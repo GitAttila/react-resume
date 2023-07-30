@@ -1,0 +1,20 @@
+@use './mixins/responsive-mixins' as responsive;
+
+.ah {
+  &-container {
+    width: calc(100% - 3.2rem);
+    max-width: 540px;
+    margin: 0 auto;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    transition: 500ms width ease-in-out;
+    @include responsive.atMedium {
+      width: 90%;
+      max-width: 920px;
+    }
+    @include responsive.atLarge {
+      width: 80%;
+      max-width: 1920px;
+    }
+  }
+}

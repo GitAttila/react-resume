@@ -1,0 +1,23 @@
+@use './mixins/responsive-mixins' as responsive;
+
+.ah {
+  &-flex {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 2.4rem;
+    &--center {
+      justify-content: center;
+      align-items: center;
+    }
+    &__child {
+      flex: 1 0 100%;
+      &--50 {
+        flex: 1 1 50%;
+      }
+    }
+    @include responsive.atSmall {
+      flex-direction: row;
+    }
+  }
+}

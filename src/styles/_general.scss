@@ -1,0 +1,45 @@
+@use './variables' as vars;
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%; // this will make calculations between rems and pixels simple, e.g. 1rem = 10px.
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 16px;
+  font-family: vars.$ah-font-text;
+  background-color: vars.$ah-primary-background-color;
+  color: vars.$ah-mediumgrey;
+}
+
+#root {
+  height: 100%;
+}
+
+a[href^='tel'] {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:active,
+a:focus {
+  color: vars.$ah-primary-text-color;
+}
+
+textarea,
+input {
+  appearance: none;
+  border-radius: 0;
+}

@@ -1,0 +1,16 @@
+@mixin gradient-background($from, $to) {
+  background-color: $from;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from($from),
+    to($to)
+  );
+  background-image: -webkit-linear-gradient(left, $from, $to);
+  background-image: -moz-linear-gradient(left, $from, $to);
+  background-image: -ms-linear-gradient(left, $from, $to);
+  background-image: -o-linear-gradient(left, $from, $to);
+  background-image: linear-gradient(to right, $from, $to);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#646260, endColorstr=#3a3836);
+}

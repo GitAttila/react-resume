@@ -1,0 +1,35 @@
+@use '../../styles/variables' as vars;
+
+.ah {
+  &-c {
+    &-status-bar {
+      position: relative;
+      background-color: vars.$ah-disabled-text-color;
+      border-radius: 4rem;
+      height: 3.2rem;
+      width: 100%;
+      overflow: hidden;
+      &__bar {
+        position: absolute;
+        background-color: vars.$ah-orange;
+        border-radius: 4rem;
+        z-index: 0;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 0;
+        transform: 500ms width ease-in-out;
+      }
+      &__caption {
+        color: vars.$ah-white;
+        position: relative;
+        z-index: 1;
+        display: inline-flex;
+        align-items: center;
+        height: 100%;
+        font-size: 2rem;
+        margin-left: 1.6rem;
+      }
+    }
+  }
+}

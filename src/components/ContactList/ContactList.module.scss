@@ -1,0 +1,42 @@
+@use '../../styles/variables' as vars;
+
+.ah {
+  &-c {
+    &-contacts-list {
+      padding-top: 0.8rem;
+      padding-bottom: 1.6rem;
+      &--no-events {
+        pointer-events: none;
+      }
+      &__list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      &__list-item {
+        margin-bottom: 0.4rem;
+        a {
+          cursor: pointer;
+          display: inline-flex;
+          justify-content: flex-start;
+          align-items: stretch;
+          text-decoration: none;
+          gap: 0.8rem;
+          transition: 100ms color ease-in-out;
+          &:active,
+          &:visited {
+            color: vars.$ah-darkgrey;
+          }
+          &:hover {
+            color: vars.$ah-orange;
+          }
+        }
+      }
+      &__icon {
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: baseline;
+      }
+    }
+  }
+}

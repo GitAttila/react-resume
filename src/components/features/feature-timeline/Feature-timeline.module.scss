@@ -1,0 +1,34 @@
+@use '../../../styles/variables' as vars;
+
+.ah {
+  &-c {
+    &-feature-timeline {
+      &__list {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      &__list-item {
+        margin-top: 0;
+        margin-bottom: 3.2rem;
+        display: flex;
+        gap: 2.4rem;
+      }
+      &__chip {
+        display: inline-flex;
+        padding: 0.8rem 1.6rem;
+        margin-bottom: 0.8rem;
+        margin-right: 0.8rem;
+        border-radius: 3rem;
+        background-color: vars.$ah-orange;
+        color: vars.$ah-white;
+      }
+      &__date {
+        flex: 1 1 25%;
+      }
+      &__feature {
+        flex: 1 1 75%;
+      }
+    }
+  }
+}

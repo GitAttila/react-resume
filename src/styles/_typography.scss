@@ -1,0 +1,63 @@
+@use './variables' as vars;
+
+.ah {
+  &-section-title {
+    color: vars.$ah-darkergrey;
+    font-family: vars.$ah-font-hero;
+    font-weight: 700;
+    font-size: 7.2rem;
+    line-height: 7.2rem;
+    margin-top: 0;
+    margin-bottom: 1.6rem;
+  }
+  &-feature-title {
+    color: vars.$ah-mediumgrey;
+    font-family: vars.$ah-font-headline;
+    font-weight: 400;
+    font-size: 4.8rem;
+    line-height: 5.2rem;
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+  }
+  &-feature-subtitle {
+    color: vars.$ah-darkgrey;
+    font-family: vars.$ah-font-text;
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 3.2rem;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+  }
+  &-feature-text {
+    color: vars.$ah-mediumgrey;
+    font-family: vars.$ah-font-text;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    &--lead {
+      font-size: 1.2em;
+      line-height: 1.4em;
+      letter-spacing: 0.2rem;
+    }
+  }
+  &-font-hero {
+    font-family: vars.$ah-font-hero;
+  }
+  &-font-headline {
+    font-family: vars.$ah-font-headline;
+  }
+  &-font-text {
+    font-family: vars.$ah-font-text;
+  }
+  &-font-light {
+    font-weight: lighter;
+  }
+  &-font-normal {
+    font-weight: normal;
+  }
+  &-font-bold {
+    font-weight: bold;
+  }
+}

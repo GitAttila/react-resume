@@ -1,0 +1,71 @@
+@use '../../../styles/variables' as vars;
+@use '../../../styles/mixins/responsive-mixins' as responsive;
+@use '../../../styles/animations';
+
+.ah {
+  &-c {
+    &-feature-download {
+      padding: 5.6rem 0;
+      &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.4rem;
+        color: vars.$ah-white;
+        @include responsive.atSmall {
+          flex-direction: row;
+        }
+      }
+      h2 {
+        &.ah-c-feature-download__title {
+          color: vars.$ah-white;
+        }
+      }
+      p {
+        &.ah-c-feature-download__subtitle {
+          color: vars.$ah-white;
+        }
+      }
+      &__arrow {
+        font-size: 3rem;
+        &--right {
+          display: none;
+          @include responsive.atSmall {
+            display: block;
+          }
+        }
+        &--down {
+          display: block;
+          @include responsive.atSmall {
+            display: none;
+          }
+        }
+        &--animated {
+          animation-name: moveArrowVertically;
+          animation-duration: 1.2s;
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+          animation-direction: normal;
+          @include responsive.atSmall {
+            animation-name: moveArrowHorizontally;
+          }
+        }
+      }
+      &__pdf-container {
+        font-size: 5rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        a {
+          transition: 300ms color ease-in-out;
+          color: vars.$ah-white;
+          &:hover {
+            color: vars.$ah-orange;
+          }
+        }
+      }
+    }
+  }
+}
