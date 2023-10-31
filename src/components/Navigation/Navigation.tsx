@@ -1,14 +1,14 @@
 import React, { ReactNode } from 'react';
 import classes from './Navigation.module.scss';
-import { NavLink } from '../../models/navlink.model';
+import { AHButton } from '../../models/ah-button.model';
 
 const Navigation: React.FC<{
   children?: ReactNode;
-  items: NavLink[];
+  items: AHButton[];
   opened: boolean;
-  menuItemClicked: (event: React.MouseEvent, item: NavLink) => void;
+  menuItemClicked: (event: React.MouseEvent, item: AHButton) => void;
 }> = ({ items, opened, menuItemClicked }) => {
-  const clickHandler = (ev: React.MouseEvent, item: NavLink) => {
+  const clickHandler = (ev: React.MouseEvent, item: AHButton) => {
     menuItemClicked(ev, item);
   };
 

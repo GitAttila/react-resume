@@ -1,6 +1,6 @@
-export interface NavLink {
+export interface AHButton {
   id: string;
   caption: string;
-  selected: boolean;
+  selected?: boolean;
   disabled?: boolean;
 }

@@ -1,8 +1,7 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import classes from './Avatar.module.scss';
 
 const Avatar: React.FC<{
-  children?: ReactNode;
   className?: string;
   image: string;
 }> = ({ className, image }) => {

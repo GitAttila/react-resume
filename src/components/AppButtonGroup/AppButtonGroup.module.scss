@@ -1,0 +1,23 @@
+@use '../../styles/variables' as vars;
+
+.app-button {
+  &-group {
+    display: flex;
+    align-items: center;
+    &__button {
+      margin-right: 0.8rem;
+      &:last-child {
+        margin-right: 0;
+      }
+      &--all {
+        margin-right: 0;
+      }
+    }
+    &__divider {
+      height: 100%;
+      margin: 0 1.6rem;
+      min-height: 4rem;
+      border-right: 2px solid vars.$ah-mediumgrey;
+    }
+  }
+}

@@ -1,20 +1,19 @@
 @use './variables' as vars;
+@use './mixins/gradient-mixins' as mixins;
 
 .ah {
   &-bg-gradient {
     &--yelloworange {
-      background: linear-gradient(to right, vars.$ah-yellow, vars.$ah-orange);
+      @include mixins.gradient-background(vars.$ah-yellow, vars.$ah-orange);
     }
     &--mediumgreydarkgrey {
-      background: linear-gradient(
-        to left,
+      @include mixins.gradient-background(
         vars.$ah-darkgrey,
         vars.$ah-mediumgrey
       );
     }
     &--darkergreydarkgrey {
-      background: linear-gradient(
-        to right,
+      @include mixins.gradient-background(
         vars.$ah-darkgrey,
         vars.$ah-darkergrey
       );

@@ -5,9 +5,9 @@ import classes from './Header.module.scss';
 import Avatar from '../Avatar/Avatar';
 import avatarImg from '../../assets/images/AH_portrait_white.png';
 import Navigation from '../Navigation/Navigation';
-import { NavLink } from '../../models/navlink.model';
+import { AppButton } from '../../models/ah-button.model';
 
-const NAV_ITEMS: NavLink[] = [
+const NAV_ITEMS: AppButton[] = [
   { id: 'navlink-home', caption: 'home', selected: true },
   { id: 'navlink-profile', caption: 'profile', selected: false },
   { id: 'navlink-dev-stack', caption: 'dev stack', selected: false },
@@ -26,7 +26,7 @@ const Header: React.FC<{ children?: ReactNode; className: string }> = ({
     setIsMenuOpened((isOpened) => !isOpened);
   };
 
-  const menuItemClickedHandler = (event: React.MouseEvent, item: NavLink) => {
+  const menuItemClickedHandler = (event: React.MouseEvent, item: AppButton) => {
     event.preventDefault();
     const updated = navItems.map((navItem) => ({
       ...navItem,
@@ -54,7 +54,7 @@ const Header: React.FC<{ children?: ReactNode; className: string }> = ({
           <span className={classes['ah-c-header__spacer']}></span>
           <MenuIcon onClick={menuHandler} isOpened={isMenuOpened} />
           <span className={classes['ah-c-header__avatar']}>
-            <Avatar image={avatarImg} />
+            <Avatar image={avatarImg}></Avatar>
             <Navigation
               items={navItems}
               opened={isMenuOpened}

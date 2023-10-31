@@ -16,12 +16,21 @@ import FeatureDownload from './components/features/feature-download/FeatureDownl
 import FeatureTechStripe from './components/features/feature-tech-stripe/FeatureTechStripe';
 import FeatureContacts from './components/features/feature-contact/FeatureContact';
 import FeatureDevStack from './components/features/feature-dev-stack/FeatureDevStack';
+import FeatureProjects from './components/features/feature-projects/FeatureProjects';
+import Carousel from './components/Carousel/Carousel';
+import CarouselSlide from './components/CarouselSlide/CarouselSlide';
 
 function App() {
   return (
     <Fragment>
       <Header className={styles['app-c-header']}></Header>
       <main className={styles['app-c-content']}>
+        <Carousel>
+          <CarouselSlide>slide 1</CarouselSlide>
+          <CarouselSlide>slide 2</CarouselSlide>
+          <CarouselSlide>slide 3</CarouselSlide>
+        </Carousel>
+
         <NavigationSection title="profile" className={styles['app-c-section']}>
           <FeatureSummary
             className={styles['app-c-feature']}
@@ -50,7 +59,7 @@ function App() {
           <FeatureDevStack />
         </NavigationSection>
         <NavigationSection title="projects" className={styles['app-c-section']}>
-          <></>
+          <FeatureProjects></FeatureProjects>
         </NavigationSection>
         <NavigationSection title="awards" className={styles['app-c-section']}>
           <></>
