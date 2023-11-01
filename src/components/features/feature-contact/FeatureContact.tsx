@@ -10,11 +10,11 @@ const FeatureContacts: React.FC<{
   className?: string;
 }> = ({ contactsList, chartData, className }) => {
   return (
-    <div className={`ah-flex ${className || ''} `}>
-      <div className="ah-flex__child-50">
+    <div className={`ah-flex ${className || ''}`}>
+      <div className="ah-flex__child--50">
         <StatusBarChart title={chartData.title} values={chartData.values} />
       </div>
-      <div className="ah-flex__child-50">
+      <div className="ah-flex__child--50">
         <ContactsList title="contact" contacts={contactsList} />
       </div>
     </div>
