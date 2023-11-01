@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Children } from 'react';
 import styles from './Carousel.module.scss';
 import {
@@ -8,34 +8,92 @@ import {
 
 interface CarouselProps {
   children?: React.ReactNode | React.ReactElement;
+  rollOver?: boolean;
+  indicators?: boolean;
+  timer?: number; // milliseconds
 }
 
-const Carousel: React.FC<CarouselProps> = ({ children }) => {
+export default function Carousel(props: CarouselProps): React.ReactElement {
+  const timer = props?.timer || 0;
   const [atSlide, setAtSlide] = useState<number>(0);
-  const childrenArray = Children.toArray(children) as React.ReactElement[];
+  const childrenArray = Children.toArray(
+    props.children
+  ) as React.ReactElement[];
   const carouselSlideChildrenArray =
     childrenArray.filter(
       (child) => (child.type as React.FC).name.toLowerCase() === 'carouselslide'
     ) || [];
   const slidesCount = carouselSlideChildrenArray.length;
-  const moveByPer = 100 / slidesCount;
+  const moveByPer = Math.floor((100 / slidesCount) * 1000) / 1000;
+
+  useEffect(() => {
+    if (timer) {
+      const slideInterval = setInterval(() => {
+        setAtSlide((atSlide) => atSlide + 1);
+      }, timer);
+      return () => {
+        clearInterval(slideInterval);
+      };
+    }
+  }, [timer]);
 
   const clickHandler = (ev: React.MouseEvent, direction: string) => {
-    if (direction === 'left' && atSlide > 0) {
-      setAtSlide((atSlide) => atSlide - 1);
-    }
-    if (direction === 'right' && atSlide < slidesCount - 1) {
-      setAtSlide((atSlide) => atSlide + 1);
+    if (props.rollOver) {
+      if (direction === 'left') {
+        setAtSlide((atSlide) => atSlide - 1);
+      }
+      if (direction === 'right') {
+        setAtSlide((atSlide) => atSlide + 1);
+      }
+    } else {
+      if (direction === 'left' && atSlide > 0) {
+        setAtSlide((atSlide) => atSlide - 1);
+      }
+      if (direction === 'right' && atSlide < slidesCount - 1) {
+        setAtSlide((atSlide) => atSlide + 1);
+      }
     }
   };
+
+  const indicatorClickHandler = (index: number) => {
+    setAtSlide(index);
+  };
+
+  const activeSlideIndex =
+    atSlide < 0
+      ? Math.abs((Math.abs(atSlide + 1) % 3) - 2)
+      : atSlide % slidesCount;
 
   return (
     <div className={styles['ah-c-carousel']}>
       <div
+        className={styles['ah-c-carousel__indicators-container']}
+        style={{ display: props.indicators ? 'block' : 'none' }}
+      >
+        <div className={styles['ah-c-carousel__indicators']}>
+          {[...Array(slidesCount).keys()]?.map((count) => {
+            return (
+              <div
+                key={`indicator-${count}`}
+                onClick={() => indicatorClickHandler(count)}
+                className={`${styles['ah-c-carousel__indicator']} ${
+                  count === activeSlideIndex
+                    ? styles['ah-c-carousel__indicator--active']
+                    : ''
+                }`}
+              >
+                <div className={styles['ah-c-carousel__indicator-slab']}></div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div
         className={styles['ah-c-carousel__slide-container']}
         style={{
           width: `${slidesCount * 100}%`,
-          transform: `translateX(${-(atSlide * moveByPer)}%)`,
+          transform: `translateX(${-(activeSlideIndex * moveByPer)}%)`,
         }}
       >
         {carouselSlideChildrenArray?.map((childNode, ind) => (
@@ -50,22 +108,25 @@ const Carousel: React.FC<CarouselProps> = ({ children }) => {
 
       <div
         onClick={(e: React.MouseEvent) => clickHandler(e, 'left')}
-        className={`${styles['ah-c-carousel__tab']} ${styles['ah-c-carousel__tab--left']}`}
+        className={`${styles['ah-c-carousel__control']} ${styles['ah-c-carousel__control--left']}`}
       >
-        <span className={`${styles['ah-c-carousel__tab__icon']}`}>
-          {React.createElement(IoChevronBackCircleOutline)}
+        <span className={`${styles['ah-c-carousel__control__icon-container']}`}>
+          <span className={`${styles['ah-c-carousel__control__icon']}`}>
+            {React.createElement(IoChevronBackCircleOutline)}
+          </span>
         </span>
       </div>
+
       <div
         onClick={(e: React.MouseEvent) => clickHandler(e, 'right')}
-        className={`${styles['ah-c-carousel__tab']} ${styles['ah-c-carousel__tab--right']}`}
+        className={`${styles['ah-c-carousel__control']} ${styles['ah-c-carousel__control--right']}`}
       >
-        <span className={`${styles['ah-c-carousel__tab__icon']}`}>
-          {React.createElement(IoChevronForwardCircleOutline)}
+        <span className={`${styles['ah-c-carousel__control__icon-container']}`}>
+          <span className={`${styles['ah-c-carousel__control__icon']}`}>
+            {React.createElement(IoChevronForwardCircleOutline)}
+          </span>
         </span>
       </div>
     </div>
   );
-};
-
-export default Carousel;
+}

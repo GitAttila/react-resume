@@ -25,11 +25,15 @@ function App() {
     <Fragment>
       <Header className={styles['app-c-header']}></Header>
       <main className={styles['app-c-content']}>
-        <Carousel>
-          <CarouselSlide>slide 1</CarouselSlide>
-          <CarouselSlide>slide 2</CarouselSlide>
-          <CarouselSlide>slide 3</CarouselSlide>
-        </Carousel>
+        <div className={styles['app-c-content__carousel-wrapper']}>
+          <Carousel rollOver={true} indicators={true}>
+            <CarouselSlide className={styles['app-c-content__slide']}>
+              slide 1
+            </CarouselSlide>
+            <CarouselSlide>slide 2</CarouselSlide>
+            <CarouselSlide>slide 3</CarouselSlide>
+          </Carousel>
+        </div>
 
         <NavigationSection title="profile" className={styles['app-c-section']}>
           <FeatureSummary

@@ -4,11 +4,13 @@
   &-c {
     &-carousel {
       position: relative;
-      height: 100vh;
+      height: 100%;
       width: 100%;
+      overflow: hidden;
       &__slide-container {
         position: absolute;
-        width: 100%;
+        z-index: 0;
+        width: 100%; // is updated dynamically based on number of slides
         height: 100%;
         display: flex;
         justify-content: flex-start;
@@ -16,24 +18,40 @@
         transition: 500ms transform ease-in-out;
       }
       &__slide {
-        background-color: lightgreen;
-        width: 33.33%;
-        overflow: hidden;
-        border: 1px solid orange;
+        height: 100%;
+        width: 50%; // is updated dynamically based on number of slides
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
-      &__tab {
+      &__control {
         position: absolute;
+        z-index: 1;
         width: 15%;
         min-width: 8rem;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.25);
         display: flex;
         justify-content: center;
         align-items: center;
         color: vars.$ah-white;
         cursor: pointer;
+        &__icon-container {
+          width: 6rem;
+          height: 6rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &:hover {
+            .ah-c-carousel__control__icon {
+              opacity: 1;
+            }
+          }
+        }
         &__icon {
+          display: flex;
+          align-items: center;
           font-size: 4rem;
+          opacity: 0.5;
         }
         &--left {
           left: 0;
@@ -41,6 +59,40 @@
         &--right {
           right: 0;
         }
+      }
+      &__indicators-container {
+        position: absolute;
+        z-index: 2;
+        bottom: 0;
+        width: 100%;
+        display: block;
+        margin: 0 auto 2rem auto;
+      }
+      &__indicators {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      &__indicator {
+        padding: 1.6rem 0.4rem;
+        cursor: pointer;
+        &--active {
+          .ah-c-carousel__indicator-slab {
+            opacity: 1;
+          }
+        }
+        &:hover {
+          .ah-c-carousel__indicator-slab {
+            opacity: 1;
+          }
+        }
+      }
+      &__indicator-slab {
+        height: 4px;
+        border-radius: 2px;
+        min-width: 24px;
+        background: white;
+        opacity: 0.5;
       }
     }
   }

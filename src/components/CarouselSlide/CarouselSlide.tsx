@@ -1,9 +1,10 @@
 interface CarouselSlideProps {
-  children: React.ReactNode;
+  children: React.ReactNode | React.ReactElement;
+  className?: string;
 }
 
-const CarouselSlide: React.FC<CarouselSlideProps> = ({ children }) => {
-  return <>{children}</>;
-};
-
-export default CarouselSlide;
+export default function CarouselSlide(
+  props: CarouselSlideProps
+): React.ReactElement {
+  return <div className={props.className}>{props.children}</div>;
+}
