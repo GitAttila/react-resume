@@ -35,6 +35,13 @@
           -webkit-text-fill-color: inherit;
         }
       }
+      &--awards {
+        background-color: vars.$ah-disabled-text-color;
+        h2 {
+          color: vars.$ah-white;
+          -webkit-text-fill-color: inherit;
+        }
+      }
     }
     &-feature {
       margin-bottom: 3.6rem;

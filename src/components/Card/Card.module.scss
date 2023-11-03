@@ -1,0 +1,11 @@
+@use '../../styles/shadows' as shadows;
+@use '../../styles//variables' as vars;
+
+.ah {
+  &-c {
+    &-card {
+      padding: 1.6rem;
+      background-color: vars.$ah-white;
+    }
+  }
+}

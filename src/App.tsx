@@ -8,17 +8,19 @@ import { LANGUAGE_SKILLS } from './content/skills-bar-charts';
 import { Fragment } from 'react';
 import styles from './App.module.scss';
 import Header from './components/Header/Header';
-import FeatureSummary from './components/features/feature-summary/FeatureSummary';
+import FeatureSummary from './components/Features/feature-summary/FeatureSummary';
 import NavigationSection from './components/NavigationSection/NavigationSection';
-import FeatureTimeline from './components/features/feature-timeline/Feature-timeline';
-import Footer from './components/features/footer/Footer';
-import FeatureDownload from './components/features/feature-download/FeatureDownload';
-import FeatureTechStripe from './components/features/feature-tech-stripe/FeatureTechStripe';
-import FeatureContacts from './components/features/feature-contact/FeatureContact';
-import FeatureDevStack from './components/features/feature-dev-stack/FeatureDevStack';
-import FeatureProjects from './components/features/feature-projects/FeatureProjects';
-import FeatureHero from './components/features/feature-hero/FeatureHero';
+import FeatureTimeline from './components/Features/feature-timeline/Feature-timeline';
+import Footer from './components/Features/footer/Footer';
+import FeatureDownload from './components/Features/feature-download/FeatureDownload';
+import FeatureTechStripe from './components/Features/feature-tech-stripe/FeatureTechStripe';
+import FeatureContacts from './components/Features/feature-contact/FeatureContact';
+import FeatureDevStack from './components/Features/feature-dev-stack/FeatureDevStack';
+import FeatureProjects from './components/Features/feature-projects/FeatureProjects';
+import FeatureHero from './components/Features/feature-hero/FeatureHero';
 import { HERO_SLIDES } from './content/carousel-hero.const';
+import FeatureAwards from './components/Features/feature-awards/FeatureAwards';
+import { AWARD_CARDS } from './content/award-cards.const';
 
 function App() {
   return (
@@ -57,9 +59,14 @@ function App() {
         <NavigationSection title="projects" className={styles['app-c-section']}>
           <FeatureProjects></FeatureProjects>
         </NavigationSection>
-        <NavigationSection title="awards" className={styles['app-c-section']}>
-          <></>
+
+        <NavigationSection
+          title="awards"
+          className={`${styles['app-c-section']} ${styles['app-c-section--awards']}`}
+        >
+          <FeatureAwards cards={AWARD_CARDS}></FeatureAwards>
         </NavigationSection>
+
         <NavigationSection
           title="certificates"
           className={styles['app-c-section']}
