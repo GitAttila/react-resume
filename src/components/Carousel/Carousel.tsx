@@ -16,12 +16,19 @@ interface CarouselProps {
 export default function Carousel(props: CarouselProps): React.ReactElement {
   const timer = props?.timer || 0;
   const [atSlide, setAtSlide] = useState<number>(0);
+
   const childrenArray = Children.toArray(
     props.children
   ) as React.ReactElement[];
+
+  const carouselHero = childrenArray.find(
+    (child) => (child.type as React.FC).name?.toLowerCase() === 'carouselhero'
+  );
+
   const carouselSlideChildrenArray =
     childrenArray.filter(
-      (child) => (child.type as React.FC).name.toLowerCase() === 'carouselslide'
+      (child) =>
+        (child.type as React.FC).name?.toLowerCase() === 'carouselslide'
     ) || [];
   const slidesCount = carouselSlideChildrenArray.length;
   const moveByPer = Math.floor((100 / slidesCount) * 1000) / 1000;
@@ -105,6 +112,8 @@ export default function Carousel(props: CarouselProps): React.ReactElement {
           </div>
         ))}
       </div>
+
+      <div className={styles['ah-c-carousel__hero']}>{carouselHero}</div>
 
       <div
         onClick={(e: React.MouseEvent) => clickHandler(e, 'left')}

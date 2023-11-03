@@ -15,18 +15,6 @@
       width: 100%;
       overflow-x: hidden;
       overflow-y: scroll;
-      &__carousel-wrapper {
-        width: 100%;
-        height: 100dvh;
-      }
-      &__slide {
-        background-color: greenyellow;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-      }
     }
     &-section {
       &:first-of-type {

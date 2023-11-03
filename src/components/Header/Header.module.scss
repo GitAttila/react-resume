@@ -4,7 +4,7 @@
   &-c {
     &-header {
       display: flex;
-      background-color: rgba(vars.$ah-white, 0.8);
+      background-color: vars.$ah-white;
       backdrop-filter: blur(vars.$ah-backdrop-blur);
       color: vars.$ah-secondary-text-color;
       height: vars.$ah-header-height;
