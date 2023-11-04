@@ -18,7 +18,7 @@ export default function FeatureHero(
 
   return (
     <div className={`${className} ${styles['app-c-carousel__container']}`}>
-      <Carousel rollOver={true} indicators={true} timer={100000000}>
+      <Carousel rollOver={true} indicators={true} timer={10000}>
         {carouselSlides.map((carouselSlide) => {
           return (
             <CarouselSlide

@@ -2,8 +2,9 @@ import { AHButton } from './ah-button.model';
 import { Link } from './link.model';
 
 export interface AwardCardContent {
-  image: string;
+  logo: string;
   description: string;
   link: Link;
   button: AHButton;
+  scaleOnHover: boolean;
 }

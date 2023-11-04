@@ -4,7 +4,7 @@
   &-c {
     &-status-bar {
       position: relative;
-      background-color: vars.$ah-disabled-text-color;
+      background-color: rgba(vars.$ah-black, 0.14);
       border-radius: 4rem;
       height: 3.2rem;
       width: 100%;

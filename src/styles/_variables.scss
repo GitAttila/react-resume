@@ -17,14 +17,14 @@ $ah-yellow: rgb(252, 219, 0);
 $ah-orange: rgb(247, 181, 0);
 
 // ---------- text colors ----------
-$ah-primary-text-color: rgba($ah-black, 0.75);
+$ah-primary-text-color: rgba($ah-black, 0.8);
 $ah-secondary-text-color: rgba($ah-black, 0.6);
 $ah-highlight-text-color: $ah-orange;
 $ah-disabled-text-color: rgba($ah-black, 0.25);
 
 // ---------- background colors ----------
 $ah-primary-background-color: $ah-gray-100;
-$ah-disabled-background-color: $ah-gray-400;
+$ah-disabled-background-color: rgba($ah-black, 0.25);
 $ah-card-background-color: $ah-white;
 
 // fonts

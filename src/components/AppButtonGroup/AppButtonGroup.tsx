@@ -2,7 +2,7 @@ import { Fragment, useState } from 'react';
 import { AHButton } from '../../models/ah-button.model';
 import AppButton from '../AppButton/AppButton';
 import styles from './AppButtonGroup.module.scss';
-import { BUTTONS_GROUP_ALL_BUTTON } from '../../content/projects-buttonsGroup';
+import { BUTTONS_GROUP_ALL_BUTTON } from './AppButtonGroup.config';
 
 export interface AppButtonGroup {
   buttonsGroup: AHButton[];

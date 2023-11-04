@@ -16,10 +16,14 @@
         display: flex;
         justify-content: flex-start;
         align-items: baseline;
+        color: vars.$ah-primary-text-color;
       }
       &__icon {
         font-size: 2rem;
         color: vars.$ah-primary-text-color;
+      }
+      &__text {
+        color: vars.$ah-secondary-text-color;
       }
     }
   }

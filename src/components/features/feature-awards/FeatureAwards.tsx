@@ -3,17 +3,24 @@ import AppButton from '../../AppButton/AppButton';
 import Card from '../../Card/Card';
 import styles from './FeatureAwards.module.scss';
 import CardIcon from '../../CardIcon/CardIcon';
+import { Link } from '../../../models/link.model';
 
 export interface FeatureAwardProps {
   cards: AwardCardContent[];
+  buttonClicked: (id: string) => void;
 }
 
 export default function FeatureAwards(props: FeatureAwardProps) {
   const cardsContent = props.cards;
+  const buttonClicked = props.buttonClicked;
 
-  const clickHandler = () => {};
+  const clickHandlerCardButton = (id: string) => {
+    buttonClicked(id);
+  };
 
-  const onLinkClickHandler = () => {};
+  const onLinkClickHandler = (link: Link) => {
+    link?.link && window.open(link.link, '_blank');
+  };
 
   return (
     <div className={`${styles['ah-c-feature-awards']} ah-flex `}>
@@ -22,17 +29,18 @@ export default function FeatureAwards(props: FeatureAwardProps) {
           <Card
             key={`card-awards-${ind}`}
             className={`${styles['ah-c-feature-awards__card']} ah-flex__child--50`}
+            scaleOnHover={card.scaleOnHover}
           >
             <div className={styles['ah-c-feature-awards__content']}>
               {card.link.link ? (
                 <CardIcon
                   className={styles['ah-c-feature-awards__link']}
                   iconLink={card.link}
-                  onClick={() => onLinkClickHandler}
+                  onClick={(link) => onLinkClickHandler(link)}
                 ></CardIcon>
               ) : null}
               <div className={styles['ah-c-feature-awards__image-wrapper']}>
-                <img src={card?.image || ''} />
+                <img src={card?.logo || ''} />
               </div>
               <div className={styles['ah-c-feature-awards__divider']}></div>
               <div
@@ -42,9 +50,9 @@ export default function FeatureAwards(props: FeatureAwardProps) {
               </div>
               <AppButton
                 className={styles['ah-c-feature-awards__button']}
-                id={`${card.button.id}-${ind}`}
+                id={`${card.button.id}`}
                 caption={card.button.caption}
-                onClick={(_) => clickHandler()}
+                onClick={(id) => clickHandlerCardButton(id)}
               ></AppButton>
             </div>
           </Card>

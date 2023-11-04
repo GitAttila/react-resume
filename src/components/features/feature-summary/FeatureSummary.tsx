@@ -23,7 +23,11 @@ const FeatureSummary: React.FC<{
               />
               <h3 className="ah-feature-subtitle">{item.title}</h3>
             </span>
-            <p className="ah-feature-text">{item.text}</p>
+            <p
+              className={`${classes['ah-c-feature-summary__text']} ah-feature-text`}
+            >
+              {item.text}
+            </p>
           </li>
         ))}
       </ul>

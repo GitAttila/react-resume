@@ -14,3 +14,11 @@
   background: linear-gradient(to right, $from, $to);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#646260, endColorstr=#3a3836);
 }
+
+@mixin gradient-text($from, $to) {
+  color: $from;
+  -webkit-text-fill-color: transparent;
+  background: -webkit-linear-gradient(bottom, $from, $to);
+  background-clip: text;
+  -webkit-background-clip: text;
+}

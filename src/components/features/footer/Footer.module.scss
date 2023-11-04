@@ -32,6 +32,10 @@
           &:hover {
             color: vars.$ah-orange;
           }
+          &:active,
+          &:visited {
+            color: rgba(vars.$ah-white, 0.75);
+          }
         }
         &:last-of-type {
           margin-right: 0;
@@ -42,7 +46,7 @@
         padding: 0;
         list-style: none;
         text-align: center;
-        color: rgba(vars.$ah-white, 0.75);
+        color: rgba(vars.$ah-white, 0.5);
         li {
           margin-bottom: 1.6rem;
           &:last-child {

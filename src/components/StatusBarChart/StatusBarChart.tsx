@@ -9,7 +9,11 @@ export const StatusBarChart: React.FC<{
 }> = ({ title, values }) => {
   return (
     <div className={styles['ah-c-status-bar-chart']}>
-      <h3 className="ah-feature-title">{title}</h3>
+      <h3
+        className={`${styles['ah-c-status-bar-chart__title']} ah-feature-title`}
+      >
+        {title}
+      </h3>
       <ul className={styles['ah-c-status-bar-chart__list']}>
         {values?.map((item) => {
           return (

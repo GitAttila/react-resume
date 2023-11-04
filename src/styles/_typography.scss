@@ -4,32 +4,32 @@
   &-section-title {
     font-family: vars.$ah-font-hero;
     font-weight: 700;
-    font-size: 7.2rem;
-    line-height: 7.2rem;
+    font-size: 5.6rem;
+    line-height: 5.8rem;
     margin-top: 0;
-    margin-bottom: 1.6rem;
+    margin-bottom: 2.4rem;
   }
   &-feature-title {
     font-family: vars.$ah-font-headline;
     font-weight: 400;
-    font-size: 4.8rem;
-    line-height: 5.2rem;
+    font-size: 4rem;
+    line-height: 3.8rem;
     margin-top: 0;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.8rem;
   }
   &-feature-subtitle {
     font-family: vars.$ah-font-text;
     font-weight: 400;
-    font-size: 3rem;
-    line-height: 3.2rem;
+    font-size: 2.8rem;
+    line-height: 3rem;
     margin-top: 0;
-    margin-bottom: 0.8rem;
+    margin-bottom: 1.2rem;
   }
   &-feature-text {
     font-family: vars.$ah-font-text;
     font-weight: 400;
-    font-size: 2rem;
-    line-height: 2.4rem;
+    font-size: 1.8rem;
+    line-height: 2rem;
     margin-top: 0;
     margin-bottom: 0.8rem;
     &--lead {
@@ -55,5 +55,11 @@
   }
   &-font-bold {
     font-weight: bold;
+  }
+  &-ellipsis {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
   }
 }
