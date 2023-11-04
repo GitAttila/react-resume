@@ -6,6 +6,9 @@
     width: 100%;
     flex-direction: column;
     gap: 2.4rem;
+    @include responsive.atSmall {
+      flex-direction: row;
+    }
     &--center {
       justify-content: center;
       align-items: center;
@@ -15,9 +18,6 @@
       &--50 {
         flex: 1 1 50%;
       }
-    }
-    @include responsive.atSmall {
-      flex-direction: row;
     }
   }
 }

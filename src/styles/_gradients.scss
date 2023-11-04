@@ -7,16 +7,10 @@
       @include mixins.gradient-background(vars.$ah-yellow, vars.$ah-orange);
     }
     &--mediumgreydarkgrey {
-      @include mixins.gradient-background(
-        vars.$ah-darkgrey,
-        vars.$ah-mediumgrey
-      );
+      @include mixins.gradient-background(vars.$ah-gray-700, vars.$ah-gray-500);
     }
     &--darkergreydarkgrey {
-      @include mixins.gradient-background(
-        vars.$ah-darkgrey,
-        vars.$ah-darkergrey
-      );
+      @include mixins.gradient-background(vars.$ah-gray-700, vars.$ah-gray-900);
     }
     &--multiply {
       mix-blend-mode: multiply;
@@ -36,34 +30,34 @@
       -webkit-background-clip: text;
     }
     &--darkergreydarkgrey {
-      color: vars.$ah-darkergrey;
+      color: vars.$ah-gray-900;
       -webkit-text-fill-color: transparent;
       background: -webkit-linear-gradient(
         bottom,
-        vars.$ah-darkergrey,
-        vars.$ah-darkgrey
+        vars.$ah-gray-900,
+        vars.$ah-gray-700
       );
       background-clip: text;
       -webkit-background-clip: text;
     }
     &--mediumgreydarkgrey {
-      color: vars.$ah-darkgrey;
+      color: vars.$ah-gray-700;
       -webkit-text-fill-color: transparent;
       background: -webkit-linear-gradient(
         bottom,
-        vars.$ah-darkgrey,
-        vars.$ah-mediumgrey
+        vars.$ah-gray-700,
+        vars.$ah-gray-500
       );
       background-clip: text;
       -webkit-background-clip: text;
     }
     &--lightgreymediumgrey {
-      color: vars.$ah-lightgrey;
+      color: vars.$ah-gray-300;
       -webkit-text-fill-color: transparent;
       background: -webkit-linear-gradient(
         bottom,
-        vars.$ah-mediumgrey,
-        vars.$ah-lightgrey
+        vars.$ah-gray-500,
+        vars.$ah-gray-300
       );
       background-clip: text;
       -webkit-background-clip: text;

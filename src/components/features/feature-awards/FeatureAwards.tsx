@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react';
 import { AwardCardContent } from '../../../models/award-card-content.model';
 import AppButton from '../../AppButton/AppButton';
 import Card from '../../Card/Card';
 import styles from './FeatureAwards.module.scss';
+import CardIcon from '../../CardIcon/CardIcon';
 
 export interface FeatureAwardProps {
   cards: AwardCardContent[];
@@ -12,6 +12,8 @@ export default function FeatureAwards(props: FeatureAwardProps) {
   const cardsContent = props.cards;
 
   const clickHandler = () => {};
+
+  const onLinkClickHandler = () => {};
 
   return (
     <div className={`${styles['ah-c-feature-awards']} ah-flex `}>
@@ -23,11 +25,11 @@ export default function FeatureAwards(props: FeatureAwardProps) {
           >
             <div className={styles['ah-c-feature-awards__content']}>
               {card.link.link ? (
-                <div className={styles['ah-c-feature-awards__link']}>
-                  <a href={card.link.link} target="_blank">
-                    {React.createElement(card.link.icon)}
-                  </a>
-                </div>
+                <CardIcon
+                  className={styles['ah-c-feature-awards__link']}
+                  iconLink={card.link}
+                  onClick={() => onLinkClickHandler}
+                ></CardIcon>
               ) : null}
               <div className={styles['ah-c-feature-awards__image-wrapper']}>
                 <img src={card?.image || ''} />

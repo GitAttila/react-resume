@@ -1,12 +1,31 @@
 // colors
+$ah-gray-50: rgb(250, 250, 250);
+$ah-gray-100: rgb(245, 245, 245);
+$ah-gray-200: rgb(238, 238, 238);
+$ah-gray-300: rgb(224, 224, 224);
+$ah-gray-400: rgb(189, 189, 189);
+$ah-gray-500: rgb(158, 158, 158);
+$ah-gray-600: rgb(117, 117, 117);
+$ah-gray-700: rgb(97, 97, 97);
+$ah-gray-800: rgb(66, 66, 66);
+$ah-gray-900: rgb(33, 33, 33);
+
 $ah-black: rgb(0, 0, 0);
-$ah-darkergrey: rgb(58, 56, 54);
-$ah-darkgrey: rgb(100, 98, 96);
-$ah-mediumgrey: rgb(169, 168, 167);
-$ah-lightgrey: rgb(247, 246, 245);
 $ah-white: rgb(255, 255, 255);
+
 $ah-yellow: rgb(252, 219, 0);
 $ah-orange: rgb(247, 181, 0);
+
+// ---------- text colors ----------
+$ah-primary-text-color: rgba($ah-black, 0.75);
+$ah-secondary-text-color: rgba($ah-black, 0.6);
+$ah-highlight-text-color: $ah-orange;
+$ah-disabled-text-color: rgba($ah-black, 0.25);
+
+// ---------- background colors ----------
+$ah-primary-background-color: $ah-gray-100;
+$ah-disabled-background-color: $ah-gray-400;
+$ah-card-background-color: $ah-white;
 
 // fonts
 $ah-font-hero: 'Anton', times, Georgia, serif;
@@ -21,14 +40,3 @@ $ah-header-height: 6.4rem;
 $ah-header-height-mobile: 5.6rem;
 $ah-avatar-size: 14rem;
 $ah-avatar-size-mobile: 7rem;
-
-// ---------- text colors ----------
-$ah-primary-text-color: $ah-darkgrey;
-$ah-secondary-text-color: $ah-mediumgrey;
-$ah-highlight-text-color: $ah-orange;
-$ah-disabled-text-color: rgb(212, 211, 210);
-
-// ---------- background colors ----------
-$ah-primary-background-color: $ah-lightgrey;
-$ah-secondary-background-color: $ah-darkgrey;
-$ah-highlight-background-color: $ah-orange;

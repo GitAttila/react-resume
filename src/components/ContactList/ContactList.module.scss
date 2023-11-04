@@ -16,6 +16,7 @@
       &__list-item {
         margin-bottom: 0.4rem;
         a {
+          color: vars.$ah-primary-text-color;
           cursor: pointer;
           display: inline-flex;
           justify-content: flex-start;
@@ -25,10 +26,10 @@
           transition: 100ms color ease-in-out;
           &:active,
           &:visited {
-            color: vars.$ah-darkgrey;
+            color: vars.$ah-primary-text-color;
           }
           &:hover {
-            color: vars.$ah-orange;
+            color: vars.$ah-highlight-text-color;
           }
         }
       }

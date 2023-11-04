@@ -1,5 +1,4 @@
 @use '../../../styles/variables' as vars;
-@use '../../../styles/mixins/gradient-mixins' as gradient;
 
 .ah {
   &-c {
@@ -16,33 +15,8 @@
         position: absolute;
         top: 0;
         right: 0;
-        width: 4rem;
-        height: 3rem;
-        background: rgba(vars.$ah-black, 0.6);
         margin-top: -1.6rem;
         margin-right: -1.6rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        &:hover {
-          @include gradient.gradient-background(
-            vars.$ah-yellow,
-            vars.$ah-orange
-          );
-        }
-        a {
-          margin: 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 2rem;
-          color: vars.$ah-white;
-          &:focus,
-          &:visited {
-            color: vars.$ah-white;
-          }
-        }
       }
       &__image-wrapper {
         display: flex;
@@ -55,6 +29,7 @@
         }
       }
       &__description {
+        color: vars.$ah-secondary-text-color;
         align-self: center;
         text-align: center;
         padding: 1.6rem;

@@ -1,0 +1,31 @@
+@use '../../styles/variables' as vars;
+@use '../../styles/mixins/gradient-mixins' as gradient;
+
+.ah {
+  &-c {
+    &-card-icon {
+      width: 4rem;
+      height: 3rem;
+      background: rgba(vars.$ah-black, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        @include gradient.gradient-background(vars.$ah-yellow, vars.$ah-orange);
+      }
+      a {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        color: vars.$ah-white;
+        &:focus,
+        &:visited {
+          color: vars.$ah-white;
+        }
+      }
+    }
+  }
+}

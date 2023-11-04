@@ -8,7 +8,7 @@
         margin: 0 auto;
         margin-top: 1.6rem;
         list-style: none;
-        background-color: vars.$ah-white;
+        background-color: vars.$ah-card-background-color;
         border-radius: 20rem;
         max-width: 10rem;
         transform: translateY(-200%);
@@ -18,15 +18,16 @@
         }
       }
       &__list-item {
+        cursor: pointer;
+        color: vars.$ah-secondary-text-color;
         margin: 1.6rem 0;
         padding: 0.8rem 0.8rem 0.4rem 0.8rem;
         border-radius: 2rem;
-        cursor: pointer;
         text-align: center;
         transition: 200ms background-color ease-in-out, 200ms color ease-in-out;
         &:hover {
           background-color: rgba(vars.$ah-black, 0.17);
-          color: vars.$ah-darkgrey;
+          color: vars.$ah-primary-text-color;
         }
         &--selected {
           background-color: vars.$ah-orange;
