@@ -4,6 +4,7 @@
 .ah {
   &-c {
     &-card-icon {
+      position: relative;
       width: 4rem;
       height: 3rem;
       background: rgba(vars.$ah-black, 0.6);
@@ -12,9 +13,13 @@
       align-items: center;
       cursor: pointer;
       &:hover {
-        @include gradient.gradient-background(vars.$ah-yellow, vars.$ah-orange);
+        .ah-c-card-icon__selection {
+          width: 100%;
+        }
       }
       a {
+        position: relative;
+        z-index: 1;
         margin: 0;
         display: flex;
         justify-content: center;
@@ -25,6 +30,16 @@
         &:visited {
           color: vars.$ah-white;
         }
+      }
+      &__selection {
+        position: absolute;
+        z-index: 0;
+        left: 0;
+        top: 0;
+        width: 0%;
+        height: 100%;
+        transition: 150ms width ease-in-out;
+        @include gradient.gradient-background(vars.$ah-yellow, vars.$ah-orange);
       }
     }
   }

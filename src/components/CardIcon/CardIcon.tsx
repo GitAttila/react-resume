@@ -16,6 +16,7 @@ export default function CardIcon(props: CardIconProps) {
       <a onClick={() => props.onClick(iconLink)}>
         {React.createElement(iconLink.icon)}
       </a>
+      <div className={`${styles['ah-c-card-icon__selection']}`}></div>
     </div>
   );
 }

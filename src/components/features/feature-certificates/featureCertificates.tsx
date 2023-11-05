@@ -1,5 +1,9 @@
+import { useState } from 'react';
 import { CERTIFICATES_BUTTONS_GROUP } from '../../../content/certificates-buttonsGroup';
-import { CertificateCardContent } from '../../../models/certificate-card-content.model';
+import {
+  CertificateCardContent,
+  CertificateFilterKeys,
+} from '../../../models/certificate-card-content.model';
 import { Link } from '../../../models/link.model';
 import AppButtonGroup from '../../AppButtonGroup/AppButtonGroup';
 import Card from '../../Card/Card';
@@ -16,9 +20,19 @@ export default function FeatureCertificates(props: FeatureCertificatesProps) {
   const className = props?.className || '';
   const buttons = [...CERTIFICATES_BUTTONS_GROUP];
   const cards = props.cards || [];
+  const [filteredCards, setFilteredCards] =
+    useState<CertificateCardContent[]>(cards);
 
   const buttonGroupClickHandler = (id: string) => {
-    console.log(id);
+    const idFragmentsCount = id.split('--').length;
+    const key = idFragmentsCount
+      ? id.split('--')[idFragmentsCount - 1]
+      : ('' as CertificateFilterKeys);
+    let filtered =
+      cards.filter((card) => !!card.keys.find((cardKey) => cardKey === key)) ||
+      [];
+    filtered = key.includes('all') ? cards : filtered;
+    setFilteredCards(filtered);
   };
 
   const iconLinkClickHandler = (link: Link) => {
@@ -34,7 +48,7 @@ export default function FeatureCertificates(props: FeatureCertificatesProps) {
       ></AppButtonGroup>
 
       <div className={`${styles['ah-c-feature-certificates__cards']}`}>
-        {cards.map((card, ind) => {
+        {filteredCards.map((card, ind) => {
           return (
             <Card
               key={`card-certificate-${ind}`}
