@@ -32,7 +32,7 @@ import { CERTIFICATES_BUTTONS_GROUP } from './content/certificates-buttonsGroup'
 import { PROJECTS_BUTTONS_GROUP } from './content/projects-buttonsGroup';
 import { PROJECT_CARDS } from './content/project-cards.const';
 
-function App() {
+export default function App() {
   const lightBoxSlides = initLightBoxData();
   const [lightboxOpened, setLightboxOpened] = useState(false);
   const [currentSlides, setCurrentSlides] = useState<SlideImage[]>([]);
@@ -127,5 +127,3 @@ function App() {
     </Fragment>
   );
 }
-
-export default App;

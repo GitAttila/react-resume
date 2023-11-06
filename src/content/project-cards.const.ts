@@ -14,8 +14,8 @@ export const PROJECT_CARDS: PortfolioCardContent<ProjectFilterKeys>[] = [
   {
     logo: ACLogo,
     image: ACImage,
-    title: 'Astro-charting.com',
-    subtitle: '',
+    title: '',
+    subtitle: 'Astro-charting.com',
     keys: [ProjectFilterKeys.ANGULAR_DEVELOPMENT, ProjectFilterKeys.UX_DESIGN],
     linkIcon: {
       id: 'id-project-link--astro-charting',
@@ -31,8 +31,8 @@ export const PROJECT_CARDS: PortfolioCardContent<ProjectFilterKeys>[] = [
   {
     logo: MedtronicLogo,
     image: CSyncImage,
-    title: "Medtronic's C-sync application",
-    subtitle: '',
+    title: '',
+    subtitle: "Medtronic's C-sync application",
     keys: [ProjectFilterKeys.ANGULAR_DEVELOPMENT, ProjectFilterKeys.UX_DESIGN],
     linkIcon: null,
     galleryIcon: {
@@ -44,8 +44,8 @@ export const PROJECT_CARDS: PortfolioCardContent<ProjectFilterKeys>[] = [
   {
     logo: KBLogo,
     image: KBImage,
-    title: 'Investment portal by Komerční banka',
-    subtitle: '',
+    title: '',
+    subtitle: 'Investment portal by Komerční banka',
     keys: [ProjectFilterKeys.ANGULAR_DEVELOPMENT],
     linkIcon: null,
     galleryIcon: {
