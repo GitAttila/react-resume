@@ -24,10 +24,16 @@ import {
   SLIDES_CERT_STENCIL,
   SLIDES_CERT_WEBPACK5,
 } from './cert-lightbox-const';
+import {
+  SLIDES_PROJECT_ASTRO_CHARTING,
+  SLIDES_PROJECT_KB,
+  SLIDES_PROJECT_MDT_SCYNC,
+} from './projects-lightbox-const';
 
 export enum LightboxKeys {
   AWARDS_BW = 'awards-bw',
   AWARDS_PHOTOSHOOT = 'awards-photoshoot',
+
   CERT_SKETCH = 'cert-sketch',
   CERT_ADOBE_DIMENSIONS = 'cert-adobe-dimensions',
   CERT_ASYNC_JAVASCRIPT = 'cert-async-javascript',
@@ -49,6 +55,10 @@ export enum LightboxKeys {
   CERT_ANGULAR_TESTING = 'cert-angular-testing',
   CERT_ANGULAR_ANIMATIONS = 'cert-angular-animations',
   CERT_NGRX = 'cert-ngrx',
+
+  PROJECT_ASTRO_CHARTING = 'astro-charting',
+  PROJECT_MDT_CSYNC = 'mdt-csync',
+  PROJECT_KB = 'kb',
 }
 
 export function initLightBoxData(): Map<LightboxKeys, SlideImage[]> {
@@ -95,5 +105,14 @@ export function initLightBoxData(): Map<LightboxKeys, SlideImage[]> {
   LightBoxMap.set(LightboxKeys.CERT_NPM, [...SLIDES_CERT_NPM]);
   LightBoxMap.set(LightboxKeys.CERT_MEAN_STACK, [...SLIDES_CERT_MEAN_STACK]);
   LightBoxMap.set(LightboxKeys.CERT_NODE, [...SLIDES_CERT_NODE]);
+
+  LightBoxMap.set(LightboxKeys.PROJECT_ASTRO_CHARTING, [
+    ...SLIDES_PROJECT_ASTRO_CHARTING,
+  ]);
+  LightBoxMap.set(LightboxKeys.PROJECT_MDT_CSYNC, [
+    ...SLIDES_PROJECT_MDT_SCYNC,
+  ]);
+  LightBoxMap.set(LightboxKeys.PROJECT_KB, [...SLIDES_PROJECT_KB]);
+
   return LightBoxMap;
 }

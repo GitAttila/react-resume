@@ -16,8 +16,6 @@ import FeatureDownload from './components/Features/feature-download/FeatureDownl
 import FeatureTechStripe from './components/Features/feature-tech-stripe/FeatureTechStripe';
 import FeatureContacts from './components/Features/feature-contact/FeatureContact';
 import FeatureDevStack from './components/Features/feature-dev-stack/FeatureDevStack';
-import FeatureProjects from './components/Features/feature-projects/FeatureProjects';
-import FeatureCertificates from './components/Features/feature-certificates/featureCertificates';
 import FeatureHero from './components/Features/feature-hero/FeatureHero';
 import { HERO_SLIDES } from './content/carousel-hero.const';
 import FeatureAwards from './components/Features/feature-awards/FeatureAwards';
@@ -29,6 +27,10 @@ import {
   initLightBoxData,
 } from './content/lightbox/lightbox.map';
 import { CERTIFICATE_CARDS } from './content/certificate-cards.const';
+import FeaturePortfolios from './components/Features/feature-portfolios/FeaturePortfolios';
+import { CERTIFICATES_BUTTONS_GROUP } from './content/certificates-buttonsGroup';
+import { PROJECTS_BUTTONS_GROUP } from './content/projects-buttonsGroup';
+import { PROJECT_CARDS } from './content/project-cards.const';
 
 function App() {
   const lightBoxSlides = initLightBoxData();
@@ -77,7 +79,11 @@ function App() {
           <FeatureDevStack />
         </NavigationSection>
         <NavigationSection title="projects" className={styles['app-c-section']}>
-          <FeatureProjects></FeatureProjects>
+          <FeaturePortfolios
+            buttonsGroup={PROJECTS_BUTTONS_GROUP}
+            cards={PROJECT_CARDS}
+            buttonClicked={(id) => clickHandlerLightbox(id)}
+          ></FeaturePortfolios>
         </NavigationSection>
 
         <NavigationSection
@@ -94,10 +100,11 @@ function App() {
           title="certificates"
           className={styles['app-c-section']}
         >
-          <FeatureCertificates
+          <FeaturePortfolios
+            buttonsGroup={CERTIFICATES_BUTTONS_GROUP}
             cards={CERTIFICATE_CARDS}
             buttonClicked={(id) => clickHandlerLightbox(id)}
-          ></FeatureCertificates>
+          ></FeaturePortfolios>
         </NavigationSection>
         <NavigationSection
           title="this site was built with"

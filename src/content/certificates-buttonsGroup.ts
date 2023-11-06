@@ -1,5 +1,11 @@
 import { AHButton } from '../models/ah-button.model';
-import { CertificateFilterKeys } from '../models/certificate-card-content.model';
+
+export enum CertificateFilterKeys {
+  DEVELOPMENT = 'cert-development',
+  AUTOMATION = 'cert-automation',
+  TESTING = 'cert-testing',
+  DESIGN = 'cert-design',
+}
 
 export const CERTIFICATES_BUTTONS_GROUP: AHButton[] = [
   {
