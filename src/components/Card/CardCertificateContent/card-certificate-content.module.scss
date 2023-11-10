@@ -1,0 +1,55 @@
+@use '../../../styles/variables' as vars;
+
+.ah {
+  &-c {
+    &-card-certificate-content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      &__logo-wrapper {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        max-width: 24rem;
+        width: 100%;
+        flex: 1 1 50%;
+        img {
+          object-fit: contain;
+          width: 100%;
+          filter: drop-shadow(0 1px 3px rgba(vars.$ah-black, 0.6));
+        }
+      }
+      &__descriptors {
+        flex: 1 1 50%;
+        padding-bottom: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      &__title,
+      &__subtitle {
+        color: rgba(vars.$ah-white, 1);
+        align-self: center;
+        text-align: center;
+        text-shadow: 0 1px 3px rgba(vars.$ah-black, 0.6);
+      }
+      &__title {
+        max-width: 42rem;
+        padding-bottom: 0.8rem;
+      }
+      &__subtitle {
+        padding-top: 0.8rem;
+        font-style: italic;
+      }
+      &__divider {
+        width: 100%;
+        max-width: 42rem;
+        height: 1px;
+        margin: 0.8rem 0;
+        border-bottom: 2px solid rgba(vars.$ah-white, 1);
+        box-shadow: 0 1px 3px rgba(vars.$ah-black, 0.6);
+      }
+    }
+  }
+}

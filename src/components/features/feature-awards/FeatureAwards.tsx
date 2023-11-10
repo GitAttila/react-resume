@@ -8,6 +8,7 @@ import { Link } from '../../../models/link.model';
 export interface FeatureAwardProps {
   cards: AwardCardContent[];
   buttonClicked: (id: string) => void;
+  linkClicked: (link: Link) => void;
 }
 
 export default function FeatureAwards(props: FeatureAwardProps) {
@@ -19,7 +20,7 @@ export default function FeatureAwards(props: FeatureAwardProps) {
   };
 
   const onLinkClickHandler = (link: Link) => {
-    link?.link && window.open(link.link, '_blank');
+    props.linkClicked(link);
   };
 
   return (

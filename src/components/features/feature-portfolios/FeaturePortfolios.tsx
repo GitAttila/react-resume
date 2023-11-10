@@ -5,15 +5,21 @@ import { Link } from '../../../models/link.model';
 import AppButtonGroup from '../../AppButtonGroup/AppButtonGroup';
 import Card from '../../Card/Card';
 import CardIcon from '../../CardIcon/CardIcon';
-import { PortfolioCardContent } from '../../../models/feature-portfolio-content.model';
+import {
+  CardContentType,
+  PortfolioCardContent,
+} from '../../../models/feature-portfolio-content.model';
 import { ProjectFilterKeys } from '../../../content/projects-buttonsGroup';
 import { AHButton } from '../../../models/ah-button.model';
+import CertificateCardContent from '../../Card/CardCertificateContent/card-certificate-content';
+import CardProjectContent from '../../Card/CardProjectContent/card-project-content';
 
 export interface FeaturePortfoliosProps {
   className?: string;
   buttonsGroup: AHButton[];
   cards: PortfolioCardContent<CertificateFilterKeys | ProjectFilterKeys>[];
   buttonClicked: (id: string) => void;
+  linkClicked: (link: Link) => void;
 }
 
 export default function FeaturePortfolios(props: FeaturePortfoliosProps) {
@@ -41,6 +47,10 @@ export default function FeaturePortfolios(props: FeaturePortfoliosProps) {
     props.buttonClicked(link.id);
   };
 
+  const linkClickHandler = (link: Link) => {
+    props.linkClicked(link);
+  };
+
   return (
     <div className={`${styles['ah-c-feature-portfolios']} ${className}`}>
       <AppButtonGroup
@@ -61,7 +71,7 @@ export default function FeaturePortfolios(props: FeaturePortfoliosProps) {
                   <CardIcon
                     iconLink={card.linkIcon}
                     className={styles['ah-c-feature-portfolios__link-external']}
-                    onClick={(link) => iconLinkClickHandler(link)}
+                    onClick={(link) => linkClickHandler(link)}
                   ></CardIcon>
                 ) : null}
                 {card.galleryIcon ? (
@@ -71,24 +81,24 @@ export default function FeaturePortfolios(props: FeaturePortfoliosProps) {
                     onClick={(link) => iconLinkClickHandler(link)}
                   ></CardIcon>
                 ) : null}
-                <div
-                  className={styles['ah-c-feature-portfolios__logo-wrapper']}
-                >
-                  <img src={card?.logo || ''} />
-                </div>
-                <div
-                  className={`${styles['ah-c-feature-portfolios__title']} ah-feature-subtitle`}
-                >
-                  {card.title}
-                </div>
-                <div
-                  className={`${styles['ah-c-feature-portfolios__divider']} `}
-                ></div>
-                <div
-                  className={`${styles['ah-c-feature-portfolios__subtitle']} ah-feature-text`}
-                >
-                  {card.subtitle}
-                </div>
+
+                {card.type === CardContentType.CERTIFICATE && (
+                  <CertificateCardContent
+                    data={{
+                      logo: card?.logo,
+                      title: card?.title,
+                      subtitle: card?.subtitle,
+                    }}
+                  ></CertificateCardContent>
+                )}
+                {card.type === CardContentType.PROJECT && (
+                  <CardProjectContent
+                    data={{
+                      logo: card?.logo,
+                      title: card?.title,
+                    }}
+                  ></CardProjectContent>
+                )}
               </div>
               <div
                 className={`${styles['ah-c-feature-portfolios__bg']} ${styles['ah-c-feature-portfolios__bg--overlay']}`}

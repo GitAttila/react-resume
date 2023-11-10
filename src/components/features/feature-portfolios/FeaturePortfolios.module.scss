@@ -45,36 +45,6 @@
         margin-bottom: inherit;
         margin-top: -1.6rem;
       }
-      &__logo-wrapper {
-        display: flex;
-        justify-content: center;
-        align-self: center;
-        max-width: 24rem;
-        width: 100%;
-        img {
-          width: 100%;
-          filter: drop-shadow(0 1px 3px rgba(vars.$ah-black, 0.6));
-        }
-      }
-      &__title,
-      &__subtitle {
-        color: rgba(vars.$ah-white, 1);
-        align-self: center;
-        text-align: center;
-        padding-top: 1.6rem;
-        text-shadow: 0 1px 3px rgba(vars.$ah-black, 0.6);
-      }
-      &__title {
-        max-width: 42rem;
-      }
-      &__divider {
-        width: 100%;
-        max-width: 42rem;
-        margin: auto;
-        height: 1px;
-        border-bottom: 2px solid rgba(vars.$ah-white, 1);
-        box-shadow: 0 1px 3px rgba(vars.$ah-black, 0.6);
-      }
       &__bg {
         position: absolute;
         z-index: 0;

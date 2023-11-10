@@ -31,11 +31,16 @@ import FeaturePortfolios from './components/Features/feature-portfolios/FeatureP
 import { CERTIFICATES_BUTTONS_GROUP } from './content/certificates-buttonsGroup';
 import { PROJECTS_BUTTONS_GROUP } from './content/projects-buttonsGroup';
 import { PROJECT_CARDS } from './content/project-cards.const';
+import { Link } from './models/link.model';
 
 export default function App() {
   const lightBoxSlides = initLightBoxData();
   const [lightboxOpened, setLightboxOpened] = useState(false);
   const [currentSlides, setCurrentSlides] = useState<SlideImage[]>([]);
+
+  const clickHandlerLink = (link: Link) => {
+    link?.link && window.open(link.link, '_blank');
+  };
 
   const clickHandlerLightbox = (id: string) => {
     const idFragmentsCount = id.split('--').length;
@@ -83,6 +88,7 @@ export default function App() {
             buttonsGroup={PROJECTS_BUTTONS_GROUP}
             cards={PROJECT_CARDS}
             buttonClicked={(id) => clickHandlerLightbox(id)}
+            linkClicked={(link) => clickHandlerLink(link)}
           ></FeaturePortfolios>
         </NavigationSection>
 
@@ -93,6 +99,7 @@ export default function App() {
           <FeatureAwards
             cards={AWARD_CARDS}
             buttonClicked={(id) => clickHandlerLightbox(id)}
+            linkClicked={(link) => clickHandlerLink(link)}
           ></FeatureAwards>
         </NavigationSection>
 
@@ -104,6 +111,7 @@ export default function App() {
             buttonsGroup={CERTIFICATES_BUTTONS_GROUP}
             cards={CERTIFICATE_CARDS}
             buttonClicked={(id) => clickHandlerLightbox(id)}
+            linkClicked={(link) => clickHandlerLink(link)}
           ></FeaturePortfolios>
         </NavigationSection>
         <NavigationSection

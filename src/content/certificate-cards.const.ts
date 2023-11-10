@@ -1,6 +1,9 @@
 import { IoImagesOutline } from 'react-icons/io5';
 import { CertificateFilterKeys } from './certificates-buttonsGroup';
-import { PortfolioCardContent } from '../models/feature-portfolio-content.model';
+import {
+  CardContentType,
+  PortfolioCardContent,
+} from '../models/feature-portfolio-content.model';
 import { LightboxKeys } from './lightbox/lightbox.map';
 import UdemyLogoNew from '../assets/images/certificates/udemy-white-new.png';
 import UdemyLogoOld from '../assets/images/certificates/udemy-white.png';
@@ -30,6 +33,7 @@ import NodeCert from '../assets/images/certificates/2018_UC-TLKS2LBR_Node.jpg';
 export const CERTIFICATE_CARDS: PortfolioCardContent<CertificateFilterKeys>[] =
   [
     {
+      type: CardContentType.CERTIFICATE,
       logo: UdemyLogoNew,
       image: Webpack5Cert,
       title: 'Webpack 5 and Vite',
@@ -42,6 +46,7 @@ export const CERTIFICATE_CARDS: PortfolioCardContent<CertificateFilterKeys>[] =
       },
     },
     {
+      type: CardContentType.CERTIFICATE,
       logo: UdemyLogoNew,
       image: HTML5CanvasCert,
       title: 'HTML5 Canvas',
@@ -54,6 +59,7 @@ export const CERTIFICATE_CARDS: PortfolioCardContent<CertificateFilterKeys>[] =
       },
     },
     {
+      type: CardContentType.CERTIFICATE,
       logo: UdemyLogoNew,
       image: StencilCert,
       title: 'Stencil.js and web components',
@@ -66,6 +72,7 @@ export const CERTIFICATE_CARDS: PortfolioCardContent<CertificateFilterKeys>[] =
       },
     },
     {
+      type: CardContentType.CERTIFICATE,
       logo: UdemyLogoNew,
       image: PlaywrightCert,
       title: 'Automated software testing with Playwright',
@@ -78,6 +85,7 @@ export const CERTIFICATE_CARDS: PortfolioCardContent<CertificateFilterKeys>[] =
       },
     },
     {
+      type: CardContentType.CERTIFICATE,
       logo: UdemyLogoNew,
       image: JenkinsCert,
       title: 'Jenkins',
@@ -90,6 +98,7 @@ export const CERTIFICATE_CARDS: PortfolioCardContent<CertificateFilterKeys>[] =
       },
     },
     {
+      type: CardContentType.CERTIFICATE,
       logo: UdemyLogoNew,
       image: D3Cert,
       title: 'Mastering data visualization in D3',
@@ -102,6 +111,7 @@ export const CERTIFICATE_CARDS: PortfolioCardContent<CertificateFilterKeys>[] =
       },
     },
     {
+      type: CardContentType.CERTIFICATE,
       logo: UdemyLogoOld,
       image: FigmaCert,
       title: 'Figma - UI / UX',
@@ -114,6 +124,7 @@ export const CERTIFICATE_CARDS: PortfolioCardContent<CertificateFilterKeys>[] =
       },
     },
     {
+      type: CardContentType.CERTIFICATE,
       logo: UdemyLogoOld,
       image: AngStylingCert,
       title: 'Angular styling and animations',
@@ -126,6 +137,7 @@ export const CERTIFICATE_CARDS: PortfolioCardContent<CertificateFilterKeys>[] =
       },
     },
     {
+      type: CardContentType.CERTIFICATE,
       logo: UdemyLogoOld,
       image: ReactiveAngCert,
       title: 'Reactive Angular',
@@ -137,8 +149,8 @@ export const CERTIFICATE_CARDS: PortfolioCardContent<CertificateFilterKeys>[] =
         icon: IoImagesOutline,
       },
     },
-
     {
+      type: CardContentType.CERTIFICATE,
       logo: UdemyLogoOld,
       image: ElectronCert,
       title: 'Electron: Desktop Apps',
@@ -151,6 +163,7 @@ export const CERTIFICATE_CARDS: PortfolioCardContent<CertificateFilterKeys>[] =
       },
     },
     {
+      type: CardContentType.CERTIFICATE,
       logo: UdemyLogoOld,
       image: AngularTestingCert,
       title: 'Angular Testing',
@@ -163,6 +176,7 @@ export const CERTIFICATE_CARDS: PortfolioCardContent<CertificateFilterKeys>[] =
       },
     },
     {
+      type: CardContentType.CERTIFICATE,
       logo: UdemyLogoOld,
       image: AngularAnimationsCert,
       title: 'Angular animations',
@@ -175,6 +189,7 @@ export const CERTIFICATE_CARDS: PortfolioCardContent<CertificateFilterKeys>[] =
       },
     },
     {
+      type: CardContentType.CERTIFICATE,
       logo: UdemyLogoOld,
       image: NgrxCert,
       title: 'NgRx - The complete guide',
@@ -186,8 +201,8 @@ export const CERTIFICATE_CARDS: PortfolioCardContent<CertificateFilterKeys>[] =
         icon: IoImagesOutline,
       },
     },
-
     {
+      type: CardContentType.CERTIFICATE,
       logo: UdemyLogoOld,
       image: SketchCert,
       title: 'Sketch',
@@ -200,6 +215,7 @@ export const CERTIFICATE_CARDS: PortfolioCardContent<CertificateFilterKeys>[] =
       },
     },
     {
+      type: CardContentType.CERTIFICATE,
       logo: UdemyLogoOld,
       image: AdobeDimensionsCert,
       title: 'Adobe Dimension',
@@ -212,6 +228,7 @@ export const CERTIFICATE_CARDS: PortfolioCardContent<CertificateFilterKeys>[] =
       },
     },
     {
+      type: CardContentType.CERTIFICATE,
       logo: UdemyLogoOld,
       image: AsyncJavascriptCert,
       title: 'Asynchronous Javascript',
@@ -224,6 +241,7 @@ export const CERTIFICATE_CARDS: PortfolioCardContent<CertificateFilterKeys>[] =
       },
     },
     {
+      type: CardContentType.CERTIFICATE,
       logo: UdemyLogoOld,
       image: AngMaterialCert,
       title: 'Angular Material',
@@ -236,6 +254,7 @@ export const CERTIFICATE_CARDS: PortfolioCardContent<CertificateFilterKeys>[] =
       },
     },
     {
+      type: CardContentType.CERTIFICATE,
       logo: UdemyLogoOld,
       image: RxjsCert,
       title: 'Rxjs',
@@ -248,6 +267,7 @@ export const CERTIFICATE_CARDS: PortfolioCardContent<CertificateFilterKeys>[] =
       },
     },
     {
+      type: CardContentType.CERTIFICATE,
       logo: UdemyLogoOld,
       image: NpmCert,
       title: 'NPM',
@@ -260,6 +280,7 @@ export const CERTIFICATE_CARDS: PortfolioCardContent<CertificateFilterKeys>[] =
       },
     },
     {
+      type: CardContentType.CERTIFICATE,
       logo: UdemyLogoOld,
       image: MeanStackCert,
       title: 'Mean stack',
@@ -272,6 +293,7 @@ export const CERTIFICATE_CARDS: PortfolioCardContent<CertificateFilterKeys>[] =
       },
     },
     {
+      type: CardContentType.CERTIFICATE,
       logo: UdemyLogoOld,
       image: NodeCert,
       title: 'Node.js',
