@@ -5,7 +5,13 @@ import { CONTACT_LIST, SOCIAL_LINKS_LIST } from './content/contact-links.const';
 import { FOOTER_DESCRIPTORS } from './content/footer.const';
 import { TECH_LINKS_LIST } from './content/tech-stripe-links.const';
 import { LANGUAGE_SKILLS } from './content/skills-bar-charts';
-import { Fragment, useState } from 'react';
+import { HERO_SLIDES } from './content/carousel-hero.const';
+import { AWARD_CARDS } from './content/award-cards.const';
+import { CERTIFICATE_CARDS } from './content/certificate-cards.const';
+import { CERTIFICATES_BUTTONS_GROUP } from './content/certificates-buttonsGroup';
+import { PROJECTS_BUTTONS_GROUP } from './content/projects-buttonsGroup';
+import { PROJECT_CARDS } from './content/project-cards.const';
+import { Fragment, useCallback, useState } from 'react';
 import styles from './App.module.scss';
 import Header from './components/Header/Header';
 import FeatureSummary from './components/Features/feature-summary/FeatureSummary';
@@ -17,9 +23,7 @@ import FeatureTechStripe from './components/Features/feature-tech-stripe/Feature
 import FeatureContacts from './components/Features/feature-contact/FeatureContact';
 import FeatureDevStack from './components/Features/feature-dev-stack/FeatureDevStack';
 import FeatureHero from './components/Features/feature-hero/FeatureHero';
-import { HERO_SLIDES } from './content/carousel-hero.const';
 import FeatureAwards from './components/Features/feature-awards/FeatureAwards';
-import { AWARD_CARDS } from './content/award-cards.const';
 import Lightbox, { SlideImage } from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 import 'yet-another-react-lightbox/plugins/thumbnails.css';
@@ -27,16 +31,13 @@ import {
   LightboxKeys,
   initLightBoxData,
 } from './content/lightbox/lightbox.map';
-import { CERTIFICATE_CARDS } from './content/certificate-cards.const';
 import FeaturePortfolios from './components/Features/feature-portfolios/FeaturePortfolios';
-import { CERTIFICATES_BUTTONS_GROUP } from './content/certificates-buttonsGroup';
-import { PROJECTS_BUTTONS_GROUP } from './content/projects-buttonsGroup';
-import { PROJECT_CARDS } from './content/project-cards.const';
 import { Link } from './models/link.model';
 import {
   LIGHTBOX_FULL_SETTINGS,
   LightBoxGalleryType,
 } from './consts/lightbox.consts';
+import useScrollTo from './hooks/useScrollPositions';
 
 export default function App() {
   const lightBoxSlides = initLightBoxData();
@@ -45,6 +46,27 @@ export default function App() {
   const [lightBoxType, setLightBoxType] = useState<LightBoxGalleryType>(
     LightBoxGalleryType.ONE_SLIDE
   );
+
+  const [profileSectionRef, scrollToProfileSection] =
+    useScrollTo<HTMLElement>();
+  const [heroSectionRef, scrollToHeroSection] = useScrollTo<HTMLDivElement>();
+  const [projectsSectionRef, scrollToProjectsSection] =
+    useScrollTo<HTMLDivElement>();
+  const [devStackSectionRef, scrollToDevStackSection] =
+    useScrollTo<HTMLDivElement>();
+  const [awardsSectionRef, scrollToAwardsSection] =
+    useScrollTo<HTMLDivElement>();
+  const [certificatesSectionRef, scrollToCertificatesSection] =
+    useScrollTo<HTMLDivElement>();
+
+  const navHandler = (id: string) => {
+    id.includes('profile') && scrollToProfileSection(true);
+    id.includes('home') && scrollToHeroSection(true);
+    id.includes('dev-stack') && scrollToDevStackSection(true);
+    id.includes('projects') && scrollToProjectsSection(true);
+    id.includes('awards') && scrollToAwardsSection(true);
+    id.includes('certificates') && scrollToCertificatesSection(true);
+  };
 
   const plugins =
     lightBoxType === LightBoxGalleryType.FULL
@@ -71,11 +93,20 @@ export default function App() {
 
   return (
     <Fragment>
-      <Header className={styles['app-c-header']}></Header>
+      <Header
+        navClicked={(id) => navHandler(id)}
+        className={styles['app-c-header']}
+      ></Header>
       <main className={styles['app-c-content']}>
-        <FeatureHero slides={HERO_SLIDES}></FeatureHero>
-
-        <NavigationSection title="profile" className={styles['app-c-section']}>
+        <FeatureHero
+          featureHeroRef={heroSectionRef}
+          slides={HERO_SLIDES}
+        ></FeatureHero>
+        <NavigationSection
+          sectionRef={profileSectionRef}
+          title="profile"
+          className={styles['app-c-section']}
+        >
           <FeatureSummary
             className={styles['app-c-feature']}
             title="Summary"
@@ -97,12 +128,17 @@ export default function App() {
           />
         </NavigationSection>
         <NavigationSection
+          sectionRef={devStackSectionRef}
           title="dev stack"
           className={`${styles['app-c-section']} ${styles['app-c-section--dev-stack']}`}
         >
           <FeatureDevStack />
         </NavigationSection>
-        <NavigationSection title="projects" className={styles['app-c-section']}>
+        <NavigationSection
+          sectionRef={projectsSectionRef}
+          title="projects"
+          className={styles['app-c-section']}
+        >
           <FeaturePortfolios
             buttonsGroup={PROJECTS_BUTTONS_GROUP}
             cards={PROJECT_CARDS}
@@ -112,6 +148,7 @@ export default function App() {
         </NavigationSection>
 
         <NavigationSection
+          sectionRef={awardsSectionRef}
           title="awards"
           className={`${styles['app-c-section']} ${styles['app-c-section--awards']}`}
         >
@@ -123,6 +160,7 @@ export default function App() {
         </NavigationSection>
 
         <NavigationSection
+          sectionRef={certificatesSectionRef}
           title="certificates"
           className={styles['app-c-section']}
         >

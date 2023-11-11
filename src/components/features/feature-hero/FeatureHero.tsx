@@ -4,9 +4,11 @@ import CarouselHero from '../../CarouselHero/CarouselHero';
 import AHsignature from '../../../assets/images/ah_signature_white.png';
 import { CarouselSlideContent } from '../../../models/carousel-slide-content.model';
 import CarouselSlide from '../../CarouselSlide/CarouselSlide';
+import { RefObject } from 'react';
 
 interface FeatureHeroProps {
   className?: string;
+  featureHeroRef?: RefObject<HTMLDivElement>;
   slides: CarouselSlideContent[];
 }
 
@@ -17,7 +19,10 @@ export default function FeatureHero(
   const carouselSlides = props.slides;
 
   return (
-    <div className={`${className} ${styles['app-c-carousel__container']}`}>
+    <div
+      ref={props?.featureHeroRef}
+      className={`${className} ${styles['app-c-carousel__container']}`}
+    >
       <Carousel rollOver={true} indicators={true} timer={14000}>
         {carouselSlides.map((carouselSlide) => {
           return (

@@ -6,19 +6,13 @@ import Avatar from '../Avatar/Avatar';
 import avatarImg from '../../assets/images/AH_portrait_white.png';
 import Navigation from '../Navigation/Navigation';
 import { AHButton } from '../../models/ah-button.model';
+import { NAV_ITEMS } from '../../consts/nav-items.consts';
 
-const NAV_ITEMS: AHButton[] = [
-  { id: 'navlink-home', caption: 'home', selected: true },
-  { id: 'navlink-profile', caption: 'profile', selected: false },
-  { id: 'navlink-dev-stack', caption: 'dev stack', selected: false },
-  { id: 'navlink-projects', caption: 'projects', selected: false },
-  { id: 'navlink-awards', caption: 'awards', selected: false },
-  { id: 'navlink-certificates', caption: 'certificates', selected: false },
-];
-
-const Header: React.FC<{ children?: ReactNode; className: string }> = ({
-  className,
-}) => {
+const Header: React.FC<{
+  children?: ReactNode;
+  className?: string;
+  navClicked: (id: string) => void;
+}> = ({ className, navClicked }) => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const [navItems, setNavItems] = useState([...NAV_ITEMS]);
 
@@ -33,11 +27,14 @@ const Header: React.FC<{ children?: ReactNode; className: string }> = ({
       selected: item.id === navItem.id,
     }));
     setNavItems(updated);
+    navClicked(item.id);
   };
 
   return (
     <header
-      className={`${classes['ah-c-header']} ${className} ah-shadow--depth3`}
+      className={`${classes['ah-c-header']} ${
+        className || ''
+      } ah-shadow--depth3`}
     >
       <div className="ah-container">
         <div className={classes['ah-c-header__content']}>

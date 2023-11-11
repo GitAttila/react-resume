@@ -17,9 +17,6 @@
       overflow-y: scroll;
     }
     &-section {
-      &:first-of-type {
-        margin-top: vars.$ah-header-height;
-      }
       &--tech-stripe {
         h2 {
           color: vars.$ah-white;

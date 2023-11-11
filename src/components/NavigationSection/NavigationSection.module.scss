@@ -1,7 +1,10 @@
+@use '../../styles/variables' as vars;
+
 .ah {
   &-c {
     &-navigation-section {
       padding: 2.4rem 0;
+      padding-top: calc(vars.$ah-header-height + 2.4rem);
     }
   }
 }
