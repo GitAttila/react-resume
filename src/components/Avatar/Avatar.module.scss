@@ -11,7 +11,7 @@
         aspect-ratio: 1/1;
         background-color: vars.$ah-white;
         padding: 0.8rem;
-        margin: 0.8rem;
+        margin-top: 0.8rem;
         transition: 500ms height ease-in-out;
         @include responsive.breakpoint(sm) {
           height: vars.$ah-avatar-size-mobile;

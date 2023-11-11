@@ -1,20 +1,27 @@
 @use '../../styles/variables' as vars;
+@use '../../styles/mixins/responsive-mixins' as responsive;
 
 .ah {
   &-c {
     &-navigation {
+      position: relative;
       &__list {
+        position: absolute;
+        right: 0;
+        width: 100%;
         padding: 1.6rem;
-        margin: 0 auto;
-        margin-top: 1.6rem;
+        margin-top: 0.8rem;
+        box-sizing: border-box;
         list-style: none;
         background-color: vars.$ah-card-background-color;
         border-radius: 20rem;
-        max-width: 10rem;
         transform: translateY(-200%);
         transition: 500ms transform ease-in-out;
         &--opened {
           transform: translateY(0);
+        }
+        @include responsive.breakpoint(sm) {
+          width: inherit;
         }
       }
       &__list-item {
