@@ -22,6 +22,7 @@ import FeatureAwards from './components/Features/feature-awards/FeatureAwards';
 import { AWARD_CARDS } from './content/award-cards.const';
 import Lightbox, { SlideImage } from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
+import 'yet-another-react-lightbox/plugins/thumbnails.css';
 import {
   LightboxKeys,
   initLightBoxData,
@@ -32,11 +33,24 @@ import { CERTIFICATES_BUTTONS_GROUP } from './content/certificates-buttonsGroup'
 import { PROJECTS_BUTTONS_GROUP } from './content/projects-buttonsGroup';
 import { PROJECT_CARDS } from './content/project-cards.const';
 import { Link } from './models/link.model';
+import {
+  LIGHTBOX_FULL_SETTINGS,
+  LightBoxGalleryType,
+} from './consts/lightbox.consts';
 
 export default function App() {
   const lightBoxSlides = initLightBoxData();
   const [lightboxOpened, setLightboxOpened] = useState(false);
   const [currentSlides, setCurrentSlides] = useState<SlideImage[]>([]);
+  const [lightBoxType, setLightBoxType] = useState<LightBoxGalleryType>(
+    LightBoxGalleryType.ONE_SLIDE
+  );
+
+  const plugins =
+    lightBoxType === LightBoxGalleryType.FULL
+      ? [...LIGHTBOX_FULL_SETTINGS]
+      : [];
+  const renderButtons = lightBoxType === LightBoxGalleryType.FULL;
 
   const clickHandlerLink = (link: Link) => {
     link?.link && window.open(link.link, '_blank');
@@ -47,6 +61,11 @@ export default function App() {
     const key = idFragmentsCount ? id.split('--')[idFragmentsCount - 1] : '';
     const foundSlides = lightBoxSlides.get(key as LightboxKeys) || [];
     setCurrentSlides(foundSlides);
+    setLightBoxType(
+      key.includes('cert')
+        ? LightBoxGalleryType.ONE_SLIDE
+        : LightBoxGalleryType.FULL
+    );
     setLightboxOpened(true);
   };
 
@@ -131,6 +150,12 @@ export default function App() {
         open={lightboxOpened}
         close={() => setLightboxOpened(false)}
         slides={[...currentSlides]}
+        controller={{ closeOnPullDown: true, closeOnBackdropClick: true }}
+        render={{
+          buttonPrev: renderButtons ? undefined : () => null,
+          buttonNext: renderButtons ? undefined : () => null,
+        }}
+        plugins={[...plugins]}
       ></Lightbox>
     </Fragment>
   );

@@ -1,9 +1,17 @@
 @use '../../../styles/variables' as vars;
+@use '../../../styles/mixins/responsive-mixins' as responsive;
 
 .ah {
   &-c {
     &-feature-awards {
       padding: 2.4rem 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: auto;
+      grid-gap: 1.6rem;
+      @include responsive.breakpoint(lg) {
+        grid-template-columns: repeat(1, 1fr);
+      }
       &__card {
         position: relative;
       }
@@ -12,6 +20,8 @@
         flex-direction: column;
         justify-content: center;
         padding: 2.4rem;
+        height: 100%;
+        box-sizing: border-box;
       }
       &__link {
         position: absolute;
@@ -38,6 +48,7 @@
         width: 100%;
         height: 1px;
         border-bottom: 1px solid vars.$ah-disabled-text-color;
+        margin: 0.8rem 0;
       }
       &__button {
         align-self: center;

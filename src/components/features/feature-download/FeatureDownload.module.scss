@@ -13,7 +13,7 @@
         align-items: center;
         gap: 2.4rem;
         color: vars.$ah-white;
-        @include responsive.atSmall {
+        @include responsive.breakpoint(sm) {
           flex-direction: row;
         }
       }
@@ -31,13 +31,13 @@
         font-size: 3rem;
         &--right {
           display: none;
-          @include responsive.atSmall {
+          @include responsive.breakpoint(sm) {
             display: block;
           }
         }
         &--down {
           display: block;
-          @include responsive.atSmall {
+          @include responsive.breakpoint(sm) {
             display: none;
           }
         }
@@ -47,7 +47,7 @@
           animation-timing-function: linear;
           animation-iteration-count: infinite;
           animation-direction: normal;
-          @include responsive.atSmall {
+          @include responsive.breakpoint(sm) {
             animation-name: moveArrowHorizontally;
           }
         }

@@ -4,8 +4,10 @@
   &-group {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     &__button {
       margin-right: 0.8rem;
+      margin-bottom: 1.6rem;
       &:last-child {
         margin-right: 0;
       }
@@ -16,6 +18,7 @@
     &__divider {
       height: 100%;
       margin: 0 1.6rem;
+      margin-bottom: 1.6rem; // to align with button's marginson flex-wrap
       min-height: 3.2rem;
       border-right: 2px solid vars.$ah-disabled-text-color;
     }

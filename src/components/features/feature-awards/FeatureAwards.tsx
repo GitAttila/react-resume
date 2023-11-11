@@ -14,22 +14,23 @@ export interface FeatureAwardProps {
 export default function FeatureAwards(props: FeatureAwardProps) {
   const cardsContent = props.cards;
   const buttonClicked = props.buttonClicked;
+  const linkClicked = props.linkClicked;
 
   const clickHandlerCardButton = (id: string) => {
     buttonClicked(id);
   };
 
   const onLinkClickHandler = (link: Link) => {
-    props.linkClicked(link);
+    linkClicked(link);
   };
 
   return (
-    <div className={`${styles['ah-c-feature-awards']} ah-flex `}>
+    <div className={`${styles['ah-c-feature-awards']}`}>
       {cardsContent.map((card, ind) => {
         return (
           <Card
             key={`card-awards-${ind}`}
-            className={`${styles['ah-c-feature-awards__card']} ah-flex__child--50`}
+            className={`${styles['ah-c-feature-awards__card']}`}
             scaleOnHover={card.scaleOnHover}
           >
             <div className={styles['ah-c-feature-awards__content']}>

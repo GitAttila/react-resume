@@ -4,6 +4,7 @@
 .ah {
   &-c {
     &-card {
+      min-height: 17rem;
       padding: 1.6rem;
       background-color: vars.$ah-white;
       transition: 100ms transform linear, 100ms box-shadow linear;

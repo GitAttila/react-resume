@@ -6,29 +6,29 @@
     &-avatar {
       &__container {
         position: relative;
-        height: vars.$ah-avatar-size-mobile;
+        height: vars.$ah-avatar-size;
+        border-radius: vars.$ah-avatar-size;
         aspect-ratio: 1/1;
-        border-radius: vars.$ah-avatar-size-mobile;
         background-color: vars.$ah-white;
         padding: 0.8rem;
         margin: 0.8rem;
         transition: 500ms height ease-in-out;
-        @include responsive.atSmall {
-          height: vars.$ah-avatar-size;
-          border-radius: vars.$ah-avatar-size;
+        @include responsive.breakpoint(sm) {
+          height: vars.$ah-avatar-size-mobile;
+          border-radius: vars.$ah-avatar-size-mobile;
         }
       }
       &__image-wrapper {
         position: relative;
         z-index: 1;
-        border-radius: vars.$ah-avatar-size-mobile;
+        border-radius: vars.$ah-avatar-size;
         background-color: vars.$ah-primary-background-color;
         img {
           width: 100%;
           border-radius: 21rem;
         }
-        @include responsive.atSmall {
-          border-radius: vars.$ah-avatar-size;
+        @include responsive.breakpoint(sm) {
+          border-radius: vars.$ah-avatar-size-mobile;
         }
       }
       &__mask {

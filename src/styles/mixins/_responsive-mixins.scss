@@ -1,35 +1,53 @@
-@mixin atExtraSmallLandscape {
-  @media (min-width: 480px) and (orientation: landscape) {
-    @content;
-  }
-}
+$breakpoints: (
+  sm: (
+    min: 576px,
+    max: 575.98px,
+  ),
+  md: (
+    min: 768px,
+    max: 767.98px,
+  ),
+  lg: (
+    min: 992px,
+    max: 991.98px,
+  ),
+  xl: (
+    min: 1200px,
+    max: 1199.98px,
+  ),
+  xxl: (
+    min: 1440px,
+    max: 1439.98px,
+  ),
+);
 
-@mixin atSmall {
-  @media (min-width: 576px) {
-    @content;
-  }
-}
-
-@mixin atSmallLandscape {
-  @media (min-width: 576px) and (orientation: landscape) {
-    @content;
-  }
-}
-
-@mixin atMedium {
-  @media (min-width: 768px) {
-    @content;
-  }
-}
-
-@mixin atMediumLandscape {
-  @media (min-width: 768px) and (orientation: landscape) {
-    @content;
-  }
-}
-
-@mixin atLarge {
-  @media (min-width: 1200px) {
-    @content;
+@mixin breakpoint($breakpoint, $direction: max) {
+  // check if the supplied breakpoint exists in our breakpoits map
+  @if map-has-key($breakpoints, $breakpoint) {
+    $breakpoint-values: map-get($breakpoints, $breakpoint);
+    $breakpoint-min: map-get($breakpoint-values, min);
+    $breakpoint-max: map-get($breakpoint-values, max);
+    // check if we are writing styles for larger(Desktop first - max-width)
+    // or smaller screens (Mobile first - min-width)
+    @if $direction == max {
+      @media (max-width: $breakpoint-max) {
+        @content;
+      }
+    } @else {
+      @media (min-width: $breakpoint-min) {
+        @content;
+      }
+    }
+    // use the custom value if the breakpoint is not part of the pre-defined list
+  } @else {
+    @if $direction == max {
+      @media (max-width: $breakpoint) {
+        @content;
+      }
+    } @else {
+      @media (min-width: $breakpoint) {
+        @content;
+      }
+    }
   }
 }
