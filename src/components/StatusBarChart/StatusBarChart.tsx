@@ -1,12 +1,17 @@
-import React from 'react';
 import { StatusBarItem } from '../../models/status-bar.model';
 import styles from './StatusBarChart.module.scss';
 import StatusBar from '../StatusBar/StatusBar';
 
-export const StatusBarChart: React.FC<{
+export interface StatusBarChartProps {
   title: string;
   values: StatusBarItem[];
-}> = ({ title, values }) => {
+}
+
+export default function StatusBarChart(
+  props: StatusBarChartProps
+): JSX.Element {
+  const title = props.title;
+  const values = props.values;
   return (
     <div className={styles['ah-c-status-bar-chart']}>
       <h3
@@ -28,6 +33,4 @@ export const StatusBarChart: React.FC<{
       </ul>
     </div>
   );
-};
-
-export default StatusBarChart;
+}

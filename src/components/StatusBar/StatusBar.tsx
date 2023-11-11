@@ -1,8 +1,12 @@
-import React from 'react';
 import { StatusBarItem } from '../../models/status-bar.model';
 import styles from './StatusBar.module.scss';
 
-export const StatusBar: React.FC<{ status: StatusBarItem }> = ({ status }) => {
+export interface StatusBarProps {
+  status: StatusBarItem;
+}
+
+export default function StatusBar(props: StatusBarProps): JSX.Element {
+  const status = props.status;
   return (
     <div className={styles['ah-c-status-bar']}>
       <div
@@ -17,6 +21,4 @@ export const StatusBar: React.FC<{ status: StatusBarItem }> = ({ status }) => {
       ></div>
     </div>
   );
-};
-
-export default StatusBar;
+}

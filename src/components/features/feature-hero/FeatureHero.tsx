@@ -39,7 +39,11 @@ export default function FeatureHero(
           );
         })}
         <CarouselHero className={styles['app-c-carousel__hero']}>
-          <img src={AHsignature} alt="AH signature" />
+          <img
+            className={styles['app-c-carousel__hero__image']}
+            src={AHsignature}
+            alt="AH signature"
+          />
           <h1
             className={`${
               styles['app-c-carousel__title']

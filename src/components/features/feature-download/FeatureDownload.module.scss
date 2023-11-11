@@ -8,13 +8,13 @@
       padding: 5.6rem 0;
       &__content {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         gap: 2.4rem;
         color: vars.$ah-white;
         @include responsive.breakpoint(sm) {
-          flex-direction: row;
+          flex-direction: column;
         }
       }
       h2 {
@@ -30,25 +30,25 @@
       &__arrow {
         font-size: 3rem;
         &--right {
-          display: none;
-          @include responsive.breakpoint(sm) {
-            display: block;
-          }
-        }
-        &--down {
           display: block;
           @include responsive.breakpoint(sm) {
             display: none;
           }
         }
+        &--down {
+          display: none;
+          @include responsive.breakpoint(sm) {
+            display: block;
+          }
+        }
         &--animated {
-          animation-name: moveArrowVertically;
+          animation-name: moveArrowHorizontally;
           animation-duration: 1.2s;
           animation-timing-function: linear;
           animation-iteration-count: infinite;
           animation-direction: normal;
           @include responsive.breakpoint(sm) {
-            animation-name: moveArrowHorizontally;
+            animation-name: moveArrowVertically;
           }
         }
       }

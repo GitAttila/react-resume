@@ -26,14 +26,28 @@ import {
 } from './cert-lightbox-const';
 import {
   SLIDES_PROJECT_ASTRO_CHARTING,
+  SLIDES_PROJECT_CONCEPTICON,
+  SLIDES_PROJECT_DILLI6_DESIGN,
+  SLIDES_PROJECT_DILLI6_WEB,
+  SLIDES_PROJECT_EMB,
+  SLIDES_PROJECT_FTC_MANAGE,
+  SLIDES_PROJECT_FTC_SITE,
+  SLIDES_PROJECT_INTERIOR,
+  SLIDES_PROJECT_KAMENICTVI,
   SLIDES_PROJECT_KB,
+  SLIDES_PROJECT_KE_WEB,
+  SLIDES_PROJECT_MDT_HOLTER,
   SLIDES_PROJECT_MDT_SCYNC,
+  SLIDES_PROJECT_PF,
+  SLIDES_PROJECT_RA_CALENDAR,
+  SLIDES_PROJECT_RA_LOGIN_PAGE,
+  SLIDES_PROJECT_RA_MERCHENDISE,
+  SLIDES_PROJECT_SPARS,
 } from './projects-lightbox-const';
 
 export enum LightboxKeys {
   AWARDS_BW = 'awards-bw',
   AWARDS_PHOTOSHOOT = 'awards-photoshoot',
-
   CERT_SKETCH = 'cert-sketch',
   CERT_ADOBE_DIMENSIONS = 'cert-adobe-dimensions',
   CERT_ASYNC_JAVASCRIPT = 'cert-async-javascript',
@@ -55,10 +69,24 @@ export enum LightboxKeys {
   CERT_ANGULAR_TESTING = 'cert-angular-testing',
   CERT_ANGULAR_ANIMATIONS = 'cert-angular-animations',
   CERT_NGRX = 'cert-ngrx',
-
   PROJECT_ASTRO_CHARTING = 'astro-charting',
   PROJECT_MDT_CSYNC = 'mdt-csync',
   PROJECT_KB = 'kb',
+  PROJECT_PUNJABI_FOOD = 'punjabi-food',
+  PROJECT_KAMENICTVI_IE = 'kamenictvi-ie',
+  PROJECT_SPARS = 'spars',
+  PROJECT_RA_LOGIN_PAGE = 'ra-login-page',
+  PROJECT_INTERIOR_DESIGN = 'interiod-design',
+  PROJECT_CONCEPTICON = 'concepticon',
+  PROJECT_DILLI6_DESIGN = 'dilli6-design',
+  PROJECT_DILLI6_WEB = 'dilli6-web',
+  PROJECT_KE_WEB = 'ke-web',
+  PROJECT_FTC_MANAGE = 'ftc-manage',
+  PROJECT_FTC_SITE = 'ftc-site',
+  PROJECT_RA_CALENDAR = 'ra-calendar',
+  PROJECT_MDT_HOLTER = 'mdt-holter',
+  PROJECT_RA_MERCHENDISE = 'ra-merchendise',
+  PROJECT_EMB = 'embitron',
 }
 
 export function initLightBoxData(): Map<LightboxKeys, SlideImage[]> {
@@ -105,7 +133,6 @@ export function initLightBoxData(): Map<LightboxKeys, SlideImage[]> {
   LightBoxMap.set(LightboxKeys.CERT_NPM, [...SLIDES_CERT_NPM]);
   LightBoxMap.set(LightboxKeys.CERT_MEAN_STACK, [...SLIDES_CERT_MEAN_STACK]);
   LightBoxMap.set(LightboxKeys.CERT_NODE, [...SLIDES_CERT_NODE]);
-
   LightBoxMap.set(LightboxKeys.PROJECT_ASTRO_CHARTING, [
     ...SLIDES_PROJECT_ASTRO_CHARTING,
   ]);
@@ -113,6 +140,40 @@ export function initLightBoxData(): Map<LightboxKeys, SlideImage[]> {
     ...SLIDES_PROJECT_MDT_SCYNC,
   ]);
   LightBoxMap.set(LightboxKeys.PROJECT_KB, [...SLIDES_PROJECT_KB]);
-
+  LightBoxMap.set(LightboxKeys.PROJECT_PUNJABI_FOOD, [...SLIDES_PROJECT_PF]);
+  LightBoxMap.set(LightboxKeys.PROJECT_KAMENICTVI_IE, [
+    ...SLIDES_PROJECT_KAMENICTVI,
+  ]);
+  LightBoxMap.set(LightboxKeys.PROJECT_SPARS, [...SLIDES_PROJECT_SPARS]);
+  LightBoxMap.set(LightboxKeys.PROJECT_RA_LOGIN_PAGE, [
+    ...SLIDES_PROJECT_RA_LOGIN_PAGE,
+  ]);
+  LightBoxMap.set(LightboxKeys.PROJECT_INTERIOR_DESIGN, [
+    ...SLIDES_PROJECT_INTERIOR,
+  ]);
+  LightBoxMap.set(LightboxKeys.PROJECT_CONCEPTICON, [
+    ...SLIDES_PROJECT_CONCEPTICON,
+  ]);
+  LightBoxMap.set(LightboxKeys.PROJECT_DILLI6_DESIGN, [
+    ...SLIDES_PROJECT_DILLI6_DESIGN,
+  ]);
+  LightBoxMap.set(LightboxKeys.PROJECT_DILLI6_WEB, [
+    ...SLIDES_PROJECT_DILLI6_WEB,
+  ]);
+  LightBoxMap.set(LightboxKeys.PROJECT_KE_WEB, [...SLIDES_PROJECT_KE_WEB]);
+  LightBoxMap.set(LightboxKeys.PROJECT_FTC_MANAGE, [
+    ...SLIDES_PROJECT_FTC_MANAGE,
+  ]);
+  LightBoxMap.set(LightboxKeys.PROJECT_FTC_SITE, [...SLIDES_PROJECT_FTC_SITE]);
+  LightBoxMap.set(LightboxKeys.PROJECT_RA_CALENDAR, [
+    ...SLIDES_PROJECT_RA_CALENDAR,
+  ]);
+  LightBoxMap.set(LightboxKeys.PROJECT_MDT_HOLTER, [
+    ...SLIDES_PROJECT_MDT_HOLTER,
+  ]);
+  LightBoxMap.set(LightboxKeys.PROJECT_RA_MERCHENDISE, [
+    ...SLIDES_PROJECT_RA_MERCHENDISE,
+  ]);
+  LightBoxMap.set(LightboxKeys.PROJECT_EMB, [...SLIDES_PROJECT_EMB]);
   return LightBoxMap;
 }

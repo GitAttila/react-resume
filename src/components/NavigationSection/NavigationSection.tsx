@@ -1,25 +1,21 @@
-import React, { ReactNode } from 'react';
 import classes from './NavigationSection.module.scss';
 
-const NavigationSection: React.FC<{
-  children?: ReactNode;
+export interface NavigationSectionProps {
+  children: React.ReactNode;
   title: string;
   className?: string;
-}> = ({ children, title, className }) => {
+}
+
+export default function NavigationSection(props: NavigationSectionProps) {
+  const className = props?.className && '';
   return (
-    <section
-      className={`${classes['ah-c-navigation-section']} ${
-        className ? className : ''
-      }`}
-    >
+    <section className={`${classes['ah-c-navigation-section']} ${className}`}>
       <div className="ah-container">
         <h2 className="ah-section-title ah-text-gradient--mediumgreydarkgrey">
-          {(title || '').toLowerCase()}
+          {(props.title || '').toLowerCase()}
         </h2>
-        <>{children}</>
+        <>{props.children}</>
       </div>
     </section>
   );
-};
-
-export default NavigationSection;
+}
