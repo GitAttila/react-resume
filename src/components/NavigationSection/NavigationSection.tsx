@@ -7,7 +7,7 @@ export interface NavigationSectionProps {
 }
 
 export default function NavigationSection(props: NavigationSectionProps) {
-  const className = props?.className && '';
+  const className = props?.className || '';
   return (
     <section className={`${classes['ah-c-navigation-section']} ${className}`}>
       <div className="ah-container">

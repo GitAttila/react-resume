@@ -4,21 +4,19 @@ import AppButton from '../AppButton/AppButton';
 import styles from './AppButtonGroup.module.scss';
 import { BUTTONS_GROUP_ALL_BUTTON } from './AppButtonGroup.config';
 
-export interface AppButtonGroup {
+export interface AppButtonGroupProps {
   buttonsGroup: AHButton[];
   allButtonEnabled?: boolean;
   onClick: (id: string) => void;
 }
 
-export const AppButtonGroup: React.FC<AppButtonGroup> = ({
-  buttonsGroup,
-  allButtonEnabled,
-  onClick,
-}) => {
+export default function AppButtonGroup(
+  props: AppButtonGroupProps
+): JSX.Element {
   const [buttons, setButtons] = useState<AHButton[]>(
-    allButtonEnabled
-      ? [{ ...BUTTONS_GROUP_ALL_BUTTON }, ...buttonsGroup]
-      : [...buttonsGroup]
+    props?.allButtonEnabled
+      ? [{ ...BUTTONS_GROUP_ALL_BUTTON }, ...props.buttonsGroup]
+      : [...props.buttonsGroup]
   );
 
   const btnClickHandler = (id: string) => {
@@ -27,7 +25,7 @@ export const AppButtonGroup: React.FC<AppButtonGroup> = ({
       selected: button.id === id,
     }));
     setButtons(updated);
-    onClick(id);
+    props.onClick(id);
   };
 
   return (
@@ -47,7 +45,7 @@ export const AppButtonGroup: React.FC<AppButtonGroup> = ({
               caption={button.caption}
               onClick={(id) => btnClickHandler(id)}
             ></AppButton>
-            {allButtonEnabled && button.id.includes('all') && (
+            {props?.allButtonEnabled && button.id.includes('all') && (
               <div className={`${styles['app-button-group__divider']}`}></div>
             )}
           </Fragment>
@@ -55,6 +53,4 @@ export const AppButtonGroup: React.FC<AppButtonGroup> = ({
       })}
     </div>
   );
-};
-
-export default AppButtonGroup;
+}

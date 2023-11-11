@@ -1,6 +1,11 @@
 import classes from './MenuIcon.module.scss';
 
-const MenuIcon = (props: { onClick: () => void; isOpened: boolean }) => {
+export interface MenuIconProps {
+  isOpened: boolean;
+  onClick: () => void;
+}
+
+export default function MenuIcon(props: MenuIconProps) {
   return (
     <div className={classes['icon-container']}>
       <div
@@ -17,6 +22,4 @@ const MenuIcon = (props: { onClick: () => void; isOpened: boolean }) => {
       </div>
     </div>
   );
-};
-
-export default MenuIcon;
+}
