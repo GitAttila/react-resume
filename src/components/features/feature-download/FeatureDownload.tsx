@@ -36,7 +36,7 @@ const FeatureDownload: React.FC<{ className?: string }> = ({ className }) => {
           </div>
           <div className={classes['ah-c-feature-download__pdf-container']}>
             <a
-              href="../../../../src/assets/pdfs/AttilaHazay_Resume_2023.pdf"
+              href="../../../../src/assets/pdfs/AttilaHazay_Resume_2023_oct.pdf"
               download
             >
               <FaRegFilePdf />
