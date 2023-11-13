@@ -6,15 +6,14 @@ import Avatar from '../Avatar/Avatar';
 import avatarImg from '../../assets/images/AH_portrait_white.png';
 import Navigation from '../Navigation/Navigation';
 import { AHButton } from '../../models/ah-button.model';
-import { NAV_ITEMS } from '../../consts/nav-items.consts';
 
 const Header: React.FC<{
   children?: ReactNode;
   className?: string;
-  navClicked: (id: string) => void;
-}> = ({ className, navClicked }) => {
-  const [isMenuOpened, setIsMenuOpened] = useState(false);
-  const [navItems, setNavItems] = useState([...NAV_ITEMS]);
+  navItems: AHButton[];
+  navClicked: (item: AHButton) => void;
+}> = ({ children, className, navItems, navClicked }) => {
+  const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false);
 
   const menuHandler = () => {
     setIsMenuOpened((isOpened) => !isOpened);
@@ -22,12 +21,7 @@ const Header: React.FC<{
 
   const menuItemClickedHandler = (event: React.MouseEvent, item: AHButton) => {
     event.preventDefault();
-    const updated = navItems.map((navItem) => ({
-      ...navItem,
-      selected: item.id === navItem.id,
-    }));
-    setNavItems(updated);
-    navClicked(item.id);
+    navClicked(item);
   };
 
   return (

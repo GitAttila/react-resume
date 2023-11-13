@@ -5,8 +5,10 @@ import AHsignature from '../../../assets/images/ah_signature_white.png';
 import { CarouselSlideContent } from '../../../models/carousel-slide-content.model';
 import CarouselSlide from '../../CarouselSlide/CarouselSlide';
 import { RefObject } from 'react';
+import { NavItem } from '../../../consts/nav-items.consts';
 
 interface FeatureHeroProps {
+  id?: NavItem;
   className?: string;
   featureHeroRef?: RefObject<HTMLDivElement>;
   slides: CarouselSlideContent[];
@@ -20,6 +22,7 @@ export default function FeatureHero(
 
   return (
     <div
+      id={props?.id || ''}
       ref={props?.featureHeroRef}
       className={`${className} ${styles['app-c-carousel__container']}`}
     >

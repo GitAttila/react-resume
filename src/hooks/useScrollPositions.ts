@@ -2,10 +2,12 @@ import { RefObject, useEffect, useRef, useState } from 'react';
 
 const useScrollTo = <T extends Element>(): [
   RefObject<T>,
-  (val: boolean) => void
+  (val: boolean) => void,
+  val: boolean
 ] => {
   const ref = useRef<T>(null);
   const [shouldScrollTo, setShouldScrollTo] = useState(false);
+  const [isIntersecting, setIsIntersecting] = useState(false);
 
   useEffect(() => {
     if (ref.current && shouldScrollTo) {
@@ -14,7 +16,22 @@ const useScrollTo = <T extends Element>(): [
     }
   }, [shouldScrollTo]);
 
-  return [ref, setShouldScrollTo];
+  useEffect(() => {
+    const offset = window.innerHeight / 2;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsIntersecting(entry.isIntersecting);
+      },
+      { rootMargin: `-${offset}px` }
+    );
+
+    // console.log(ref.current?.id, `-${offset}px`, isIntersecting);
+
+    ref.current && observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [isIntersecting]);
+
+  return [ref, setShouldScrollTo, isIntersecting];
 };
 
 export default useScrollTo;

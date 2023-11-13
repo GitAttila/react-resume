@@ -11,7 +11,7 @@ import { CERTIFICATE_CARDS } from './content/certificate-cards.const';
 import { CERTIFICATES_BUTTONS_GROUP } from './content/certificates-buttonsGroup';
 import { PROJECTS_BUTTONS_GROUP } from './content/projects-buttonsGroup';
 import { PROJECT_CARDS } from './content/project-cards.const';
-import { Fragment, useCallback, useState } from 'react';
+import { Fragment, useState } from 'react';
 import styles from './App.module.scss';
 import Header from './components/Header/Header';
 import FeatureSummary from './components/Features/feature-summary/FeatureSummary';
@@ -38,6 +38,8 @@ import {
   LightBoxGalleryType,
 } from './consts/lightbox.consts';
 import useScrollTo from './hooks/useScrollPositions';
+import { NAV_ITEMS, NavItem } from './consts/nav-items.consts';
+import { AHButton } from './models/ah-button.model';
 
 export default function App() {
   const lightBoxSlides = initLightBoxData();
@@ -47,25 +49,55 @@ export default function App() {
     LightBoxGalleryType.ONE_SLIDE
   );
 
-  const [profileSectionRef, scrollToProfileSection] =
-    useScrollTo<HTMLElement>();
-  const [heroSectionRef, scrollToHeroSection] = useScrollTo<HTMLDivElement>();
-  const [projectsSectionRef, scrollToProjectsSection] =
-    useScrollTo<HTMLDivElement>();
-  const [devStackSectionRef, scrollToDevStackSection] =
-    useScrollTo<HTMLDivElement>();
-  const [awardsSectionRef, scrollToAwardsSection] =
-    useScrollTo<HTMLDivElement>();
-  const [certificatesSectionRef, scrollToCertificatesSection] =
-    useScrollTo<HTMLDivElement>();
+  const [navItems, setNavItems] = useState<AHButton[]>([...NAV_ITEMS]);
 
-  const navHandler = (id: string) => {
-    id.includes('profile') && scrollToProfileSection(true);
-    id.includes('home') && scrollToHeroSection(true);
-    id.includes('dev-stack') && scrollToDevStackSection(true);
-    id.includes('projects') && scrollToProjectsSection(true);
-    id.includes('awards') && scrollToAwardsSection(true);
-    id.includes('certificates') && scrollToCertificatesSection(true);
+  const [heroSectionRef, scrollToHeroSection, heroIsIntersecting] =
+    useScrollTo<HTMLDivElement>();
+  const [profileSectionRef, scrollToProfileSection, profileIsIntersecting] =
+    useScrollTo<HTMLElement>();
+  const [devStackSectionRef, scrollToDevStackSection, devStackIsIntersecting] =
+    useScrollTo<HTMLDivElement>();
+  const [projectsSectionRef, scrollToProjectsSection, projectsIsIntersecting] =
+    useScrollTo<HTMLDivElement>();
+  const [awardsSectionRef, scrollToAwardsSection, awardsIsIntersecting] =
+    useScrollTo<HTMLDivElement>();
+  const [
+    certificatesSectionRef,
+    scrollToCertificatesSection,
+    certificatesIsIntersecting,
+  ] = useScrollTo<HTMLDivElement>();
+
+  // if (heroIsIntersecting) {
+  //   const udpated = navItems.map((item) => ({
+  //     ...item,
+  //     selected: item.id.includes(NavItem.HOME)
+  //       ? heroIsIntersecting
+  //       : item.selected,
+  //   }));
+  //   console.log(udpated);
+  //   setNavItems(udpated);
+  // }
+
+  console.log(heroSectionRef.current?.id, heroIsIntersecting);
+  console.log(profileSectionRef.current?.id, profileIsIntersecting);
+  console.log(devStackSectionRef.current?.id, devStackIsIntersecting);
+  console.log(projectsSectionRef.current?.id, projectsIsIntersecting);
+  console.log(awardsSectionRef.current?.id, awardsIsIntersecting);
+  console.log(certificatesSectionRef.current?.id, certificatesIsIntersecting);
+
+  const navHandler = (navItem: AHButton) => {
+    const updated = navItems.map((item) => ({
+      ...item,
+      selected: item.id === navItem.id,
+    }));
+    setNavItems(updated);
+    navItem.id.includes(NavItem.HOME) && scrollToHeroSection(true);
+    navItem.id.includes(NavItem.PROFILE) && scrollToProfileSection(true);
+    navItem.id.includes(NavItem.DEV_STACK) && scrollToDevStackSection(true);
+    navItem.id.includes(NavItem.PROJECTS) && scrollToProjectsSection(true);
+    navItem.id.includes(NavItem.AWARDS) && scrollToAwardsSection(true);
+    navItem.id.includes(NavItem.CERTIFICATES) &&
+      scrollToCertificatesSection(true);
   };
 
   const plugins =
@@ -94,15 +126,18 @@ export default function App() {
   return (
     <Fragment>
       <Header
-        navClicked={(id) => navHandler(id)}
+        navItems={navItems}
+        navClicked={(navItem) => navHandler(navItem)}
         className={styles['app-c-header']}
       ></Header>
       <main className={styles['app-c-content']}>
         <FeatureHero
+          id={NavItem.HOME}
           featureHeroRef={heroSectionRef}
           slides={HERO_SLIDES}
         ></FeatureHero>
         <NavigationSection
+          id={NavItem.PROFILE}
           sectionRef={profileSectionRef}
           title="profile"
           className={styles['app-c-section']}
@@ -128,6 +163,7 @@ export default function App() {
           />
         </NavigationSection>
         <NavigationSection
+          id={NavItem.DEV_STACK}
           sectionRef={devStackSectionRef}
           title="dev stack"
           className={`${styles['app-c-section']} ${styles['app-c-section--dev-stack']}`}
@@ -135,6 +171,7 @@ export default function App() {
           <FeatureDevStack />
         </NavigationSection>
         <NavigationSection
+          id={NavItem.PROJECTS}
           sectionRef={projectsSectionRef}
           title="projects"
           className={styles['app-c-section']}
@@ -148,6 +185,7 @@ export default function App() {
         </NavigationSection>
 
         <NavigationSection
+          id={NavItem.AWARDS}
           sectionRef={awardsSectionRef}
           title="awards"
           className={`${styles['app-c-section']} ${styles['app-c-section--awards']}`}
@@ -160,6 +198,7 @@ export default function App() {
         </NavigationSection>
 
         <NavigationSection
+          id={NavItem.CERTIFICATES}
           sectionRef={certificatesSectionRef}
           title="certificates"
           className={styles['app-c-section']}
