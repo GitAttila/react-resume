@@ -68,15 +68,6 @@ export default function App() {
   ] = useScrollIntersection<HTMLDivElement>();
 
   useEffect(() => {
-    console.log(
-      heroIsIntersecting,
-      profileIsIntersecting,
-      devStackIsIntersecting,
-      projectsIsIntersecting,
-      awardsIsIntersecting,
-      certificatesIsIntersecting
-    );
-
     setNavItems((navItems) => {
       return navItems.map((item) => ({
         ...item,
