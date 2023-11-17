@@ -10,7 +10,6 @@ const useScrollIntersection = <T extends Element>(): [
   const [isIntersecting, setIsIntersecting] = useState(false);
 
   useEffect(() => {
-    console.log(ref);
     if (ref.current && shouldScrollTo) {
       ref.current!.scrollIntoView({ behavior: 'smooth' });
       setShouldScrollTo(false);
