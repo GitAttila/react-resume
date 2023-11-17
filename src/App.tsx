@@ -11,7 +11,7 @@ import { CERTIFICATE_CARDS } from './content/certificate-cards.const';
 import { CERTIFICATES_BUTTONS_GROUP } from './content/certificates-buttonsGroup';
 import { PROJECTS_BUTTONS_GROUP } from './content/projects-buttonsGroup';
 import { PROJECT_CARDS } from './content/project-cards.const';
-import { Fragment, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import styles from './App.module.scss';
 import Header from './components/Header/Header';
 import FeatureSummary from './components/Features/feature-summary/FeatureSummary';
@@ -37,9 +37,9 @@ import {
   LIGHTBOX_FULL_SETTINGS,
   LightBoxGalleryType,
 } from './consts/lightbox.consts';
-import useScrollTo from './hooks/useScrollPositions';
 import { NAV_ITEMS, NavItem } from './consts/nav-items.consts';
 import { AHButton } from './models/ah-button.model';
+import useScrollIntersection from './hooks/useScrollIntersection';
 
 export default function App() {
   const lightBoxSlides = initLightBoxData();
@@ -52,38 +52,56 @@ export default function App() {
   const [navItems, setNavItems] = useState<AHButton[]>([...NAV_ITEMS]);
 
   const [heroSectionRef, scrollToHeroSection, heroIsIntersecting] =
-    useScrollTo<HTMLDivElement>();
+    useScrollIntersection<HTMLDivElement>();
   const [profileSectionRef, scrollToProfileSection, profileIsIntersecting] =
-    useScrollTo<HTMLElement>();
+    useScrollIntersection<HTMLElement>();
   const [devStackSectionRef, scrollToDevStackSection, devStackIsIntersecting] =
-    useScrollTo<HTMLDivElement>();
+    useScrollIntersection<HTMLDivElement>();
   const [projectsSectionRef, scrollToProjectsSection, projectsIsIntersecting] =
-    useScrollTo<HTMLDivElement>();
+    useScrollIntersection<HTMLDivElement>();
   const [awardsSectionRef, scrollToAwardsSection, awardsIsIntersecting] =
-    useScrollTo<HTMLDivElement>();
+    useScrollIntersection<HTMLDivElement>();
   const [
     certificatesSectionRef,
     scrollToCertificatesSection,
     certificatesIsIntersecting,
-  ] = useScrollTo<HTMLDivElement>();
+  ] = useScrollIntersection<HTMLDivElement>();
 
-  // if (heroIsIntersecting) {
-  //   const udpated = navItems.map((item) => ({
-  //     ...item,
-  //     selected: item.id.includes(NavItem.HOME)
-  //       ? heroIsIntersecting
-  //       : item.selected,
-  //   }));
-  //   console.log(udpated);
-  //   setNavItems(udpated);
-  // }
+  useEffect(() => {
+    console.log(
+      heroIsIntersecting,
+      profileIsIntersecting,
+      devStackIsIntersecting,
+      projectsIsIntersecting,
+      awardsIsIntersecting,
+      certificatesIsIntersecting
+    );
 
-  console.log(heroSectionRef.current?.id, heroIsIntersecting);
-  console.log(profileSectionRef.current?.id, profileIsIntersecting);
-  console.log(devStackSectionRef.current?.id, devStackIsIntersecting);
-  console.log(projectsSectionRef.current?.id, projectsIsIntersecting);
-  console.log(awardsSectionRef.current?.id, awardsIsIntersecting);
-  console.log(certificatesSectionRef.current?.id, certificatesIsIntersecting);
+    setNavItems((navItems) => {
+      return navItems.map((item) => ({
+        ...item,
+        selected: !!(
+          (heroIsIntersecting && item.id.includes(NavItem.HOME)) ||
+          (profileIsIntersecting && item.id.includes(NavItem.PROFILE)) ||
+          (devStackIsIntersecting && item.id.includes(NavItem.DEV_STACK)) ||
+          (projectsIsIntersecting && item.id.includes(NavItem.PROJECTS)) ||
+          (awardsIsIntersecting && item.id.includes(NavItem.AWARDS)) ||
+          (certificatesIsIntersecting && item.id.includes(NavItem.CERTIFICATES))
+        ),
+      }));
+    });
+  }, [
+    heroIsIntersecting,
+    profileIsIntersecting,
+    devStackIsIntersecting,
+    projectsIsIntersecting,
+    awardsIsIntersecting,
+    certificatesIsIntersecting,
+  ]);
+
+  const headerVisibleClass = heroIsIntersecting
+    ? ''
+    : styles['app-c-header--visible'];
 
   const navHandler = (navItem: AHButton) => {
     const updated = navItems.map((item) => ({
@@ -128,17 +146,17 @@ export default function App() {
       <Header
         navItems={navItems}
         navClicked={(navItem) => navHandler(navItem)}
-        className={styles['app-c-header']}
+        className={`${styles['app-c-header']} ${headerVisibleClass}`}
       ></Header>
       <main className={styles['app-c-content']}>
         <FeatureHero
           id={NavItem.HOME}
-          featureHeroRef={heroSectionRef}
+          ref={heroSectionRef}
           slides={HERO_SLIDES}
         ></FeatureHero>
         <NavigationSection
           id={NavItem.PROFILE}
-          sectionRef={profileSectionRef}
+          ref={profileSectionRef}
           title="profile"
           className={styles['app-c-section']}
         >
@@ -164,7 +182,7 @@ export default function App() {
         </NavigationSection>
         <NavigationSection
           id={NavItem.DEV_STACK}
-          sectionRef={devStackSectionRef}
+          ref={devStackSectionRef}
           title="dev stack"
           className={`${styles['app-c-section']} ${styles['app-c-section--dev-stack']}`}
         >
@@ -172,7 +190,7 @@ export default function App() {
         </NavigationSection>
         <NavigationSection
           id={NavItem.PROJECTS}
-          sectionRef={projectsSectionRef}
+          ref={projectsSectionRef}
           title="projects"
           className={styles['app-c-section']}
         >
@@ -186,7 +204,7 @@ export default function App() {
 
         <NavigationSection
           id={NavItem.AWARDS}
-          sectionRef={awardsSectionRef}
+          ref={awardsSectionRef}
           title="awards"
           className={`${styles['app-c-section']} ${styles['app-c-section--awards']}`}
         >
@@ -199,7 +217,7 @@ export default function App() {
 
         <NavigationSection
           id={NavItem.CERTIFICATES}
-          sectionRef={certificatesSectionRef}
+          ref={certificatesSectionRef}
           title="certificates"
           className={styles['app-c-section']}
         >

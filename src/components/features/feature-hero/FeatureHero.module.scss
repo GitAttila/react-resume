@@ -25,6 +25,22 @@
           color: vars.$ah-white;
           margin-bottom: 7rem;
         }
+        &__title {
+          font-size: 3.8rem;
+          margin: 0;
+          margin-bottom: 1.6rem;
+          @include responsive.breakpoint(sm) {
+            font-size: 2.8rem;
+          }
+        }
+        &__subtitle {
+          font-size: 2.4rem;
+          margin: 0;
+          margin-bottom: 2.4rem;
+          @include responsive.breakpoint(sm) {
+            font-size: 2rem;
+          }
+        }
         &__image {
           position: relative;
           z-index: 0;
@@ -65,9 +81,16 @@
             width: 50%;
           }
         }
-      }
-      &__title {
-        color: vars.$ah-white;
+        &__title {
+          color: vars.$ah-white;
+          font-size: 5.6rem;
+          @include responsive.breakpoint(md) {
+            font-size: 3.8rem;
+          }
+          @include responsive.breakpoint(sm) {
+            font-size: 2.4rem;
+          }
+        }
       }
     }
   }

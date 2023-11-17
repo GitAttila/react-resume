@@ -2,6 +2,7 @@ import { AHButton } from '../models/ah-button.model';
 
 export enum ProjectFilterKeys {
   ANGULAR_DEVELOPMENT = 'project-angular-development',
+  REACT_DEVELOPMENT = 'project-react-development',
   WEB_DEVELOPMENT = 'project-web-development',
   UX_DESIGN = 'project-ux-design',
   GRAPHICS_DESIGN = 'project-graphics-design',
@@ -12,6 +13,10 @@ export const PROJECTS_BUTTONS_GROUP: AHButton[] = [
   {
     id: `btn-id--${ProjectFilterKeys.ANGULAR_DEVELOPMENT}`,
     caption: 'angular development',
+  },
+  {
+    id: `btn-id--${ProjectFilterKeys.REACT_DEVELOPMENT}`,
+    caption: 'react development',
   },
   {
     id: `btn-id--${ProjectFilterKeys.WEB_DEVELOPMENT}`,

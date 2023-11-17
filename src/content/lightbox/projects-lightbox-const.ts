@@ -132,6 +132,11 @@ import Emb5 from '../../assets/images/projects/embitron/embitron5.png';
 import Emb6 from '../../assets/images/projects/embitron/embitron6.png';
 import Emb7 from '../../assets/images/projects/embitron/embitron7.png';
 import Emb8 from '../../assets/images/projects/embitron/embitron8.png';
+import MyResume1 from '../../assets/images/projects/resume/my-resume_1.png';
+import MyResume2 from '../../assets/images/projects/resume/my-resume_2.png';
+import MyResume3 from '../../assets/images/projects/resume/my-resume_3.png';
+import MyResume4 from '../../assets/images/projects/resume/my-resume_4.png';
+import MyResume5 from '../../assets/images/projects/resume/my-resume_5.png';
 
 export const SLIDES_PROJECT_ASTRO_CHARTING = [
   {
@@ -720,5 +725,28 @@ export const SLIDES_PROJECT_EMB = [
   {
     src: Emb8,
     alt: "Embitron's CRM system",
+  },
+];
+
+export const SLIDES_PROJECT_MY_RESUME = [
+  {
+    src: MyResume1,
+    alt: 'Attila Hazay resume',
+  },
+  {
+    src: MyResume2,
+    alt: 'Attila Hazay resume',
+  },
+  {
+    src: MyResume3,
+    alt: 'Attila Hazay resume',
+  },
+  {
+    src: MyResume4,
+    alt: 'Attila Hazay resume',
+  },
+  {
+    src: MyResume5,
+    alt: 'Attila Hazay resume',
   },
 ];

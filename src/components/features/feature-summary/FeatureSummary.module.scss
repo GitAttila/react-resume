@@ -3,6 +3,9 @@
 .ah {
   &-c {
     &-feature-summary {
+      &__title {
+        color: vars.$ah-secondary-text-color;
+      }
       &__list {
         padding: 0;
         margin: 0;
@@ -11,19 +14,19 @@
       &__list-item {
         margin-top: 0;
         margin-bottom: 2.4rem;
-      }
-      &__title {
-        display: flex;
-        justify-content: flex-start;
-        align-items: baseline;
-        color: vars.$ah-primary-text-color;
-      }
-      &__icon {
-        font-size: 2rem;
-        color: vars.$ah-primary-text-color;
-      }
-      &__text {
-        color: vars.$ah-secondary-text-color;
+        &__title {
+          display: flex;
+          justify-content: flex-start;
+          align-items: baseline;
+          color: vars.$ah-primary-text-color;
+        }
+        &__icon {
+          font-size: 2rem;
+          color: vars.$ah-primary-text-color;
+        }
+        &__text {
+          color: vars.$ah-secondary-text-color;
+        }
       }
     }
   }

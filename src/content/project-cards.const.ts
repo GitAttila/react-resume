@@ -36,6 +36,7 @@ import FTCManage from '../assets/images/projects/FTC_Manage/AH_project_FTC_manag
 import FTCWebSite from '../assets/images/projects/FTC_site/AH_project_FTC_site_01.jpg';
 import EmbLogo from '../assets/images/projects/embitron-logo-white.png';
 import EmbImage from '../assets/images/projects/embitron/embitron1.png';
+import MyResumeImage from '../assets/images/projects/resume/my-resume_1.png';
 
 // must have double hyphens in LinkIcon id for later parsing
 export const PROJECT_CARDS: PortfolioCardContent<ProjectFilterKeys>[] = [
@@ -300,6 +301,18 @@ export const PROJECT_CARDS: PortfolioCardContent<ProjectFilterKeys>[] = [
     keys: [ProjectFilterKeys.GRAPHICS_DESIGN],
     galleryIcon: {
       id: `id-project-gallery-icon--${LightboxKeys.PROJECT_RA_MERCHENDISE}`,
+      caption: '',
+      icon: IoImagesOutline,
+    },
+  },
+  {
+    type: CardContentType.PROJECT,
+    logo: AHstudioLogo,
+    image: MyResumeImage,
+    title: 'My Resume',
+    keys: [ProjectFilterKeys.REACT_DEVELOPMENT],
+    galleryIcon: {
+      id: `id-project-gallery-icon--${LightboxKeys.PROJECT_MY_RESUME}`,
       caption: '',
       icon: IoImagesOutline,
     },

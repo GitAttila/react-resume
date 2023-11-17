@@ -8,6 +8,9 @@
       &--no-events {
         pointer-events: none;
       }
+      &__title {
+        color: vars.$ah-secondary-text-color;
+      }
       &__list {
         padding: 0;
         margin: 0;

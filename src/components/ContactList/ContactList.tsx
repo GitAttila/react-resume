@@ -8,7 +8,9 @@ export const ContactsList: React.FC<{
 }> = ({ title, contacts }) => {
   return (
     <div className={styles['ah-c-contacts-list']}>
-      <h3 className="ah-feature-title">{title}</h3>
+      <h3 className={`${styles['ah-c-contacts-list__title']} ah-feature-title`}>
+        {title}
+      </h3>
       <ul className={styles['ah-c-contacts-list__list']}>
         {contacts?.map((contact) => {
           return (

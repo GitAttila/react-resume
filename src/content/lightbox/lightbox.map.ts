@@ -38,6 +38,7 @@ import {
   SLIDES_PROJECT_KE_WEB,
   SLIDES_PROJECT_MDT_HOLTER,
   SLIDES_PROJECT_MDT_SCYNC,
+  SLIDES_PROJECT_MY_RESUME,
   SLIDES_PROJECT_PF,
   SLIDES_PROJECT_RA_CALENDAR,
   SLIDES_PROJECT_RA_LOGIN_PAGE,
@@ -87,6 +88,7 @@ export enum LightboxKeys {
   PROJECT_MDT_HOLTER = 'mdt-holter',
   PROJECT_RA_MERCHENDISE = 'ra-merchendise',
   PROJECT_EMB = 'embitron',
+  PROJECT_MY_RESUME = 'my-resume',
 }
 
 export function initLightBoxData(): Map<LightboxKeys, SlideImage[]> {
@@ -175,5 +177,8 @@ export function initLightBoxData(): Map<LightboxKeys, SlideImage[]> {
     ...SLIDES_PROJECT_RA_MERCHENDISE,
   ]);
   LightBoxMap.set(LightboxKeys.PROJECT_EMB, [...SLIDES_PROJECT_EMB]);
+  LightBoxMap.set(LightboxKeys.PROJECT_MY_RESUME, [
+    ...SLIDES_PROJECT_MY_RESUME,
+  ]);
   return LightBoxMap;
 }

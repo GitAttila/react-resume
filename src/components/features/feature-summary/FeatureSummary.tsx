@@ -1,7 +1,7 @@
 import React from 'react';
 import { SummaryItem } from '../../../models/summaryItem.model';
 import { IoChevronForwardSharp } from 'react-icons/io5';
-import classes from './FeatureSummary.module.scss';
+import styles from './FeatureSummary.module.scss';
 
 const FeatureSummary: React.FC<{
   title: string;
@@ -10,21 +10,25 @@ const FeatureSummary: React.FC<{
 }> = ({ title, summaryList, className }) => {
   return (
     <div className={className || ''}>
-      <h2 className="ah-feature-title">{(title || '').toLowerCase()}</h2>
-      <ul className={classes['ah-c-feature-summary__list']}>
+      <h2
+        className={`${styles['ah-c-feature-summary__title']} ah-feature-title`}
+      >
+        {(title || '').toLowerCase()}
+      </h2>
+      <ul className={styles['ah-c-feature-summary__list']}>
         {summaryList.map((item) => (
           <li
             key={item.id}
-            className={classes['ah-c-feature-summary__list-item']}
+            className={styles['ah-c-feature-summary__list-item']}
           >
-            <span className={classes['ah-c-feature-summary__title']}>
+            <span className={styles['ah-c-feature-summary__list-item__title']}>
               <IoChevronForwardSharp
-                className={classes['ah-c-feature-summary__icon']}
+                className={styles['ah-c-feature-summary__list-item__icon']}
               />
               <h3 className="ah-feature-subtitle">{item.title}</h3>
             </span>
             <p
-              className={`${classes['ah-c-feature-summary__text']} ah-feature-text`}
+              className={`${styles['ah-c-feature-summary__list-item__text']} ah-feature-text`}
             >
               {item.text}
             </p>

@@ -6,6 +6,8 @@ import Avatar from '../Avatar/Avatar';
 import avatarImg from '../../assets/images/AH_portrait_white.png';
 import Navigation from '../Navigation/Navigation';
 import { AHButton } from '../../models/ah-button.model';
+import IconSwitch from '../IconSwitch/IconSwitch';
+import { AHIcon } from '../../models/ah-icon.model';
 
 const Header: React.FC<{
   children?: ReactNode;
@@ -23,6 +25,11 @@ const Header: React.FC<{
     event.preventDefault();
     navClicked(item);
   };
+
+  // TODO: Add theming dark/light
+  // const themeIconHandler = (icon: AHIcon) => {
+  //   console.log('clicked: ', icon);
+  // };
 
   return (
     <header
@@ -43,6 +50,10 @@ const Header: React.FC<{
             </h3>
           </span>
           <span className={classes['ah-c-header__spacer']}></span>
+          {/* <IconSwitch
+            className={`${classes['ah-c-header__theme-icon']}`}
+            onClick={themeIconHandler}
+          ></IconSwitch> */}
           <MenuIcon onClick={menuHandler} isOpened={isMenuOpened} />
           <span className={classes['ah-c-header__avatar']}>
             <Avatar image={avatarImg}></Avatar>

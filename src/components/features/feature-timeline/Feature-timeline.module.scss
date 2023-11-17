@@ -1,8 +1,12 @@
 @use '../../../styles/variables' as vars;
+@use '../../../styles//mixins/responsive-mixins' as responsive;
 
 .ah {
   &-c {
     &-feature-timeline {
+      &__title {
+        color: vars.$ah-secondary-text-color;
+      }
       &__list {
         padding: 0;
         margin: 0;
@@ -13,6 +17,10 @@
         margin-bottom: 3.2rem;
         display: flex;
         gap: 2.4rem;
+        @include responsive.breakpoint(sm) {
+          flex-direction: column;
+          gap: 0rem;
+        }
       }
       &__chip {
         display: inline-flex;
@@ -28,6 +36,12 @@
       }
       &__feature {
         flex: 1 1 75%;
+        &__subtitle {
+          color: vars.$ah-disabled-text-color;
+        }
+        &__description {
+          color: vars.$ah-secondary-text-color;
+        }
       }
     }
   }
