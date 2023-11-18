@@ -3,8 +3,6 @@ interface CarouselSlideProps {
   className?: string;
 }
 
-export default function CarouselSlide(
-  props: CarouselSlideProps
-): React.ReactElement {
+export default function CarouselSlide(props: CarouselSlideProps): JSX.Element {
   return <div className={props.className}>{props.children}</div>;
 }

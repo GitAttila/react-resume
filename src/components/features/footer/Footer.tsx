@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './Footer.module.scss';
 import { FooterDescriptionItem } from '../../../models/footer-description.model';
 import { Link } from '../../../models/link.model';
+import signatureImage from '../../../assets/images/ah_signature_white.png';
 
 const Footer: React.FC<{
   contactLinks: Link[];
@@ -16,7 +17,7 @@ const Footer: React.FC<{
     >
       <div className="ah-container">
         <div className={classes['ah-c-footer__image-container']}>
-          <img src="../../../../src/assets/images/ah_signature_white.png" />
+          <img src={signatureImage} />
         </div>
 
         <ul className={classes['ah-c-footer__contact-links']}>

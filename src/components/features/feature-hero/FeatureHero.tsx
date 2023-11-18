@@ -25,10 +25,10 @@ const FeatureHero = forwardRef(
         className={`${className} ${styles['app-c-carousel__container']}`}
       >
         <Carousel rollOver={true} indicators={true} timer={14000}>
-          {carouselSlides.map((carouselSlide) => {
+          {carouselSlides.map((carouselSlide, i) => {
             return (
               <CarouselSlide
-                key={carouselSlide.title}
+                key={`carousel-slide-${i}`}
                 className={styles['app-c-carousel__slide']}
               >
                 <div className={`${styles['app-c-carousel__slide__text']}`}>
@@ -52,7 +52,10 @@ const FeatureHero = forwardRef(
               </CarouselSlide>
             );
           })}
-          <CarouselHero className={styles['app-c-carousel__hero']}>
+          <CarouselHero
+            key={'carousel-hero'}
+            className={styles['app-c-carousel__hero']}
+          >
             <img
               className={styles['app-c-carousel__hero__image']}
               src={AHsignature}

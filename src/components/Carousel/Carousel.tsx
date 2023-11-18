@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import { Children } from 'react';
 import styles from './Carousel.module.scss';
 import {
@@ -7,29 +7,24 @@ import {
 } from 'react-icons/io5';
 
 interface CarouselProps {
-  children?: React.ReactNode | React.ReactElement;
+  children?: ReactNode | ReactNode[];
   rollOver?: boolean;
   indicators?: boolean;
   timer?: number; // milliseconds
 }
 
-export default function Carousel(props: CarouselProps): React.ReactElement {
+export default function Carousel(props: CarouselProps): JSX.Element {
   const timer = props?.timer || 0;
   const [atSlide, setAtSlide] = useState<number>(0);
 
-  const childrenArray = Children.toArray(
-    props.children
-  ) as React.ReactElement[];
+  const childrenArray = Children.toArray(props.children) as JSX.Element[];
 
-  const carouselHero = childrenArray.find(
-    (child) => (child.type as React.FC).name?.toLowerCase() === 'carouselhero'
+  const carouselHero = childrenArray.find((child) =>
+    child?.key?.includes('hero')
   );
 
   const carouselSlideChildrenArray =
-    childrenArray.filter(
-      (child) =>
-        (child.type as React.FC).name?.toLowerCase() === 'carouselslide'
-    ) || [];
+    childrenArray.filter((child) => child?.key?.includes('slide')) || [];
   const slidesCount = carouselSlideChildrenArray.length;
   const moveByPer = Math.floor((100 / slidesCount) * 1000) / 1000;
 
