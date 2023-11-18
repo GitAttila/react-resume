@@ -45,6 +45,7 @@ export default function Carousel(props: CarouselProps): React.ReactElement {
   }, [timer]);
 
   const clickHandler = (ev: React.MouseEvent, direction: string) => {
+    ev.preventDefault();
     if (props.rollOver) {
       if (direction === 'left') {
         setAtSlide((atSlide) => atSlide - 1);

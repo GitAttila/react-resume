@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { useState } from 'react';
 import MenuIcon from '../MenuIcon/MenuIcon';
 import classes from './Header.module.scss';
@@ -6,15 +6,14 @@ import Avatar from '../Avatar/Avatar';
 import avatarImg from '../../assets/images/AH_portrait_white.png';
 import Navigation from '../Navigation/Navigation';
 import { AHButton } from '../../models/ah-button.model';
-import IconSwitch from '../IconSwitch/IconSwitch';
-import { AHIcon } from '../../models/ah-icon.model';
+// import IconSwitch from '../IconSwitch/IconSwitch';
+// import { AHIcon } from '../../models/ah-icon.model';
 
 const Header: React.FC<{
-  children?: ReactNode;
   className?: string;
   navItems: AHButton[];
   navClicked: (item: AHButton) => void;
-}> = ({ children, className, navItems, navClicked }) => {
+}> = ({ className, navItems, navClicked }) => {
   const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false);
 
   const menuHandler = () => {
