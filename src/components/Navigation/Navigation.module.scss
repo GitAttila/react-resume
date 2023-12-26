@@ -13,7 +13,7 @@
         margin-top: 0.8rem;
         box-sizing: border-box;
         list-style: none;
-        background-color: vars.$ah-card-background-color;
+        background-color: var(--card-background-color);
         border-radius: 20rem;
         transform: translateY(-200%);
         transition: 500ms transform ease-in-out;
@@ -26,15 +26,15 @@
       }
       &__list-item {
         cursor: pointer;
-        color: vars.$ah-secondary-text-color;
+        color: var(--secondary-text-color);
         margin: 1.6rem 0;
         padding: 0.8rem 0.8rem 0.4rem 0.8rem;
         border-radius: 2rem;
         text-align: center;
         transition: 200ms background-color ease-in-out, 200ms color ease-in-out;
         &:hover {
-          background-color: rgba(vars.$ah-black, 0.17);
-          color: vars.$ah-primary-text-color;
+          background-color: var(--disabled-background-color);
+          color: var(--primary-text-color);
         }
         &--selected {
           background-color: vars.$ah-orange;

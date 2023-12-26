@@ -5,9 +5,8 @@
   &-c {
     &-header {
       display: flex;
-      background-color: vars.$ah-white;
-      backdrop-filter: blur(vars.$ah-backdrop-blur);
-      color: vars.$ah-secondary-text-color;
+      background-color: var(--card-background-color);
+      color: var(--secondary-text-color);
       height: vars.$ah-header-height;
       width: 100%;
       &__theme-icon {

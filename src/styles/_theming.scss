@@ -1,0 +1,23 @@
+@use './variables' as vars;
+
+:root {
+  --primary-text-color: #{rgba(vars.$ah-black, 0.8)};
+  --secondary-text-color: #{rgba(vars.$ah-black, 0.6)};
+  --highlight-text-color: #{vars.$ah-orange};
+  --disabled-text-color: #{rgba(vars.$ah-black, 0.25)};
+
+  --primary-background-color: #{vars.$ah-gray-100};
+  --disabled-background-color: #{rgba(vars.$ah-black, 0.25)};
+  --card-background-color: #{vars.$ah-white};
+}
+
+.dark-theme {
+  --primary-text-color: #{rgba(vars.$ah-white, 0.8)};
+  --secondary-text-color: #{rgba(vars.$ah-white, 0.6)};
+  --highlight-text-color: #{vars.$ah-orange};
+  --disabled-text-color: #{rgba(vars.$ah-white, 0.2)};
+
+  --primary-background-color: #{vars.$ah-gray-800};
+  --disabled-background-color: #{rgba(vars.$ah-white, 0.15)};
+  --card-background-color: #{vars.$ah-gray-900};
+}

@@ -20,8 +20,8 @@ body {
   overflow: hidden;
   font-size: 16px;
   font-family: vars.$ah-font-text;
-  background-color: vars.$ah-primary-background-color;
-  color: vars.$ah-primary-text-color;
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
 }
 
 #root {
@@ -35,7 +35,7 @@ a[href^='tel'] {
 
 a:active,
 a:focus {
-  color: vars.$ah-primary-text-color;
+  color: var(--primary-text-color);
 }
 
 textarea,

@@ -9,7 +9,7 @@
         height: vars.$ah-avatar-size;
         border-radius: vars.$ah-avatar-size;
         aspect-ratio: 1/1;
-        background-color: vars.$ah-white;
+        background-color: var(--card-background-color);
         padding: 0.8rem;
         margin-top: 0.8rem;
         transition: 500ms height ease-in-out;
@@ -22,7 +22,7 @@
         position: relative;
         z-index: 1;
         border-radius: vars.$ah-avatar-size;
-        background-color: vars.$ah-primary-background-color;
+        background-color: var(--primary-background-color);
         img {
           width: 100%;
           border-radius: 21rem;
@@ -39,7 +39,7 @@
         margin-left: -1.6rem;
         margin-right: -1.6rem;
         height: vars.$ah-header-height;
-        background-color: vars.$ah-white;
+        background-color: var(--card-background-color);
       }
     }
   }

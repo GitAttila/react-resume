@@ -40,6 +40,7 @@ import {
 import { NAV_ITEMS, NavItem } from './consts/nav-items.consts';
 import { AHButton } from './models/ah-button.model';
 import useScrollIntersection from './hooks/useScrollIntersection';
+import { AHIcon } from './models/ah-icon.model';
 
 export default function App() {
   const lightBoxSlides = initLightBoxData();
@@ -68,8 +69,8 @@ export default function App() {
   ] = useScrollIntersection<HTMLDivElement>();
 
   useEffect(() => {
-    setNavItems((navItems) => {
-      return navItems.map((item) => ({
+    setNavItems(navItems => {
+      return navItems.map(item => ({
         ...item,
         selected: !!(
           (heroIsIntersecting && item.id.includes(NavItem.HOME)) ||
@@ -95,7 +96,7 @@ export default function App() {
     : styles['app-c-header--visible'];
 
   const navHandler = (navItem: AHButton) => {
-    const updated = navItems.map((item) => ({
+    const updated = navItems.map(item => ({
       ...item,
       selected: item.id === navItem.id,
     }));
@@ -119,6 +120,15 @@ export default function App() {
     link?.link && window.open(link.link, '_blank');
   };
 
+  const iconClickHandler = (icon: AHIcon) => {
+    document.body.classList.add(
+      icon.id.includes('light') ? 'light-theme' : 'dark-theme'
+    );
+    document.body.classList.remove(
+      icon.id.includes('light') ? 'dark-theme' : 'light-theme'
+    );
+  };
+
   const clickHandlerLightbox = (id: string) => {
     const idFragmentsCount = id.split('--').length;
     const key = idFragmentsCount ? id.split('--')[idFragmentsCount - 1] : '';
@@ -136,7 +146,8 @@ export default function App() {
     <Fragment>
       <Header
         navItems={navItems}
-        navClicked={(navItem) => navHandler(navItem)}
+        navClicked={navItem => navHandler(navItem)}
+        iconClicked={icon => iconClickHandler(icon)}
         className={`${styles['app-c-header']} ${headerVisibleClass}`}
       ></Header>
       <main className={styles['app-c-content']}>
@@ -188,8 +199,8 @@ export default function App() {
           <FeaturePortfolios
             buttonsGroup={PROJECTS_BUTTONS_GROUP}
             cards={PROJECT_CARDS}
-            buttonClicked={(id) => clickHandlerLightbox(id)}
-            linkClicked={(link) => clickHandlerLink(link)}
+            buttonClicked={id => clickHandlerLightbox(id)}
+            linkClicked={link => clickHandlerLink(link)}
           ></FeaturePortfolios>
         </NavigationSection>
 
@@ -201,8 +212,8 @@ export default function App() {
         >
           <FeatureAwards
             cards={AWARD_CARDS}
-            buttonClicked={(id) => clickHandlerLightbox(id)}
-            linkClicked={(link) => clickHandlerLink(link)}
+            buttonClicked={id => clickHandlerLightbox(id)}
+            linkClicked={link => clickHandlerLink(link)}
           ></FeatureAwards>
         </NavigationSection>
 
@@ -215,8 +226,8 @@ export default function App() {
           <FeaturePortfolios
             buttonsGroup={CERTIFICATES_BUTTONS_GROUP}
             cards={CERTIFICATE_CARDS}
-            buttonClicked={(id) => clickHandlerLightbox(id)}
-            linkClicked={(link) => clickHandlerLink(link)}
+            buttonClicked={id => clickHandlerLightbox(id)}
+            linkClicked={link => clickHandlerLink(link)}
           ></FeaturePortfolios>
         </NavigationSection>
         <NavigationSection

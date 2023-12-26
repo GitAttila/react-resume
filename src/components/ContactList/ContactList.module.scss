@@ -1,5 +1,3 @@
-@use '../../styles/variables' as vars;
-
 .ah {
   &-c {
     &-contacts-list {
@@ -9,7 +7,7 @@
         pointer-events: none;
       }
       &__title {
-        color: vars.$ah-secondary-text-color;
+        color: var(--secondary-text-color);
       }
       &__list {
         padding: 0;
@@ -19,7 +17,7 @@
       &__list-item {
         margin-bottom: 0.4rem;
         a {
-          color: vars.$ah-primary-text-color;
+          color: var(--primary-text-color);
           cursor: pointer;
           display: inline-flex;
           justify-content: flex-start;
@@ -29,10 +27,10 @@
           transition: 100ms color ease-in-out;
           &:active,
           &:visited {
-            color: vars.$ah-primary-text-color;
+            color: var(--primary-text-color);
           }
           &:hover {
-            color: vars.$ah-highlight-text-color;
+            color: var(--highlight-text-color);
           }
         }
       }
