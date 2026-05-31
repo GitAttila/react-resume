@@ -20,7 +20,8 @@
       margin: 0 1.6rem;
       margin-bottom: 1.6rem; // to align with button's marginson flex-wrap
       min-height: 3.2rem;
-      border-right: 2px solid vars.$ah-disabled-text-color;
+      border-right: 2px solid var(--disabled-text-color);
+      transition: 300ms border-color ease-in-out;
     }
   }
 }

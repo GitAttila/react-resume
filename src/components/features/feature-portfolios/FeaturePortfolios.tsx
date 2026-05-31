@@ -37,8 +37,7 @@ export default function FeaturePortfolios(props: FeaturePortfoliosProps) {
       ? id.split('--')[idFragmentsCount - 1]
       : ('' as CertificateFilterKeys | ProjectFilterKeys);
     let filtered =
-      cards.filter((card) => !!card.keys.find((cardKey) => cardKey === key)) ||
-      [];
+      cards.filter(card => !!card.keys.find(cardKey => cardKey === key)) || [];
     filtered = key.includes('all') ? cards : filtered;
     setFilteredCards(filtered);
   };
@@ -71,14 +70,14 @@ export default function FeaturePortfolios(props: FeaturePortfoliosProps) {
                   <CardIcon
                     iconLink={card.linkIcon}
                     className={styles['ah-c-feature-portfolios__link-external']}
-                    onClick={(link) => linkClickHandler(link)}
+                    onClick={link => linkClickHandler(link)}
                   ></CardIcon>
                 ) : null}
                 {card.galleryIcon ? (
                   <CardIcon
                     iconLink={card.galleryIcon}
                     className={styles['ah-c-feature-portfolios__link-gallery']}
-                    onClick={(link) => iconLinkClickHandler(link)}
+                    onClick={link => iconLinkClickHandler(link)}
                   ></CardIcon>
                 ) : null}
 
@@ -100,6 +99,9 @@ export default function FeaturePortfolios(props: FeaturePortfoliosProps) {
                   ></CardProjectContent>
                 )}
               </div>
+              <div
+                className={`${styles['ah-c-feature-portfolios__bg']} ${styles['ah-c-feature-portfolios__bg--overlay-tinting']}`}
+              ></div>
               <div
                 className={`${styles['ah-c-feature-portfolios__bg']} ${styles['ah-c-feature-portfolios__bg--overlay']}`}
               ></div>

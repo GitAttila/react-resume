@@ -1,12 +1,11 @@
 @use '../../styles/shadows' as shadows;
-@use '../../styles//variables' as vars;
 
 .ah {
   &-c {
     &-card {
       min-height: 17rem;
       padding: 1.6rem;
-      background-color: vars.$ah-white;
+      background-color: var(--card-background-color);
       transition: 100ms transform linear, 100ms box-shadow linear;
       &--scale-on-hover {
         &:hover {

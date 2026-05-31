@@ -13,7 +13,7 @@ export default function IconSwitch(props: IconSwitchProps) {
   const darkThemeIcon: AHIcon = { ...ICON_DARK_THEME };
   const lightThemeIcon: AHIcon = { ...ICON_LIGHT_THEME };
 
-  const [selectedIcon, setSelectedIcon] = useState<AHIcon>(lightThemeIcon);
+  const [selectedIcon, setSelectedIcon] = useState<AHIcon>(darkThemeIcon);
 
   const iconClickedHandler = (ev: React.MouseEvent, iconClicked: AHIcon) => {
     ev.preventDefault();

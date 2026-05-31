@@ -5,7 +5,7 @@
   &-c {
     &-feature-timeline {
       &__title {
-        color: vars.$ah-secondary-text-color;
+        color: var(--secondary-text-color);
       }
       &__list {
         padding: 0;
@@ -37,10 +37,10 @@
       &__feature {
         flex: 1 1 75%;
         &__subtitle {
-          color: vars.$ah-disabled-text-color;
+          color: var(--disabled-text-color);
         }
         &__description {
-          color: vars.$ah-secondary-text-color;
+          color: var(--secondary-text-color);
         }
       }
     }

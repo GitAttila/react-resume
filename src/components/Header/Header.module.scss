@@ -5,11 +5,11 @@
   &-c {
     &-header {
       display: flex;
-      background-color: vars.$ah-white;
-      backdrop-filter: blur(vars.$ah-backdrop-blur);
-      color: vars.$ah-secondary-text-color;
+      background-color: var(--card-background-color);
+      color: var(--secondary-text-color);
       height: vars.$ah-header-height;
       width: 100%;
+      transition: 300ms background-color ease-in-out, 300ms color ease-in-out;
       &__theme-icon {
         margin-right: 1.6rem;
       }

@@ -6,18 +6,19 @@ import Avatar from '../Avatar/Avatar';
 import avatarImg from '../../assets/images/AH_portrait_white.png';
 import Navigation from '../Navigation/Navigation';
 import { AHButton } from '../../models/ah-button.model';
-// import IconSwitch from '../IconSwitch/IconSwitch';
-// import { AHIcon } from '../../models/ah-icon.model';
+import IconSwitch from '../IconSwitch/IconSwitch';
+import { AHIcon } from '../../models/ah-icon.model';
 
 const Header: React.FC<{
   className?: string;
   navItems: AHButton[];
   navClicked: (item: AHButton) => void;
-}> = ({ className, navItems, navClicked }) => {
+  iconClicked: (icon: AHIcon) => void;
+}> = ({ className, navItems, navClicked, iconClicked }) => {
   const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false);
 
   const menuHandler = () => {
-    setIsMenuOpened((isOpened) => !isOpened);
+    setIsMenuOpened(isOpened => !isOpened);
   };
 
   const menuItemClickedHandler = (event: React.MouseEvent, item: AHButton) => {
@@ -25,10 +26,9 @@ const Header: React.FC<{
     navClicked(item);
   };
 
-  // TODO: Add theming dark/light
-  // const themeIconHandler = (icon: AHIcon) => {
-  //   console.log('clicked: ', icon);
-  // };
+  const iconClickHandler = (icon: AHIcon) => {
+    iconClicked(icon);
+  };
 
   return (
     <header
@@ -49,10 +49,10 @@ const Header: React.FC<{
             </h3>
           </span>
           <span className={classes['ah-c-header__spacer']}></span>
-          {/* <IconSwitch
+          <IconSwitch
             className={`${classes['ah-c-header__theme-icon']}`}
-            onClick={themeIconHandler}
-          ></IconSwitch> */}
+            onClick={iconClickHandler}
+          ></IconSwitch>
           <MenuIcon onClick={menuHandler} isOpened={isMenuOpened} />
           <span className={classes['ah-c-header__avatar']}>
             <Avatar image={avatarImg}></Avatar>

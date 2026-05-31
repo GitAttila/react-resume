@@ -1,5 +1,3 @@
-@use '../../styles/variables' as vars;
-
 .icon-container {
   position: relative;
   height: 4rem;
@@ -16,7 +14,7 @@
   &__line {
     display: block;
     width: 100%;
-    background-color: vars.$ah-secondary-text-color;
+    background-color: var(--secondary-text-color);
     border-radius: 3px;
     height: 0.4rem;
     transition: all 0.3s;

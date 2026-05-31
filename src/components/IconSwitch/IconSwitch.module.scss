@@ -1,5 +1,3 @@
-@use '../../styles/variables' as vars;
-
 .ah {
   &-c {
     &-icon-switch {
@@ -23,7 +21,7 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background: vars.$ah-disabled-background-color;
+        background: var(--disabled-background-color);
         opacity: 0;
         transition: 100ms opacity ease-in-out;
       }
