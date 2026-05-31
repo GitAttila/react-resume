@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { AHButton } from '../../models/ah-button.model';
 import AppButton from '../AppButton/AppButton';
 import styles from './AppButtonGroup.module.scss';
@@ -11,16 +11,16 @@ export interface AppButtonGroupProps {
 }
 
 export default function AppButtonGroup(
-  props: AppButtonGroupProps
-): JSX.Element {
+  props: AppButtonGroupProps,
+): React.ReactElement {
   const [buttons, setButtons] = useState<AHButton[]>(
     props?.allButtonEnabled
       ? [{ ...BUTTONS_GROUP_ALL_BUTTON }, ...props.buttonsGroup]
-      : [...props.buttonsGroup]
+      : [...props.buttonsGroup],
   );
 
   const btnClickHandler = (id: string) => {
-    const updated = buttons.map((button) => ({
+    const updated = buttons.map(button => ({
       ...button,
       selected: button.id === id,
     }));
@@ -30,7 +30,7 @@ export default function AppButtonGroup(
 
   return (
     <div className={`${styles['app-button-group']}`}>
-      {buttons.map((button) => {
+      {buttons.map(button => {
         return (
           <Fragment key={button.id}>
             <AppButton
@@ -43,7 +43,7 @@ export default function AppButtonGroup(
               selected={!!button?.selected}
               disabled={!!button?.disabled}
               caption={button.caption}
-              onClick={(id) => btnClickHandler(id)}
+              onClick={id => btnClickHandler(id)}
             ></AppButton>
             {props?.allButtonEnabled && button.id.includes('all') && (
               <div className={`${styles['app-button-group__divider']}`}></div>

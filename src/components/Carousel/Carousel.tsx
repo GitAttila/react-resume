@@ -13,25 +13,27 @@ interface CarouselProps {
   timer?: number; // milliseconds
 }
 
-export default function Carousel(props: CarouselProps): JSX.Element {
+export default function Carousel(props: CarouselProps): React.ReactElement {
   const timer = props?.timer || 0;
   const [atSlide, setAtSlide] = useState<number>(0);
 
-  const childrenArray = Children.toArray(props.children) as JSX.Element[];
+  const childrenArray = Children.toArray(
+    props.children,
+  ) as React.ReactElement[];
 
-  const carouselHero = childrenArray.find((child) =>
-    child?.key?.includes('hero')
+  const carouselHero = childrenArray.find(child =>
+    child?.key?.includes('hero'),
   );
 
   const carouselSlideChildrenArray =
-    childrenArray.filter((child) => child?.key?.includes('slide')) || [];
+    childrenArray.filter(child => child?.key?.includes('slide')) || [];
   const slidesCount = carouselSlideChildrenArray.length;
   const moveByPer = Math.floor((100 / slidesCount) * 1000) / 1000;
 
   useEffect(() => {
     if (timer) {
       const slideInterval = setInterval(() => {
-        setAtSlide((atSlide) => atSlide + 1);
+        setAtSlide(atSlide => atSlide + 1);
       }, timer);
       return () => {
         clearInterval(slideInterval);
@@ -43,17 +45,17 @@ export default function Carousel(props: CarouselProps): JSX.Element {
     ev.preventDefault();
     if (props.rollOver) {
       if (direction === 'left') {
-        setAtSlide((atSlide) => atSlide - 1);
+        setAtSlide(atSlide => atSlide - 1);
       }
       if (direction === 'right') {
-        setAtSlide((atSlide) => atSlide + 1);
+        setAtSlide(atSlide => atSlide + 1);
       }
     } else {
       if (direction === 'left' && atSlide > 0) {
-        setAtSlide((atSlide) => atSlide - 1);
+        setAtSlide(atSlide => atSlide - 1);
       }
       if (direction === 'right' && atSlide < slidesCount - 1) {
-        setAtSlide((atSlide) => atSlide + 1);
+        setAtSlide(atSlide => atSlide + 1);
       }
     }
   };
@@ -74,7 +76,7 @@ export default function Carousel(props: CarouselProps): JSX.Element {
         style={{ display: props.indicators ? 'block' : 'none' }}
       >
         <div className={styles['ah-c-carousel__indicators']}>
-          {[...Array(slidesCount).keys()]?.map((count) => {
+          {[...Array(slidesCount).keys()]?.map(count => {
             return (
               <div
                 key={`indicator-${count}`}

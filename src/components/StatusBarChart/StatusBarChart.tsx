@@ -8,8 +8,8 @@ export interface StatusBarChartProps {
 }
 
 export default function StatusBarChart(
-  props: StatusBarChartProps
-): JSX.Element {
+  props: StatusBarChartProps,
+): React.ReactElement {
   const title = props.title;
   const values = props.values;
   return (
@@ -20,7 +20,7 @@ export default function StatusBarChart(
         {title}
       </h3>
       <ul className={styles['ah-c-status-bar-chart__list']}>
-        {values?.map((item) => {
+        {values?.map(item => {
           return (
             <li
               key={item.caption}

@@ -47,7 +47,7 @@ export default function App() {
   const [lightboxOpened, setLightboxOpened] = useState(false);
   const [currentSlides, setCurrentSlides] = useState<SlideImage[]>([]);
   const [lightBoxType, setLightBoxType] = useState<LightBoxGalleryType>(
-    LightBoxGalleryType.ONE_SLIDE
+    LightBoxGalleryType.ONE_SLIDE,
   );
 
   const [navItems, setNavItems] = useState<AHButton[]>([...NAV_ITEMS]);
@@ -101,12 +101,12 @@ export default function App() {
       selected: item.id === navItem.id,
     }));
     setNavItems(updated);
-    navItem.id.includes(NavItem.HOME) && scrollToHeroSection(true);
-    navItem.id.includes(NavItem.PROFILE) && scrollToProfileSection(true);
-    navItem.id.includes(NavItem.DEV_STACK) && scrollToDevStackSection(true);
-    navItem.id.includes(NavItem.PROJECTS) && scrollToProjectsSection(true);
-    navItem.id.includes(NavItem.AWARDS) && scrollToAwardsSection(true);
-    navItem.id.includes(NavItem.CERTIFICATES) &&
+    if (navItem.id.includes(NavItem.HOME)) scrollToHeroSection(true);
+    if (navItem.id.includes(NavItem.PROFILE)) scrollToProfileSection(true);
+    if (navItem.id.includes(NavItem.DEV_STACK)) scrollToDevStackSection(true);
+    if (navItem.id.includes(NavItem.PROJECTS)) scrollToProjectsSection(true);
+    if (navItem.id.includes(NavItem.AWARDS)) scrollToAwardsSection(true);
+    if (navItem.id.includes(NavItem.CERTIFICATES))
       scrollToCertificatesSection(true);
   };
 
@@ -117,15 +117,15 @@ export default function App() {
   const renderButtons = lightBoxType === LightBoxGalleryType.FULL;
 
   const clickHandlerLink = (link: Link) => {
-    link?.link && window.open(link.link, '_blank');
+    if (link?.link) window.open(link.link, '_blank');
   };
 
   const iconClickHandler = (icon: AHIcon) => {
     document.body.classList.add(
-      icon.id.includes('light') ? 'light-theme' : 'dark-theme'
+      icon.id.includes('light') ? 'light-theme' : 'dark-theme',
     );
     document.body.classList.remove(
-      icon.id.includes('light') ? 'dark-theme' : 'light-theme'
+      icon.id.includes('light') ? 'dark-theme' : 'light-theme',
     );
   };
 
@@ -137,7 +137,7 @@ export default function App() {
     setLightBoxType(
       key.includes('cert')
         ? LightBoxGalleryType.ONE_SLIDE
-        : LightBoxGalleryType.FULL
+        : LightBoxGalleryType.FULL,
     );
     setLightboxOpened(true);
   };

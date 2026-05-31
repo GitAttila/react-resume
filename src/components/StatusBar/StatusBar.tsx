@@ -5,7 +5,7 @@ export interface StatusBarProps {
   status: StatusBarItem;
 }
 
-export default function StatusBar(props: StatusBarProps): JSX.Element {
+export default function StatusBar(props: StatusBarProps): React.ReactElement {
   const status = props.status;
   return (
     <div className={styles['ah-c-status-bar']}>

@@ -5,7 +5,7 @@ export interface AvatarProps {
   image: string;
 }
 
-export default function Avatar(props: AvatarProps): JSX.Element {
+export default function Avatar(props: AvatarProps): React.ReactElement {
   const className = props?.className && '';
   return (
     <div
