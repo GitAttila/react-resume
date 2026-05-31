@@ -3,7 +3,7 @@ import { RefObject, useEffect, useRef, useState } from 'react';
 const useScrollIntersection = <T extends Element>(): [
   RefObject<T>,
   (val: boolean) => void,
-  val: boolean
+  val: boolean,
 ] => {
   const ref = useRef<T>(null);
   const [shouldScrollTo, setShouldScrollTo] = useState(false);
@@ -23,10 +23,10 @@ const useScrollIntersection = <T extends Element>(): [
         console.log(ref.current, entry.isIntersecting);
         setIsIntersecting(entry.isIntersecting);
       },
-      { rootMargin: `-${offset}px` }
+      { rootMargin: `-${offset}px` },
     );
 
-    ref.current && observer.observe(ref.current);
+    if (ref.current) observer.observe(ref.current);
 
     return () => observer.disconnect();
   }, [isIntersecting]);

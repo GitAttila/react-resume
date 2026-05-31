@@ -12,11 +12,15 @@ export interface PortfolioCardContent<T> {
   scaleOnHover?: boolean;
 }
 
-export interface CertificateCardContent
-  extends Pick<PortfolioCardContent<any>, 'logo' | 'title' | 'subtitle'> {}
+export type CertificateCardContent = Pick<
+  PortfolioCardContent<any>,
+  'logo' | 'title' | 'subtitle'
+>;
 
-export interface ProjectCardContent
-  extends Pick<PortfolioCardContent<any>, 'logo' | 'title'> {}
+export type ProjectCardContent = Pick<
+  PortfolioCardContent<any>,
+  'logo' | 'title'
+>;
 
 export enum CardContentType {
   PROJECT = 'project',
