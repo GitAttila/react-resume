@@ -3,7 +3,9 @@ interface CarouselHeroProps {
   className?: string;
 }
 
-export default function CarouselHero(props: CarouselHeroProps): JSX.Element {
+export default function CarouselHero(
+  props: CarouselHeroProps,
+): React.ReactElement {
   return props?.className ? (
     <div className={props?.className || ''}>{props.children}</div>
   ) : (

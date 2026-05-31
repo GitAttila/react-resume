@@ -8,7 +8,7 @@ export interface NavigationProps {
   menuItemClicked: (ev: React.MouseEvent, item: AHButton) => void;
 }
 
-export default function Navigation(props: NavigationProps): JSX.Element {
+export default function Navigation(props: NavigationProps): React.ReactElement {
   const clickHandler = (ev: React.MouseEvent, item: AHButton) => {
     props.menuItemClicked(ev, item);
   };
@@ -19,10 +19,10 @@ export default function Navigation(props: NavigationProps): JSX.Element {
         props.opened ? classes['ah-c-navigation__list--opened'] : ''
       } `}
     >
-      {props.items.map((item) => {
+      {props.items.map(item => {
         return (
           <li
-            onClick={(e) => clickHandler(e, item)}
+            onClick={e => clickHandler(e, item)}
             key={item.id}
             className={` ${classes['ah-c-navigation__list-item']} ${
               item.selected

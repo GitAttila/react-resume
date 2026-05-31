@@ -1,7 +1,7 @@
 import { RefObject, useEffect, useRef, useState } from 'react';
 
 const useScrollIntersection = <T extends Element>(): [
-  RefObject<T>,
+  RefObject<T | null>,
   (val: boolean) => void,
   val: boolean,
 ] => {
