@@ -9,6 +9,7 @@
       color: var(--secondary-text-color);
       height: vars.$ah-header-height;
       width: 100%;
+      transition: 300ms background-color ease-in-out, 300ms color ease-in-out;
       &__theme-icon {
         margin-right: 1.6rem;
       }

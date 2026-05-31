@@ -1,23 +1,31 @@
 @use './variables' as vars;
 
 :root {
+  // text colors
   --primary-text-color: #{rgba(vars.$ah-black, 0.8)};
   --secondary-text-color: #{rgba(vars.$ah-black, 0.6)};
   --highlight-text-color: #{vars.$ah-orange};
   --disabled-text-color: #{rgba(vars.$ah-black, 0.25)};
-
+  // background colors
+  --highlight-background-color: #{vars.$ah-orange};
   --primary-background-color: #{vars.$ah-gray-100};
+  --secondary-background-color: #{vars.$ah-gray-700};
   --disabled-background-color: #{rgba(vars.$ah-black, 0.25)};
+  --tinting-background-color: #{rgba(vars.$ah-white, 0.33)};
   --card-background-color: #{vars.$ah-white};
 }
 
 .dark-theme {
+  // text colors
   --primary-text-color: #{rgba(vars.$ah-white, 0.8)};
   --secondary-text-color: #{rgba(vars.$ah-white, 0.6)};
   --highlight-text-color: #{vars.$ah-orange};
   --disabled-text-color: #{rgba(vars.$ah-white, 0.2)};
-
-  --primary-background-color: #{vars.$ah-gray-800};
+  // background colors
+  --highlight-background-color: #{vars.$ah-orange};
+  --primary-background-color: #{vars.$ah-primary-dark-background-color};
+  --secondary-background-color: #{vars.$ah-gray-900};
   --disabled-background-color: #{rgba(vars.$ah-white, 0.15)};
-  --card-background-color: #{vars.$ah-gray-900};
+  --tinting-background-color: #{rgba(vars.$ah-black, 0.8)};
+  --card-background-color: #{vars.$ah-gray-800};
 }

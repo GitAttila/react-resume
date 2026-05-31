@@ -31,14 +31,14 @@
         }
       }
       &--dev-stack {
-        background-color: vars.$ah-gray-700;
+        background-color: var(--secondary-background-color);
         h2 {
           color: vars.$ah-white;
           -webkit-text-fill-color: inherit;
         }
       }
       &--awards {
-        background-color: vars.$ah-disabled-text-color;
+        background-color: var(--secondary-background-color);
         h2 {
           color: vars.$ah-white;
           -webkit-text-fill-color: inherit;

@@ -4,21 +4,22 @@
   &-c {
     &-status-bar {
       position: relative;
-      background-color: rgba(vars.$ah-black, 0.14);
+      background-color: var(--disabled-background-color);
       border-radius: 4rem;
       height: 3.2rem;
       width: 100%;
       overflow: hidden;
+      transition: 300ms background-color ease-in-out;
       &__bar {
         position: absolute;
-        background-color: vars.$ah-orange;
+        background-color: var(--highlight-background-color);
         border-radius: 4rem;
         z-index: 0;
         left: 0;
         top: 0;
         height: 100%;
         width: 0;
-        transform: 500ms width ease-in-out;
+        transition: 500ms width ease-in-out, 300ms background-color ease-in-out;
       }
       &__caption {
         color: vars.$ah-white;
@@ -29,6 +30,7 @@
         height: 100%;
         font-size: 2rem;
         margin-left: 1.6rem;
+        transition: 300ms color ease-in-out;
       }
     }
   }

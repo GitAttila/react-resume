@@ -56,6 +56,12 @@
         top: 0;
         width: 100%;
         height: 100%;
+        &--overlay-tinting {
+          z-index: 2;
+          background-color: var(--tinting-background-color);
+          mix-blend-mode: soft-light;
+          transition: 300ms background-color ease-in-out;
+        }
         &--overlay {
           z-index: 1;
           opacity: 0.6;
