@@ -2,18 +2,18 @@ import { SummaryItem } from '../models/summaryItem.model';
 
 export const FEATURE_SUMMARY: SummaryItem[] = [
   {
-    id: 'summary-1',
+    id: 'summary-3',
     title: 'Front-end software engineer',
-    text: 'Front-end software engineer with focus on Angular framework including the reactive programming and state management systems.',
+    text: 'Senior front-end engineer specialising in Angular, with deep expertise in reactive programming (RxJS) and state management (NgRx). Delivered production-grade applications across high-stakes industries including financial risk management, cybersecurity, medical devices, and industrial automation.',
   },
   {
     id: 'summary-2',
     title: 'UX designer',
-    text: 'Full - stack Adobe Suite designer with a proven record of design projects across both digital and desktop publishing platforms, with rich and extensive portfolio overpassing the common proffesional ground and an award-winning photographer.',
+    text: 'Multidisciplinary designer bridging engineering and user experience. Proficient across the full Adobe Suite and Figma, with a proven track record of leading UX design on complex enterprise applications — from medical device monitoring to financial risk dashboards.',
   },
   {
-    id: 'summary-3',
+    id: 'summary-1',
     title: 'Data visualisation specialist',
-    text: "Focusing on HTML5's SVG and Canvas for building custom visualisation components.",
+    text: 'Transforming complex datasets into clear, interactive visual narratives using D3.js, HTML5 SVG and Canvas. Experienced in crafting bespoke chart solutions and data-driven interfaces for demanding enterprise environments.',
   },
 ];

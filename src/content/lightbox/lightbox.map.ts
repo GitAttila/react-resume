@@ -40,6 +40,7 @@ import {
   SLIDES_PROJECT_MDT_SCYNC,
   SLIDES_PROJECT_MY_RESUME,
   SLIDES_PROJECT_PF,
+  SLIDES_PROJECT_ZODIAC_FONTS,
   SLIDES_PROJECT_RA_CALENDAR,
   SLIDES_PROJECT_RA_LOGIN_PAGE,
   SLIDES_PROJECT_RA_MERCHENDISE,
@@ -89,6 +90,7 @@ export enum LightboxKeys {
   PROJECT_RA_MERCHENDISE = 'ra-merchendise',
   PROJECT_EMB = 'embitron',
   PROJECT_MY_RESUME = 'my-resume',
+  PROJECT_ZODIAC_FONTS = 'zodiac-fonts',
 }
 
 export function initLightBoxData(): Map<LightboxKeys, SlideImage[]> {
@@ -179,6 +181,9 @@ export function initLightBoxData(): Map<LightboxKeys, SlideImage[]> {
   LightBoxMap.set(LightboxKeys.PROJECT_EMB, [...SLIDES_PROJECT_EMB]);
   LightBoxMap.set(LightboxKeys.PROJECT_MY_RESUME, [
     ...SLIDES_PROJECT_MY_RESUME,
+  ]);
+  LightBoxMap.set(LightboxKeys.PROJECT_ZODIAC_FONTS, [
+    ...SLIDES_PROJECT_ZODIAC_FONTS,
   ]);
   return LightBoxMap;
 }

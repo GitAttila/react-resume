@@ -5,12 +5,12 @@ import codingImage from '../assets/images/coding.jpeg';
 export const HERO_SLIDES: CarouselSlideContent[] = [
   {
     title: 'Frontend engineer',
-    text: 'Front-end software engineer with focus on Angular framework including the reactive programming and state management systems.',
+    text: 'Senior front-end engineer specialising in Angular, with deep expertise in reactive programming and state management. Delivering scalable solutions across finance, cybersecurity, medical and industrial sectors.',
     image: codingImage,
   },
   {
     title: 'UX designer',
-    text: 'Full - stack Adobe Suite designer with a proven record of design projects across both digital and desktop publishing platforms.',
+    text: 'Multidisciplinary designer bridging engineering and user experience. Proficient in Figma and the full Adobe Suite, with a proven track record of leading UX design on complex enterprise applications.',
     image: uxImage,
   },
 ];

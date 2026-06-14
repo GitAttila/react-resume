@@ -31,7 +31,7 @@ export const PROGRAMMING_LANGUAGES_SKILLS: StatusBarChartData = {
     },
     {
       caption: 'typescript',
-      value: 0.75,
+      value: 0.85,
     },
     {
       caption: 'node.js',
@@ -44,28 +44,36 @@ export const FRAMEWORKS_SKILLS: StatusBarChartData = {
   title: 'frameworks / libraries',
   values: [
     {
-      caption: 'react',
-      value: 0.7,
-    },
-    {
       caption: 'angular',
-      value: 0.9,
+      value: 0.95,
     },
     {
       caption: 'angular material',
-      value: 0.9,
+      value: 0.95,
     },
     {
       caption: 'rxjs / reactive programming',
-      value: 0.8,
+      value: 0.85,
     },
     {
-      caption: 'redux - ngrx / state management',
-      value: 0.65,
+      caption: 'ngrx / ngrx signal store',
+      value: 0.75,
     },
     {
       caption: 'd3.js',
-      value: 0.7,
+      value: 0.75,
+    },
+    {
+      caption: 'ionic / angular',
+      value: 0.6,
+    },
+    {
+      caption: 'ngprime',
+      value: 0.6,
+    },
+    {
+      caption: 'react',
+      value: 0.6,
     },
   ],
 };
@@ -74,24 +82,20 @@ export const DEVELOPMENT_AUTOMATION: StatusBarChartData = {
   title: 'development automation',
   values: [
     {
+      caption: 'vite',
+      value: 0.9,
+    },
+    {
       caption: 'npm',
       value: 0.9,
     },
     {
-      caption: 'gulp',
-      value: 0.9,
-    },
-    {
       caption: 'webpack',
-      value: 0.75,
-    },
-    {
-      caption: 'vite',
-      value: 0.7,
+      value: 0.85,
     },
     {
       caption: 'git / github / gitlab',
-      value: 0.65,
+      value: 0.85,
     },
   ],
 };
@@ -108,8 +112,12 @@ export const WEB_TECHNOLOGIES: StatusBarChartData = {
       value: 1,
     },
     {
-      caption: 'bootstrap',
-      value: 1,
+      caption: 'tailwind css',
+      value: 0.75,
+    },
+    {
+      caption: 'primeflex',
+      value: 0.6,
     },
   ],
 };
@@ -126,7 +134,7 @@ export const DESIGN_TOOLS: StatusBarChartData = {
       value: 1,
     },
     {
-      caption: 'adobe indesgn',
+      caption: 'adobe indesign',
       value: 0.9,
     },
     {
@@ -134,7 +142,7 @@ export const DESIGN_TOOLS: StatusBarChartData = {
       value: 0.8,
     },
     {
-      caption: 'adobe ilustrator',
+      caption: 'adobe illustrator',
       value: 0.65,
     },
   ],

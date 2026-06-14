@@ -1,27 +1,17 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal resume app built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+Uses [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) (Babel) for Fast Refresh.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ESLint Configuration
 
-## Expanding the ESLint configuration
+This project uses type-aware lint rules for production-quality linting:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Uses `plugin:@typescript-eslint/recommended-type-checked` for type-aware TypeScript linting
+- Configured `parserOptions` with `project` references to `tsconfig.json` and `tsconfig.node.json`
+- `eslint.config.js` is excluded from linting via the `ignores` list
 
-- Configure the top-level `parserOptions` property like this:
+### Note on `eslint-plugin-react`
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+[eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) is not currently installed because it does not yet support ESLint v10+ (peer dep requires `eslint@^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9.7`). React-specific linting is covered by `eslint-plugin-react-hooks` and `eslint-plugin-react-refresh` in the meantime.
