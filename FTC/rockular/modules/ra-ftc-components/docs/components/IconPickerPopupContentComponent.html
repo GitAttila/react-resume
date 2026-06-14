@@ -1,0 +1,664 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@ra-wcftcloud/ra-ftc-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@ra-wcftcloud/ra-ftc-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>IconPickerPopupContentComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">API</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/icon-picker/popup-content.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">encapsulation</td>
+                <td class="col-md-9"><code>ViewEncapsulation.None</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>ra-ftc-icon-picker-popup-content</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>popup-content.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>popup-content.component.html</code></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#_destroyed">_destroyed</a>
+                            </li>
+                            <li>
+                                <a href="#_fontList">_fontList</a>
+                            </li>
+                            <li>
+                                <a href="#_loading">_loading</a>
+                            </li>
+                            <li>
+                                <a href="#_simpleIconPicker">_simpleIconPicker</a>
+                            </li>
+                            <li>
+                                <a href="#iconpicker">iconpicker</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostBindings</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#@transformPopup">@transformPopup</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#simpleIconPicker">simpleIconPicker</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(_changeDetectorRef: <a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank">ChangeDetectorRef</a>, fontsLoaderSvc: <a href="../injectables/FontsHttpLoaderService.html">FontsHttpLoaderService</a>)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>_changeDetectorRef</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank" >ChangeDetectorRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>fontsLoaderSvc</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="../injectables/FontsHttpLoaderService.html" target="_self" >FontsHttpLoaderService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+    <section>
+    <h3>HostBindings</h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="@transformPopup"></a>
+                        <span class="name">
+                            <b>
+                            @transformPopup
+                            </b>
+                            <a href="#@transformPopup"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>@transformPopup:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;enter&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnDestroy"></a>
+                        <span class="name">
+                            <b>
+                            ngOnDestroy
+                            </b>
+                            <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_destroyed"></a>
+                        <span class="name">
+                            <b>
+                            _destroyed
+                            </b>
+                            <a href="#_destroyed"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>_destroyed:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Subject&lt;void&gt;()</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_fontList"></a>
+                        <span class="name">
+                            <b>
+                            _fontList
+                            </b>
+                            <a href="#_fontList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>_fontList:     <code><a href="../interfaces/IFont.html" target="_self" >IFont[]</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/IFont.html" target="_self" >IFont[]</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_loading"></a>
+                        <span class="name">
+                            <b>
+                            _loading
+                            </b>
+                            <a href="#_loading"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>_loading:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_simpleIconPicker"></a>
+                        <span class="name">
+                            <b>
+                            _simpleIconPicker
+                            </b>
+                            <a href="#_simpleIconPicker"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>_simpleIconPicker:     <code><a href="../components/SimpleIconPickerComponent.html" target="_self" >SimpleIconPickerComponent</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../components/SimpleIconPickerComponent.html" target="_self" >SimpleIconPickerComponent</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="iconpicker"></a>
+                        <span class="name">
+                            <b>
+                            iconpicker
+                            </b>
+                            <a href="#iconpicker"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>iconpicker:     <code><a href="../components/IconPickerComponent.html" target="_self" >IconPickerComponent</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../components/IconPickerComponent.html" target="_self" >IconPickerComponent</a></code>
+
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Reference to the popup that created the overlay. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="simpleIconPicker"></a>
+                        <span class="name"><b>simpleIconPicker</b><a href="#simpleIconPicker"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>simpleIconPicker()</code></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>simpleIconPicker(child: )</code></span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Reference to the internal simpleiconpicker component. </p>
+</div>
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>child</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+
+
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div [@fadeInPopup]="\'enter\'">    <div *ngIf="_loading" fxFlex fxLayoutAlign="center center" style="height: 50px;">        <mat-spinner [diameter]="20"></mat-spinner>    </div>    <ra-ftc-simple-icon-picker *ngIf="!_loading" [fontList]="_fontList" [visibleFontSets]="iconpicker._visibleFontSets" [selectedIcon]="iconpicker._selectedIcon"></ra-ftc-simple-icon-picker></div></div>'
+    var COMPONENTS = [{'name': 'BreadcrumbComponent', 'selector': 'ra-ftc-breadcrumb'},{'name': 'DatetimePickerComponent', 'selector': 'ra-ftc-datetime-picker'},{'name': 'DialogMessageComponent', 'selector': 'ra-ftc-dialog-message'},{'name': 'ExpansionPanel', 'selector': 'ra-ftc-expansion-panel'},{'name': 'ExpansionPanelHeader', 'selector': 'ra-ftc-expansion-panel-header'},{'name': 'ExpansionToolPanelComponent', 'selector': 'ra-ftc-expansion-tool-panel'},{'name': 'FileInputComponent', 'selector': 'ra-ftc-file-input'},{'name': 'IconPickerComponent', 'selector': 'ra-ftc-icon-picker'},{'name': 'IconPickerPopupContentComponent', 'selector': 'ra-ftc-icon-picker-popup-content'},{'name': 'LabelComponent', 'selector': 'ra-ftc-label'},{'name': 'MapComponent', 'selector': 'ra-ftc-map'},{'name': 'NavbarContextMenuComponent', 'selector': 'ra-ftc-navbar-context-menu'},{'name': 'PaletteColorPickerComponent', 'selector': 'ra-ftc-palette-color-picker'},{'name': 'PaletteColorPickerPopupContentComponent', 'selector': 'ra-ftc-palette-colorpicker-popup-content'},{'name': 'RasterImageComponent', 'selector': 'ra-ftc-raster-image'},{'name': 'SimpleIconPickerComponent', 'selector': 'ra-ftc-simple-icon-picker'},{'name': 'SimplePaletteColorPickerComponent', 'selector': 'ra-ftc-simple-palette-color-picker'},{'name': 'SimpleStandardColorPickerComponent', 'selector': 'ra-ftc-simple-standard-color-picker'},{'name': 'StandardColorPickerComponent', 'selector': 'ra-ftc-standard-color-picker'},{'name': 'StandardColorPickerPopupContentComponent', 'selector': 'ra-ftc-standard-colorpicker-popup-content'},{'name': 'StringValuePickerComponent', 'selector': 'ra-ftc-string-value-picker'},{'name': 'TruncateComponent', 'selector': 'ra-ftc-truncate'},{'name': 'ValuePickerContentComponent', 'selector': 'ra-ftc-value-picker-content'},{'name': 'ValueTableComponent', 'selector': 'ra-ftc-value-table'},{'name': 'ValueTitleComponent', 'selector': 'ra-ftc-value-title'},{'name': 'VerticalIconNavbarComponent', 'selector': 'ra-ftc-vertical-icon-navbar'}];
+    var DIRECTIVES = [{'name': 'Accordion', 'selector': 'ra-ftc-accordion'},{'name': 'ExpansionPanelActionRow', 'selector': 'ra-ftc-action-row'},{'name': 'ExpansionPanelContent', 'selector': 'ng-template[ExpansionPanelContent]'},{'name': 'ExpansionPanelHeaderContent', 'selector': 'ra-ftc-panel-header-content'},{'name': 'ExpansionPanelHeaderDescription', 'selector': 'ra-ftc-panel-header-description'},{'name': 'ExpansionPanelHeaderTitle', 'selector': 'ra-ftc-panel-header-title'},{'name': 'NavbarLabelWrapperDirective', 'selector': 'mat-toolbar-row[navbarLabelWrapper]'}];
+    var ACTUAL_COMPONENT = {'name': 'IconPickerPopupContentComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'IconPickerPopupContentComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

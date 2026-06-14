@@ -1,0 +1,87 @@
+<!doctype html>
+<html ng-app="example1">
+<head>
+    <!-- JS Dependencies -->
+   <script src="dependencies/jquery.min.js"></script>
+   <script src="dependencies/jquery.contextMenu.js"></script>
+   <script src="dependencies/jquery.ui.position.js"></script>
+   <script src="dependencies/bootstrap.min.js"></script>
+   <script src="dependencies/lodash.js"></script>
+   <script src="dependencies/angular.min.js"></script>
+   <script src="dependencies/angular-animate.min.js"></script>
+   <script src="dependencies/angular-sanitize.min.js"></script>
+   <script src="dependencies/angular-ui-router.min.js"></script>
+   <script src="dependencies/ui-bootstrap-tpls.min.js"></script>
+   <script src="dependencies/moment.min.js"></script>
+   <script src="dependencies/angular-translate.min.js"></script>
+   <script src="dependencies/angular-translate-loader-static-files.min.js"></script>
+   <script src="dependencies/toaster.min.js"></script>
+   <script src="dependencies/hammer.min.js"></script>
+   <script src="dependencies/angular.hammer.min.js"></script>
+   <script src="dependencies/mobile-toolkit-ra.min.js"></script>
+   <script src="dependencies/ra-ip-common.js"></script>
+   <script src="dependencies/ra-ip-components.js"></script>
+
+    <!-- CSS Dependencies -->
+   <link rel="stylesheet" href="dependencies/toaster.min.css">
+   <link rel="stylesheet" href="dependencies/bootstrap.css">
+   <link rel="stylesheet" href="dependencies/jquery.contextMenu.css">
+   <link rel="stylesheet" href="dependencies/bootstrap-datetimepicker.min.css">
+   <link rel="stylesheet" href="dependencies/mobile-toolkit-ra.min.css">
+   <link rel="stylesheet" href="dependencies/ra-icons.min.css">
+   <link rel="stylesheet" href="dependencies/flex-examples.css">
+   <link rel="stylesheet" href="dependencies/doc-examples.css">
+   <link rel="stylesheet" href="dependencies/ra-ip-components.css">
+
+    <!-- CSS Styles from the example -->
+   <link rel="stylesheet" href="example-8-style.css">
+
+    <!-- Scripts from the example -->
+   <script src='example-8-script.js'></script>
+</head>
+<body>
+
+  <div ng-controller="raIpFilterSearchCtrl">
+  <ra-ip-filter-search filters="filters" default="default" do-confirm="doConfirm" delay="delay" debounce="debounce" min-chars="minChars" mode="mode" placeholder="placeholder" reset="reset" callback="callback(query)" whispers="whispers(query)" whisper-last-query="whisperLastQuery" set-api="setApi(api)"></ra-ip-filter-search>
+  <h4 ng-show="results">Filtered results:</h4>
+      <ul class="search-results">
+         <li ng-repeat="result in results">{{result}}</li>
+      </ul>
+      <h4>Configuration</h4>
+          <div>
+              <label for="doConfirm">doConfirm</label>
+              <input id="doConfirm" type="checkbox" ng-model="doConfirm">
+              <label for="delay">delay</label>
+              <input id="delay" type="number" min="0" ng-model="delay">
+              <label for="minChars">minChars</label>
+              <input id="minChars" type="number" min="0" ng-model="minChars">
+          </div>
+          <div>
+             <label for="mode">mode</label>
+              <select id="mode" ng-model="mode" ng-change="api.reinit(mode)">
+              <option value="basic">Basic</option>
+              <option value="string">String</option>
+              <option value="advanced">Advanced</option>
+              </select>
+              <label for="whisperLastQuery">whisperLastQuery</label>
+              <input id="whisperLastQuery" type="checkbox" ng-model="whisperLastQuery">
+              <label for="reset">reset</label>
+              <input id="reset" type="checkbox" ng-model="reset">
+          </div>
+      <h4>Array of objects to filter:</h4>
+      <pre>{{array | json}}</pre>
+
+      <h4>Push item to array</h4>
+      <label for="objName">name:</label>
+      <input id="objName" type="text" ng-model="objName">
+      <label for="objCat">category:</label>
+      <input id="objCat" type="text" ng-model="objCat">
+      <button ng-click="array.push({name: objName, category: objCat})">Push</button>
+      <h4>Delete item from array</h4>
+      <label for="objId">ID</label>
+      <input id="objId" type="number" min="0" ng-model="objId">
+      <button ng-click="array.splice(objId,1)">Delete</button>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@ra-wcftcloud/ra-ftc-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@ra-wcftcloud/ra-ftc-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content directive">
+                   <div class="content-data">
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Directives</li>
+  <li>ExpansionPanelActionRow</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">API</a>
+        </li>
+        <li >
+            <a href="#readme" role="tab" id="readme-tab" data-toggle="tab" data-link="readme">Overview</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/expansion/expansion-panel.ts</code>
+        </p>
+
+
+
+
+        <section>
+            <h3>Metadata</h3>
+            <table class="table table-sm table-hover">
+                <tbody>
+
+                    <tr>
+                        <td class="col-md-3">Selector</td>
+                        <td class="col-md-9"><code>ra-ftc-action-row</code></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <div class="tab-pane fade " id="c-readme">
+        <p><p><code>&lt;ra-ftc-expansion-panel&gt;</code> provides an expandable details-summary view.</p>
+<!-- example(expansion-overview) -->
+
+<h3 id="expansion-panel-content">Expansion-panel content</h3>
+<p>Each expansion-panel must include a header and may optionally include an action bar.</p>
+<h4 id="header">Header</h4>
+<p>The <code>&lt;ra-ftc-expansion-panel-header&gt;</code> shows a summary of the panel content and acts
+as the control for expanding and collapsing. This header may optionally contain an
+<code>&lt;ra-ftc-panel-title&gt;</code> and an <code>&lt;ra-ftc-panel-description&gt;</code>, which format the content of the
+header to align with Material Design specifications.</p>
+<p>By default, the expansion-panel header includes a toggle icon at the end of the
+header to indicate the expansion state. This icon can be hidden via the
+<code>hideToggle</code> property.</p>
+<div><pre class="line-numbers"><code class="language-html">&lt;ra-ftc-expansion-panel&gt;
+  &lt;ra-ftc-expansion-panel-header&gt;
+    &lt;ra-ftc-panel-title&gt;
+      This is the expansion title
+    &lt;/ra-ftc-panel-title&gt;
+    &lt;ra-ftc-panel-description&gt;
+      This is a summary of the content
+    &lt;/ra-ftc-panel-description&gt;
+  &lt;/ra-ftc-expansion-panel-header&gt;
+
+  &lt;p&gt;This is the primary content of the panel.&lt;/p&gt;
+
+&lt;/ra-ftc-expansion-panel&gt;</code></pre></div><h4 id="action-bar">Action bar</h4>
+<p>Actions may optionally be included at the bottom of the panel, visible only when the expansion
+is in its expanded state.</p>
+<div><pre class="line-numbers"><code class="language-html">&lt;ra-ftc-expansion-panel&gt;
+  &lt;ra-ftc-expansion-panel-header&gt;
+    This is the expansion title
+  &lt;/ra-ftc-expansion-panel-header&gt;
+
+  &lt;p&gt;This is the primary content of the panel.&lt;/p&gt;
+
+  &lt;ra-ftc-action-row&gt;
+    &lt;button mat-button&gt;Click me&lt;/button&gt;
+  &lt;/ra-ftc-action-row&gt;
+&lt;/ra-ftc-expansion-panel&gt;</code></pre></div><h4 id="disabling-a-panel">Disabling a panel</h4>
+<p>Expansion panels can be disabled using the <code>disabled</code> attribute. A disabled expansion panel can&#39;t
+be toggled by the user, but can still be manipulated programmatically.</p>
+<div><pre class="line-numbers"><code class="language-html">&lt;ra-ftc-expansion-panel [disabled]=&quot;isDisabled&quot;&gt;
+  &lt;ra-ftc-expansion-panel-header&gt;
+    This is the expansion title
+  &lt;/ra-ftc-expansion-panel-header&gt;
+  &lt;ra-ftc-panel-description&gt;
+    This is a summary of the content
+  &lt;/ra-ftc-panel-description&gt;
+&lt;/ra-ftc-expansion-panel&gt;</code></pre></div><h3 id="accordion">Accordion</h3>
+<p>Multiple expansion-panels can be combined into an accordion. The <code>multi=&quot;true&quot;</code> input allows the
+expansions state to be set independently of each other. When <code>multi=&quot;false&quot;</code> (default) just one
+panel can be expanded at a given time:</p>
+<div><pre class="line-numbers"><code class="language-html">&lt;ra-ftc-accordion&gt;
+
+  &lt;ra-ftc-expansion-panel&gt;
+    &lt;ra-ftc-expansion-panel-header&gt;
+        &lt;ra-ftc-panel-header-title&gt;
+            This is the expansion 1 title
+        &lt;/ra-ftc-panel-header-title&gt;
+    &lt;/ra-ftc-expansion-panel-header&gt;
+
+    This the expansion 1 content
+
+  &lt;/ra-ftc-expansion-panel&gt;
+
+  &lt;ra-ftc-expansion-panel&gt;
+    &lt;ra-ftc-expansion-panel-header disableHeaderRowToggle=&quot;true&quot; collapsedHeight=&quot;40px&quot; expandedHeight=&quot;40px&quot;&gt;
+        &lt;ra-ftc-panel-header-title&gt;
+            This is the expansion 2 title
+        &lt;/ra-ftc-panel-header-title&gt;
+        &lt;ra-ftc-panel-header-description&gt;
+            This is the expansion 2 description
+            &lt;mat-icon&gt;account_circle&lt;/mat-icon&gt;
+        &lt;/ra-ftc-panel-header-description&gt;
+        &lt;ra-ftc-panel-header-content&gt;
+            &lt;button mat-icon-button&gt;
+                &lt;mat-icon&gt;account_circle&lt;/mat-icon&gt;
+            &lt;/button&gt;
+        &lt;/ra-ftc-panel-header-content&gt;
+    &lt;/ra-ftc-expansion-panel-header&gt;
+
+    This the expansion 2 content
+    &lt;mat-form-field&gt;
+        &lt;input matInput placeholder=&quot;First name&quot;&gt;
+    &lt;/mat-form-field&gt;
+
+    &lt;mat-form-field&gt;
+        &lt;input matInput type=&quot;number&quot; min=&quot;1&quot; placeholder=&quot;Age&quot;&gt;
+    &lt;/mat-form-field&gt;
+
+    &lt;ra-ftc-action-row&gt;
+        &lt;button mat-button color=&quot;primary&quot;&gt;Next&lt;/button&gt;
+    &lt;/ra-ftc-action-row&gt;
+
+  &lt;/ra-ftc-expansion-panel&gt;
+
+&lt;/ra-ftc-accordion&gt;</code></pre></div><h3 id="lazy-rendering">Lazy rendering</h3>
+<p>By default, the expansion panel content will be initialized even when the panel is closed.
+To instead defer initialization until the panel is open, the content should be provided as
+an <code>ng-template</code>:</p>
+<div><pre class="line-numbers"><code class="language-html">&lt;ra-ftc-expansion-panel&gt;
+  &lt;ra-ftc-expansion-panel-header&gt;
+    &lt;ra-ftc-panel-header-title&gt;
+        This is the expansion title
+    &lt;/ra-ftc-panel-header-title&gt;
+  &lt;/ra-ftc-expansion-panel-header&gt;
+
+  &lt;ng-template ExpansionPanelContent&gt;
+    Some deferred content
+  &lt;/ng-template&gt;
+&lt;/ra-ftc-expansion-panel&gt;</code></pre></div><h3 id="accessibility">Accessibility</h3>
+<p>The expansion-panel aims to mimic the experience of the native <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> elements.
+The expansion panel header has <code>role=&quot;button&quot;</code> and also the attribute <code>aria-controls</code> with the
+expansion panel&#39;s id as value.</p>
+<p>The expansion panel headers are buttons. Users can use the keyboard to activate the expansion panel
+header to switch between expanded state and collapsed state.</p>
+</p>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'directive';
+            var COMPODOC_CURRENT_PAGE_URL = 'ExpansionPanelActionRow.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

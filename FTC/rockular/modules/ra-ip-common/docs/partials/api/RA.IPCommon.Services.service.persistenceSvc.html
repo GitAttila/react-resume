@@ -1,0 +1,74 @@
+<h1><code ng:non-bindable="">persistenceSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPCommon.Services</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-persistencesvc-page"><p>Service for Persistence Request and Manipulations</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_commit">commit(persistRequest, [raPassError])</h3>
+<div class="commit"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-persistencesvc-commit-page"><p>Makes a request to JSON Persistence service on the server.</p>
+</div><h5 id="methods_commit_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>persistRequest</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-persistencesvc-commit-page"><p><a href="#/api/RA.IPCommon.Services.object:PersistRequest">RA.IPCommon.Services.object:PersistRequest</a></p>
+</div></td></tr><tr><td>[raPassError] <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-persistencesvc-commit-page"><p>flag indicating whether to turn off
+common error&#39;s interception mechanism</p>
+</div></td></tr></tbody></table><h5 id="methods_commit_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-ipromise">IPromise&lt;T&gt;</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-persistencesvc-commit-page"><p>Promise to resolve when answer will be available.</p>
+<p>It is strongly recommended to use the PropNameValues and PersistRequest utility objects
+to assist in construction of the request object. Doing so provides protection against 
+underlying changes to the JSON Persistence service. </p>
+<p>Examples:</p>
+<p> Creating items:  </p>
+<pre><code>      var propNameValues = createPropNameValues();
+      propNameValues.add(&#39;Name&#39;, &#39;DouglasFolder&#39;);
+      propNameValues.add(&#39;Description&#39;, &#39;Douglas folder description&#39;);
+
+      var persistRequest = createPersistRequest();
+      persistRequest.createItem(&#39;MyEnterprise.Public&#39;, 
+        &#39;TypeSystem.Packages.[Core.Package].ItemTypes.[Core.Folder]&#39;, 
+        propNameValues)
+
+      persistenceSvc.commit(persistRequest);
+</code></pre><p>  Updating items:</p>
+<pre><code>      var propNameValues = createPropNameValues();
+      propNameValues.add(&#39;Description&#39;, &#39;Updated folder description&#39;);
+
+      var persistRequest = createPersistRequest();
+      persistRequest.changeItem(&#39;MyEnterprise.Public.DouglasFolder&#39;, propNameValues);
+
+      persistenceSvc.commit(persistRequest);
+</code></pre><p>  Re-ordering an item collection:
+          // NOTE: The collection property must be defined as &quot;isOrdered&quot; in the model item type.
+          //       Also, you cannot add a collection and re-order it in the same transaction.</p>
+<pre><code>      var propNameValues = createPropNameValues();
+      propNameValues.reorder(&#39;Favorites&#39;, [&#39;Item 5&#39;,&#39;Item 4&#39;,&#39;Item 3&#39;,&#39;Item 2&#39;,&#39;Item 1&#39;]);
+
+      var persistRequest = createPersistRequest();
+      persistRequest.changeItem(&#39;System.Services.Profile.Users.PTM\User1.Mobile&#39;, propNameValues);
+
+      persistenceSvc.commit(persistRequest);
+</code></pre><p>   Rename item: (only one allowed per commit)</p>
+<pre><code>      var persistRequest = createPersistRequest();
+      persistRequest.renameItem(&#39;MyEnterprise.Public.DouglasFolder&#39;,&#39;RoseFolder&#39;)
+
+      persistenceSvc.commit(persistRequest);
+</code></pre><p>   Deleting items:</p>
+<pre><code>      var persistRequest = createPersistRequest();
+      persistRequest.deleteItem(&#39;MyEnterprise.Public.RoseFolder&#39;);
+      persistRequest.deleteItem(&#39;MyEnterprise.Public.TestFolder&#39;);
+
+      persistenceSvc.commit(persistRequest);
+</code></pre></div></td></tr></table></div>
+</li>
+<li><h3 id="methods_createpersistrequest">createPersistRequest()</h3>
+<div class="createpersistrequest"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-persistencesvc-createpersistrequest-page"><p>Create &amp; Return Persistence Request</p>
+</div><h5 id="methods_createpersistrequest_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-persistencesvc-createpersistrequest-page"><p>Persistence Request Object</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_createpropnamevalues">createPropNameValues()</h3>
+<div class="createpropnamevalues"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-persistencesvc-createpropnamevalues-page"><p>Create &amp; Return Proerpty Name &amp; Value Pairs</p>
+</div><h5 id="methods_createpropnamevalues_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-persistencesvc-createpropnamevalues-page"><p>Property Name Value Pair</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

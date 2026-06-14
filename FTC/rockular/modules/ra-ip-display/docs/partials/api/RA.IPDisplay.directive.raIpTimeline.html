@@ -1,0 +1,192 @@
+<h1><code ng:non-bindable="">raIpTimeline</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raiptimeline-page"><p>This raIpTimeline component is responsible for rendering Timeline Chart Widget.
+There is a specific service to handle widget constants, schema and examples, see <a href="#/api/RA.IPDisplay.service:raIpTimelineConstSvc">RA.IPDisplay.service:raIpTimelineConstSvc</a>.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ra-ip-timeline
+       rb-parameters="{object}"
+       ri-fqn="{string}"
+       rb-is-active="{boolean}"
+       ro-schema="{function}"
+       ro-examples="{function}"
+       rb-design-mode="{boolean}"&gt;
+&lt;/ra-ip-timeline&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rbParameters</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raiptimeline-page"><p>An object representing the parameters of Timeline Chart Widget.</p>
+<p>Common Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>autoReload</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>Should the values be auto reload</td>
+<td>False</td>
+</tr>
+<tr>
+<td>autoReloadInterval (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>Time interval to auto reload after</td>
+<td>5 sec</td>
+</tr>
+<tr>
+<td>lookBackwardHours</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>Number of Seconds the value are being displayed for. Special treatment for value 0 (see startTime and endTime parameters) and -1 (see lastSeconds parameter).</td>
+<td>600 sec (5 minutes)</td>
+</tr>
+<tr>
+<td>lastSeconds (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>Mandatory and used in case when lookBackwardHours equals -1 (Last N seconds). Number of Seconds the value are being displayed for when Last N seconds is chosen.</td>
+<td></td>
+</tr>
+<tr>
+<td>startTime (optional)</td>
+<td><a href="#" class="label type-hint type-hint-date">Date</a></td>
+<td>Start time date. Mandatory and used in case when lookBackwardHours equals 0 (Custom range).</td>
+<td></td>
+</tr>
+<tr>
+<td>endTime (optional)</td>
+<td><a href="#" class="label type-hint type-hint-date">Date</a></td>
+<td>End time date. Mandatory and used in case when lookBackwardHours equals 0 (Custom range).</td>
+<td></td>
+</tr>
+<tr>
+<td>hideTimeControl (optional)</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>Should widget time control be hidden</td>
+<td>False</td>
+</tr>
+<tr>
+<td>hideLegend (optional)</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>Should chart legend be hidden</td>
+<td>False</td>
+</tr>
+<tr>
+<td>hideTooltip (optional)</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>Should chart tooltip be hidden</td>
+<td>False</td>
+</tr>
+<tr>
+<td>hideUnknownLegend (optional)</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>Should chart hide legend for unknown ranges</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+<p>Schema Type: String</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>FQN of the string item in data model</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>keywordRange (optional)</td>
+<td><a href="#" class="label type-hint type-hint-array">Array</a></td>
+<td>The array with string ranges for widget</td>
+<td></td>
+</tr>
+<tr>
+<td>keywordRange.keywords (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Keywords for range, separated by comma</td>
+<td></td>
+</tr>
+<tr>
+<td>keywordRange.color (optional)</td>
+<td><a href="#" class="label type-hint type-hint-object">Object</a></td>
+<td>The color of box when value is one of keywords. Color object (see <a href="#/api/RA.IPDisplay.service:colorTypeSvc">* <em>colorTypeSvc</em></a>) or hexadecimal String for compatibily reasons</td>
+<td>#22b14c</td>
+</tr>
+<tr>
+<td>keywordRange.label (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The label for range color. This label is present in chart&#39;s legend</td>
+<td>&#39;&#39;</td>
+</tr>
+</tbody>
+</table>
+<p>Schema Type: Number</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>FQN of the numeric item in data model</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>ranges (optional)</td>
+<td><a href="#" class="label type-hint type-hint-array">Array</a></td>
+<td>The array with ranges for widget</td>
+<td></td>
+</tr>
+<tr>
+<td>ranges.from (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The begining of range</td>
+<td></td>
+</tr>
+<tr>
+<td>ranges.to (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The end of range</td>
+<td></td>
+</tr>
+<tr>
+<td>ranges.color (optional)</td>
+<td><a href="#" class="label type-hint type-hint-object">Object</a></td>
+<td>The color for chart bar when value is inside range. Color object (see <a href="#/api/RA.IPDisplay.service:colorTypeSvc">* <em>colorTypeSvc</em></a>) or hexadecimal String for compatibily reasons</td>
+<td>#22b14c</td>
+</tr>
+<tr>
+<td>ranges.label (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The label for range color. This label is present in chart&#39;s legend</td>
+<td>&#39;&#39;</td>
+</tr>
+</tbody>
+</table>
+</div></td></tr><tr><td>riFqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raiptimeline-page"><p>FQN the widget is relative to.</p>
+</div></td></tr><tr><td>rbIsActive</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raiptimeline-page"><p>Flag which shows whether the widget should be active.</p>
+</div></td></tr><tr><td>roSchema</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raiptimeline-page"><p>Function which should be called to intialize the widget schema in outside environment.</p>
+</div></td></tr><tr><td>roExamples</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raiptimeline-page"><p>Function which should be called to intialize the widget examples in outside
+environment.</p>
+</div></td></tr><tr><td>rbDesignMode</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raiptimeline-page"><p>Flag which indicates whether the widget is in design mode.</p>
+</div></td></tr></tbody></table></div>
+</div>

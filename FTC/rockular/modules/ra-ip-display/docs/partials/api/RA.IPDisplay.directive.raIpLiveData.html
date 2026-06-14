@@ -1,0 +1,49 @@
+<h1><code ng:non-bindable="">raIpLiveData</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raiplivedata-page"><p>This directive is responsible for binding data/live data to directive scope based on widget schema,
+current parameters, current fqn context and configuration. This directive does not create new scope.
+GetOnce bound data are stored to object &#39;drawData&#39; and live data are bound to object &#39;liveData&#39;
+that will be created on scope.
+As this is only attribute directive without own scope, it shares scope where it is defined.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;ANY ra-ip-live-data
+     ra-ip-live-data-context-fqn="{string}"
+     ra-ip-live-data-params="{String}"
+     ra-ip-live-data-schema="{String}"
+     ra-ip-live-data-is-get-once="{Boolean}"
+     ra-ip-live-data-is-active="{Boolean}"
+     ra-ip-live-data-time-series="{Boolean}"
+     ra-ip-live-data-time-series-config="{String}"
+     ra-ip-live-data-set-api-fn-name="{String}"
+     ra-ip-live-data-reinit-on-common-params-change="{Boolean}"&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>raIpLiveDataContextFqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raiplivedata-page"><p>Name of scope property where directive
+can find fqn (fallback to scope.fqn)</p>
+</div></td></tr><tr><td>raIpLiveDataParams</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raiplivedata-page"><p>Name of scope property where directive
+can find fqn (fallback to scope.params)</p>
+</div></td></tr><tr><td>raIpLiveDataSchema</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raiplivedata-page"><p>Name of scope property where directive
+can find schema (fallback to scope.schema)</p>
+</div></td></tr><tr><td>raIpLiveDataIsGetOnce</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raiplivedata-page"><p>Flag indicating if live data request should be loaded only once.
+Defaults to false - live data are loaded repeatedly.</p>
+</div></td></tr><tr><td>raIpLiveDataIsActive</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raiplivedata-page"><p>Flag indicating activity of live data,
+in case of false there will be no live data loaded. Defaults to false.</p>
+</div></td></tr><tr><td>raIpLiveDataTimeSeries</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raiplivedata-page"><p>Flag indicating if there is timeseries mode for live data.</p>
+</div></td></tr><tr><td>raIpLiveDataTimeSeriesConfig</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raiplivedata-page"><p>Function which returns configuration object for
+timeseries request, mandatory in case of timeseries mode. This object should contain direct request parameters for
+timeSeriesSvc and will be filled with fqns by current parameters and may contain one extra property
+called &quot;autoReloadInterval&quot; which will be used as interval parameter for timeseries repeated requests.</p>
+</div></td></tr><tr><td>raIpLiveDataSetApiFnName</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raiplivedata-page"><p>optional attribute with name of function defined on scope which
+should be called to provide raIpLiveData API with two methods:
+&quot;reinitialize&quot; - does reinitialization of whole live data
+&quot;unsubscribe&quot; - unsubscribe all registered live or timeseries repeated handlers</p>
+</div></td></tr><tr><td>raIpLiveDataReinitOnCommonParamsChange</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raiplivedata-page"><p>flag indicating if live data should be reinitialized
+on common parameters change (defaults to false, only parameters non-common section is watched for change).
+This settings can be set only in initialization.</p>
+</div></td></tr></tbody></table></div>
+</div>

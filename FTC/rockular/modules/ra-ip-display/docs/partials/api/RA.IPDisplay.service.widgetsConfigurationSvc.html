@@ -1,0 +1,60 @@
+<h1><code ng:non-bindable="">widgetsConfigurationSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-widgetsconfigurationsvc-page"><p>Service providing information about widgets in current implementation.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_getcomposercomponents">getComposerComponents()</h3>
+<div class="getcomposercomponents"><h5 id="methods_getcomposercomponents_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-widgetsconfigurationsvc-getcomposercomponents-page"><p>The list of widgets which was set during initialization.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getcomposerdefaults">getComposerDefaults()</h3>
+<div class="getcomposerdefaults"><h5 id="methods_getcomposerdefaults_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-widgetsconfigurationsvc-getcomposerdefaults-page"><p>The list of default widgets bound to specified types which was set during
+initialization.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_init">init(_composerComponents, _composerDefaults)</h3>
+<div class="init"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-widgetsconfigurationsvc-init-page"><p>Initializes the list of accessible widgets. If _composerComponents is specified, it uses
+this array. Otherwise it use <strong>getWidgetsConfiguration</strong> operation on Widget Library item in the model
+on <a href="#/api/RA.IPDisplay:WIDGET_LIBRARY_FQN">Widget library fqn</a> to obtain this list.</p>
+</div><h5 id="methods_init_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>_composerComponents</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-widgetsconfigurationsvc-init-page"><p>Array containing accessible widgets. Each object in array should
+contain following properties:</p>
+<ul>
+<li><strong>directive:</strong> Name of widget directive (in HTML valid format, e.g. data-ra-example)</li>
+<li><strong>name:</strong> Label which will be used for widget</li>
+<li><strong>category:</strong> Optional. Reference to existing widget category (curently implemented only in
+Composer which si not a part of this module).</li>
+</ul>
+</div></td></tr><tr><td>_composerDefaults</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-widgetsconfigurationsvc-init-page"><p>Object which defines what widget should be used as default one
+for specified types. Only used in Composer which is not a part of this module.
+Example:
+<pre class="prettyprint linenums">
+ {
+   "number": "data-ra-ip-gauge",
+   "boolean": "data-ra-ip-indicator",
+   "string": "data-ra-ip-value-box",
+   "mimeImagePng": "data-ra-ip-image-container",
+   "mimeImageJpg": "data-ra-ip-image-container",
+   "mimeImageGif": "data-ra-ip-image-container",
+   "mimeImageSvgXml": "data-ra-ip-image-container"
+  }
+</pre>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_isready">isReady()</h3>
+<div class="isready"><h5 id="methods_isready_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-widgetsconfigurationsvc-isready-page"><p>Indication whether the list of accessible widgets is already initialized</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isvalidwidgettype">isValidWidgetType(type)</h3>
+<div class="isvalidwidgettype"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-widgetsconfigurationsvc-isvalidwidgettype-page"><p>Checks if given type is specified in composerComponents array.</p>
+</div><h5 id="methods_isvalidwidgettype_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>type</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-widgetsconfigurationsvc-isvalidwidgettype-page"><p>Directive name which should Be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_isvalidwidgettype_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-widgetsconfigurationsvc-isvalidwidgettype-page"><p><strong>true</strong> if type is undefined or is in the <strong>composerComponents</strong> array.
+Otherwise returns <strong>false</strong>.</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

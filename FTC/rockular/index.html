@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="New sexy hot UI framework built on Angular. Stay modular with Rockular!
+    A framework by Rockwell Automation's Thin UI Cloud Team.">
+    <meta name="author" content="Attila Hazay / UX Prague / Rockwell Automation">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Rockular framework by Rockwell Automation.</title>
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Oswald:200,400,700|Roboto:300,300i,400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+    <!-- vendors CSS -->
+    <link href="lib/css/vendors.css" rel="stylesheet">
+    <!-- Site custom styles -->
+    <link href="lib/css/site.css" rel="stylesheet">
+</head>
+<body>
+
+<nav id="navbar" class="navbar navbar-expand-md navbar-inverse fixed-top">
+    <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="ion-navicon"></i></span>
+        </button>
+        <a class="navbar-brand" href="http://www.rockwellautomation.com/" target="_blank">
+            <img id="brand-white" src="lib/images/ra_logo_white_withbug.png" alt="Rockwell Automation logo white">
+            <img id="brand-original" class="hide-brand" src="lib/images/ra_logo_color_withbug.png" alt="Rockwell Automation logo">
+        </a>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+            <ul class="navbar-nav text-center">
+                <li id="nav-item-mainsite"
+                    class="nav-item"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="back to main site">
+                    <a class="nav-link" href="../ftc-main-site/index.html#toolkits">
+                        <i class="ion-ios-undo-outline"></i>
+                    </a>
+                </li>
+                <li id="nav-item-home" class="nav-item active">
+                    <a class="nav-link" href="#homeCarousel">Home </a>
+                </li>
+                <li id="nav-item-about" class="nav-item">
+                    <a class="nav-link" href="#about">About </a>
+                </li>
+                <li id="nav-item-modules" class="nav-item">
+                    <a class="nav-link" href="#modules">Modules </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="homeCarousel" class="carousel slide" data-ride="carousel" data-interval="7000">
+
+    <ol class="carousel-indicators">
+        <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#homeCarousel" data-slide-to="1"></li>
+        <li data-target="#homeCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+
+        <div class="carousel-header-fixed text-center">
+            <div class="main-logo-container shadowed">
+                <img src="lib/images/rockular_logo.png" alt="Rockular logo">
+            </div>
+            <h1 class="display-2">Rockular</h1>
+            <h2 class="display-4">Rockwell Automation's framework built on Angular</h2>
+            <div id="hero-btn-download">
+                <a class="btn btn-outline-site-inv" href="#downloads" role="button">take me to modules</a>
+            </div>
+        </div>
+
+        <!--<div class="subtle-overlay  image-lts subtle-overlay-25"></div>-->
+
+        <div class="carousel-item active shadowed-deep">
+            <div class="img-carousel img-carousel-1"></div>
+            <div class="container">
+                <div class="carousel-caption">
+                    <h2 class="d-none d-sm-block">WebTech UI toolkit and Angular.</h2>
+                    <p>Rockular framework is built on WebTech UI toolkit and each its element is an Angular
+                        component.</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item shadowed-deep">
+            <div class="img-carousel img-carousel-2"></div>
+            <div class="container">
+                <div class="carousel-caption">
+                    <h2 class="d-none d-sm-block">Build HTML5 application quickly.</h2>
+                    <p>Provides reusable building blocks and communication services for rapid HTML5 application
+                        development.</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item shadowed-deep">
+            <div class="img-carousel img-carousel-3"></div>
+            <div class="container">
+                <div class="carousel-caption">
+                    <h2 class="d-none d-sm-block">User experience at core.</h2>
+                    <p>Design of UI components developed in collaboration with UXDT.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+
+    <div class="parallax-wrapper gradient-rockular">
+        <ul id="parallax-scene1" class="parallax-scene">
+            <li class="layer" data-depth="0.10"><div class="layer-content img-content0"></div></li>
+            <li class="layer" data-depth="0.20"><div class="layer-content img-content1"></div></li>
+            <li class="layer" data-depth="0.30"><div class="layer-content img-content2"></div></li>
+            <li class="layer" data-depth="0.50"><div class="layer-content img-content3"></div></li>
+        </ul>
+    </div>
+
+    <div id="jump-up" class="btn-rounded btn-rounded-fixed">
+        <i class="btn-rounded-inner ion-chevron-up"></i>
+    </div>
+
+    <div id="jump-down" class="btn-rounded">
+        <i class="btn-rounded-inner ion-chevron-down"></i>
+    </div>
+
+</section> <!-- End of  carousel -->
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+
+<section id="about" class="marketing marketing-shadow-down">
+    <div class="container">
+        <h2 class="display-3 section-header section-header-grey">about</h2>
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="img-logo-container bg-lightgrey about-logo-animation">
+                    <img class="shadowed" src="lib/images/angular_white_outline.png" alt="angular logo">
+                </div>
+                <h3 class="about-text-animation">WebTech UI toolkit and Angular.</h3>
+                <p class="about-text-animation">Rockular framework is built on WebTech UI toolkit and each its element is an Angular component.</p>
+            </div><!-- /.col-md-4 -->
+            <div class="col-md-4">
+                <div class="img-logo-container bg-lightgrey about-logo-animation">
+                    <img class="shadowed" src="lib/images/html5_white_outline.png" alt="html5 logo">
+                </div>
+                <h3 class="about-text-animation">Build HTML5 application quickly.</h3>
+                <p class="about-text-animation">Provides reusable building blocks and communication services for rapid HTML5 application development.</p>
+            </div><!-- /.col-md-4 -->
+            <div class="col-md-4">
+                <div class="img-logo-container bg-lightgrey about-logo-animation">
+                    <img class="shadowed" src="lib/images/UXPRA_white.png" alt="UX logo">
+                </div>
+                <h3 class="about-text-animation">User experience at core.</h3>
+                <p class="about-text-animation">Design of UI components developed in collaboration with UXDT.</p>
+            </div><!-- /.col-md-4 -->
+        </div><!-- /.row -->
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr id="divider1" class="featurette-divider">
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="display-3 featurette-heading feature-animation1">Rockular framework.</h2>
+                <p class="lead feature-animation1">Contains parts which are either more complex then in WebTech UI toolkit
+                    or need to communicate with back-end.
+                </p>
+            </div>
+            <div class="col-md-5">
+                <img src="lib/images/Rockular_pyramid.png" class="featurette-image img-fluid mx-auto feature-animation1"
+                     alt="pyramid graph of the framework">
+            </div>
+        </div>
+
+        <hr id="divider2" class="featurette-divider">
+
+        <div id="rotate-vetruvian" class="img-theme-left"></div>
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="display-3 featurette-heading feature-animation2">Our modules will get you covered.
+                </h2>
+                <p class="lead feature-animation2">Rockular framework is intended to be used as an open-source project.
+                Adopters are welcome to become a part of community that will contribute.</p>
+            </div>
+            <div class="col-md-5">
+                <img src="lib/images/components.png" class="featurette-image img-fluid mx-auto feature-animation2"
+                     alt="components graph">
+            </div>
+        </div>
+
+    </div><!-- /.container -->
+
+</section>
+
+<!-- MODULES SECTION -->
+<section id="modules" class="modules shadow-inset-up">
+
+    <div class="parallax-wrapper">
+        <ul id="parallax-scene2" class="parallax-scene">
+            <li class="layer" data-depth="0.10"><div class="layer-content img-rockular-content0"></div></li>
+            <li class="layer" data-depth="0.20"><div class="layer-content img-rockular-content1"></div></li>
+            <li class="layer" data-depth="0.30"><div class="layer-content img-rockular-content2"></div></li>
+            <li class="layer" data-depth="0.50"><div class="layer-content img-rockular-content3"></div></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2 class="display-3 section-header section-header-white">modules</h2>
+        <div class="row">
+
+            <div data-module="ra-ip-common" class="module-wrapper col-md-6 module-animation">
+                <div class="module text-center justify-content-between">
+                    <div class="module-angular-version">
+                        <span class="module-angular-name">Angular&nbsp;JS&nbsp;1.6</span>
+                    </div>
+                    <ul class="releases-list collapse"> <!-- id written with Javascript -->
+                        <!-- list of releases written into HTML via Javascript based on a content of JSON file -->
+                    </ul>
+                    <h2 class="module-name">module name</h2> <!-- via Javascript -->
+                    <h4 class="module-release-number">
+                        <span>module version</span> <!-- via Javascript -->
+                        <div class="release-version-status"></div> <!-- via Javascript -->
+                    </h4>
+                    <h5 class="release-date">dd of mm,yyyy</h5>
+                    <p class="module-release-desc">module description</p> <!-- via Javascript -->
+                    <div class="row">
+                        <div class="col-lg-6 mobile-off">
+                            <p><a class="btn btn-outline-site module-download-files" href="" role="button" download>Download</a></p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p><a class="btn btn-outline-site module-download-docs" href="" target="_blank" role="button">Read&nbsp;documentation</a></p>
+                        </div>
+                    </div>
+                    <a class="release-list-icon mobile-off" data-toggle="collapse" data-target="" role="button"> <!-- data-target via Javascript -->
+                        <i class="ion-android-list"></i>
+                    </a>
+                </div>
+            </div><!-- END OF .col-md-6 -->
+
+            <div data-module="ra-ip-display" class="module-wrapper col-md-6 module-animation">
+                <div class="module text-center justify-content-between">
+                    <div class="module-angular-version">
+                        <span class="module-angular-name">Angular&nbsp;JS&nbsp;1.6</span>
+                    </div>
+                    <ul class="releases-list collapse"> <!-- id written with Javascript -->
+                        <!-- list of releases written into HTML via Javascript based on a content of JSON file -->
+                    </ul>
+                    <h2 class="module-name">module name</h2> <!-- via Javascript -->
+                    <h4 class="module-release-number">
+                        <span>module version</span>  <!-- via Javascript -->
+                        <div class="release-version-status"></div> <!-- via Javascript -->
+                    </h4>
+                    <h5 class="release-date">dd of mm,yyyy</h5>
+                    <p class="module-release-desc">module description...</p> <!-- via Javascript -->
+                    <div class="row">
+                        <div class="col-lg-6 mobile-off">
+                            <p><a class="btn btn-outline-site module-download-files" href="" role="button" download>Download</a></p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p><a class="btn btn-outline-site module-download-docs" href="" target="_blank" role="button">Read&nbsp;documentation</a></p>
+                        </div>
+                    </div>
+                    <a class="release-list-icon mobile-off" data-toggle="collapse" data-target="" role="button"> <!-- data-target via Javascript -->
+                        <i class="ion-android-list"></i>
+                    </a>
+                </div>
+            </div><!-- END OF .col-md-6 -->
+
+            <div data-module="ra-ip-components" class="module-wrapper col-md-6 module-animation">
+                <div class="module text-center justify-content-between">
+                    <div class="module-angular-version">
+                        <span class="module-angular-name">Angular&nbsp;JS&nbsp;1.6</span>
+                    </div>
+                    <ul class="releases-list collapse"> <!-- id written with Javascript -->
+                        <!-- list of releases written into HTML via Javascript based on a content of JSON file -->
+                    </ul>
+                    <h2 class="module-name">module name</h2> <!-- via Javascript -->
+                    <h4 class="module-release-number">
+                        <span>module version</span> <!-- via Javascript -->
+                        <div class="release-version-status"></div> <!-- via Javascript -->
+                    </h4>
+                    <h5 class="release-date">dd of mm,yyyy</h5>
+                    <p class="module-release-desc">module description...</p> <!-- via Javascript -->
+                    <div class="row">
+                        <div class="col-lg-6 mobile-off">
+                            <p><a class="btn btn-outline-site module-download-files" href="" role="button" download>Download</a></p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p><a class="btn btn-outline-site module-download-docs" href="" target="_blank" role="button">Read&nbsp;documentation</a></p>
+                        </div>
+                    </div>
+                    <a class="release-list-icon mobile-off" data-toggle="collapse" data-target="" role="button"> <!-- data-target via Javascript -->
+                        <i class="ion-android-list"></i>
+                    </a>
+                </div>
+            </div><!-- END OF .col-md-6 -->
+
+            <div data-module="ra-ftc-communication" class="module-wrapper col-md-6 module-animation">
+                <div class="module text-center justify-content-between">
+                    <div class="module-angular-version angular-version-new">
+                        <span class="module-angular-name">Angular</span>
+                    </div>
+                    <ul class="releases-list collapse"> <!-- id written with Javascript -->
+                        <!-- list of releases written into HTML via Javascript based on a content of JSON file -->
+                    </ul>
+                    <h2 class="module-name">module name</h2> <!-- via Javascript -->
+                    <h4 class="module-release-number">
+                        <span>module version</span> <!-- via Javascript -->
+                        <div class="release-version-status"></div> <!-- via Javascript -->
+                    </h4>
+                    <h5 class="release-date">dd of mm,yyyy</h5>
+                    <p class="module-release-desc">module description...</p> <!-- via Javascript -->
+                    <div class="row">
+                        <div class="col-lg-6 mobile-off">
+                            <p><a class="btn btn-outline-site module-download-files" href="" role="button" download>Download</a></p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p><a class="btn btn-outline-site module-download-docs" href="" target="_blank" role="button">Read&nbsp;documentation</a></p>
+                        </div>
+                    </div>
+                    <a class="release-list-icon mobile-off" data-toggle="collapse" data-target="" role="button"> <!-- data-target via Javascript -->
+                        <i class="ion-android-list"></i>
+                    </a>
+                </div>
+            </div><!-- END OF .col-md-6 -->
+
+            <div data-module="ra-ftc-components" class="module-wrapper col-md-6 module-animation">
+                <div class="module text-center justify-content-between">
+                    <div class="module-angular-version angular-version-new">
+                        <span class="module-angular-name">Angular</span>
+                    </div>
+                    <ul class="releases-list collapse"> <!-- id written with Javascript -->
+                        <!-- list of releases written into HTML via Javascript based on a content of JSON file -->
+                    </ul>
+                    <h2 class="module-name">module name</h2> <!-- via Javascript -->
+                    <h4 class="module-release-number">
+                        <span>module version</span> <!-- via Javascript -->
+                        <div class="release-version-status"></div> <!-- via Javascript -->
+                    </h4>
+                    <h5 class="release-date">dd of mm,yyyy</h5>
+                    <p class="module-release-desc">module description...</p> <!-- via Javascript -->
+                    <div class="row">
+                        <!-- <div class="col-lg-6 mobile-off">
+                            <p><a class="btn btn-outline-site module-download-files" href="" role="button" download>Download</a></p>
+                        </div> -->
+                        <div class="col-lg-12">
+                            <p><a class="btn btn-outline-site module-download-docs" href="" target="_blank" role="button">Read&nbsp;documentation</a></p>
+                        </div>
+                    </div>
+                    <a class="release-list-icon mobile-off" data-toggle="collapse" data-target="" role="button"> <!-- data-target via Javascript -->
+                        <i class="ion-android-list"></i>
+                    </a>
+                </div>
+            </div><!-- END OF .col-md-6 -->
+
+        </div>
+    </div> <!-- END OF CONTAINER -->
+</section>
+
+<!-- TEAM SECTION -->
+<!--<section id="team" class="team">-->
+    <!--<div class="container">-->
+        <!--<h2 class="display-3 section-header section-header-grey">team</h2>-->
+        <!--<div class="row">-->
+            <!--<div class="col-lg-12 col-xl-6">-->
+                <!--<div class="card bg-lightgrey ">-->
+                    <!--<div class="subtle-overlay subtle-overlay-lts subtle-overlay-25"></div>-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-12 col-lg-5 center-img">-->
+                            <!--<div class="img-logo-container portrait">-->
+                                <!--<img src="lib/images/vojta.jpg" alt="Photo of Vojtech Sipek">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-12 col-lg-7">-->
+                            <!--<div class="card-block text-center text-lg-left">-->
+                                <!--<p class="card-title">Vojtěch Šípek</p>-->
+                                <!--<p class="card-subtitle">team lead</p>-->
+                                <!--<hr/>-->
+                                <!--<p>-->
+                                    <!--<i class="ion-iphone" aria-hidden="true"></i>-->
+                                    <!--&nbsp;+420&nbsp;401&nbsp;504&nbsp;325-->
+                                    <!--<br>-->
+                                    <!--<a href= "mailto:vsipek@ra.rockwell.com">-->
+                                        <!--<i class="ion-ios-email" aria-hidden="true"></i>-->
+                                        <!--&nbsp;vsipek@ra.rockwell.com-->
+                                    <!--</a>-->
+                                <!--</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-lg-12 col-xl-6">-->
+                <!--<div class="card bg-lightgrey">-->
+                    <!--<div class="subtle-overlay subtle-overlay-lts subtle-overlay-25"></div>-->
+                    <!--<div class="row">-->
+                        <!--<div class="col-md-12 col-lg-5 center-img">-->
+                            <!--<div class="img-logo-container portrait">-->
+                                <!--<img src="lib/images/jindra.jpg" alt="Photo of Javascript ninja">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="col-md-12 col-lg-7">-->
+                            <!--<div class="card-block text-center text-lg-left">-->
+                                <!--<p class="card-title">Jindřich Růžička</p>-->
+                                <!--<p class="card-subtitle">rockular developer</p>-->
+                                <!--<hr/>-->
+                                <!--<p>-->
+                                    <!--<i class="ion-iphone" aria-hidden="true"></i>-->
+                                    <!--&nbsp;+420&nbsp;734&nbsp;655&nbsp;719-->
+                                    <!--<br>-->
+                                    <!--<a href= "mailto:JRuzick1@ra.rockwell.com">-->
+                                        <!--<i class="ion-ios-email" aria-hidden="true"></i>-->
+                                        <!--&nbsp;JRuzick1@ra.rockwell.com-->
+                                    <!--</a>-->
+                                <!--</p>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div> &lt;!&ndash; END OF CONTAINER &ndash;&gt;-->
+<!--</section>-->
+
+<section class="tech-stripe gradient-lightgrey shadow-up">
+    <div class="subtle-overlay image-ftc-bg subtle-overlay-25"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-3">
+                <div class="img-logo-container tech-animation">
+                    <img class="shadowed" src="lib/images/html5_white_outline.png" alt="html5 logo">
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="img-logo-container tech-animation">
+                    <img class="shadowed" src="lib/images/angular_white_outline.png" alt="Angular logo">
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="img-logo-container tech-animation">
+                    <img class="shadowed" src="lib/images/webtech_white.png" alt="webtech logo">
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="img-logo-container tech-animation">
+                    <img class="shadowed" src="lib/images/UX_prague_logo_rounded.png" alt="UX Prague logo">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="gradient-deepspace">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-7 order-2 order-md-1 text-center text-md-left">
+                <p>&copy; <span class="copyright-year">2017</span>&nbsp;&nbsp;Rockwell&nbsp;Automation,&nbsp;Inc.<br>
+                    <a href="http://www.rockwellautomation.com/global/legal-notices/overview.page?#/C132" target="_blank">Privacy</a>
+                    &nbsp; &middot; &nbsp;
+                    <a href="http://www.rockwellautomation.com/global/legal-notices/overview.page?#/C131" target="_blank">Terms</a>
+                </p>
+            </div>
+            <div class="col-12 col-md-5 order-1 order-md-2">
+                <div class="social-links text-center text-md-right">
+                    <a href="https://www.facebook.com/ROKAutomation" target="_blank" class="social-icon facebook" title="Facebook">
+                        <i class="ion-social-facebook"></i>
+                    </a>
+                    <a href="https://plus.google.com/+RockwellautomationInc" target="_blank" class="social-icon google" title="Google+">
+                        <i class="ion-social-googleplus"></i>
+                    </a>
+                    <a href="http://twitter.com/ROKAutomation" target="_blank" class="social-icon twitter" title="Twitter">
+                        <i class="ion-social-twitter"></i>
+                    </a>
+                    <a href="http://www.youtube.com/rokautomation" target="_blank" class="social-icon youtube" title="YouTube">
+                        <i class="ion-social-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-6">
+                <div class="logo-container">
+                    <img src="lib/images/ra_logo_white_withbug.png" alt="Rockwell Automation logo white">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="logo-container logo-container--right">
+                    <img src="lib/images/ftc-logo-white.png" alt="FactoryTalk logo white">
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- VENDOR BASED JAVASCRIPT files -->
+<!-- JQuery plugin -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>window.jQuery || document.write('<script src="lib/js/jquery-3.1.1.min.js"><\/script>')</script>
+<!-- Bootstrap's 4 javascript plugin and popper.js-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous">
+</script>
+<script src="lib/js/bootstrap.min.js"></script>
+<!-- ScrollMagic javascript plugin -->
+<script src="lib/js/TweenMax.min.js"></script>
+<script src="lib/js/ScrollMagic.min.js"></script>
+<script src="lib/js/animation.gsap.js"></script>
+<script src="lib/js/ScrollToPlugin.min.js"></script>
+<script src="lib/js/debug.addIndicators.min.js"></script>  <!-- uncomment this in the production version-->
+<script src="lib/js/parallax.min.js"></script>
+
+<!-- SITE SPECIFIC JAVASCRIPT files -->
+<script src="lib/js/scripts.js"></script>
+
+</body>
+</html>

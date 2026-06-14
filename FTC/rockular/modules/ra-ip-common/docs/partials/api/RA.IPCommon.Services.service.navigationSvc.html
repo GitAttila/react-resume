@@ -1,0 +1,67 @@
+<h1><code ng:non-bindable="">navigationSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPCommon.Services</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationsvc-page"><p>Service for Navigation Request and Manipulations</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_createnavigationrequest">createNavigationRequest(fqn, propNames, includeParents, [navHandlerFqn], [hideRules], [skipRules])</h3>
+<div class="createnavigationrequest"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationsvc-createnavigationrequest-page"><p>Create and return Navigation Request Object
+Note : If navHandlerFqn is specified then the Hide &amp; Skip Rules
+will be ignored.</p>
+</div><h5 id="methods_createnavigationrequest_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>fqn</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationsvc-createnavigationrequest-page"><ul>
+<li>FullyQualifiedName</li>
+</ul>
+</div></td></tr><tr><td>propNames</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationsvc-createnavigationrequest-page"><ul>
+<li>Property Names</li>
+</ul>
+</div></td></tr><tr><td>includeParents</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationsvc-createnavigationrequest-page"><ul>
+<li>true if parents are included</li>
+</ul>
+</div></td></tr><tr><td>[navHandlerFqn] <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationsvc-createnavigationrequest-page"><ul>
+<li>FullyQualifiedName of Navigation Handler</li>
+</ul>
+</div></td></tr><tr><td>[hideRules] <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationsvc-createnavigationrequest-page"><ul>
+<li>Hide Rules</li>
+</ul>
+</div></td></tr><tr><td>[skipRules] <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationsvc-createnavigationrequest-page"><ul>
+<li>Skip Rules</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_createnavigationrequest_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationsvc-createnavigationrequest-page"><ul>
+<li><a href="#/api/RA.IPCommon.Services.object:NavigationRequest">RA.IPCommon.Services.object:NavigationRequest</a>
+will be available.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getlastresult">getLastResult()</h3>
+<div class="getlastresult"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationsvc-getlastresult-page"><p>Returns the result of the most recent Navigation request.</p>
+</div><h5 id="methods_getlastresult_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationsvc-getlastresult-page"><ul>
+<li>the most recent result of a getNavigationData request.
+will be available.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getnavigationdata">getNavigationData(navigationRequest)</h3>
+<div class="getnavigationdata"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationsvc-getnavigationdata-page"><p>Makes a request to JSON Navigation service on the server.</p>
+</div><h5 id="methods_getnavigationdata_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>navigationRequest</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationsvc-getnavigationdata-page"><p><a href="#/api/RA.IPCommon.Services.object:NavigationRequest">RA.IPCommon.Services.object:NavigationRequest</a></p>
+</div></td></tr></tbody></table><h5 id="methods_getnavigationdata_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-ipromise">IPromise&lt;T&gt;</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationsvc-getnavigationdata-page"><ul>
+<li>Promise to resolve when answer
+will be available.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_sethideskiprules">setHideSkipRules([hideRules], [skipRules])</h3>
+<div class="sethideskiprules"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationsvc-sethideskiprules-page"><p>Sets the default hide and skip rules - called at app startup</p>
+</div><h5 id="methods_sethideskiprules_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>[hideRules] <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationsvc-sethideskiprules-page"><ul>
+<li>Hide Rules</li>
+</ul>
+</div></td></tr><tr><td>[skipRules] <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationsvc-sethideskiprules-page"><ul>
+<li>Skip Rules</li>
+</ul>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+</div>

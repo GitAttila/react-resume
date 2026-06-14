@@ -1,0 +1,136 @@
+<h1><code ng:non-bindable="">GridstackWrapper</code>
+<div><span class="hint">object in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-page"><p>Object representing the Gridstack grid and its API.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_addelement">addElement(x, y, width, height, content, minWidth, minHeight)</h3>
+<div class="addelement"><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-addelement-page"><p>Creates new cell with specified content and add it to the grid on specified position.</p>
+</div><h5 id="methods_addelement_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>x</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-addelement-page"><p>Column to which the element should be added.</p>
+</div></td></tr><tr><td>y</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-addelement-page"><p>Row to which the element should be added.</p>
+</div></td></tr><tr><td>width</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-addelement-page"><p>Width of element in number of columns.</p>
+</div></td></tr><tr><td>height</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-addelement-page"><p>Height of element in number of rows.</p>
+</div></td></tr><tr><td>content</td><td><a href="" class="label type-hint type-hint-jquery">jQuery</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-addelement-page"><p>Content which should be appended into the new cell.</p>
+</div></td></tr><tr><td>minWidth</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-addelement-page"><p>Minimal width to which the cell can be resized.</p>
+</div></td></tr><tr><td>minHeight</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-addelement-page"><p>Minimal height to which the cell can be resized.</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_addplaceholder">addPlaceholder(lock, event, minimumWidth, minimumHeight)</h3>
+<div class="addplaceholder"><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-addplaceholder-page"><p>Adds placeholder into grid. This placeholder is automatically registered for move
+events (it presumes that placeholder was added to grid as a reaction on
+onDragEnter MFT D&amp;D event).</p>
+<p>If placeholder cannot be added to grid, error message is appended to drag helper. This error message
+has class <strong>&quot;dropInvalid&quot;</strong> and can be styled by end adopters.</p>
+<div class="alert alert-danger" role="alert">
+    <strong>Note:</strong> Use this function only if the event parameter is MFT onDragEnter event.
+</div>
+</div><h5 id="methods_addplaceholder_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>lock</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-addplaceholder-page"><p>If <strong>true</strong> all cells (except placeholder) are locked during drag.</p>
+</div></td></tr><tr><td>event</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-addplaceholder-page"><p>MFT D&amp;D onDragEnter event</p>
+</div></td></tr><tr><td>minimumWidth</td><td><a href="" class="label type-hint type-hint-integer">Integer</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-addplaceholder-page"><p>optional parameter to allow to check minimum width widget can fill</p>
+</div></td></tr><tr><td>minimumHeight</td><td><a href="" class="label type-hint type-hint-integer">Integer</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-addplaceholder-page"><p>optional parameter to allow to check minimum height widget can fill</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_adjustheight">adjustHeight()</h3>
+<div class="adjustheight"><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-adjustheight-page"><p>Sets the height of the cells to covers whole gridstackWrapper element.</p>
+</div></div>
+</li>
+<li><h3 id="methods_confirmplaceholder">confirmPlaceholder(event, cell)</h3>
+<div class="confirmplaceholder"><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-confirmplaceholder-page"><p>Changes the placeholder to have the specified content.</p>
+</div><h5 id="methods_confirmplaceholder_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>event</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-confirmplaceholder-page"><p><em>touchEnd</em> or <strong>mouseUp</strong> event.</p>
+</div></td></tr><tr><td>cell</td><td><a href="" class="label type-hint type-hint-jquery">jQuery</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-confirmplaceholder-page"><p>jQuery element which should be appended into the confirmed cell.
+If the gridstack is not set a static, the cell should contain some element which has the class
+<strong>&#39;.cellDragArea&#39;</strong>. The whole cell will be draggable by this element.</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_constructor">constructor(options, DaD)</h3>
+<div class="constructor"><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-constructor-page"><p>Creates Gridstack Wrapper Object. It initializes the gridstack library for the</p>
+</div><h5 id="methods_constructor_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>options</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-constructor-page"><p>Options object which is used in native gridstack constructor.</p>
+</div></td></tr><tr><td>DaD</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-constructor-page"><p>Identifier of D&amp;D provider.</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_deleteall">deleteAll()</h3>
+<div class="deleteall"><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-deleteall-page"><p>Removes all elements from the grid.</p>
+</div></div>
+</li>
+<li><h3 id="methods_deletedrageventhandlers">deleteDragEventHandlers()</h3>
+<div class="deletedrageventhandlers"><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-deletedrageventhandlers-page"><p>Cancels the propagation of touchMove events to the gridstack grid</p>
+</div></div>
+</li>
+<li><h3 id="methods_deleteelement">deleteElement(element)</h3>
+<div class="deleteelement"><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-deleteelement-page"><p>Removes the element from the grid.</p>
+</div><h5 id="methods_deleteelement_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>element</td><td><a href="" class="label type-hint type-hint-jquery">jQuery</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-deleteelement-page"><p>Gridstack cell element.</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_deleteplaceholderifneeded">deletePlaceholderIfNeeded(event)</h3>
+<div class="deleteplaceholderifneeded"><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-deleteplaceholderifneeded-page"><p>Deletes the placeholder when dragged outside of gridstack area. If it is not dragged
+outside, nothing happens.</p>
+<div class="alert alert-danger" role="alert">
+    <strong>Note:</strong> Use this function only if the event parameter is MFT onDragLeave event. This function
+    should be refactored in the future since it is created for the purposes of Composer. When used
+    outside of Composer the scope of dragged helper has to have <strong>curItem</strong> object property.
+    This property has to have <strong>dragId</strong> property set to <strong>&quot;emptyWidget&quot;</strong>.
+    <br><br>
+    In other words the line of code:
+    <pre class="prettyprint linenums">
+        event.draggable.element.scope().curItem.dragId
+    </pre>
+    has to return <strong>&quot;emptyWidget&quot;</strong> string;
+</div>
+</div><h5 id="methods_deleteplaceholderifneeded_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>event</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-deleteplaceholderifneeded-page"><p>MFT onDragLeave event</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_lockcells">lockCells()</h3>
+<div class="lockcells"><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-lockcells-page"><p>Locks all cells in grid. This prevents the Gridstack cell avoiding mechanism</p>
+</div></div>
+</li>
+<li><h3 id="methods_registerdrageventhandlers">registerDragEventHandlers()</h3>
+<div class="registerdrageventhandlers"><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-registerdrageventhandlers-page"><p>Registers the propagation of touchMove events to the gridstack grid</p>
+</div></div>
+</li>
+<li><h3 id="methods_registerevents">registerEvents(onResizeCallback, onDragStopCallback)</h3>
+<div class="registerevents"><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-registerevents-page"><p>Registers callback functions on &quot;cell resize&quot; and &quot;cell move&quot; events</p>
+</div><h5 id="methods_registerevents_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>onResizeCallback</td><td><a href="" class="label type-hint type-hint-function">Function</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-registerevents-page"><p>Callback function which is called when gridstack cell is resized</p>
+</div></td></tr><tr><td>onDragStopCallback</td><td><a href="" class="label type-hint type-hint-function">Function</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-registerevents-page"><p>Callback function which is called when gridstack cell is moved</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_setcustomheightofcell">setCustomHeightOfCell(height)</h3>
+<div class="setcustomheightofcell"><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-setcustomheightofcell-page"><p>Sets the height of the cells to specified value.</p>
+</div><h5 id="methods_setcustomheightofcell_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>height</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-setcustomheightofcell-page"><p>Height in pixels.</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_setmincellsize">setMinCellSize(element, minWidth, minHeight)</h3>
+<div class="setmincellsize"><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-setmincellsize-page"><p>Set the minimum size for the cell. This is useful only when the cells are resizable.</p>
+</div><h5 id="methods_setmincellsize_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>element</td><td><a href="" class="label type-hint type-hint-jquery">jQuery</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-setmincellsize-page"><p>Gridstack cell element.</p>
+</div></td></tr><tr><td>minWidth</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-setmincellsize-page"><p>Minimum width.</p>
+</div></td></tr><tr><td>minHeight</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-setmincellsize-page"><p>Minimum height.</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_setmobileheightofcell">setMobileHeightOfCell()</h3>
+<div class="setmobileheightofcell"><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-setmobileheightofcell-page"><p>Sets the height of the cells to mobileCellHeight constant.</p>
+</div></div>
+</li>
+<li><h3 id="methods_switchelements">switchElements(element, secondElement, y, secondY)</h3>
+<div class="switchelements"><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-switchelements-page"><p>Switches the vertical position of two cells.</p>
+</div><h5 id="methods_switchelements_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>element</td><td><a href="" class="label type-hint type-hint-jquery">jQuery</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-switchelements-page"><p>Gridstack cell element.</p>
+</div></td></tr><tr><td>secondElement</td><td><a href="" class="label type-hint type-hint-jquery">jQuery</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-switchelements-page"><p>Second gridstack cell element.</p>
+</div></td></tr><tr><td>y</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-switchelements-page"><p>Row on which the first element starts.</p>
+</div></td></tr><tr><td>secondY</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-switchelements-page"><p>Row on which the second element starts.</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_unlockcells">unlockCells()</h3>
+<div class="unlockcells"><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-unlockcells-page"><p>Unlocks all cells in grid. This enables the Gridstack cell avoiding mechanism</p>
+</div></div>
+</li>
+</ul>
+</div>
+<div class="member property"><h2 id="properties">Properties</h2>
+<ul class="properties"><li><h3 id="properties_wrapperelement">wrapperElement</h3>
+<div class="wrapperelement"><div class="ra-ipdisplay-object-page ra-ipdisplay-object-gridstackwrapper-page"><p>jQuery object representing the wrapper of gridstack.</p>
+</div></div>
+</li>
+</ul>
+</div>
+</div>

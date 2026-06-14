@@ -1,0 +1,44 @@
+<h1><code ng:non-bindable="">timeseriesHelperSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timeserieshelpersvc-page"><p>Provides basic utilities for timeseries data.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_filterandsortdata">filterAndSortData(data, duration)</h3>
+<div class="filterandsortdata"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timeserieshelpersvc-filterandsortdata-page"><p>Function to filter duplicate data by timestamp and sort them.</p>
+</div><h5 id="methods_filterandsortdata_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>data</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timeserieshelpersvc-filterandsortdata-page"><p>new timeseries data</p>
+</div></td></tr><tr><td>duration</td><td><a href="" class="label type-hint type-hint-integer">Integer</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timeserieshelpersvc-filterandsortdata-page"><p>duration of timeseries data to watch in seconds</p>
+</div></td></tr></tbody></table><h5 id="methods_filterandsortdata_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timeserieshelpersvc-filterandsortdata-page"><p>filtered array data</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_gettimedeadband">getTimeDeadBand(duration, screenWidth, count, noformat)</h3>
+<div class="gettimedeadband"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timeserieshelpersvc-gettimedeadband-page"><p>Return calculated time dead band for the timeseries request.</p>
+</div><h5 id="methods_gettimedeadband_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>duration</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timeserieshelpersvc-gettimedeadband-page"><p>in seconds to count deadband with</p>
+</div></td></tr><tr><td>screenWidth</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timeserieshelpersvc-gettimedeadband-page"><p>width of screen</p>
+</div></td></tr><tr><td>count</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timeserieshelpersvc-gettimedeadband-page"><ul>
+<li>number of tags</li>
+</ul>
+</div></td></tr><tr><td>noformat</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timeserieshelpersvc-gettimedeadband-page"><ul>
+<li>when true return noformated number as seconds</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_gettimedeadband_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String|Nu,ber</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timeserieshelpersvc-gettimedeadband-page"><p>time formatted string in format
+&quot;HH:MM:SS.mmm&quot;, where HH is an hour 00-59, MM minute
+00-59, SS seconds 00-59 and mmm are milliseconds| number of seconds</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_mergetimeseriesdata">mergeTimeseriesData(currentData, newData, endTime, duration)</h3>
+<div class="mergetimeseriesdata"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timeserieshelpersvc-mergetimeseriesdata-page"><p>Function to merge live timeseries data into whole (previous) data.
+It does count with requested duration for timeseries and removes not needed data.</p>
+</div><h5 id="methods_mergetimeseriesdata_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>currentData</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timeserieshelpersvc-mergetimeseriesdata-page"><p>array of current timeseries data (directly modified)</p>
+</div></td></tr><tr><td>newData</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timeserieshelpersvc-mergetimeseriesdata-page"><p>new timeseries data, can be only incremental data</p>
+</div></td></tr><tr><td>endTime</td><td><a href="" class="label type-hint type-hint-integer">Integer</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timeserieshelpersvc-mergetimeseriesdata-page"><p>datetime for current request end time in unix miliseconds</p>
+</div></td></tr><tr><td>duration</td><td><a href="" class="label type-hint type-hint-integer">Integer</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timeserieshelpersvc-mergetimeseriesdata-page"><p>duration of timeseries data to watch in seconds</p>
+</div></td></tr></tbody></table><h5 id="methods_mergetimeseriesdata_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timeserieshelpersvc-mergetimeseriesdata-page"><p>array with merged, filtered and sorted data</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

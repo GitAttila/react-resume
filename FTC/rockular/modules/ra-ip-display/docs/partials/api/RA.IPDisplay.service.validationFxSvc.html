@@ -1,0 +1,119 @@
+<h1><code ng:non-bindable="">validationFxSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-page"><p>Provides basic validation functions.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_alphanumericunderscorewhitespace">alphanumericUnderscoreWhitespace(actualValue)</h3>
+<div class="alphanumericunderscorewhitespace"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-alphanumericunderscorewhitespace-page"><p>Function to check that string contains only letters, numbers, whitespace and underscore.
+Also returns false for empty string and undefined.</p>
+</div><h5 id="methods_alphanumericunderscorewhitespace_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>actualValue</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-alphanumericunderscorewhitespace-page"><p>actual value to validate</p>
+</div></td></tr></tbody></table><h5 id="methods_alphanumericunderscorewhitespace_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-alphanumericunderscorewhitespace-page"><p>flag indicatig validity of actualValue</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isvaliddate">isValidDate(value)</h3>
+<div class="isvaliddate"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-isvaliddate-page"><p>Function to check that a date is valid</p>
+</div><h5 id="methods_isvaliddate_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>value</td><td><a href="" class="label type-hint type-hint-date">Date</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-isvaliddate-page"><p>date object to check</p>
+</div></td></tr></tbody></table><h5 id="methods_isvaliddate_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-isvaliddate-page"><p>validity of given value as Date</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_limit">limit(min, max, actualValue)</h3>
+<div class="limit"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-limit-page"><p>Function to check if number value is within range.</p>
+</div><h5 id="methods_limit_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>min</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-limit-page"><p>minimum value (not included in comparison)</p>
+</div></td></tr><tr><td>max</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-limit-page"><p>maximum value (not included in comparison)</p>
+</div></td></tr><tr><td>actualValue</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-limit-page"><p>actual value to compare</p>
+</div></td></tr></tbody></table><h5 id="methods_limit_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-limit-page"><p>flag indicating value is defined range</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_maxlength">maxLength(max, actualValue)</h3>
+<div class="maxlength"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-maxlength-page"><p>Function to check if string length is lower then maximum.</p>
+</div><h5 id="methods_maxlength_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>max</td><td><a href="" class="label type-hint type-hint-integer">integer</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-maxlength-page"><p>maximum value (not included in comparison)</p>
+</div></td></tr><tr><td>actualValue</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-maxlength-page"><p>actual value to validate</p>
+</div></td></tr></tbody></table><h5 id="methods_maxlength_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-maxlength-page"><p>flag indicating actualValue is lower then maximum</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_required">required(actualValue)</h3>
+<div class="required"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-required-page"><p>Function to check if value is non-empty.</p>
+</div><h5 id="methods_required_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>actualValue</td><td><a href="" class="label type-hint type-hint-number">Number</a><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-required-page"><p>value to validate</p>
+</div></td></tr></tbody></table><h5 id="methods_required_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-required-page"><p>flag indicating value is defined, non-empty string and not null</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_validdegreesgpscoordinates">validDegreesGpsCoordinates(actualValue)</h3>
+<div class="validdegreesgpscoordinates"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-validdegreesgpscoordinates-page"><p>Function to validate proper GPS coordinates in floating point notation.
+Supported format: 41.553291, -81.747669</p>
+</div><h5 id="methods_validdegreesgpscoordinates_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>actualValue</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-validdegreesgpscoordinates-page"><p>actual value to validate</p>
+</div></td></tr></tbody></table><h5 id="methods_validdegreesgpscoordinates_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-validdegreesgpscoordinates-page"><p>flag indicating validity of actualValue as floating point coordinate</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_validdmsgpscoordinates">validDmsGpsCoordinates(actualValue)</h3>
+<div class="validdmsgpscoordinates"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-validdmsgpscoordinates-page"><p>Function to validate proper GPS coordinates in degree notation.
+Supported format:</p>
+<ul>
+<li>degrees minutes seconds 40° 26′ 46″ N, 79° 58′ 56″ W or 40° 26&#39; 46&quot; N, 79° 58&#39; 56&quot; W</li>
+<li>degrees decimal minutes 40° 26′ N, 79° 58′ W or 40° 26&#39; N, 79° 58&#39; W</li>
+<li>decimal degrees 40.446° N, 79.982° W</li>
+</ul>
+</div><h5 id="methods_validdmsgpscoordinates_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>actualValue</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-validdmsgpscoordinates-page"><p>actual value to validate</p>
+</div></td></tr></tbody></table><h5 id="methods_validdmsgpscoordinates_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-validdmsgpscoordinates-page"><p>flag indicating validity of actualValue as DMS coordinate</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_validemail">validEmail(email)</h3>
+<div class="validemail"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-validemail-page"><p>Function to check for valid email address in string.
+Algorithm regexp taken from Google Chrome definition.</p>
+</div><h5 id="methods_validemail_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>email</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-validemail-page"><p>actual value to validate as email</p>
+</div></td></tr></tbody></table><h5 id="methods_validemail_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-validemail-page"><p>flag indicatig validity of passed email</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_validfromregex">validFromRegex(actualValue, inputRegex)</h3>
+<div class="validfromregex"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-validfromregex-page"><p>Function to check that string is valid from input regex</p>
+</div><h5 id="methods_validfromregex_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>actualValue</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-validfromregex-page"><p>actual value to validate</p>
+</div></td></tr><tr><td>inputRegex</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-validfromregex-page"><p>regex for validation</p>
+</div></td></tr></tbody></table><h5 id="methods_validfromregex_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-validfromregex-page"><p>validity of given string</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_validipv4">validIpv4(actualValue)</h3>
+<div class="validipv4"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-validipv4-page"><p>Function to check that string is valid IPv4 address. Also allows IPv4 with subnet mask - CIDR notation.</p>
+</div><h5 id="methods_validipv4_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>actualValue</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-validipv4-page"><p>actual value to validate</p>
+</div></td></tr></tbody></table><h5 id="methods_validipv4_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-validipv4-page"><p>validity of given string as IPv4 address</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_validipv6">validIpv6(actualValue)</h3>
+<div class="validipv6"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-validipv6-page"><p>Function to check that string is valid IPv6 address. Also allows IPv6 with subnet mask - CIDR notation.</p>
+</div><h5 id="methods_validipv6_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>actualValue</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-validipv6-page"><p>actual value to validate</p>
+</div></td></tr></tbody></table><h5 id="methods_validipv6_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-validipv6-page"><p>validity of given string as IPv6 address</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_validatecustomdatasampling">validateCustomDataSampling(sampling)</h3>
+<div class="validatecustomdatasampling"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-validatecustomdatasampling-page"><p>Function to validate proper sampling definition.
+Allowed sampling pattern: |any number in digits|specific string from &quot;YMwdhm&quot;||optional space|,
+This pattern is allowed multipletimes.
+Examples:</p>
+<ul>
+<li>10m (ten minutes)</li>
+<li>2h 10m (two hours and ten minutes)</li>
+<li>1w (one week)</li>
+<li>1Y 3M (one year three months)</li>
+</ul>
+</div><h5 id="methods_validatecustomdatasampling_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>sampling</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-validatecustomdatasampling-page"><p>actual value to validate</p>
+</div></td></tr></tbody></table><h5 id="methods_validatecustomdatasampling_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-validatecustomdatasampling-page"><p>flag indicating validity of sampling</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_validatelocation">validateLocation(actualValue)</h3>
+<div class="validatelocation"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-validatelocation-page"><p>Function to validate proper coordinates for location.
+Supported formats:</p>
+<ul>
+<li>decimal 41.553291, -81.747669</li>
+<li>degrees minutes seconds 40° 26′ 46″ N, 79° 58′ 56″ W</li>
+<li>degrees decimal minutes 40° 26.767′ N, 79° 58.933′ W</li>
+<li>decimal degrees 40.446° N, 79.982° W</li>
+</ul>
+</div><h5 id="methods_validatelocation_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>actualValue</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-validatelocation-page"><p>actual value to validate</p>
+</div></td></tr></tbody></table><h5 id="methods_validatelocation_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-validationfxsvc-validatelocation-page"><p>flag indicating validity of actualValue as coordinate</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

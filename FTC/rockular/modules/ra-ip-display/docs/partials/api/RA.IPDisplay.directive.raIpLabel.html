@@ -1,0 +1,185 @@
+<h1><code ng:non-bindable="">raIpLabel</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raiplabel-page"><p>The raIpLabel directive is responsible for rendering the Label widget for visualizing simple texts.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ra-ip-label
+       rb-parameters="{object}"
+       ri-fqn="{string}"
+       rb-is-active="{boolean}"
+       ro-schema="{function}"
+       ro-examples="{function}"&gt;
+&lt;/ra-ip-label&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rbParameters</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raiplabel-page"><p>An object representing the parameters of Indicator. This object contains array of objects (<em>rbParameters.items</em>) with these properties. This
+This widget supports only 1 item in <em>rbParameters.items</em> array.</p>
+<p> Schema type: String</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The main property, string value or FQN for live data</td>
+<td></td>
+</tr>
+<tr>
+<td>font (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Font to be used in label. Value should be from following enumeration: <em>robotoFont</em>, <em>serifFont</em>, <em>sansserifFont</em>, <em>monospaceFont</em></td>
+<td>robotoFont</td>
+</tr>
+<tr>
+<td>fontColor (optional)</td>
+<td><a href="#" class="label type-hint type-hint-object">Object</a></td>
+<td>Color for label.  Color object(see <a href="#/api/RA.IPDisplay.service:colorTypeSvc"><em>colorTypeSvc</em></a>) or hexadecimal String for compatibily reasons</td>
+<td>#000000</td>
+</tr>
+<tr>
+<td>fontBold (optional)</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>If true, label font is bold</td>
+<td>false</td>
+</tr>
+<tr>
+<td>fontItalic (optional)</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>If true, label font is italic</td>
+<td>false</td>
+</tr>
+<tr>
+<td>textUnderline (optional)</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>If true, label is underlined</td>
+<td>false</td>
+</tr>
+<tr>
+<td>fontSize (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>Size of the font</td>
+<td>20</td>
+</tr>
+<tr>
+<td>horizontalAlign (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Horizontal alignment of label. Value should be from following enumeration: <em>left</em>, <em>right</em>, <em>center</em>, <em>justify</em></td>
+<td>center</td>
+</tr>
+<tr>
+<td>verticalAlign (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Vertical alignment of label. Value should be from following enumeration: <em>top</em>, <em>middle</em>, <em>bottom</em></td>
+<td>middle</td>
+</tr>
+</tbody>
+</table>
+</div></td></tr><tr><td>riFqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raiplabel-page"><p>FQN the widget is relative to.</p>
+</div></td></tr><tr><td>rbIsActive</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raiplabel-page"><p>Flag which shows whether the widget sould be active.</p>
+</div></td></tr><tr><td>roSchema</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raiplabel-page"><p>Function which should be called to intialize the widget schema in outside environment.</p>
+</div></td></tr><tr><td>roExamples</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raiplabel-page"><p>Function which should be called to intialize the widget examples in outside
+environment.</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raiplabel-page"><p>The example below shows how to use the <em>raIpLabel</em> directive:
+<h4 id="example_source">Source</h4>
+<div source-edit="exampleAppOne" source-edit-deps="angular.js script.js" source-edit-html="index.html-22" source-edit-css="" source-edit-js="script.js-23" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-22" ng-html-wrap-loaded="exampleAppOne angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-22">
+       <div ng-controller="exampleCtrl">
+           <label>Text: </label><input type="text" style="width: 100%;"
+                  ng-model="data.value">
+           <div>
+               <label style="float: left; margin-right: 10px">Bold: </label><input type="checkbox"style="float: left; margin-right: 10px"
+                  ng-model="data.fontBold">
+                <label style="float: left; margin-right: 10px">Italic: </label><input type="checkbox"style="float: left; margin-right: 10px"
+                  ng-model="data.fontItalic">
+                <label style="float: left; margin-right: 10px">Underlined: </label><input type="checkbox"style="float: left; margin-right: 10px"
+                  ng-model="data.textUnderline">
+                <label style="float: left; margin-right: 10px">Horizontal Align: </label>
+                <select style="float: left; margin-right: 10px" ng-model="data.horizontalAlign">
+                  <option value="left">Left</option>
+                  <option value="center">Center</option>
+                  <option value="justify">Justify</option>
+                  <option value="right">Right</option>
+                </select>
+                <label style="float: left; margin-right: 10px">Vertical Align: </label>
+                <select style="float: left; margin-right: 10px" ng-model="data.verticalAlign">
+                  <option value="top">Top</option>
+                  <option value="middle">Middle</option>
+                  <option value="bottom">Bottom</option>
+                </select>
+           </div>
+           <div style="clear: both;">
+               <label style="float: left; margin-right: 10px">Font size: </label>
+               <input type="number" style="float: left; margin-right: 10px" ng-model="data.fontSize">
+               <label style="float: left; margin-right: 10px">Font: </label>
+               <select style="float: left; margin-right: 10px" ng-model="data.font">
+                 <option value="robotoFont">Roboto</option>
+                 <option value="serifFont">Serif</option>
+                 <option value="sansserifFont">Sans Serif</option>
+                 <option value="monospaceFont">Monospace</option>
+               </select>
+           </div>
+
+           <ra-ip-label style="width: 100%; height: 100px;"
+             rb-parameters="example1.params"
+             rb-is-active="example1.isActive"
+             ri-fqn="example1.fqn"
+             ri-schema="example1.getSchema(schema)">
+           </ra-ip-label>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-23"></pre>
+<script type="text/ng-template" id="script.js-23">
+       var mod = angular.module('exampleAppOne', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope',
+           function ($scope) {
+               'use strict';
+               $scope.data = {};
+               $scope.data.value = "Sample text";
+               $scope.checkChange = function () {
+                 $scope.example1.params.items[0].value = $scope.isChecked;
+               }
+
+               $scope.example1 = {};
+               $scope.example1.isActive = true;
+               $scope.example1.fqn = "MyEnterprise";
+               $scope.example1.getSchema = function (schema) {};
+               $scope.example1.params = {
+                 items: [
+                     {
+                         value: $scope.data.value
+                     }
+                 ]
+               }
+
+               $scope.$watch("data", function (newVal) {
+                 $scope.example1.params.items[0] = newVal;
+               }, true);
+           }
+       ]);
+
+   </script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well live-example-container"><iframe src="examples/example-13-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>

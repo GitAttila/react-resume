@@ -1,0 +1,48 @@
+<h1><code ng:non-bindable="">navigationHandlerSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPCommon.Services</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationhandlersvc-page"><p>Service for Navigation Handler Request and Manipulations</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_createnavigationhandlerrequest">createNavigationHandlerRequest(fqn, viewFqn)</h3>
+<div class="createnavigationhandlerrequest"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationhandlersvc-createnavigationhandlerrequest-page"><p>Create or Return the Navigation Handler Request.</p>
+</div><h5 id="methods_createnavigationhandlerrequest_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>fqn</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationhandlersvc-createnavigationhandlerrequest-page"><ul>
+<li>FullyQualifiedName</li>
+</ul>
+</div></td></tr><tr><td>viewFqn</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationhandlersvc-createnavigationhandlerrequest-page"><ul>
+<li>View FullyQualifiedName</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_createnavigationhandlerrequest_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-navigationhandlerrequest">NavigationHandlerRequest</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationhandlersvc-createnavigationhandlerrequest-page"><p>Navigation Handler Request
+<a href="#/api/RA.IPCommon.Services.object:NavigationHandlerRequest">RA.IPCommon.Services.object:NavigationHandlerRequest</a></p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getnavigationhandler">getNavigationHandler(navigationHandlerRequest)</h3>
+<div class="getnavigationhandler"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationhandlersvc-getnavigationhandler-page"><p>Makes a request to JSON navigationhandler service on the server.</p>
+</div><h5 id="methods_getnavigationhandler_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>navigationHandlerRequest</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationhandlersvc-getnavigationhandler-page"><p><a href="#/api/RA.IPCommon.Services.object:NavigationHandlerRequest">RA.IPCommon.Services.object:NavigationHandlerRequest</a></p>
+</div></td></tr></tbody></table><h5 id="methods_getnavigationhandler_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-ipromise">IPromise&lt;T&gt;</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationhandlersvc-getnavigationhandler-page"><ul>
+<li>Promise to resolve when answer
+will be available.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getnavigationview">getNavigationView(currentFqn, [currentView])</h3>
+<div class="getnavigationview"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationhandlersvc-getnavigationview-page"><p>Create or Return the default view for the given FullyQualifiedName
+if the currentView is not set, call a service to retrieve the fqn &quot;available&quot; view.</p>
+</div><h5 id="methods_getnavigationview_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>currentFqn</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationhandlersvc-getnavigationview-page"><ul>
+<li>Current FullyQualifiedName</li>
+</ul>
+</div></td></tr><tr><td>[currentView] <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationhandlersvc-getnavigationview-page"><ul>
+<li>Current View</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_getnavigationview_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-ipromise">IPromise&lt;T&gt;</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-navigationhandlersvc-getnavigationview-page"><ul>
+<li>Promise to resolve when answer
+will be available.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

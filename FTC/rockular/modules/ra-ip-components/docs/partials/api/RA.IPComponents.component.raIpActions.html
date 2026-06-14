@@ -1,0 +1,116 @@
+<h1><code ng:non-bindable="">raIpActions</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">RA.IPComponents</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipactions-page"><p>This component is responsible for rendering action buttons. Action button can be an icon or a button. Component
+allows to set size of each action and align for whole component. For icon button is used raIpBadge component and
+for button is used MFT button.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ra-ip-actions
+       config="{object}"&gt;
+&lt;/ra-ip-actions&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipactions-page"><ul>
+<li><strong><code>class</code></strong> {string} to customize style of component</li>
+<li><strong><code>align</code></strong> {string} left | center | right</li>
+<li><p><strong><code>actions</code></strong> {array} actions</p>
+<ul>
+<li><strong><code>class</code></strong> {string} class for icon button</li>
+<li><strong><code>disabled</code></strong> {boolean} disabled action button</li>
+<li><strong><code>onAction</code></strong> {function} called on click</li>
+<li><strong><code>tooltip</code></strong> {string} information text shown on hover on button</li>
+<li><strong><code>value</code></strong> {string} for button when this value is undefined it set icon button</li>
+<li><p><strong><code>size</code></strong> {string} small | medium | large</p>
+<p>raIpBadge component for icon action
+See also <a href="#/api/RA.IPComponents.component:raIpBadge">RA.IPComponents.component:raIpBadge</a>.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipactions-page"><h4 id="example_source">Source</h4>
+<div source-edit="example1" source-edit-deps="angular.js script.js" source-edit-html="index.html" source-edit-css="" source-edit-js="script.js" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html" ng-html-wrap-loaded="example1 angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html">
+    <div ng-controller="myCtrl">
+        <ra-ip-actions config="config"></ra-ip-actions>
+    </div>
+</script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js"></pre>
+<script type="text/ng-template" id="script.js">
+    angular.module('example1', ['mobile-toolkit-ra', 'RA.IPComponents']);
+    angular.module('example1').controller('myCtrl',['$scope',
+        function($scope) {
+            $scope.config = {
+                align: 'left',
+                actions: [
+                    {
+                        class: 'ra-icon-home',
+                        disabled: false,
+                        onAction: function() {
+                            alert("Called function");
+                        },
+                        tooltip: 'Tooltip text',
+                        size: 'small'
+                    },
+                    {
+                        class: 'ra-icon-home',
+                        disabled: false,
+                        onAction: function() {
+                            alert("Called function");
+                        },
+                        tooltip: 'Tooltip text',
+                        size: 'medium'
+                    },
+                    {
+                        class: 'ra-icon-home',
+                        disabled: false,
+                        onAction: function() {
+                            alert("Called function");
+                        },
+                        tooltip: 'Tooltip text',
+                        size: 'large'
+                    },
+                    {
+                        class: 'ra-btn-primary',
+                        disabled: false,
+                        onAction: function() {
+                            alert("Called function");
+                        },
+                        value: 'Some text',
+                        size: 'small'
+                    },
+                    {
+                        class: 'ra-btn-primary',
+                        disabled: false,
+                        onAction: function() {
+                            alert("Called function");
+                        },
+                        value: 'Some text',
+                        size: 'medium'
+                    },
+                    {
+                        class: 'ra-btn-primary',
+                        disabled: false,
+                        onAction: function() {
+                            alert("Called function");
+                        },
+                        value: 'Some text',
+                        size: 'large'
+                    }
+                ]
+            };
+        }
+    ]);
+</script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well live-example-container"><iframe src="examples/example-1-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>

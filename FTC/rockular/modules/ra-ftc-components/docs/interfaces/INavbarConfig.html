@@ -1,0 +1,273 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@ra-wcftcloud/ra-ftc-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@ra-wcftcloud/ra-ftc-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content interface">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Interfaces</li>
+  <li>INavbarConfig</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">API</a>
+        </li>
+        <li >
+            <a href="#readme" role="tab" id="readme-tab" data-toggle="tab" data-link="readme">Overview</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/vertical-icon-navbar/vertical-icon-navbar.component.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Navbar config interface </p>
+
+            </p>
+
+
+        <section>
+            <h3 id="index">Index</h3>
+            <table class="table table-sm table-bordered index-table">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Properties</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                        <a href="#position">position</a>
+                                </li>
+                                <li>
+                                        <a href="#responsibleType">responsibleType</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+
+            <section>
+                <h3 id="inputs">Properties</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="position"></a>
+                                        <span class="name"><b>position</b><a href="#position"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>position:     <code><a href="../miscellaneous/typealiases.html#position" target="_self" >position</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code><a href="../miscellaneous/typealiases.html#position" target="_self" >position</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="responsibleType"></a>
+                                        <span class="name"><b>responsibleType</b><a href="#responsibleType"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>responsibleType:     <code><a href="../miscellaneous/typealiases.html#ResponsibleType" target="_self" >ResponsibleType</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code><a href="../miscellaneous/typealiases.html#ResponsibleType" target="_self" >ResponsibleType</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+            </section>
+    </div>
+
+    <div class="tab-pane fade " id="c-readme">
+        <p><p>The vertical icon navbar component are designed to add vertical side navigation to a fullscreen app.
+To set up a navbar we use component <code>&lt;ra-ftc-vertical-icon-navbar&gt;</code>  which acts as a structural container for our navbar items.</p>
+<h3 id="configuration">Configuration</h3>
+<h4 id="input-bindings">Input bindings</h4>
+<p>Parameter <code>navbarConfig</code> (not required)</p>
+<div><pre class="line-numbers"><code class="language-json">{
+  &quot;position&quot;: &quot;left&quot;,
+  &quot;responsibleType&quot;: &quot;scrollbar&quot;
+}</code></pre></div><ul>
+<li>position - navbar position, accept params: &#39;right&#39;, &#39;left&#39;, default: &#39;left&#39;  <div><pre class="line-numbers"><code class="language-typescript">const position: string;</code></pre></div></li>
+<li>responsibleType - defines component behavior when container size is changed,
+accept params: &#39;scrollbar&#39;, &#39;context_menu&#39;, &#39;context_menu&#39;, default: &#39;scrollbar&#39;   <div><pre class="line-numbers"><code class="language-typescript">const responsibleType: string;</code></pre></div></li>
+</ul>
+<p>Parameter <code>navbarList</code>: default <code>[]</code>: (required)</p>
+<div><pre class="line-numbers"><code class="language-json">[
+  {
+    &quot;id&quot;: &quot;home&quot;,
+    &quot;icon&quot;: &quot;ra-icon-home&quot;,
+    &quot;label&quot;: &quot;Home link&quot;
+  }
+]</code></pre></div><ul>
+<li><p>id - navbar item id</p>
+<div><pre class="line-numbers"><code class="language-typescript">const id: string;</code></pre></div></li>
+<li><p>icon - name of icon definition in ra-icons component or default material icons</p>
+<div><pre class="line-numbers"><code class="language-typescript">const icon: string;</code></pre></div></li>
+<li><p>label - label for the icon navbar item</p>
+<div><pre class="line-numbers"><code class="language-typescript">const label: string;</code></pre></div><p>Parameter <code>activeItem</code>: (not required)</p>
+</li>
+</ul>
+<p>default:</p>
+<div><pre class="line-numbers"><code class="language-json">{
+  &quot;id&quot;: &quot;&quot;,
+  &quot;icon&quot;: &quot;&quot;,
+  &quot;label&quot;: &quot;&quot;
+}</code></pre></div><h4 id="output-bindings">Output bindings</h4>
+<p>Callback <code>(activeItemChange)</code>: onClickItem(<code>output</code>)</p>
+<p><code>output</code> return selected item:</p>
+<div><pre class="line-numbers"><code class="language-json">{
+  &quot;id&quot;: &quot;home&quot;,
+  &quot;icon&quot;: &quot;ra-icon-home&quot;,
+  &quot;label&quot;: &quot;Home link&quot;
+}</code></pre></div><h3 id="examples">Examples</h3>
+<div><pre class="line-numbers"><code class="language-html">&lt;ra-ftc-vertical-icon-navbar
+  [navbarConfig]=&quot;navbarConfig&quot;
+  [navbarList]=&quot;navbarList&quot;
+  [activeItem]=&quot;activeItem&quot;
+  (activeItemChange)=&quot;onClickItem($event)&quot;&gt;
+&lt;/ra-ftc-vertical-icon-navbar&gt;</code></pre></div></p>
+    </div>
+
+</div>
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
+            var COMPODOC_CURRENT_PAGE_URL = 'INavbarConfig.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

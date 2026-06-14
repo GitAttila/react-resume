@@ -1,0 +1,121 @@
+<h1><code ng:non-bindable="">raIpQuery</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipquery-page"><p>The raIpQuery directive is responsible for rendering the Query Widget.</p>
+<div class="alert alert-info" role="alert">
+        <strong>Note:</strong> By default the query widget header in design mode contains pure text boxes. When there is a
+        possibility of usage of graphical model picker it might be used. All you need to do is specify the
+        controller, template URL and window class in <strong>MODEL_PICKER</strong> constant in your application. These are
+        then used in raOverlaySvc. This model picker dialog is used for both selecting a type and property.
+
+        For example it might look like:
+
+        <pre class="prettyprint linenums">
+        angular.module("myModule").constant(
+             "MODEL_PICKER", {
+                 controller: "modelPickerCtrl",
+                 templateUrl: "path/to/the/template",
+                 windowClass: "classOfMyWindow"
+             }
+        )
+        </pre>
+
+        <h3 id="description_input">Input:</h3>
+
+        As a config parameter to the controller is passed object with 2 properties:
+        <ul>
+            <li><strong>currentFqn</strong>: FQN of context in which the model picker should be opened</li>
+            <li><strong>selection</strong>: FQN of selected item (if exists)</li>
+        </ul>
+
+        For the selection of type there is also passed property <strong>pickerMode</strong> with structure:
+
+        <pre class="prettyprint linenums">
+            {
+                itemsTab: {
+                    selectable: true,
+                    active: true
+                }
+            }
+        </pre>
+
+        <h3 id="description_expected-output">Expected output:</h3>
+
+        Object with 2 properties:
+        <ul>
+            <li><strong>fqn</strong>: FQN of selected item or property</li>
+            <li><strong>type</strong>: FQN of the type in type system for items or <em>&quot;string&quot;</em>/<em>&quot;number&quot;</em>/<em>&quot;boolean&quot;</em> for properties</li>
+        </ul>
+     </div>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ra-ip-query
+       rb-parameters="{object}"
+       ri-fqn="{string}"
+       rb-is-active="{boolean}"
+       ro-schema="{function}"
+       ro-examples="{function}"
+       [rb-style="{string}"]&gt;
+&lt;/ra-ip-query&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rbParameters</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipquery-page"><p>An object representing common parameters and
+the parameters of Query Widget.</p>
+<p>Query Widget Specific Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>boundType</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Type of the item which should be queried (FQN in type system)</td>
+</tr>
+<tr>
+<td>boundProperty</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Relative FQN (to the found item) which should be used as a schemaType property</td>
+</tr>
+<tr>
+<td>directive</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Name of the Widget to be used to display Query results</td>
+</tr>
+<tr>
+<td>schemaType</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Type of the selected property (&quot;number&quot;, &quot;boolean&quot;, &quot;string&quot; or FQN of type from type system - based on this value the schema of selected widget is picked)</td>
+</tr>
+<tr>
+<td>items</td>
+<td><a href="#" class="label type-hint type-hint-array">Array</a></td>
+<td>Inner properties related to the specific widget selected in directive. The object in this array will be used for each item in query widget. Note that relative FQNs in this array are relative to the found item instance</td>
+</tr>
+<tr>
+<td>common</td>
+<td><a href="#" class="label type-hint type-hint-array">Array</a></td>
+<td>Common parameters which will be passed to inner widget</td>
+</tr>
+</tbody>
+</table>
+<p>Note that <strong>caption</strong> and <strong>color</strong> properties are properties from &quot;item&quot; schema. These will be copied to each
+matched item from query result. On the other hand <strong>chartTitle</strong> and <strong>lastSeconds</strong> are properties from common
+schema and therefore these will be copied only to common section of inner widget.</p>
+</div></td></tr><tr><td>riFqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipquery-page"><p>FQN the widget is relative to.</p>
+</div></td></tr><tr><td>rbIsActive</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipquery-page"><p>Flag which shows whether the widget should be active.</p>
+</div></td></tr><tr><td>roSchema</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipquery-page"><p>Function which should be called to initialize the widget schema in outside environment.</p>
+</div></td></tr><tr><td>roExamples</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipquery-page"><p>Function which should be called to initialize the widget examples in outside
+environment.</p>
+</div></td></tr><tr><td>rbStyle <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipquery-page"><p>String indicating which class should be used in widget.</p>
+</div></td></tr></tbody></table></div>
+</div>

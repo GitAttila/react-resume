@@ -1,0 +1,93 @@
+<h1><code ng:non-bindable="">raIpCollapseBox</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">RA.IPComponents</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipcollapsebox-page"><p>This component is responsible for rendering the collapse box. The collapse box expects to receive a object
+with some parameters and it is possible to add icons or buttons which will be shown in the header of collapse box.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ra-ip-collapse-box
+       config="{Object}"&gt;
+&lt;/ra-ip-collapse-box&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipcollapsebox-page"><ul>
+<li><strong><code>theme</code></strong> {string} class theme definition: light, dark, rockwell</li>
+<li><strong><code>shadow</code></strong> {boolean} shadow</li>
+<li><strong><code>defaultClosed</code></strong> {boolean} default state of the collapse box</li>
+<li><strong><code>disableCollapse</code></strong> {boolean} to disable collapsible functionality</li>
+<li><strong><code>hideHeader</code></strong> {boolean} to hide header bar of the collapse box</li>
+<li><strong><code>hideBorder</code></strong> {boolean} to hide border of the collapse box</li>
+<li><strong><code>header</code></strong> {object} raIpHeader component.
+   See also <a href="#/api/RA.IPComponents.component:raIpHeader">RA.IPComponents.component:raIpHeader</a>.</li>
+<li><strong><code>action</code></strong> {object} raIpActions component.
+   See also <a href="#/api/RA.IPComponents.component:raIpActions">RA.IPComponents.component:raIpActions</a>.</li>
+</ul>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipcollapsebox-page"><p>Example of Collapse box to show usage with individual content.
+<h4 id="example_source">Source</h4>
+<div source-edit="example1" source-edit-deps="angular.js script.js" source-edit-html="index.html-8" source-edit-css="" source-edit-js="script.js-9" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-8" ng-html-wrap-loaded="example1 angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-8">
+       <div ng-controller="myCtrl">
+           <ra-ip-collapse-box config="config">
+               <div style="padding: 15px; text-align: center;">
+                   Body of the collapse box. It is possible to add here component or directive.
+               </div>
+           </ra-ip-collapse-box>
+       </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-9"></pre>
+<script type="text/ng-template" id="script.js-9">
+       angular.module('example1', ['mobile-toolkit-ra', 'RA.IPComponents']);
+       angular.module('example1')
+           .controller('myCtrl',['$scope',
+               function($scope) {
+                   $scope.config = {
+                       theme: 'rockwell',
+                       hideHeader: false,
+                       disableCollapse: true,
+                       header: {
+                           titleAlign: 'row',
+                           mainTitle: {
+                               value: 'Main title'
+                           },
+                           subtitle: {
+                               value: 'Subtitle'
+                           }
+                       },
+                       action: {
+                           actions: [
+                               {
+                                   class: 'ra-icon-home',
+                                   active: true,
+                                   size: 'small',
+                                   type: 'button'
+                               },
+                               {
+                                   class: 'ra-icon-edit',
+                                   active: false,
+                                   size: 'small',
+                                   type: 'button'
+                               },
+                               {
+                                   visible: true,
+                                   class: "ra-btn-primary",
+                                   value: "Add button",
+                                   disabled: false,
+                                   onAction: function() {alert("add dialog");}
+                               }
+                           ]
+                       }
+                   };
+           }]);
+   </script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well live-example-container"><iframe src="examples/example-6-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>

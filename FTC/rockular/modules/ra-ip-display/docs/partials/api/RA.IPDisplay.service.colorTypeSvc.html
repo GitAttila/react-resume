@@ -1,0 +1,103 @@
+<h1><code ng:non-bindable="">colorTypeSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colortypesvc-page"><p>Service which supports operations with Color type.
+It also provides backwards compatibility with the versions of
+displays which still use &quot;string&quot; colors.</p>
+<p>Color type has following format:
+<pre class="prettyprint linenums">
+{
+     color: "string describing the color in any CSS-like format",
+     type: "item from RA.IPDisplay module constant COLOR_TYPES",
+     index: "index of color in the palette"
+}
+</pre>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_colorequals">colorEquals(c1, c2)</h3>
+<div class="colorequals"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colortypesvc-colorequals-page"><p>Returns true if specified color representations are equal.</p>
+</div><h5 id="methods_colorequals_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>c1</td><td><a href="" class="label type-hint type-hint-string">String</a><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colortypesvc-colorequals-page"><p>First color (Color object or hexadecimal string)</p>
+</div></td></tr><tr><td>c2</td><td><a href="" class="label type-hint type-hint-string">String</a><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colortypesvc-colorequals-page"><p>Second color (Color object or hexadecimal string)</p>
+</div></td></tr></tbody></table><h5 id="methods_colorequals_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colortypesvc-colorequals-page"><p>Returns true if following conditions are met:</p>
+<ul>
+<li>Both colors describes same color</li>
+<li>Both colors are of the same type</li>
+</ul>
+<p><strong>Example 1</strong> - following colors are equal (String colors are considering as
+<a href="#/api/RA.IPDisplay:COLOR_TYPES">FIXED_COLOR</a>)</p>
+<pre class="prettyprint linenums">
+    c1 = "#123ABC";
+    c2 = {
+         color: "#123ABC",
+         type: COLOR_TYPES.FIXED_COLOR
+    }
+</pre>
+<p><strong>Example 2</strong> - following colors are not equal (they have different type)</p>
+<pre class="prettyprint linenums">
+    c1 = {
+         color: "#123ABC",
+         type: COLOR_TYPES.FIXED_COLOR
+    };
+    c2 = {
+         color: "#123ABC",
+         type: COLOR_TYPES.THEME_COLOR,
+         index: 10
+    }
+</pre>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getcolorobject">getColorObject(color, type, palette)</h3>
+<div class="getcolorobject"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colortypesvc-getcolorobject-page"><p>Builds color object based on input parameters.</p>
+</div><h5 id="methods_getcolorobject_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>color</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colortypesvc-getcolorobject-page"><p>Hexadecimal color description. E.g. &quot;#123ABC&quot;.</p>
+</div></td></tr><tr><td>type</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colortypesvc-getcolorobject-page"><p>Item from <a href="#/api/RA.IPDisplay:COLOR_TYPES">COLOR_TYPES</a>. Default is
+<a href="#/api/RA.IPDisplay:COLOR_TYPES">FIXED_COLOR</a></p>
+</div></td></tr><tr><td>palette</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colortypesvc-getcolorobject-page"><p>Array containing strings representation of colors. (without &quot;#&quot; prefix)</p>
+</div></td></tr></tbody></table><h5 id="methods_getcolorobject_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colortypesvc-getcolorobject-page"><p>Color object with following properties:</p>
+<ul>
+<li><strong>color</strong>: String describing the color in hexadecimal notation</li>
+<li><strong>type</strong>: Item from <a href="#/api/RA.IPDisplay:COLOR_TYPES">COLOR_TYPES</a></li>
+<li><strong>index</strong>: This property is defined only if type is equal to
+<a href="#/api/RA.IPDisplay:COLOR_TYPES">THEME_COLOR</a>.
+It contains index of specified color in specified palette.
+If type is equal to <a href="#/api/RA.IPDisplay:COLOR_TYPES">THEME_COLOR</a> and color is not
+present in specified palette, it throws RAError.</li>
+</ul>
+<p>Example:
+<pre class="prettyprint linenums">
+ {
+     color: "#123ABC"
+     type: COLOR_TYPES.THEME_COLOR
+     index: 10
+ }
+</pre>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getcolorstring">getColorString(color)</h3>
+<div class="getcolorstring"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colortypesvc-getcolorstring-page"><p>Returns the lowercase string representing the input color.</p>
+</div><h5 id="methods_getcolorstring_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>color</td><td><a href="" class="label type-hint type-hint-object">Object</a><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colortypesvc-getcolorstring-page"><p>Color representation</p>
+</div></td></tr></tbody></table><h5 id="methods_getcolorstring_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colortypesvc-getcolorstring-page"><ul>
+<li>If user provides color object, it returns its &quot;color&quot; property.</li>
+<li>If user provides string representation it just returns this unchanged string
+(it is because of backwards compatibility).</li>
+<li>If the color parameter is something else than valid color object or string it throws RAError.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getcolortype">getColorType(color)</h3>
+<div class="getcolortype"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colortypesvc-getcolortype-page"><p>Returns the type of input color from <a href="#/api/RA.IPDisplay:COLOR_TYPES">COLOR_TYPES</a>
+enumeration.</p>
+</div><h5 id="methods_getcolortype_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>color</td><td><a href="" class="label type-hint type-hint-object">Object</a><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colortypesvc-getcolortype-page"><p>Color representation (Color object or hexadecimal string)</p>
+</div></td></tr></tbody></table><h5 id="methods_getcolortype_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colortypesvc-getcolortype-page"><ul>
+<li>If user provides color object, it returns its type property.</li>
+<li>If user provides String representation it it returns <a href="#/api/RA.IPDisplay:COLOR_TYPES">FIXED_COLOR</a>
+(it is because of backwards compatibility).</li>
+<li>If the color parameter is something else than valid color object or string it throws RAError.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

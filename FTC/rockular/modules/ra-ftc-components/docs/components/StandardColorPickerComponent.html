@@ -1,0 +1,1424 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@ra-wcftcloud/ra-ftc-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@ra-wcftcloud/ra-ftc-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>StandardColorPickerComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">API</a>
+        </li>
+        <li >
+            <a href="#readme" role="tab" id="readme-tab" data-toggle="tab" data-link="readme">Overview</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/color-picker/standard-color-picker/standard-picker.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">encapsulation</td>
+                <td class="col-md-9"><code>ViewEncapsulation.None</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>ra-ftc-standard-color-picker</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>standard-picker.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./standard-picker.component.html</code></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#_appearance">_appearance</a>
+                            </li>
+                            <li>
+                                <a href="#_disableAlpha">_disableAlpha</a>
+                            </li>
+                            <li>
+                                <a href="#_disabled">_disabled</a>
+                            </li>
+                            <li>
+                                <a href="#_popupRef">_popupRef</a>
+                            </li>
+                            <li>
+                                <a href="#_presetColors">_presetColors</a>
+                            </li>
+                            <li>
+                                <a href="#_showDropdown">_showDropdown</a>
+                            </li>
+                            <li>
+                                <a href="#_value">_value</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#changeDetectorRef">changeDetectorRef</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#_closePopup">_closePopup</a>
+                            </li>
+                            <li>
+                                <a href="#_openPopup">_openPopup</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#popupColorSelected">popupColorSelected</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#appearance">appearance</a>
+                            </li>
+                            <li>
+                                <a href="#disableAlpha">disableAlpha</a>
+                            </li>
+                            <li>
+                                <a href="#disabled">disabled</a>
+                            </li>
+                            <li>
+                                <a href="#presetColors">presetColors</a>
+                            </li>
+                            <li>
+                                <a href="#showDropdown">showDropdown</a>
+                            </li>
+                            <li>
+                                <a href="#value">value</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#closed">closed</a>
+                            </li>
+                            <li>
+                                <a href="#colorSelected">colorSelected</a>
+                            </li>
+                            <li>
+                                <a href="#opened">opened</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostBindings</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#class.ra-ftc-standard-color-picker">class.ra-ftc-standard-color-picker</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#appearance">appearance</a>
+                                </li>
+                                <li>
+                                    <a href="#presetColors">presetColors</a>
+                                </li>
+                                <li>
+                                    <a href="#value">value</a>
+                                </li>
+                                <li>
+                                    <a href="#disabled">disabled</a>
+                                </li>
+                                <li>
+                                    <a href="#showDropdown">showDropdown</a>
+                                </li>
+                                <li>
+                                    <a href="#disableAlpha">disableAlpha</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(changeDetectorRef: <a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank">ChangeDetectorRef</a>, _viewContainerRef: <a href="https://angular.io/api/core/ViewContainerRef" target="_blank">ViewContainerRef</a>, _element: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>, _ngZone: <a href="https://angular.io/api/core/NgZone" target="_blank">NgZone</a>, _overlay: Overlay)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>changeDetectorRef</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank" >ChangeDetectorRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_viewContainerRef</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/core/ViewContainerRef" target="_blank" >ViewContainerRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_element</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_ngZone</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/core/NgZone" target="_blank" >NgZone</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_overlay</td>
+                                                  
+                                                        <td>
+                                                                    <code>Overlay</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="appearance"></a>
+                        <code>appearance</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="../miscellaneous/typealiases.html#StandardColorPickerAppearance" target="_self" >StandardColorPickerAppearance</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="disableAlpha"></a>
+                        <code>disableAlpha</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="disabled"></a>
+                        <code>disabled</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="presetColors"></a>
+                        <code>presetColors</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="../miscellaneous/typealiases.html#ColorPickerInput" target="_self" >ColorPickerInput[]</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="showDropdown"></a>
+                        <code>showDropdown</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="value"></a>
+                        <code>value</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="../miscellaneous/typealiases.html#ColorPickerInput" target="_self" >ColorPickerInput</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="closed"></a>
+                        <code>closed</code>
+                    </td>
+                    <td class="col-md-10">
+                        <div><p>Emits when the datepicker has been closed. </p>
+</div>
+                        <em><code>$event</code> Type:</em>    <code>EventEmitter&lt;void&gt;</code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="colorSelected"></a>
+                        <code>colorSelected</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="opened"></a>
+                        <code>opened</code>
+                    </td>
+                    <td class="col-md-10">
+                        <div><p>Emits when the datepicker has been opened. </p>
+</div>
+                        <em><code>$event</code> Type:</em>    <code>EventEmitter&lt;void&gt;</code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3>HostBindings</h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="class.ra-ftc-standard-color-picker"></a>
+                        <span class="name">
+                            <b>
+                            class.ra-ftc-standard-color-picker
+                            </b>
+                            <a href="#class.ra-ftc-standard-color-picker"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>class.ra-ftc-standard-color-picker:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_closePopup"></a>
+                        <span class="name">
+                            <b>
+                            _closePopup
+                            </b>
+                            <a href="#_closePopup"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>_closePopup()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Close the popup. </p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_openPopup"></a>
+                        <span class="name">
+                            <b>
+                            _openPopup
+                            </b>
+                            <a href="#_openPopup"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>_openPopup()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnDestroy"></a>
+                        <span class="name">
+                            <b>
+                            ngOnDestroy
+                            </b>
+                            <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="popupColorSelected"></a>
+                        <span class="name">
+                            <b>
+                            popupColorSelected
+                            </b>
+                            <a href="#popupColorSelected"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>popupColorSelected(value: <a href="../interfaces/IColorPickerColor.html">IColorPickerColor</a>)</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Method triggered when color is selected in popup.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>value</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/IColorPickerColor.html" target="_self" >IColorPickerColor</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_appearance"></a>
+                        <span class="name">
+                            <b>
+                            _appearance
+                            </b>
+                            <a href="#_appearance"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>_appearance:     <code><a href="../miscellaneous/typealiases.html#StandardColorPickerAppearance" target="_self" >StandardColorPickerAppearance</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../miscellaneous/typealiases.html#StandardColorPickerAppearance" target="_self" >StandardColorPickerAppearance</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_disableAlpha"></a>
+                        <span class="name">
+                            <b>
+                            _disableAlpha
+                            </b>
+                            <a href="#_disableAlpha"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>_disableAlpha:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_disabled"></a>
+                        <span class="name">
+                            <b>
+                            _disabled
+                            </b>
+                            <a href="#_disabled"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>_disabled:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_popupRef"></a>
+                        <span class="name">
+                            <b>
+                            _popupRef
+                            </b>
+                            <a href="#_popupRef"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>_popupRef:     <code>OverlayRef</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>OverlayRef</code>
+
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>A reference to the overlay when the picker is opened as a popup. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_presetColors"></a>
+                        <span class="name">
+                            <b>
+                            _presetColors
+                            </b>
+                            <a href="#_presetColors"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>_presetColors:     <code><a href="../miscellaneous/typealiases.html#ColorPickerInput" target="_self" >ColorPickerInput[]</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../miscellaneous/typealiases.html#ColorPickerInput" target="_self" >ColorPickerInput[]</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_showDropdown"></a>
+                        <span class="name">
+                            <b>
+                            _showDropdown
+                            </b>
+                            <a href="#_showDropdown"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>_showDropdown:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_value"></a>
+                        <span class="name">
+                            <b>
+                            _value
+                            </b>
+                            <a href="#_value"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>_value:     <code>TinyColor</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>TinyColor</code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="changeDetectorRef"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            changeDetectorRef
+                            </b>
+                            <a href="#changeDetectorRef"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>changeDetectorRef:     <code><a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank" >ChangeDetectorRef</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank" >ChangeDetectorRef</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="appearance"></a>
+                        <span class="name"><b>appearance</b><a href="#appearance"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>appearance(appearance: )</code></span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>appearance</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="presetColors"></a>
+                        <span class="name"><b>presetColors</b><a href="#presetColors"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>presetColors(presetColors: [])</code></span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                        <td>Type</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>presetColors</td>
+                                                    
+                                                            <td>
+                                                                        <code>[]</code>
+                                                            </td>
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="value"></a>
+                        <span class="name"><b>value</b><a href="#value"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>value(color: )</code></span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>color</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="disabled"></a>
+                        <span class="name"><b>disabled</b><a href="#disabled"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>disabled(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code></span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                        <td>Type</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>value</td>
+                                                    
+                                                            <td>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                            </td>
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showDropdown"></a>
+                        <span class="name"><b>showDropdown</b><a href="#showDropdown"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>showDropdown(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code></span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                        <td>Type</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>value</td>
+                                                    
+                                                            <td>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                            </td>
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="disableAlpha"></a>
+                        <span class="name"><b>disableAlpha</b><a href="#disableAlpha"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>disableAlpha(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code></span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                        <td>Type</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>value</td>
+                                                    
+                                                            <td>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                            </td>
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+</section>
+</div>
+
+    <div class="tab-pane fade " id="c-readme">
+        <p><p><code>StandardColorPickerComponent</code> provides visual representation for standard color picker.</p>
+<h3 id="standard-color-picker">Standard color picker</h3>
+<p>This module provides methods and definitions to show selected color and also allows user to pick a color from component colorpicker.</p>
+<h3 id="configuration">Configuration</h3>
+<h4 id="input-bindings">Input bindings</h4>
+<p>It is possible to set these configuration properties (as attribute property binding):</p>
+<ul>
+<li>appearance - optional settings to allow set visualization as circle or square.<div><pre class="line-numbers"><code class="language-typescript">const appearance: ColorPickerAppearance = &#39;square&#39;;  // default is &#39;circle&#39;</code></pre></div></li>
+<li>presetColors - array of color definitions.<div><pre class="line-numbers"><code class="language-typescript">const presetColors: ColorPickerInput[] = [
+  { h: 10, s: 50, l: 90, a: 0.8 },
+  { r: 80, g: 190, b: 255, a: 0.5 },
+  &#39;#EEECE1&#39;,
+];</code></pre></div></li>
+<li>value - actual color value<div><pre class="line-numbers"><code class="language-typescript">// value has no default value
+// value of type &lt;ColorPickerInput&gt; allows: string | IColorPickerRGB | IColorPickerRGBA | IColorPickerHSLA IColorPickerHSLA | TinyColor
+// value has no default value
+// value of type &lt;ColorPickerInput&gt;
+const colorValue: string = &#39;#C19859&#39;; // also &#39;rgb(10, 25, 30)&#39;, &#39;rgba(10, 25, 30, 1)&#39; is supported
+const colorValue: IColorPickerHSL = {h: 10, s: 50, l: 90};
+const colorValue: IColorPickerHSLA = {h: 10, s: 50, l: 90, a: 0.8};
+const colorValue: IColorPickerRGB = {r: 80, g: 190, b: 255};
+const colorValue: IColorPickerRGBA = {r: 80, g: 190, b: 255, a: 0.5};
+const colorValue: IColorPickerHSV = {h: 10, s: 50, v: 90};
+const colorValue: IColorPickerHSVA = {h: 10, s: 50, v: 90, a: 0.5};
+const colorValue: TinyColor = new TinyColor(&#39;rgb(10, 25, 30)&#39;);</code></pre></div></li>
+<li>disabled - flag indicating disabled state of component, user is not able to select color<div><pre class="line-numbers"><code class="language-typescript">const disabled: boolean = false; // default as false</code></pre></div></li>
+<li>showDropdown - flag indicating to show dropdown<div><pre class="line-numbers"><code class="language-typescript">const showDropdown: boolean = false; // default as false</code></pre></div></li>
+<li>disableAlpha - flag indicating to hide alpha channel selection from picker<div><pre class="line-numbers"><code class="language-typescript">const disableAlpha: boolean = false; // default as false</code></pre></div></li>
+</ul>
+<h4 id="output-bindings">Output bindings</h4>
+<ul>
+<li>colorSelected - triggered when color is selected from color picker, this is of type ColorPickerColor<div><pre class="line-numbers"><code class="language-typescript">onColorSelected(output) {
+  // output ~
+  output = {
+      hex: &#39;#c0504d&#39;, 
+      rgb: { r: 192, g: 80, b: 77, a: 1 }, 
+      rgbString: &#39;rgb(192, 80, 77)&#39;, 
+      hsl: { h: 1.5652173913043497, s: 0.47717842323651455, l: 0.5274509803921569, a: 1 }, 
+      hslString: &#39;hsl(2, 48%, 53%)&#39;, 
+      hsv: { h: 1.5652173913043497, s: 0.5989583333333334, v: 0.7529411764705882, a: 1 }, 
+      hsvString: &#39;hsl(2, 48%, 53%)&#39;,
+      source: &#39;#c0504d&#39;
+  };
+}</code></pre></div></li>
+<li>opened - triggered when popup is opened</li>
+<li>closed - triggered when popup is closed</li>
+</ul>
+<h4 id="usage-in-template">Usage in template</h4>
+<div><pre class="line-numbers"><code class="language-html">&lt;ra-ftc-Standard-color-picker [presetColors]=&quot;presetColors&quot; [appearance]=&quot;appearance&quot; [value]=&quot;colorValue&quot; [disabled]=&quot;disabled&quot; [showDropdown]=&quot;showDropdown&quot; [disableAlpha]=&quot;disableAlpha&quot; (colorSelected)=&quot;callbackWhenColorSelected($event)&quot;&gt;&lt;/ra-ftc-Standard-color-picker&gt;</code></pre></div></p>
+    </div>
+
+
+
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div fxFlex fxLayout="row" [ngClass]="{\'disabled\': _disabled}">    <div class="ra-ftc-standard-color-picker-color-container" [ngClass]="{\'circle\': _appearance === \'circle\'}" [ngStyle]="{\'background-color\': _value && _value.toRgbString()}" (click)="_openPopup()"></div>    <button *ngIf="_showDropdown" class="ra-ftc-standard-color-picker-dropdown-button" mat-icon-button [disabled]="_disabled" (click)="_openPopup()"><mat-icon>arrow_drop_down</mat-icon></button></div></div>'
+    var COMPONENTS = [{'name': 'BreadcrumbComponent', 'selector': 'ra-ftc-breadcrumb'},{'name': 'DatetimePickerComponent', 'selector': 'ra-ftc-datetime-picker'},{'name': 'DialogMessageComponent', 'selector': 'ra-ftc-dialog-message'},{'name': 'ExpansionPanel', 'selector': 'ra-ftc-expansion-panel'},{'name': 'ExpansionPanelHeader', 'selector': 'ra-ftc-expansion-panel-header'},{'name': 'ExpansionToolPanelComponent', 'selector': 'ra-ftc-expansion-tool-panel'},{'name': 'FileInputComponent', 'selector': 'ra-ftc-file-input'},{'name': 'IconPickerComponent', 'selector': 'ra-ftc-icon-picker'},{'name': 'IconPickerPopupContentComponent', 'selector': 'ra-ftc-icon-picker-popup-content'},{'name': 'LabelComponent', 'selector': 'ra-ftc-label'},{'name': 'MapComponent', 'selector': 'ra-ftc-map'},{'name': 'NavbarContextMenuComponent', 'selector': 'ra-ftc-navbar-context-menu'},{'name': 'PaletteColorPickerComponent', 'selector': 'ra-ftc-palette-color-picker'},{'name': 'PaletteColorPickerPopupContentComponent', 'selector': 'ra-ftc-palette-colorpicker-popup-content'},{'name': 'RasterImageComponent', 'selector': 'ra-ftc-raster-image'},{'name': 'SimpleIconPickerComponent', 'selector': 'ra-ftc-simple-icon-picker'},{'name': 'SimplePaletteColorPickerComponent', 'selector': 'ra-ftc-simple-palette-color-picker'},{'name': 'SimpleStandardColorPickerComponent', 'selector': 'ra-ftc-simple-standard-color-picker'},{'name': 'StandardColorPickerComponent', 'selector': 'ra-ftc-standard-color-picker'},{'name': 'StandardColorPickerPopupContentComponent', 'selector': 'ra-ftc-standard-colorpicker-popup-content'},{'name': 'StringValuePickerComponent', 'selector': 'ra-ftc-string-value-picker'},{'name': 'TruncateComponent', 'selector': 'ra-ftc-truncate'},{'name': 'ValuePickerContentComponent', 'selector': 'ra-ftc-value-picker-content'},{'name': 'ValueTableComponent', 'selector': 'ra-ftc-value-table'},{'name': 'ValueTitleComponent', 'selector': 'ra-ftc-value-title'},{'name': 'VerticalIconNavbarComponent', 'selector': 'ra-ftc-vertical-icon-navbar'}];
+    var DIRECTIVES = [{'name': 'Accordion', 'selector': 'ra-ftc-accordion'},{'name': 'ExpansionPanelActionRow', 'selector': 'ra-ftc-action-row'},{'name': 'ExpansionPanelContent', 'selector': 'ng-template[ExpansionPanelContent]'},{'name': 'ExpansionPanelHeaderContent', 'selector': 'ra-ftc-panel-header-content'},{'name': 'ExpansionPanelHeaderDescription', 'selector': 'ra-ftc-panel-header-description'},{'name': 'ExpansionPanelHeaderTitle', 'selector': 'ra-ftc-panel-header-title'},{'name': 'NavbarLabelWrapperDirective', 'selector': 'mat-toolbar-row[navbarLabelWrapper]'}];
+    var ACTUAL_COMPONENT = {'name': 'StandardColorPickerComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'StandardColorPickerComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

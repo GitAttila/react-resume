@@ -1,0 +1,36 @@
+<h1><code ng:non-bindable="">transformationSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-transformationsvc-page"><p>Service which provides functions to transform outdated parameters of display.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_createlayout">createLayout(params)</h3>
+<div class="createlayout"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-transformationsvc-createlayout-page"><p>Function which adds layout information into the configuration
+(<strong>x</strong>, <strong>y</strong>, <strong>width</strong> and <strong>height</strong> properties for each cell).</p>
+</div><h5 id="methods_createlayout_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>params</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-transformationsvc-createlayout-page"><p>Display configuration.</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_registertransformationhooks">registerTransformationHooks(hooks)</h3>
+<div class="registertransformationhooks"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-transformationsvc-registertransformationhooks-page"><p>Registers the hooks for transformation from version to version.</p>
+</div><h5 id="methods_registertransformationhooks_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>hooks</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-transformationsvc-registertransformationhooks-page"><p>Object with hook functions. E.g.
+<pre class="prettyprint linenums">
+    {
+     updateDisplayConfigurationVersion1ToVersion2: function (config) {...},
+     updateDisplayStyleUnversionedToVersion1: function (style) {...}
+    }
+</pre>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_transformconfiguration">transformConfiguration(params)</h3>
+<div class="transformconfiguration"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-transformationsvc-transformconfiguration-page"><p>Main function which adapts configuration from old format to a new one.</p>
+</div><h5 id="methods_transformconfiguration_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>params</td><td><a href="" class="label type-hint type-hint-object">Object</a><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-transformationsvc-transformconfiguration-page"><p>Old configuration, params object is altered after method is run.</p>
+</div></td></tr></tbody></table><h5 id="methods_transformconfiguration_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-transformationsvc-transformconfiguration-page"><p>Configuration valid for current version of
+<a href="#/api/RA.IPDisplay.directive:raIpComposite">raIpComposite</a>.</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

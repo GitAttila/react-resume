@@ -30,3 +30,7 @@ typings/
 .BridgeSort
 
 .DS_Store
+
+# Large video files (>100MB, excluded from git)
+FTC/ftc-main-site/lib/vids/releases/budapest.mp4
+FTC/ftc-main-site/lib/vids/releases/FTCloud_Connecting_SPS_May2018.mp4

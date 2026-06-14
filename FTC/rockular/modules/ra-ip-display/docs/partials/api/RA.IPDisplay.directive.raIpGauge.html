@@ -1,0 +1,399 @@
+<h1><code ng:non-bindable="">raIpGauge</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipgauge-page"><p>The raIpGauge directive is responsible for rendering the Gauge widget.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ra-ip-gauge
+       rb-parameters="{object}"
+       ri-fqn="{string}"
+       rb-is-active="{boolean}"
+       ro-schema="{function}"
+       ro-examples="{function}"
+       [rb-style="{string}"]
+       [rb-custom="{object}"]&gt;
+&lt;/ra-ip-gauge&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rbParameters</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipgauge-page"><p>An object representing the parameters of Gauge. This object contains array of objects (rbParameters.items) with these properties.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The main property, value of gauge</td>
+<td></td>
+</tr>
+<tr>
+<td>caption (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The text which is displayed as caption of gauge</td>
+<td>This property is autobound to model .Name property of tag or it is empty</td>
+</tr>
+<tr>
+<td>subcaptionSwitch (optional)</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>Flag if subcaption is used</td>
+<td>false</td>
+</tr>
+<tr>
+<td>subcaption (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The text which is displayed as subcaption of gauge</td>
+<td>This property is autobound to model .Name property of tag or it is empty</td>
+</tr>
+<tr>
+<td>unit (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The text which is displayed as part of caption of gauge in [].</td>
+<td>This property is autobound to model .EngineeringUnit property of tag or it is empty</td>
+</tr>
+<tr>
+<td>min (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The minimum value on scale.</td>
+<td>This property is autobound to model .Min property of tag or it is empty</td>
+</tr>
+<tr>
+<td>max (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The maximum value on scale.</td>
+<td>This property is autobound to model .Max property of tag or it is empty</td>
+</tr>
+<tr>
+<td>precision (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The decimal precision of value</td>
+<td>Default value is 2, minimum value is 0, maximum value is 4</td>
+</tr>
+<tr>
+<td>multiplication (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The multiplication factor for value</td>
+<td>1</td>
+</tr>
+<tr>
+<td>tickMarks (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The count of ticks around the scale</td>
+<td>Deafult value is 21, minimum is 3, maximum 101</td>
+</tr>
+<tr>
+<td>numberMarks (optional)</td>
+<td><a href="#" class="label type-hint type-hint-array">Array</a></td>
+<td>Step on which numer should show up on scale</td>
+<td>Deafult is 10, Possible values: 0, 1, 2, 5, 10</td>
+</tr>
+<tr>
+<td>setPoint (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>Value on which setpoint should be set</td>
+<td></td>
+</tr>
+<tr>
+<td>normalOperatingRangeSwitch (optional)</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>Flag if normal operating range is used</td>
+<td>false</td>
+</tr>
+<tr>
+<td>normalOperatingRangeStart (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The beggining of Normal Operarting Range</td>
+<td></td>
+</tr>
+<tr>
+<td>normalOperatingRangeEnd (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The end of Normal Operarting Range</td>
+<td></td>
+</tr>
+<tr>
+<td>disableGrayscaleRanges (optional)</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>Flag if grayscale color should be disabled for ranges</td>
+<td>false</td>
+</tr>
+<tr>
+<td>disableEmptyRanges (optional)</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>Flag if transparent ranges visual should be disabled</td>
+<td>false</td>
+</tr>
+<tr>
+<td>ranges (optional)</td>
+<td><a href="#" class="label type-hint type-hint-array">Array</a></td>
+<td>The array with ranges for gauge</td>
+<td></td>
+</tr>
+<tr>
+<td>ranges.to (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The beggining of range</td>
+<td></td>
+</tr>
+<tr>
+<td>ranges.from (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The end of range</td>
+<td></td>
+</tr>
+<tr>
+<td>ranges.threshold (optional)</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>Flag if range should be displayed as threshold</td>
+<td>false</td>
+</tr>
+<tr>
+<td>ranges.color (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The color when value is inside range. Color object (see <a href="#/api/RA.IPDisplay.service:colorTypeSvc">* <em>colorTypeSvc</em></a>) or hexadecimal String for compatibily reasons</td>
+<td>#22b14c</td>
+</tr>
+<tr>
+<td>ranges.fontColor (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The color of text when value is inside range. Color object (see <a href="#/api/RA.IPDisplay.service:colorTypeSvc">* <em>colorTypeSvc</em></a>) or hexadecimal String for compatibily reasons</td>
+<td>#ffffff</td>
+</tr>
+<tr>
+<td>ranges.rangeIcon (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The alarm icon for box when value is inside range. Possible values: none, low, medium, high, urgent</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+</div></td></tr><tr><td>riFqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipgauge-page"><p>FQN the widget is relative to.</p>
+</div></td></tr><tr><td>rbIsActive</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipgauge-page"><p>Flag which shows whether the widget sould be active.</p>
+</div></td></tr><tr><td>roSchema</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipgauge-page"><p>Function which should be called to intialize the widget schema in outside environment.</p>
+</div></td></tr><tr><td>roExamples</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipgauge-page"><p>Function which should be called to intialize the widget examples in outside
+environment.</p>
+</div></td></tr><tr><td>rbStyle <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipgauge-page"><p>String indicating which class should be used in widget.</p>
+</div></td></tr><tr><td>rbCustom <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipgauge-page"><p>This parameter is not currently not used.</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipgauge-page"><p>The example below shows how to use the <em>raIpGauge</em> directive with number value:
+<h4 id="example_source">Source</h4>
+<div source-edit="exampleAppOne" source-edit-deps="angular.js script.js" source-edit-html="index.html-4" source-edit-css="" source-edit-js="script.js-5" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-4" ng-html-wrap-loaded="exampleAppOne angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-4">
+       <div ng-controller="exampleCtrl" style="width:300px; height: 300px;" >
+           <input type="number" style="margin-bottom:20px;"
+     ng-model="value"
+     ng-change="valueChange()">
+           <ra-ip-gauge
+             rb-parameters="example1.params"
+             rb-is-active="example1.isActive"
+             ri-fqn="example1.fqn"
+             ri-schema="example1.getSchema(schema)">
+           </ra-ip-gauge>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-5"></pre>
+<script type="text/ng-template" id="script.js-5">
+       var mod = angular.module('exampleAppOne', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope',
+           function ($scope) {
+               'use strict';
+               $scope.value = 50;
+               $scope.valueChange = function () {
+                 $scope.example1.params.items[0].value = $scope.value;
+               }
+
+               $scope.example1 = {};
+               $scope.example1.isActive = true;
+               $scope.example1.fqn = "MyEnterprise";
+               $scope.example1.getSchema = function (schema) {};
+               $scope.example1.params = {
+     "items": [
+     {
+     "value": 50,
+     "caption": "Number Value",
+     "schemaType": "number",
+     "max": 100,
+     "min": 0
+     }
+     ]
+     }
+           }
+       ]);
+
+   </script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well live-example-container"><iframe src="examples/example-4-index.html" iframe-adjust-dimensions></iframe></div>
+<p>The example below shows how to use the <em>raIpGauge</em> directive with ranges and alarm icons:
+<h4 id="example_source">Source</h4>
+<div source-edit="exampleAppTwo" source-edit-deps="angular.js script.js" source-edit-html="index.html-6" source-edit-css="" source-edit-js="script.js-7" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-6" ng-html-wrap-loaded="exampleAppTwo angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-6">
+       <div ng-controller="exampleCtrl" style="width:300px; height: 300px;" >
+           <input type="number" style="margin-bottom:20px;"
+     ng-model="value"
+     ng-change="valueChange()">
+           <ra-ip-gauge
+             rb-parameters="example1.params"
+             rb-is-active="example1.isActive"
+             ri-fqn="example1.fqn"
+             ri-schema="example1.getSchema(schema)">
+           </ra-ip-gauge>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-7"></pre>
+<script type="text/ng-template" id="script.js-7">
+       var mod = angular.module('exampleAppTwo', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope',
+           function ($scope) {
+               'use strict';
+               $scope.value = 50;
+               $scope.valueChange = function () {
+                 $scope.example1.params.items[0].value = $scope.value;
+               }
+
+               $scope.example1 = {};
+               $scope.example1.isActive = true;
+               $scope.example1.fqn = "MyEnterprise";
+               $scope.example1.getSchema = function (schema) {};
+               $scope.example1.params = {
+     "items": [
+     {
+     "value": 50,
+     "caption": "Number Value",
+     "schemaType": "number",
+     "min": 0,
+     "max": 200,
+     "outOfRangeIcon": "urgent",
+     "outOfRangeColor": {
+     "color": "#ff0000",
+     "type": "FIXED_COLOR"
+     },
+     "outOfRangeFontColor": {
+     "color": "#ffffff",
+     "type": "FIXED_COLOR"
+     },
+     "ranges": [
+     {
+     "from": 0,
+     "to": 75,
+     "color": {
+     "color": "#22b14c",
+     "type": "FIXED_COLOR"
+     },
+     "fontColor": {
+     "color": "#000000",
+     "type": "FIXED_COLOR"
+     }
+     },
+     {
+     "from": 75,
+     "to": 150,
+     "icon": "low",
+     "color": {
+     "color": "#ffc90e",
+     "type": "FIXED_COLOR",
+     "icon": "high"
+     },
+     "fontColor": {
+     "color": "#000000",
+     "type": "FIXED_COLOR"
+     }
+     },
+     {
+     "from": 150,
+     "to": 200,
+     "icon": "high",
+     "color": {
+     "color": "#ff7f27",
+     "type": "FIXED_COLOR"
+     },
+     "fontColor": {
+     "color": "#000000",
+     "type": "FIXED_COLOR"
+     }
+     }
+     ],
+     }
+     ]
+     }
+           }
+       ]);
+
+   </script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well live-example-container"><iframe src="examples/example-5-index.html" iframe-adjust-dimensions></iframe></div>
+The example below shows how multiple gauges are displayed in one cell (see <a href="#/api/RA.IPDisplay.directive:raIpLayoutPlanner">* <em>raIpLayoutPlanner</em></a>) :
+<h4 id="example_source">Source</h4>
+<div source-edit="exampleAppOne" source-edit-deps="angular.js script.js" source-edit-html="index.html-8" source-edit-css="" source-edit-js="script.js-9" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-8" ng-html-wrap-loaded="exampleAppOne angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-8">
+       <div ng-controller="exampleCtrl" style="width:500px; height: 500px;" >
+   <button ng-click="addFunc()">Add another gauge</button>
+           <ra-ip-gauge
+             rb-parameters="example1.params"
+             rb-is-active="example1.isActive"
+             ri-fqn="example1.fqn"
+             ri-schema="example1.getSchema(schema)">
+           </ra-ip-gauge>
+        </>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-9"></pre>
+<script type="text/ng-template" id="script.js-9">
+       var mod = angular.module('exampleAppOne', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope',
+           function ($scope) {
+               'use strict';
+
+               $scope.example1 = {};
+               $scope.example1.isActive = true;
+               $scope.example1.fqn = "MyEnterprise";
+               $scope.example1.getSchema = function (schema) {};
+               $scope.example1.params = {
+     "items": [
+     ]
+     }
+
+                 $scope.addFunc = function () {
+                 $scope.example1.params.items.push({
+     "value": 50,
+     "caption": "Number Value",
+     "schemaType": "number",
+     "max": 100,
+     "min": 0
+     });
+               }
+           }
+       ]);
+
+   </script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well live-example-container"><iframe src="examples/example-6-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>

@@ -1,0 +1,2010 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@ra-wcftcloud/ra-ftc-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@ra-wcftcloud/ra-ftc-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>VerticalIconNavbarComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">API</a>
+        </li>
+        <li >
+            <a href="#readme" role="tab" id="readme-tab" data-toggle="tab" data-link="readme">Overview</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/vertical-icon-navbar/vertical-icon-navbar.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code><a href="https://angular.io/api/core/AfterContentChecked" target="_blank" >AfterContentChecked</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">encapsulation</td>
+                <td class="col-md-9"><code>ViewEncapsulation.None</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>ra-ftc-vertical-icon-navbar</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>vertical-icon-navbar.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./vertical-icon-navbar.component.html</code></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#_disableScrollAfter">_disableScrollAfter</a>
+                            </li>
+                            <li>
+                                <a href="#_disableScrollBefore">_disableScrollBefore</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#_elementRef">_elementRef</a>
+                            </li>
+                            <li>
+                                <a href="#_labelWrappers">_labelWrappers</a>
+                            </li>
+                            <li>
+                                <a href="#_navbarListContainer">_navbarListContainer</a>
+                            </li>
+                            <li>
+                                <a href="#_navbarListRef">_navbarListRef</a>
+                            </li>
+                            <li>
+                                <a href="#tooltipConfig">tooltipConfig</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#_checkPaginationEnabled">_checkPaginationEnabled</a>
+                            </li>
+                            <li>
+                                <a href="#_checkScrollingControls">_checkScrollingControls</a>
+                            </li>
+                            <li>
+                                <a href="#_getLayoutDirection">_getLayoutDirection</a>
+                            </li>
+                            <li>
+                                <a href="#_getMaxScrollDistance">_getMaxScrollDistance</a>
+                            </li>
+                            <li>
+                                <a href="#_onSizeChange">_onSizeChange</a>
+                            </li>
+                            <li>
+                                <a href="#_scrollHeader">_scrollHeader</a>
+                            </li>
+                            <li>
+                                <a href="#_scrollToLabel">_scrollToLabel</a>
+                            </li>
+                            <li>
+                                <a href="#_updatePagination">_updatePagination</a>
+                            </li>
+                            <li>
+                                <a href="#_updateTabScrollPosition">_updateTabScrollPosition</a>
+                            </li>
+                            <li>
+                                <a href="#moveLastItem">moveLastItem</a>
+                            </li>
+                            <li>
+                                <a href="#ngAfterContentChecked">ngAfterContentChecked</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onClickItem">onClickItem</a>
+                            </li>
+                            <li>
+                                <a href="#reverseContextMenu">reverseContextMenu</a>
+                            </li>
+                            <li>
+                                <a href="#setSelectedRowClasses">setSelectedRowClasses</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#activeItem">activeItem</a>
+                            </li>
+                            <li>
+                                <a href="#navbarConfig">navbarConfig</a>
+                            </li>
+                            <li>
+                                <a href="#navbarList">navbarList</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#activeItemChange">activeItemChange</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>HostBindings</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#class.navbar-header-pagination-controls-enabled">class.navbar-header-pagination-controls-enabled</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#allItems">allItems</a>
+                                </li>
+                                <li>
+                                    <a href="#contextMenuList">contextMenuList</a>
+                                </li>
+                                <li>
+                                    <a href="#selectedIndex">selectedIndex</a>
+                                </li>
+                                <li>
+                                    <a href="#activeItem">activeItem</a>
+                                </li>
+                                <li>
+                                    <a href="#navbarConfig">navbarConfig</a>
+                                </li>
+                                <li>
+                                    <a href="#navbarList">navbarList</a>
+                                </li>
+                                <li>
+                                    <a href="#scrollDistance">scrollDistance</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(_elementRef: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>, _dir: Directionality)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>_elementRef</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>_dir</td>
+                                                  
+                                                        <td>
+                                                                    <code>Directionality</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="activeItem"></a>
+                        <code>activeItem</code>
+                    </td>
+                    <td class="col-md-10">
+                        <div><p>Active item json object </p>
+</div>
+                            <p>
+                            <em>Type :</em>    <code><a href="../interfaces/INavbarItem.html" target="_self" >INavbarItem</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="navbarConfig"></a>
+                        <code>navbarConfig</code>
+                    </td>
+                    <td class="col-md-10">
+                        <div><p>Navbar config json object </p>
+</div>
+                            <p>
+                            <em>Type :</em>    <code><a href="../interfaces/INavbarConfig.html" target="_self" >INavbarConfig</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="navbarList"></a>
+                        <code>navbarList</code>
+                    </td>
+                    <td class="col-md-10">
+                        <div><p>Navbar list array of INavbarItem json objects </p>
+</div>
+                            <p>
+                            <em>Type :</em>    <code><a href="../interfaces/INavbarItem.html" target="_self" >INavbarItem[]</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="activeItemChange"></a>
+                        <code>activeItemChange</code>
+                    </td>
+                    <td class="col-md-10">
+                        <div><p>An event fired after item click. Fires INavbarItem object.</p>
+</div>
+                        <em><code>$event</code> Type:</em>    <code><a href="../interfaces/INavbarItem.html" target="_self" >EventEmitter&lt;INavbarItem&gt;</a></code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3>HostBindings</h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="class.navbar-header-pagination-controls-enabled"></a>
+                        <span class="name">
+                            <b>
+                            class.navbar-header-pagination-controls-enabled
+                            </b>
+                            <a href="#class.navbar-header-pagination-controls-enabled"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>class.navbar-header-pagination-controls-enabled:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Bind classes to host element </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_checkPaginationEnabled"></a>
+                        <span class="name">
+                            <b>
+                            _checkPaginationEnabled
+                            </b>
+                            <a href="#_checkPaginationEnabled"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>_checkPaginationEnabled()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Evaluate whether the pagination controls should be displayed. If the scroll height of the
+tab list is wider than the size of the header container, then the pagination controls should
+be shown.</p>
+<p>This is an expensive call that forces a layout reflow to compute box and scroll metrics and
+should be called sparingly.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_checkScrollingControls"></a>
+                        <span class="name">
+                            <b>
+                            _checkScrollingControls
+                            </b>
+                            <a href="#_checkScrollingControls"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>_checkScrollingControls()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Evaluate whether the before and after controls should be enabled or disabled.
+If the header is at the beginning of the list (scroll distance is equal to 0) then disable the
+before button. If the header is at the end of the list (scroll distance is equal to the
+maximum distance we can scroll), then disable the after button.</p>
+<p>This is an expensive call that forces a layout reflow to compute box and scroll metrics and
+should be called sparingly.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_getLayoutDirection"></a>
+                        <span class="name">
+                            <b>
+                            _getLayoutDirection
+                            </b>
+                            <a href="#_getLayoutDirection"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>_getLayoutDirection()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>The layout direction of the containing app. </p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code>Direction</code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_getMaxScrollDistance"></a>
+                        <span class="name">
+                            <b>
+                            _getMaxScrollDistance
+                            </b>
+                            <a href="#_getMaxScrollDistance"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>_getMaxScrollDistance()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Determines what is the maximum length in pixels that can be set for the scroll distance. This
+is equal to the difference in height between the tab list container and tab header container.</p>
+<p>This is an expensive call that forces a layout reflow to compute box and scroll metrics and
+should be called sparingly.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_onSizeChange"></a>
+                        <span class="name">
+                            <b>
+                            _onSizeChange
+                            </b>
+                            <a href="#_onSizeChange"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>_onSizeChange(event: ISizeChangeEvent)</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>A method observing the size changes of the nav bar container.
+Called with each change.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                        <td>
+                                                                    <code>ISizeChangeEvent</code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_scrollHeader"></a>
+                        <span class="name">
+                            <b>
+                            _scrollHeader
+                            </b>
+                            <a href="#_scrollHeader"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>_scrollHeader(scrollDir: <a href="../undefineds/ScrollDirection.html">ScrollDirection</a>)</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Moves the tab list in the &#39;before&#39; or &#39;after&#39; direction (towards the beginning of the list or
+the end of the list, respectively). The distance to scroll is computed to be a third of the
+length of the tab list view window.</p>
+<p>This is an expensive call that forces a layout reflow to compute box and scroll metrics and
+should be called sparingly.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>scrollDir</td>
+                                                        <td>
+                                                                    <code><a href="../miscellaneous/typealiases.html#ScrollDirection" target="_self" >ScrollDirection</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_scrollToLabel"></a>
+                        <span class="name">
+                            <b>
+                            _scrollToLabel
+                            </b>
+                            <a href="#_scrollToLabel"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>_scrollToLabel(labelIndex: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Moves the tab list such that the desired tab label (marked by index) is moved into view.</p>
+<p>This is an expensive call that forces a layout reflow to compute box and scroll metrics and
+should be called sparingly.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>labelIndex</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_updatePagination"></a>
+                        <span class="name">
+                            <b>
+                            _updatePagination
+                            </b>
+                            <a href="#_updatePagination"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>_updatePagination()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Updating the view whether pagination should be enabled or not </p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_updateTabScrollPosition"></a>
+                        <span class="name">
+                            <b>
+                            _updateTabScrollPosition
+                            </b>
+                            <a href="#_updateTabScrollPosition"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>_updateTabScrollPosition()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Performs the CSS transformation on the tab list that will cause the list to scroll. </p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="moveLastItem"></a>
+                        <span class="name">
+                            <b>
+                            moveLastItem
+                            </b>
+                            <a href="#moveLastItem"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>moveLastItem()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Move last item of navbar menu to context menu </p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngAfterContentChecked"></a>
+                        <span class="name">
+                            <b>
+                            ngAfterContentChecked
+                            </b>
+                            <a href="#ngAfterContentChecked"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngAfterContentChecked()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="onClickItem"></a>
+                        <span class="name">
+                            <b>
+                            onClickItem
+                            </b>
+                            <a href="#onClickItem"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>onClickItem(item: <a href="../interfaces/INavbarItem.html">INavbarItem</a>)</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>On click action</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>item</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/INavbarItem.html" target="_self" >INavbarItem</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>json object</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="reverseContextMenu"></a>
+                        <span class="name">
+                            <b>
+                            reverseContextMenu
+                            </b>
+                            <a href="#reverseContextMenu"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>reverseContextMenu()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Reverse order of context menu after binding </p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="setSelectedRowClasses"></a>
+                        <span class="name">
+                            <b>
+                            setSelectedRowClasses
+                            </b>
+                            <a href="#setSelectedRowClasses"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>setSelectedRowClasses(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Defines active row classes</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>id</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>item id</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_disableScrollAfter"></a>
+                        <span class="name">
+                            <b>
+                            _disableScrollAfter
+                            </b>
+                            <a href="#_disableScrollAfter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>_disableScrollAfter:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Whether the tab list can be scrolled more towards the end of the tab label list. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_disableScrollBefore"></a>
+                        <span class="name">
+                            <b>
+                            _disableScrollBefore
+                            </b>
+                            <a href="#_disableScrollBefore"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>_disableScrollBefore:     <code></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>true</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Whether the tab list can be scrolled more towards the beginning of the tab label list. </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_elementRef"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            _elementRef
+                            </b>
+                            <a href="#_elementRef"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span><code>_elementRef:     <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_labelWrappers"></a>
+                        <span class="name">
+                            <b>
+                            _labelWrappers
+                            </b>
+                            <a href="#_labelWrappers"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>_labelWrappers:     <code>QueryList&lt;NavbarLabelWrapperDirective&gt;</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>QueryList&lt;NavbarLabelWrapperDirective&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Decorators : </i><code>ViewChildren</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Used for scrolling on active item </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_navbarListContainer"></a>
+                        <span class="name">
+                            <b>
+                            _navbarListContainer
+                            </b>
+                            <a href="#_navbarListContainer"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>_navbarListContainer:     <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Decorators : </i><code>ViewChild</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Navbar list container </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_navbarListRef"></a>
+                        <span class="name">
+                            <b>
+                            _navbarListRef
+                            </b>
+                            <a href="#_navbarListRef"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>_navbarListRef:     <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Decorators : </i><code>ViewChild</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Navbar list reference </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="tooltipConfig"></a>
+                        <span class="name">
+                            <b>
+                            tooltipConfig
+                            </b>
+                            <a href="#tooltipConfig"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>tooltipConfig:     <code>ITooltipConfig</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>ITooltipConfig</code>
+
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Tooltip config </p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="allItems"></a>
+                        <span class="name"><b>allItems</b><a href="#allItems"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>allItems()</code></span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>All items list </p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="../interfaces/INavbarItem.html" target="_self" >INavbarItem[]</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>allItems(newAllItems: [])</code></span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                        <td>Type</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>newAllItems</td>
+                                                    
+                                                            <td>
+                                                                        <code>[]</code>
+                                                            </td>
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="contextMenuList"></a>
+                        <span class="name"><b>contextMenuList</b><a href="#contextMenuList"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>contextMenuList()</code></span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Context menu list </p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="../interfaces/INavbarItem.html" target="_self" >INavbarItem[]</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>contextMenuList(newContextMenuList: [])</code></span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                        <td>Type</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>newContextMenuList</td>
+                                                    
+                                                            <td>
+                                                                        <code>[]</code>
+                                                            </td>
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectedIndex"></a>
+                        <span class="name"><b>selectedIndex</b><a href="#selectedIndex"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>selectedIndex()</code></span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Selected item index </p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>selectedIndex(value: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code></span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                        <td>Type</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>value</td>
+                                                    
+                                                            <td>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                            </td>
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="activeItem"></a>
+                        <span class="name"><b>activeItem</b><a href="#activeItem"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>activeItem(newActiveItem: )</code></span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>newActiveItem</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navbarConfig"></a>
+                        <span class="name"><b>navbarConfig</b><a href="#navbarConfig"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>navbarConfig(newNavbarConfig: )</code></span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>newNavbarConfig</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="navbarList"></a>
+                        <span class="name"><b>navbarList</b><a href="#navbarList"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>navbarList(newNavbarList: [])</code></span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                        <td>Type</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>newNavbarList</td>
+                                                    
+                                                            <td>
+                                                                        <code>[]</code>
+                                                            </td>
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="scrollDistance"></a>
+                        <span class="name"><b>scrollDistance</b><a href="#scrollDistance"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>get</b><code>scrollDistance()</code></span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Sets the distance in pixels that the tab header should be transformed in the X-axis. </p>
+</div>
+
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>scrollDistance(v: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code></span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                        <td>Type</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>v</td>
+                                                    
+                                                            <td>
+                                                                        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                            </td>
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+</section>
+</div>
+
+    <div class="tab-pane fade " id="c-readme">
+        <p><p>The vertical icon navbar component are designed to add vertical side navigation to a fullscreen app.
+To set up a navbar we use component <code>&lt;ra-ftc-vertical-icon-navbar&gt;</code>  which acts as a structural container for our navbar items.</p>
+<h3 id="configuration">Configuration</h3>
+<h4 id="input-bindings">Input bindings</h4>
+<p>Parameter <code>navbarConfig</code> (not required)</p>
+<div><pre class="line-numbers"><code class="language-json">{
+  &quot;position&quot;: &quot;left&quot;,
+  &quot;responsibleType&quot;: &quot;scrollbar&quot;
+}</code></pre></div><ul>
+<li>position - navbar position, accept params: &#39;right&#39;, &#39;left&#39;, default: &#39;left&#39;  <div><pre class="line-numbers"><code class="language-typescript">const position: string;</code></pre></div></li>
+<li>responsibleType - defines component behavior when container size is changed,
+accept params: &#39;scrollbar&#39;, &#39;context_menu&#39;, &#39;context_menu&#39;, default: &#39;scrollbar&#39;   <div><pre class="line-numbers"><code class="language-typescript">const responsibleType: string;</code></pre></div></li>
+</ul>
+<p>Parameter <code>navbarList</code>: default <code>[]</code>: (required)</p>
+<div><pre class="line-numbers"><code class="language-json">[
+  {
+    &quot;id&quot;: &quot;home&quot;,
+    &quot;icon&quot;: &quot;ra-icon-home&quot;,
+    &quot;label&quot;: &quot;Home link&quot;
+  }
+]</code></pre></div><ul>
+<li><p>id - navbar item id</p>
+<div><pre class="line-numbers"><code class="language-typescript">const id: string;</code></pre></div></li>
+<li><p>icon - name of icon definition in ra-icons component or default material icons</p>
+<div><pre class="line-numbers"><code class="language-typescript">const icon: string;</code></pre></div></li>
+<li><p>label - label for the icon navbar item</p>
+<div><pre class="line-numbers"><code class="language-typescript">const label: string;</code></pre></div><p>Parameter <code>activeItem</code>: (not required)</p>
+</li>
+</ul>
+<p>default:</p>
+<div><pre class="line-numbers"><code class="language-json">{
+  &quot;id&quot;: &quot;&quot;,
+  &quot;icon&quot;: &quot;&quot;,
+  &quot;label&quot;: &quot;&quot;
+}</code></pre></div><h4 id="output-bindings">Output bindings</h4>
+<p>Callback <code>(activeItemChange)</code>: onClickItem(<code>output</code>)</p>
+<p><code>output</code> return selected item:</p>
+<div><pre class="line-numbers"><code class="language-json">{
+  &quot;id&quot;: &quot;home&quot;,
+  &quot;icon&quot;: &quot;ra-icon-home&quot;,
+  &quot;label&quot;: &quot;Home link&quot;
+}</code></pre></div><h3 id="examples">Examples</h3>
+<div><pre class="line-numbers"><code class="language-html">&lt;ra-ftc-vertical-icon-navbar
+  [navbarConfig]=&quot;navbarConfig&quot;
+  [navbarList]=&quot;navbarList&quot;
+  [activeItem]=&quot;activeItem&quot;
+  (activeItemChange)=&quot;onClickItem($event)&quot;&gt;
+&lt;/ra-ftc-vertical-icon-navbar&gt;</code></pre></div></p>
+    </div>
+
+
+
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="navbar-header-pagination navbar-header-pagination-before mat-elevation-z4"     aria-hidden="true"     matRipple [matRippleDisabled]="_disableScrollBefore"     [class.navbar-header-pagination-disabled]="_disableScrollBefore"     (click)="_scrollHeader(\'before\')">  <div class="navbar-header-pagination-chevron"></div></div><div class="scroll-container" (raUiOnSizeChange)="_onSizeChange($event)" #navbarListContainer>  <div class="navbar-content" #navbarListRef>    <mat-toolbar color="primary" *ngIf="navbarList.length">      <mat-toolbar-row *ngFor="let item of navbarList;"                       navbarLabelWrapper                       matRipple                       fxLayoutAlign="center center"                       (click)="onClickItem(item)"                       [ngClass]="setSelectedRowClasses(item.id)">        <div fxLayoutAlign="center center"             raUiTooltip="{{ item.label }}"             [tooltipConfig]="tooltipConfig">          <mat-icon fontSet="ra-icons"                    fxLayoutAlign="center center"                    fontIcon="{{ item.icon }}"></mat-icon>        </div>      </mat-toolbar-row>      <mat-toolbar-row        *ngIf="contextMenuList.length > 0"        fxLayoutAlign="center center"        class="more-button"        [ngClass]="setSelectedRowClasses(\'0\')">        <ra-ftc-navbar-context-menu [contextMenuList]="contextMenuList"                                    [(activeItem)]="activeItem">        </ra-ftc-navbar-context-menu>      </mat-toolbar-row>    </mat-toolbar>  </div></div><div class="navbar-header-pagination navbar-header-pagination-after mat-elevation-z4"     aria-hidden="true"     matRipple [matRippleDisabled]="_disableScrollAfter"     [class.navbar-header-pagination-disabled]="_disableScrollAfter"     (click)="_scrollHeader(\'after\')">  <div class="navbar-header-pagination-chevron"></div></div></div>'
+    var COMPONENTS = [{'name': 'BreadcrumbComponent', 'selector': 'ra-ftc-breadcrumb'},{'name': 'DatetimePickerComponent', 'selector': 'ra-ftc-datetime-picker'},{'name': 'DialogMessageComponent', 'selector': 'ra-ftc-dialog-message'},{'name': 'ExpansionPanel', 'selector': 'ra-ftc-expansion-panel'},{'name': 'ExpansionPanelHeader', 'selector': 'ra-ftc-expansion-panel-header'},{'name': 'ExpansionToolPanelComponent', 'selector': 'ra-ftc-expansion-tool-panel'},{'name': 'FileInputComponent', 'selector': 'ra-ftc-file-input'},{'name': 'IconPickerComponent', 'selector': 'ra-ftc-icon-picker'},{'name': 'IconPickerPopupContentComponent', 'selector': 'ra-ftc-icon-picker-popup-content'},{'name': 'LabelComponent', 'selector': 'ra-ftc-label'},{'name': 'MapComponent', 'selector': 'ra-ftc-map'},{'name': 'NavbarContextMenuComponent', 'selector': 'ra-ftc-navbar-context-menu'},{'name': 'PaletteColorPickerComponent', 'selector': 'ra-ftc-palette-color-picker'},{'name': 'PaletteColorPickerPopupContentComponent', 'selector': 'ra-ftc-palette-colorpicker-popup-content'},{'name': 'RasterImageComponent', 'selector': 'ra-ftc-raster-image'},{'name': 'SimpleIconPickerComponent', 'selector': 'ra-ftc-simple-icon-picker'},{'name': 'SimplePaletteColorPickerComponent', 'selector': 'ra-ftc-simple-palette-color-picker'},{'name': 'SimpleStandardColorPickerComponent', 'selector': 'ra-ftc-simple-standard-color-picker'},{'name': 'StandardColorPickerComponent', 'selector': 'ra-ftc-standard-color-picker'},{'name': 'StandardColorPickerPopupContentComponent', 'selector': 'ra-ftc-standard-colorpicker-popup-content'},{'name': 'StringValuePickerComponent', 'selector': 'ra-ftc-string-value-picker'},{'name': 'TruncateComponent', 'selector': 'ra-ftc-truncate'},{'name': 'ValuePickerContentComponent', 'selector': 'ra-ftc-value-picker-content'},{'name': 'ValueTableComponent', 'selector': 'ra-ftc-value-table'},{'name': 'ValueTitleComponent', 'selector': 'ra-ftc-value-title'},{'name': 'VerticalIconNavbarComponent', 'selector': 'ra-ftc-vertical-icon-navbar'}];
+    var DIRECTIVES = [{'name': 'Accordion', 'selector': 'ra-ftc-accordion'},{'name': 'ExpansionPanelActionRow', 'selector': 'ra-ftc-action-row'},{'name': 'ExpansionPanelContent', 'selector': 'ng-template[ExpansionPanelContent]'},{'name': 'ExpansionPanelHeaderContent', 'selector': 'ra-ftc-panel-header-content'},{'name': 'ExpansionPanelHeaderDescription', 'selector': 'ra-ftc-panel-header-description'},{'name': 'ExpansionPanelHeaderTitle', 'selector': 'ra-ftc-panel-header-title'},{'name': 'NavbarLabelWrapperDirective', 'selector': 'mat-toolbar-row[navbarLabelWrapper]'}];
+    var ACTUAL_COMPONENT = {'name': 'VerticalIconNavbarComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'VerticalIconNavbarComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

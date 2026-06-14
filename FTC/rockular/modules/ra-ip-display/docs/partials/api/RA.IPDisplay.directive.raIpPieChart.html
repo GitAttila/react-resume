@@ -1,0 +1,254 @@
+<h1><code ng:non-bindable="">raIpPieChart</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raippiechart-page"><p>This raIpPieChart directive is responsible for rendering Pie Chart Widget.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ra-ip-pie-chart
+       rb-parameters="{object}"
+       ri-fqn="{string}"
+       rb-is-active="{boolean}"
+       ro-schema="{function}"
+       ro-examples="{function}"
+       [rb-style="{string}"]&gt;
+&lt;/ra-ip-pie-chart&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rbParameters</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raippiechart-page"><p>An object representing the parameters of Pie Chart Widget.</p>
+<p>Common Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>dataMode (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Data mode for what data is to be displayed in widget (liveMode/timeMode)</td>
+<td>liveMode</td>
+</tr>
+<tr>
+<td>autoSize (optional)</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>Whether to automatically set the size of the wiget when dataMode is liveMode (true/false)</td>
+<td>true</td>
+</tr>
+<tr>
+<td>timePeriod (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The time period in seconds for which data to be displayed when dataMode is timeMode</td>
+<td>300</td>
+</tr>
+<tr>
+<td>aggregate (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Data Aggregation method for widget display when dataMode is timeMode (Average/Sum/Minimum/Maximum/Variance/StandardDeviation)</td>
+<td>Average</td>
+</tr>
+<tr>
+<td>dataSampling (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>Data Sampling Rate in seconds for when the dataMode is timeMode (-1 means that data samplig is off)</td>
+<td>-1</td>
+</tr>
+</tbody>
+</table>
+<p>Pie Chart Widget Specific Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caption (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Caption of the Bar Chart</td>
+<td>This property is autobound to model .Name property of tag or it is empty</td>
+</tr>
+<tr>
+<td>color (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Color of the Bar Chart</td>
+<td>#26a9e0</td>
+</tr>
+<tr>
+<td>max (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>Maximum Value</td>
+<td>This property is autobound to model .Max property of tag or it is empty</td>
+</tr>
+<tr>
+<td>min (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>Minimum Value</td>
+<td>This property is autobound to model .Min  property of tag or it is empty</td>
+</tr>
+<tr>
+<td>precision (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>Decimal Precision for the Value</td>
+<td>2</td>
+</tr>
+<tr>
+<td>unit (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>Engineering Unit of the Value</td>
+<td>This property is autobound to model .EngineeringUnit property of tag or it is empty</td>
+</tr>
+<tr>
+<td>value</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>FQN of the numeric item in data model</td>
+<td>undefined</td>
+</tr>
+</tbody>
+</table>
+</div></td></tr><tr><td>riFqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raippiechart-page"><p>FQN the widget is relative to.</p>
+</div></td></tr><tr><td>rbIsActive</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raippiechart-page"><p>Flag which shows whether the widget sould be active.</p>
+</div></td></tr><tr><td>roSchema</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raippiechart-page"><p>Function which should be called to intialize the widget schema in outside environment.</p>
+</div></td></tr><tr><td>roExamples</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raippiechart-page"><p>Function which should be called to intialize the widget examples in outside
+environment.</p>
+</div></td></tr><tr><td>rbStyle <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raippiechart-page"><p>String indicating which class should be used in widget.</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raippiechart-page"><p>The example below shows how to use the <em>raIpPieChart</em> directive with number value:
+<h4 id="example_source">Source</h4>
+<div source-edit="exampleAppTwo" source-edit-deps="angular.js script.js" source-edit-html="index.html-38" source-edit-css="" source-edit-js="script.js-39" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-38" ng-html-wrap-loaded="exampleAppTwo angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-38">
+       <div ng-controller="exampleCtrl" class="ra-flex-column">
+           <div class="ra-flex-row ra-flex-align-main-start ra-flex-item-static">
+           <span class="ra-flex-item-static" style="margin-right: 10px;">Value 1 : </span>
+           <input class="ra-flex-item-static" type="number"
+             ng-model="value1"
+             ng-change="value1Change()" style="margin-right: 10px;" />
+           <span class="ra-flex-item-static" style="margin-right: 10px;">Value 2 : </span>
+           <input class="ra-flex-item-static" type="number"
+             ng-model="value2"
+             ng-change="value2Change()" style="margin-right: 10px;" />
+           </div>
+           <div class="ra-flex-item-static" style="width: 400px; height: 400px;">
+           <ra-ip-pie-chart
+             rb-parameters="example1.params"
+             rb-is-active="example1.isActive"
+             ri-fqn="example1.fqn"
+             ri-schema="example1.getSchema(schema)">
+           </ra-ip-pie-chart>
+           </div>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-39"></pre>
+<script type="text/ng-template" id="script.js-39">
+       var mod = angular.module('exampleAppTwo', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope',
+           function ($scope) {
+               'use strict';
+               $scope.value1 = 90;
+               $scope.value2 = 30;
+               $scope.value1Change = function () {
+                 $scope.example1.params.items[0].value = $scope.value1;
+               }
+               $scope.value2Change = function () {
+                 $scope.example1.params.items[1].value = $scope.value2;
+               }
+
+               $scope.example1 = {};
+               $scope.example1.isActive = true;
+               $scope.example1.fqn = "MyEnterprise";
+               $scope.example1.getSchema = function (schema) {};
+               $scope.example1.params = {
+                 "items": [
+                     {
+                         "precision": 2,
+                         "caption": "Value 1",
+                         "value": 90,
+                         "schemaType": "number"
+                     },
+                     {
+                         "precision": 2,
+                         "caption": "Value 2",
+                         "value": 30,
+                         "schemaType": "number"
+                     }
+                 ],
+                 "common": {
+
+                 }
+               }
+           }
+       ]);
+
+   </script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well live-example-container"><iframe src="examples/example-21-index.html" iframe-adjust-dimensions></iframe></div>
+<p> The example below shows adding random values into the Pie Chart:
+<h4 id="example_source">Source</h4>
+<div source-edit="exampleAppTwo" source-edit-deps="angular.js script.js" source-edit-html="index.html-40" source-edit-css="" source-edit-js="script.js-41" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-40" ng-html-wrap-loaded="exampleAppTwo angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-40">
+       <div ng-controller="exampleCtrl">
+           <button style="margin-right: 10px;" ng-click="addValue()">Add</button>
+           <div style="width: 400px; height: 400px;">
+           <ra-ip-pie-chart
+             rb-parameters="example1.params"
+             rb-is-active="example1.isActive"super
+             ri-fqn="example1.fqn"
+             ri-schema="example1.getSchema(schema)">
+           </ra-ip-pie-chart>
+           </div>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-41"></pre>
+<script type="text/ng-template" id="script.js-41">
+       var mod = angular.module('exampleAppTwo', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope',
+           function ($scope) {
+               'use strict';
+               var i = 0;
+               $scope.addValue = function () {
+                 $scope.example1.params.items.push({
+                     "value": Math.floor(Math.random() * 100) + 1,
+                     "caption": "Value " + ++i
+                 });
+               }
+
+               $scope.example1 = {};
+               $scope.example1.isActive = true;
+               $scope.example1.fqn = "MyEnterprise";
+               $scope.example1.getSchema = function (schema) {};
+               $scope.example1.params = {
+                  "items": []
+               };
+           }
+       ]);
+
+   </script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well live-example-container"><iframe src="examples/example-22-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>

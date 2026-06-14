@@ -1,0 +1,167 @@
+<h1><code ng:non-bindable="">controlSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-controlsvc-page"><p>Provides functionality which is used across widget controls.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_equalvalueswithoutspecificproperty">equalValuesWithoutSpecificProperty(newVal, oldVal, propertyName)</h3>
+<div class="equalvalueswithoutspecificproperty"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-controlsvc-equalvalueswithoutspecificproperty-page"><p>Function to compare objects without specific property specified by propertyName parameter.
+This function does not modify input parameters directly, it does remove property given by propertyName
+parameter from copy of newVal and oldVal parameters and then compares equality.</p>
+</div><h5 id="methods_equalvalueswithoutspecificproperty_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>newVal</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-controlsvc-equalvalueswithoutspecificproperty-page"><p>new object value</p>
+</div></td></tr><tr><td>oldVal</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-controlsvc-equalvalueswithoutspecificproperty-page"><p>previous object value</p>
+</div></td></tr><tr><td>propertyName</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-controlsvc-equalvalueswithoutspecificproperty-page"><p>name of property without to evaluate</p>
+</div></td></tr></tbody></table><h5 id="methods_equalvalueswithoutspecificproperty_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-controlsvc-equalvalueswithoutspecificproperty-page"><p>Flag indicating equality of objects without specific property.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getrangecolor">getRangeColor(value, ranges, defaultRange, min, min, outOfRange)</h3>
+<div class="getrangecolor"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-controlsvc-getrangecolor-page"><p>Returns the color of the matched color range.</p>
+</div><h5 id="methods_getrangecolor_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>value</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-controlsvc-getrangecolor-page"><p>Current value to which we want to find the matching range.</p>
+</div></td></tr><tr><td>ranges</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-controlsvc-getrangecolor-page"><p>Array of ranges. Each item in array should be object with number properties
+<strong>from</strong> and <strong>to</strong>. Also, in this object should be at least one from following properties:</p>
+<ul>
+<li><strong>color</strong></li>
+<li><strong>fontColor</strong></li>
+<li><strong>flashColor</strong></li>
+</ul>
+<p>These properties should contain color in hexadecimal notation.</p>
+</div></td></tr><tr><td>defaultRange</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-controlsvc-getrangecolor-page"><p>Object specifing the color which should be used when no range is matched.
+It should contain at least one from following properties:</p>
+<ul>
+<li><strong>color</strong></li>
+<li><strong>fontColor</strong></li>
+<li><strong>flashColor</strong></li>
+</ul>
+<p>These properties should contain color in hexadecimal notation.</p>
+</div></td></tr><tr><td>min</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-controlsvc-getrangecolor-page"><p>Minimal value. This is used when outOfRange color is specified.</p>
+</div></td></tr><tr><td>min</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-controlsvc-getrangecolor-page"><p>Miximal value. This is used when outOfRange color is specified.</p>
+</div></td></tr><tr><td>outOfRange</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-controlsvc-getrangecolor-page"><p>(Optional) Object specifing the color which should be used when value is less
+then min or greater then max. If it is not specified, <strong>defaultRange</strong> is used instead.</p>
+<p>It should contain at least one from following properties:</p>
+<ul>
+<li><strong>color</strong></li>
+<li><strong>fontColor</strong></li>
+<li><strong>flashColor</strong></li>
+</ul>
+<p>These properties should contain color in hexadecimal notation.</p>
+</div></td></tr></tbody></table><h5 id="methods_getrangecolor_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-controlsvc-getrangecolor-page"><p>Matched range object.</p>
+</div></td></tr></table><h4 id="methods_getrangecolor_example">Example</h4>
+<div class="example"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-controlsvc-getrangecolor-page"><p>The example below shows usage of getRangeColor method and the visualization of its result.</p>
+<ul>
+<li><strong>0-10:</strong> Matching &#39;green&#39; range</li>
+<li><strong>11-49:</strong> Matching default &#39;grey&#39; range</li>
+<li><strong>50-70:</strong> Matching &#39;yellow&#39; range</li>
+<li><strong>71-100:</strong> Matching &#39;orange&#39; range</li>
+<li><strong>Any other value:</strong> Matching outOfRange &#39;red&#39; range
+<h6 id="methods_getrangecolor_example_source">Source</h6>
+<div source-edit="exampleAppOne" source-edit-deps="angular.js script.js" source-edit-html="index.html-54" source-edit-css="" source-edit-js="script.js-55" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-54" ng-html-wrap-loaded="exampleAppOne angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-54">
+       <div ng-controller="exampleCtrl">
+           <div>
+               Value: <input ng-model="value" type="number" ng-change="valueChange()">
+           </div>
+           Matched range color:
+           <div style="width: 30px; height: 30px;" ng-style="{'background-color': color}">
+           </div>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-55"></pre>
+<script type="text/ng-template" id="script.js-55">
+       var mod = angular.module('exampleAppOne', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope', 'controlSvc',
+           function ($scope, controlSvc) {
+               'use strict';
+               $scope.value = 50;
+               var min = 0;
+               var max = 100;
+               var defaultRange = {
+                 color: "#AAAAAA" //Grey
+               };
+               var ranges = [
+                 {
+                     from: 0,
+                     to: 10,
+                     color: "#00FF00" // Green
+                 },
+                 {
+                     from: 50,
+                     to: 70,
+                     color: "#FFFF00" //Yellow
+                 },
+                 {
+                     from: 71,
+                     to: 100,
+                     color: "#FFA500" //Orange
+                 }
+               ];
+               var outOfRange = {
+                 color: "#FF0000" //Red
+               };
+               var valueChange = function () {
+                 $scope.color = controlSvc.getRangeColor(
+                     $scope.value,
+                     ranges,
+                     defaultRange,
+                     min,
+                     max,
+                     outOfRange
+                 ).color;
+               };
+
+               valueChange();
+               $scope.valueChange = valueChange;
+           }
+       ]);
+
+   </script>
+</div>
+</div><h6 id="methods_getrangecolor_example_demo">Demo</h6>
+<div class="well live-example-container"><iframe src="examples/example-29-index.html" iframe-adjust-dimensions></iframe></div></li>
+</ul>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_getrangeobject">getRangeObject(value, ranges, defaultRange, min, min, outOfRange)</h3>
+<div class="getrangeobject"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-controlsvc-getrangeobject-page"><p>Returns the range object of the matched range.</p>
+</div><h5 id="methods_getrangeobject_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>value</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-controlsvc-getrangeobject-page"><p>Current value to which we want to find the matching range.</p>
+</div></td></tr><tr><td>ranges</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-controlsvc-getrangeobject-page"><p>Array of ranges. Each item in array should be object with number properties
+<strong>from</strong> and <strong>to</strong>. Also, in this object should be at least one from following properties:</p>
+<ul>
+<li><strong>color</strong></li>
+<li><strong>fontColor</strong></li>
+<li><strong>flashColor</strong></li>
+</ul>
+<p>These properties should contain color in hexadecimal notation.</p>
+</div></td></tr><tr><td>defaultRange</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-controlsvc-getrangeobject-page"><p>Object specifing the color which should be used when no range is matched.
+It should contain at least one from following properties:</p>
+<ul>
+<li><strong>color</strong></li>
+<li><strong>fontColor</strong></li>
+<li><strong>flashColor</strong></li>
+</ul>
+<p>These properties should contain color in hexadecimal notation.</p>
+</div></td></tr><tr><td>min</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-controlsvc-getrangeobject-page"><p>Minimal value. This is used when outOfRange color is specified.</p>
+</div></td></tr><tr><td>min</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-controlsvc-getrangeobject-page"><p>Miximal value. This is used when outOfRange color is specified.</p>
+</div></td></tr><tr><td>outOfRange</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-controlsvc-getrangeobject-page"><p>(Optional) Object specifing the color which should be used when value is less
+then min or greater then max. If it is not specified, <strong>defaultRange</strong> is used instead.</p>
+<p>It should contain at least one from following properties:</p>
+<ul>
+<li><strong>color</strong></li>
+<li><strong>fontColor</strong></li>
+<li><strong>flashColor</strong></li>
+</ul>
+<p>These properties should contain color in hexadecimal notation.</p>
+</div></td></tr></tbody></table><h5 id="methods_getrangeobject_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-controlsvc-getrangeobject-page"><p>Matched range object.</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

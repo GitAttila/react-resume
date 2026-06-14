@@ -1,0 +1,381 @@
+<h1><code ng:non-bindable="">raIpDataGridLogicSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-page"><p>Basically this service is the functional part of raIpDataGrid directive.
+Scope passed around is the scope which directive is creating. Besides the
+bound variables (like rbParameters, riFqn and so on) scope holds up the
+information which is passed into or related to ra-data-grid object:</p>
+<ul>
+<li>scope.fqnsList is an array with fqn for every series. This list keeps
+the order of the fqns.</li>
+<li>scope.fqns is a hash table, where keys are indices from fqnsList array,
+which holds information about series like unit, type and index
+(i.e. series order)</li>
+</ul>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_applychanges">applyChanges(scope, element, recreate)</h3>
+<div class="applychanges"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-applychanges-page"><p>React on change of rbParameters and/or riFqn</p>
+</div><h5 id="methods_applychanges_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-applychanges-page"><p>object</p>
+</div></td></tr><tr><td>element</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-applychanges-page"><p>widget element</p>
+</div></td></tr><tr><td>recreate</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-applychanges-page"><p>flag</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_applypropertydata">applyPropertyData(scope, element, properties)</h3>
+<div class="applypropertydata"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-applypropertydata-page"><p>Apply settings of properties returned by property window</p>
+</div><h5 id="methods_applypropertydata_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-applypropertydata-page"><p>scope</p>
+</div></td></tr><tr><td>element</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-applypropertydata-page"><p>widget element</p>
+</div></td></tr><tr><td>properties</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-applypropertydata-page"><p>object</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_aretimehorizonitemsequal">areTimeHorizonItemsEqual(itemA, itemB)</h3>
+<div class="aretimehorizonitemsequal"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-aretimehorizonitemsequal-page"><p>Compares given time horizon items and it returns True if the items are
+equal. If both items are undefined or null the result will be True.</p>
+</div><h5 id="methods_aretimehorizonitemsequal_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>itemA <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-aretimehorizonitemsequal-page"><p>Item to be compared</p>
+</div></td></tr><tr><td>itemB <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-aretimehorizonitemsequal-page"><p>Item to be compared</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_checkoutofrangeminmax">checkOutOfRangeMinMax(fqns, value)</h3>
+<div class="checkoutofrangeminmax"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-checkoutofrangeminmax-page"><p>Check values and add color property for out of range min/max</p>
+</div><h5 id="methods_checkoutofrangeminmax_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>fqns</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-checkoutofrangeminmax-page"><p>FQN whose values are to be checked</p>
+</div></td></tr><tr><td>value</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-checkoutofrangeminmax-page"><p>value of FQN</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_combinedata">combineData(scope, series, startTs, dataStartTs)</h3>
+<div class="combinedata"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-combinedata-page"><p>Combine existing data in scope.series with new data in series
+object. This functionality works as follows:</p>
+<ul>
+<li>remove all points from scope.series, when x value (date) is
+older than startDate</li>
+<li>append points from series to scope.series, which x (date) is
+older than date from the last point of scope.series</li>
+</ul>
+</div><h5 id="methods_combinedata_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-combinedata-page"><p>scope</p>
+</div></td></tr><tr><td>series</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-combinedata-page"><p>object processed by processData function</p>
+</div></td></tr><tr><td>startTs</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-combinedata-page"><p>start date of current expressed in timestamp</p>
+</div></td></tr><tr><td>dataStartTs</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-combinedata-page"><p>data portion start timestamp</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_createtimehorizonitem">createTimeHorizonItem(duration)</h3>
+<div class="createtimehorizonitem"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-createtimehorizonitem-page"><p>Creates item object for time horizon items list</p>
+</div><h5 id="methods_createtimehorizonitem_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>duration</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-createtimehorizonitem-page"><p>Duration in seconds</p>
+</div></td></tr></tbody></table><h5 id="methods_createtimehorizonitem_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-key">key: string, duration: *</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-createtimehorizonitem-page"><p>Object that contains data
+required by time horizon items list</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_discovertype">discoverType(scope, data)</h3>
+<div class="discovertype"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-discovertype-page"><p>Discover type for the data returned by the timeSeriesSvc. Return true,
+if there is at least one valid plot to display, otherwise return false,
+and set appropriate error state and error message.</p>
+</div><h5 id="methods_discovertype_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-discovertype-page"><p>scope</p>
+</div></td></tr><tr><td>data</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-discovertype-page"><p>incoming data</p>
+</div></td></tr></tbody></table><h5 id="methods_discovertype_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-discovertype-page"><p>true for any data to display, false otherwise</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_fetchdata">fetchData(scope, element, anchorTime, duration, timeDeadBand, recreate)</h3>
+<div class="fetchdata"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-fetchdata-page"><p>Get the actual data, prepare and pass to the current or
+newly created object.</p>
+</div><h5 id="methods_fetchdata_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-fetchdata-page"><p>current scope</p>
+</div></td></tr><tr><td>element</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-fetchdata-page"><p>widget element</p>
+</div></td></tr><tr><td>anchorTime</td><td><a href="" class="label type-hint type-hint-number">Number</a><a href="" class="label type-hint type-hint-null">null</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-fetchdata-page"><p>represented in milliseconds time or
+null, means &quot;now&quot;</p>
+</div></td></tr><tr><td>duration</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-fetchdata-page"><p>the period of time from or to anchorTime
+expressed in seconds. Negative duration means getting data
+from the left of the anchor time (past), and positive on
+the right (future). Note, that the latter have only sense
+when anchorTime is not null.</p>
+</div></td></tr><tr><td>timeDeadBand</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-fetchdata-page"><p>interval for getting the data for the
+grid in right format</p>
+</div></td></tr><tr><td>recreate</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-fetchdata-page"><p>value if widget was refreshed or recreated</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_findtimehorizonitem">findTimeHorizonItem(items, options)</h3>
+<div class="findtimehorizonitem"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-findtimehorizonitem-page"><p>Looks for time horizon item in list of items comparing
+with fields and their values</p>
+</div><h5 id="methods_findtimehorizonitem_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>items</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-findtimehorizonitem-page"><p>Array of time horizon items</p>
+</div></td></tr><tr><td>options</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-findtimehorizonitem-page"><p>The object that allows to pass key value
+or the information if sought item is custom range</p>
+</div></td></tr></tbody></table><h5 id="methods_findtimehorizonitem_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-findtimehorizonitem-page"><p>found item or null</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_flattendataforgrid">flattenDataForGrid(series)</h3>
+<div class="flattendataforgrid"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-flattendataforgrid-page"><p>Transform the data from arrays of arrays into the array</p>
+</div><h5 id="methods_flattendataforgrid_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>series</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-flattendataforgrid-page"><p>incoming timeseries data</p>
+</div></td></tr></tbody></table><h5 id="methods_flattendataforgrid_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-flattendataforgrid-page"><p>transformed data</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_flattendataforwidegrid">flattenDataForWideGrid(series)</h3>
+<div class="flattendataforwidegrid"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-flattendataforwidegrid-page"><p>Transform the data from arrays of arrays into the array</p>
+</div><h5 id="methods_flattendataforwidegrid_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>series</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-flattendataforwidegrid-page"><p>incoming timeseries data</p>
+</div></td></tr></tbody></table><h5 id="methods_flattendataforwidegrid_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-flattendataforwidegrid-page"><p>transformed data</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_formatcell">formatCell(scope, column, grid, row, col)</h3>
+<div class="formatcell"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-formatcell-page"><p>Sets the Style of Cell based on inputs</p>
+</div><h5 id="methods_formatcell_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-formatcell-page"><p>scope</p>
+</div></td></tr><tr><td>column</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-formatcell-page"><p>name of the column</p>
+</div></td></tr><tr><td>grid</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-formatcell-page"><p>grid object</p>
+</div></td></tr><tr><td>row</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-formatcell-page"><p>grid&#39;s row</p>
+</div></td></tr><tr><td>col</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-formatcell-page"><p>grid&#39;s column</p>
+</div></td></tr></tbody></table><h5 id="methods_formatcell_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-formatcell-page"><p>that defines styles used by columnDef</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_formatcellboolean">formatCellBoolean(item, value, range)</h3>
+<div class="formatcellboolean"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-formatcellboolean-page"><p>Formats the cell for a boolean series value based on the value itself and schema settings.
+The function is called for every FQN item in scope.</p>
+</div><h5 id="methods_formatcellboolean_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>item</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-formatcellboolean-page"><p>the FQN item</p>
+</div></td></tr><tr><td>value</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-formatcellboolean-page"><p>the cell value, true or false</p>
+</div></td></tr><tr><td>range</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-formatcellboolean-page"><p>the range definition</p>
+</div></td></tr></tbody></table><h5 id="methods_formatcellboolean_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-formatcellboolean-page"><p>that defines the styles used by columnDef</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getautoreloadparameters">getAutoReloadParameters(scope)</h3>
+<div class="getautoreloadparameters"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getautoreloadparameters-page"><p>Returns auto-reload parameters based on scope.rbParameters</p>
+</div><h5 id="methods_getautoreloadparameters_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getautoreloadparameters-page"><p>Model data that contains rbParameters member. See
+prepareOptions function for details.</p>
+</div></td></tr></tbody></table><h5 id="methods_getautoreloadparameters_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getautoreloadparameters-page"><p>that defines whether auto-reload is enabled/disabled
+and the interval passed in milliseconds.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getcalculatedtimedeadband">getCalculatedTimeDeadBand(duration, unit)</h3>
+<div class="getcalculatedtimedeadband"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getcalculatedtimedeadband-page"><p>Return number of seconds</p>
+</div><h5 id="methods_getcalculatedtimedeadband_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>duration</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getcalculatedtimedeadband-page"><p>Duration in seconds</p>
+</div></td></tr><tr><td>unit</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getcalculatedtimedeadband-page"><p>unit of duration</p>
+</div></td></tr></tbody></table><h5 id="methods_getcalculatedtimedeadband_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getcalculatedtimedeadband-page"><p>duration in seconds</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getcolumndefs">getColumnDefs(scope)</h3>
+<div class="getcolumndefs"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getcolumndefs-page"><p>Get column definition for the grid</p>
+</div><h5 id="methods_getcolumndefs_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getcolumndefs-page"><p>scope</p>
+</div></td></tr></tbody></table><h5 id="methods_getcolumndefs_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getcolumndefs-page"><p>Column definition</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getdatagridtitle">getDataGridTitle(scope)</h3>
+<div class="getdatagridtitle"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getdatagridtitle-page"><p>Return the title for the data grid.</p>
+</div><h5 id="methods_getdatagridtitle_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getdatagridtitle-page"><p>scope</p>
+</div></td></tr></tbody></table><h5 id="methods_getdatagridtitle_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getdatagridtitle-page"><p>Grid title</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getdatagridtype">getDataGridType(scope)</h3>
+<div class="getdatagridtype"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getdatagridtype-page"><p>Return the type of the data grid</p>
+</div><h5 id="methods_getdatagridtype_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getdatagridtype-page"><p>scope</p>
+</div></td></tr></tbody></table><h5 id="methods_getdatagridtype_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getdatagridtype-page"><p>Grid Type</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getformattedduration">getFormattedDuration(duration)</h3>
+<div class="getformattedduration"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getformattedduration-page"><p>Return formatted duration</p>
+</div><h5 id="methods_getformattedduration_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>duration</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getformattedduration-page"><p>in seconds</p>
+</div></td></tr></tbody></table><h5 id="methods_getformattedduration_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getformattedduration-page"><p>time formatted string in format
+&quot;HH:MM:SS.mmm&quot;, where HH is an hour 00-59, MM minute
+00-59, SS seconds 00-59 and mmm are milliseconds</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getfqnsadditionaldata">getFqnsAdditionalData(scope)</h3>
+<div class="getfqnsadditionaldata"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getfqnsadditionaldata-page"><p>Get fqns out of main fqn and tails with additional fields like
+EngineeringUnit. Useful with liveDataSvc.</p>
+</div><h5 id="methods_getfqnsadditionaldata_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getfqnsadditionaldata-page"><p>scope</p>
+</div></td></tr></tbody></table><h5 id="methods_getfqnsadditionaldata_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getfqnsadditionaldata-page"><p>with array of fqns</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getfulltail">getFullTail(rootFqn, tail)</h3>
+<div class="getfulltail"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getfulltail-page"><p>Get full FQNs out of rootFqn and tail.</p>
+</div><h5 id="methods_getfulltail_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rootFqn</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getfulltail-page"><p>Root FQN</p>
+</div></td></tr><tr><td>tail</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getfulltail-page"><p>Remaining parts of FQN (tail)</p>
+</div></td></tr></tbody></table><h5 id="methods_getfulltail_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String||undefined</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-getfulltail-page"><p>of valid fqns</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_gettimehorizonstate">getTimeHorizonState(scope)</h3>
+<div class="gettimehorizonstate"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-gettimehorizonstate-page"><p>Gets the time horizon state object. If the object doesn&#39;t exist it
+will be automatically created and returned as the default one.</p>
+</div><h5 id="methods_gettimehorizonstate_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-gettimehorizonstate-page"><p>Scope within the state will be set</p>
+</div></td></tr></tbody></table><h5 id="methods_gettimehorizonstate_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-gettimehorizonstate-page"><p>with the UI state</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_gettimeperiodparameters">getTimePeriodParameters(scope)</h3>
+<div class="gettimeperiodparameters"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-gettimeperiodparameters-page"><p>Returns anchor time and duration based on scope.rbParameters.</p>
+</div><h5 id="methods_gettimeperiodparameters_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-gettimeperiodparameters-page"><p>Model data that contains rbParameters member. See
+prepareOptions function for details.</p>
+</div></td></tr></tbody></table><h5 id="methods_gettimeperiodparameters_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-anchortime">anchorTime: null, duration: number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-gettimeperiodparameters-page"><p>Object that contains
+anchor time and calculated duration</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_openpropertywindow">openPropertyWindow(scope, element)</h3>
+<div class="openpropertywindow"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-openpropertywindow-page"><p>Opens the property window that allows to set time horizon,
+range of dates and interval</p>
+</div><h5 id="methods_openpropertywindow_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-openpropertywindow-page"><p>scope</p>
+</div></td></tr><tr><td>element</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-openpropertywindow-page"><p>widget element</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_prepareoptions">prepareOptions(scope)</h3>
+<div class="prepareoptions"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-prepareoptions-page"><p>Prepare options for grid, which will be easy to manipulate.
+fqns and fqnsList will be filled up regarding to the per fqn
+options and defaults params from rbParameters.</p>
+<p>In order to figure out the time frame, there
+are three parameters are exposed to the user for change in
+rbParameters common section:</p>
+<ul>
+<li>startTime - if defined it means start date of time period</li>
+<li>endTime - if defined it means end date of time period</li>
+<li>lastSeconds - defines number of seconds that it should be calculated<pre><code>          for now as an anchor time.
+</code></pre></li>
+</ul>
+<p>If all three fields are defined, the start and end times takes
+precedence.</p>
+</div><h5 id="methods_prepareoptions_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-prepareoptions-page"><p>scope</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_preparepropertydata">preparePropertyData(scope)</h3>
+<div class="preparepropertydata"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-preparepropertydata-page"><p>Prepares data of properties for property window</p>
+</div><h5 id="methods_preparepropertydata_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-preparepropertydata-page"><p>scope</p>
+</div></td></tr></tbody></table><h5 id="methods_preparepropertydata_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-preparepropertydata-page"><p>properties object</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_processdata">processData(scope, data)</h3>
+<div class="processdata"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-processdata-page"><p>Process incoming time series data. This function may affects also
+scope.fqns[...] object in case of missing series type</p>
+<p>NOTE: This function doesn&#39;t care if timeSeriesSvc return bad data,
+it assumes that either it got data in following structure:
+ {
+     startTime: {Number}, // timestamps in fact
+     endTime: {Number},
+     messages: [
+         {Fqn1}: [
+             [x1, y1],
+             [x2, y2],
+             ...
+             [xn, yn]
+         ],
+         ...
+         {Fqnm}: [
+             [x1, y1],
+             [x2, y2],
+             ...
+             [xm, ym]
+         ]
+     ]
+ }</p>
+<p>or the error handling will catch such issue (in fact, this kind of
+checks should belong to the timeSeriesSvc service or some
+specialized VP service anyway)</p>
+<p>The only brief check which are performed are for existence of first
+elements on the object (so startTime, endTime and messages).</p>
+</div><h5 id="methods_processdata_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-processdata-page"><p>scope</p>
+</div></td></tr><tr><td>data</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-processdata-page"><p>incoming data</p>
+</div></td></tr></tbody></table><h5 id="methods_processdata_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-processdata-page"><p>data suitable for ra-grid</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_protectcircularcalls">protectCircularCalls(scope, callbackFn)</h3>
+<div class="protectcircularcalls"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-protectcircularcalls-page"><p>Protects against occurrence circular calls when members of
+rbParameters are set inside this service.</p>
+</div><h5 id="methods_protectcircularcalls_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-protectcircularcalls-page"><p>Model where protectCircularCalls member is stored</p>
+</div></td></tr><tr><td>callbackFn</td><td><a href="" class="label type-hint type-hint-function">Function</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-protectcircularcalls-page"><p>Callback Function</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_removeexceedpoints">removeExceedPoints(dataSet, startTs)</h3>
+<div class="removeexceedpoints"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-removeexceedpoints-page"><p>Remove exceeded points out of the new data up to provided timestamp.
+Sometimes it may happen, that the timeout will be so big, that it
+exceeds actual view port refresh time + actual duration. This function
+will cut off the old data.</p>
+</div><h5 id="methods_removeexceedpoints_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>dataSet</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-removeexceedpoints-page"><p>to be examined</p>
+</div></td></tr><tr><td>startTs</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-removeexceedpoints-page"><p>timestamp to cut off the data to</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_removenodatafqns">removeNodataFqns(scope)</h3>
+<div class="removenodatafqns"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-removenodatafqns-page"><p>(Sliently) remove fqns, which does not have the data</p>
+</div><h5 id="methods_removenodatafqns_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-removenodatafqns-page"><p>scope</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_setautoreloadparameters">setAutoReloadParameters(scope, autoReload, autoReloadInterval)</h3>
+<div class="setautoreloadparameters"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-setautoreloadparameters-page"><p>Sets auto-reload parameters</p>
+</div><h5 id="methods_setautoreloadparameters_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-setautoreloadparameters-page"><p>scope</p>
+</div></td></tr><tr><td>autoReload</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-setautoreloadparameters-page"><p>True if AutoReaload is enabled</p>
+</div></td></tr><tr><td>autoReloadInterval</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-setautoreloadparameters-page"><p>Interval for AutoReload</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_seterrorstate">setErrorState(scope, message)</h3>
+<div class="seterrorstate"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-seterrorstate-page"><p>Set error state.</p>
+</div><h5 id="methods_seterrorstate_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-seterrorstate-page"><p>scope</p>
+</div></td></tr><tr><td>message</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-seterrorstate-page"><p>displayed (somehow) to the user</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_setgridheight">setGridHeight(scope, element)</h3>
+<div class="setgridheight"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-setgridheight-page"><p>Sets the grid element&#39;s CSS height to grid container&#39;s height.</p>
+</div><h5 id="methods_setgridheight_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-setgridheight-page"><p>scope</p>
+</div></td></tr><tr><td>element</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-setgridheight-page"><p>widget element</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_setnodatastate">setNoDataState(scope, message)</h3>
+<div class="setnodatastate"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-setnodatastate-page"><p>Set error state.</p>
+</div><h5 id="methods_setnodatastate_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-setnodatastate-page"><p>scope</p>
+</div></td></tr><tr><td>message</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-setnodatastate-page"><p>displayed (somehow) to the user</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_setprotectcircularcalls">setProtectCircularCalls(scope, value)</h3>
+<div class="setprotectcircularcalls"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-setprotectcircularcalls-page"><p>Sets protectCircularCalls member of scope</p>
+</div><h5 id="methods_setprotectcircularcalls_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-setprotectcircularcalls-page"><p>scope</p>
+</div></td></tr><tr><td>value</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a><a href="" class="label type-hint type-hint-object">*</a><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-setprotectcircularcalls-page"><p>New value of
+protectCircularCalls</p>
+</div></td></tr></tbody></table><h5 id="methods_setprotectcircularcalls_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean|*|Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-setprotectcircularcalls-page"><p>Previous value of
+protectCircularCalls</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_settimehorizonstate">setTimeHorizonState(scope, state)</h3>
+<div class="settimehorizonstate"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-settimehorizonstate-page"><p>Sets the time horizon state object. If the object doesn&#39;t exist it
+will be automatically created. If state parameter is undefined the state
+object will be replaced with the default one (with all fields null
+filled in)</p>
+</div><h5 id="methods_settimehorizonstate_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-settimehorizonstate-page"><p>Scope within the state will be set</p>
+</div></td></tr><tr><td>state <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-settimehorizonstate-page"><p>Time horizon state object</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_setwidgetstate">setWidgetState(scope, state)</h3>
+<div class="setwidgetstate"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-setwidgetstate-page"><p>Sets the widget state to one of following value:
+LOADING - it means that the widget and the data are currently loaded
+REFRESHING - it defines that chart is refreshed
+READY - it means that chart has already loaded the data</p>
+</div><h5 id="methods_setwidgetstate_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-setwidgetstate-page"><p>Scope that contains state member</p>
+</div></td></tr><tr><td>state <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-setwidgetstate-page"><p>New state of widget</p>
+</div></td></tr></tbody></table><h5 id="methods_setwidgetstate_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">*|displayState</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-setwidgetstate-page"><p>Value of state after setting</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_timeseries">timeSeries(scope, element, anchor, duration, timeDeadBand)</h3>
+<div class="timeseries"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-timeseries-page"><p>Get timeSeries data. This is simple wrapper on the timeSeries
+service.</p>
+</div><h5 id="methods_timeseries_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-timeseries-page"><p>scope</p>
+</div></td></tr><tr><td>element</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-timeseries-page"><p>widget element</p>
+</div></td></tr><tr><td>anchor</td><td><a href="" class="label type-hint type-hint-number">Number</a><a href="" class="label type-hint type-hint-null">null</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-timeseries-page"><p>represented in milliseconds time or
+null, means &quot;now&quot;</p>
+</div></td></tr><tr><td>duration</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-timeseries-page"><p>the period of time from or to anchor
+expressed in seconds. Negative duration means getting data
+from the left of the anchor (past), and positive on
+the right (future). Note, that the latter have only sense
+when anchor is not null.</p>
+</div></td></tr><tr><td>timeDeadBand</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-timeseries-page"><p>interval for getting the data for the
+grid in right format</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_toggleautoreload">toggleAutoReload(scope, flag)</h3>
+<div class="toggleautoreload"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-toggleautoreload-page"><p>Turn on subscribing to for the data for current chart.</p>
+</div><h5 id="methods_toggleautoreload_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-toggleautoreload-page"><p>scope</p>
+</div></td></tr><tr><td>flag</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-toggleautoreload-page"><p>if true, will subscribe for the data</p>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+<div class="member property"><h2 id="properties">Properties</h2>
+<ul class="properties"><li><h3 id="properties_widgetstates">widgetStates</h3>
+<div class="widgetstates"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdatagridlogicsvc-widgetstates-page"><p>Widget state object with set of fixed values of following value:</p>
+<ul>
+<li>NODATA - it means widget has no data</li>
+<li>LOADING - it means that the widget and the data are currently loaded</li>
+<li>REFRESHING - it defines that chart is refreshed</li>
+<li>READY - it means that chart has already loaded the data</li>
+</ul>
+</div></div>
+</li>
+</ul>
+</div>
+</div>

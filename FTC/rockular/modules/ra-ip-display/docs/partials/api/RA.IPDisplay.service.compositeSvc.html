@@ -1,0 +1,57 @@
+<h1><code ng:non-bindable="">compositeSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-compositesvc-page"><p>Provides functionality specific for rendering displays with multiple cells</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_getmobileheightofcell">getMobileHeightOfCell(originalWidth, originalHeight, isXs)</h3>
+<div class="getmobileheightofcell"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-compositesvc-getmobileheightofcell-page"><p>Returns the height of the specified cell on mobile viewport.</p>
+</div><h5 id="methods_getmobileheightofcell_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>originalWidth</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-compositesvc-getmobileheightofcell-page"><p>Width (number of columns) of cell in desktop display.</p>
+</div></td></tr><tr><td>originalHeight</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-compositesvc-getmobileheightofcell-page"><p>Height (number of rows) of cell in desktop display.</p>
+</div></td></tr><tr><td>isXs</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-compositesvc-getmobileheightofcell-page"><p>Flag which indicates if we are on larger mobile device or on extra small.</p>
+</div></td></tr></tbody></table><h5 id="methods_getmobileheightofcell_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-compositesvc-getmobileheightofcell-page"><p>Number of rows the cell should cover on mobile viewport.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_ismobile">isMobile()</h3>
+<div class="ismobile"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-compositesvc-ismobile-page"><p>Returns whether size of viewport is mobile sized.
+It is comparing only the width of viewport.
+Uses raScreenSizeSvc from mobile-toolkit-ra and its &quot;sm&quot; and &quot;xs&quot; constants.</p>
+</div><h5 id="methods_ismobile_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-compositesvc-ismobile-page"><p>Indication whether the width of display is mobile sized.
+True if width of the viewport is under &quot;sm&quot; constant from raScreenSizeSvc.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isstyleobjectvalid">isStyleObjectValid(style)</h3>
+<div class="isstyleobjectvalid"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-compositesvc-isstyleobjectvalid-page"><p>Checks whether given style object contains <strong>dashboardBackgroundColor</strong>,
+<strong>cellBackgroundColor</strong> and <strong>displayPalette</strong> properties.
+If <strong>displayPalette</strong> property is not set, it assigns default palette using
+<a href="#/api/RA.IPDisplay.service:colorThemeSvc#getdefaultpalette">&quot;getDefaultPalette&quot;</a> function</p>
+</div><h5 id="methods_isstyleobjectvalid_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>style</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-compositesvc-isstyleobjectvalid-page"><p>Object representing the style of display.</p>
+</div></td></tr></tbody></table><h5 id="methods_isstyleobjectvalid_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-compositesvc-isstyleobjectvalid-page"><p>False if object itself, or its properties <strong>dashboardBackgroundColor</strong> or
+<strong>cellBackgroundColor</strong> are not defined.</p>
+<p>Otherwise it returns true.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isxssize">isXsSize()</h3>
+<div class="isxssize"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-compositesvc-isxssize-page"><p>Returns whether size of viewport is extra small.
+It is comparing only the width of viewport.
+Uses raScreenSizeSvc from mobile-toolkit-ra and its &quot;xs&quot; constant.</p>
+</div><h5 id="methods_isxssize_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-compositesvc-isxssize-page"><p>Indication whether the width of display is &quot;extra small&quot;.
+True if width of the viewport is under &quot;xs&quot; constant from raScreenSizeSvc.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_layoutsort">layoutSort(array)</h3>
+<div class="layoutsort"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-compositesvc-layoutsort-page"><p>Sorts the input array by the position of cells (at first by row and then by column).</p>
+<div class="alert alert-info" role="alert">
+<strong>Example</strong> of usage can be found in <a href="#/api/RA.IPDisplay.directive:raIpComposite"><em>raIpComposite</em></a>
+directive documentation.
+</div>
+</div><h5 id="methods_layoutsort_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>array</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-compositesvc-layoutsort-page"><p>Array of cells which should be sorted.
+Each object in array has to have <strong>x</strong> and <strong>y</strong> number properties.</p>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+</div>

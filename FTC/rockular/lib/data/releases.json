@@ -1,0 +1,166 @@
+[
+    {
+        "ra-ip-common": {
+            "description": "This library contains reusable services proxy and other common components that can be used in any Rockwell Automation web‑based application which connects to InfoPlatfom services.",
+            "releases": [
+                {
+                    "date": "09/15/2017",
+                    "releaseName": "",
+                    "versionNumber": "1.4.0",
+                    "releaseDescription": "",
+                    "pathDownload": "modules/ra-ip-common/ra-ip-common-releases-1-4-0.zip",
+                    "pathDocumentation": "modules/ra-ip-common/docs/index.html#/api"
+                },
+                {
+                    "date": "05/17/2018",
+                    "releaseName": "",
+                    "versionNumber": "1.5.0",
+                    "releaseDescription": "",
+                    "pathDownload": "modules/ra-ip-common/ra-ip-common-releases-1-5-0.zip",
+                    "pathDocumentation": "modules/ra-ip-common/docs/index.html#/api"
+                }
+            ]
+        }
+    },
+    {
+        "ra-ip-display": {
+            "description": "This library contains reusable display runtime component and widgets to show inside display that can be used in any Rockwell Automation web‑based application which connects to InfoPlatfom services.",
+            "releases": [
+                {
+                    "date": "09/15/2017",
+                    "releaseName": "",
+                    "versionNumber": "4.0.0",
+                    "releaseDescription": "",
+                    "pathDownload": "modules/ra-ip-display/ra-ip-display-releases-4-0-0.zip",
+                    "pathDocumentation": "modules/ra-ip-display/docs/index.html#/api"
+                },
+                {
+                    "date": "12/14/2017",
+                    "releaseName": "",
+                    "versionNumber": "5.0.0",
+                    "releaseDescription": "",
+                    "pathDownload": "modules/ra-ip-display/ra-ip-display-releases-5-0-0.zip",
+                    "pathDocumentation": "modules/ra-ip-display/docs/index.html#/api"
+                },
+                {
+                    "date": "05/17/2018",
+                    "releaseName": "",
+                    "versionNumber": "6.0.0",
+                    "releaseDescription": "",
+                    "pathDownload": "modules/ra-ip-display/ra-ip-display-releases-6-0-0.zip",
+                    "pathDocumentation": "modules/ra-ip-display/docs/index.html#/api"
+                },
+                {
+                    "date": "12/21/2018",
+                    "releaseName": "",
+                    "versionNumber": "6.2.0",
+                    "releaseDescription": "",
+                    "pathDownload": "modules/ra-ip-display/ra-ip-display-releases-6-2-0.zip",
+                    "pathDocumentation": "modules/ra-ip-display/docs/index.html#/api"
+                },
+                {
+                    "date": "04/18/2019",
+                    "releaseName": "",
+                    "versionNumber": "6.3.0",
+                    "releaseDescription": "",
+                    "pathDownload": "modules/ra-ip-display/ra-ip-display-releases-6-3-0.zip",
+                    "pathDocumentation": "modules/ra-ip-display/docs/index.html#/api"
+                }
+            ]
+        }
+    },
+    {
+        "ra-ip-components": {
+            "description": "This library contains reusable components which are either too complex to be in MFT mobile toolkit or need a connection on (InfoPlatform) back‑end.",
+            "releases": [
+                {
+                    "date": "09/15/2017",
+                    "releaseName": "",
+                    "versionNumber": "1.0.1",
+                    "releaseDescription": "",
+                    "pathDownload": "modules/ra-ip-components/ra-ip-components-releases-1-0-1.zip",
+                    "pathDocumentation": "modules/ra-ip-components/docs/index.html#/api"
+                },
+                {
+                    "date": "12/14/2017",
+                    "releaseName": "",
+                    "versionNumber": "2.0.0",
+                    "releaseDescription": "",
+                    "pathDownload": "modules/ra-ip-components/ra-ip-components-releases-2-0-0.zip",
+                    "pathDocumentation": "modules/ra-ip-components/docs/index.html#/api"
+                },
+                {
+                    "date": "05/17/2018",
+                    "releaseName": "",
+                    "versionNumber": "3.0.0",
+                    "releaseDescription": "",
+                    "pathDownload": "modules/ra-ip-components/ra-ip-components-releases-3-0-0.zip",
+                    "pathDocumentation": "modules/ra-ip-components/docs/index.html#/api"
+                }
+            ]
+        }
+    },
+    {
+        "ra-ftc-communication": {
+            "description": "This library contains reusable services proxy that can be used in any Rockwell Automation Angular‑based application which connects to InfoPlatfom services.",
+            "releases": [
+                {
+                    "date": "04/04/2018",
+                    "releaseName": "",
+                    "versionNumber": "1.0.0",
+                    "releaseDescription": "",
+                    "pathDownload": "modules/ra-ftc-communication/ra-ip-communication-releases-1.0.0.zip",
+                    "pathDocumentation": "modules/ra-ftc-communication/docs/index.html"
+                },
+                {
+                    "date": "05/09/2018",
+                    "releaseName": "",
+                    "versionNumber": "1.1.0",
+                    "releaseDescription": "",
+                    "pathDownload": "modules/ra-ftc-communication/ra-ip-communication-releases-1.1.0.zip",
+                    "pathDocumentation": "modules/ra-ftc-communication/docs/index.html"
+                },
+                {
+                    "date": "06/08/2018",
+                    "releaseName": "",
+                    "versionNumber": "1.2.0",
+                    "releaseDescription": "",
+                    "pathDownload": "modules/ra-ftc-communication/ra-ip-communication-releases-1.2.0.zip",
+                    "pathDocumentation": "modules/ra-ftc-communication/docs/index.html"
+                },
+                {
+                    "date": "09/06/2018",
+                    "releaseName": "",
+                    "versionNumber": "2.0.0",
+                    "releaseDescription": "",
+                    "pathDownload": "modules/ra-ftc-communication/ra-ftc-communication-releases-2.0.0.zip",
+                    "pathDocumentation": "modules/ra-ftc-communication/docs/index.html"
+                },
+                {
+                    "date": "01/11/2019",
+                    "releaseName": "",
+                    "versionNumber": "3.0.0",
+                    "releaseDescription": "",
+                    "pathDownload": "modules/ra-ftc-communication/ra-ftc-communication-releases-3.0.0.zip",
+                    "pathDocumentation": "modules/ra-ftc-communication/docs/index.html"
+                }
+            ]
+        }
+    },
+    {
+        "ra-ftc-components": {
+            "description": "Documentation preview of library containing reusable components. Documentation contains also components which are or will be contributed to WebTechUI toolkit.",
+            "releases": [
+                {
+                    "date": "12/10/2018",
+                    "releaseName": "",
+                    "versionNumber": "Preview",
+                    "releaseDescription": "",
+                    "pathDownload": "",
+                    "pathDocumentation": "modules/ra-ftc-components/docs/index.html"
+                }
+            ]
+        }
+    }
+
+]

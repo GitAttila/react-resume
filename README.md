@@ -38,24 +38,32 @@ A single-page, interactive resume and portfolio web application built with **Rea
 ## 📁 Project Structure
 
 ```
-src/
-├── assets/
-│   ├── fonts/          # Self-hosted font files (.ttf)
-│   ├── images/         # All project/award/certificate images + portrait
-│   └── pdfs/           # Downloadable resume PDF
-├── components/
-│   ├── Features/       # Page-level feature sections (hero, timeline, portfolios, etc.)
-│   └── [Shared]/       # Reusable UI components (Card, Carousel, Button, Header…)
-├── content/            # All static data constants (project cards, timeline entries,
-│   │                   #   carousel slides, certificate lists, nav items…)
-│   └── lightbox/       # Per-gallery slide arrays + lightbox key map
-├── consts/             # App-wide constants (nav items, lightbox settings)
-├── hooks/              # Custom React hooks (useScrollIntersection)
-├── models/             # TypeScript interfaces & models
-└── styles/             # Global SCSS (variables, mixins, typography, theming…)
+├── FTC/                        # Static showcase sites (no build process — copied as-is to dist/)
+├── public/                     # Static root assets (favicon, robots.txt)
+└── src/
+    ├── assets/
+    │   ├── fonts/              # Self-hosted font files (.ttf)
+    │   ├── images/             # All project/award/certificate images + portrait
+    │   └── pdfs/               # Downloadable resume PDF
+    ├── components/
+    │   ├── Features/           # Page-level feature sections (hero, timeline, portfolios, etc.)
+    │   └── [Shared]/           # Reusable UI components (Card, Carousel, Button, Header…)
+    ├── content/                # All static data constants (project cards, timeline entries,
+    │   │                       #   carousel slides, certificate lists, nav items…)
+    │   └── lightbox/           # Per-gallery slide arrays + lightbox key map
+    ├── consts/                 # App-wide constants (nav items, lightbox settings)
+    ├── hooks/                  # Custom React hooks (useScrollIntersection)
+    ├── models/                 # TypeScript interfaces & models
+    └── styles/                 # Global SCSS (variables, mixins, typography, theming…)
 ```
 
 Content and UI are intentionally decoupled — all copy, images, and data live in `src/content/` as typed TypeScript constants, making updates straightforward without touching component code.
+
+---
+
+## 🗂 Static Showcase Sites (FTC/)
+
+The `FTC/` folder contains standalone static HTML/CSS/JS sites that are linked from certain project cards in the portfolio. They have no build process — they are copied verbatim into `dist/FTC/` via `vite-plugin-static-copy` during `npm run build`, so the project card links resolve correctly in the deployed environment.
 
 ---
 
@@ -98,7 +106,7 @@ Vite will start a local dev server and automatically open the app in your browse
 npm run build
 ```
 
-Runs TypeScript type-checking (`tsc`) first, then Vite bundles and outputs to `dist/`. The output directory is always wiped clean before each build.
+Runs TypeScript type-checking (`tsc`) first, then Vite bundles and outputs to `dist/`. The output directory is always wiped clean before each build. As part of the build, `vite-plugin-static-copy` copies the entire `FTC/` folder verbatim into `dist/FTC/`.
 
 ### Preview the production build locally
 
@@ -132,12 +140,12 @@ Navigation uses a custom `useScrollIntersection` hook built on the native `Inter
 
 ## ⚙️ Configuration Files
 
-| File                 | Purpose                                                                                |
-| -------------------- | -------------------------------------------------------------------------------------- |
-| `vite.config.ts`     | Vite config — enables React plugin, auto-opens browser on dev, clears `dist/` on build |
-| `tsconfig.json`      | TypeScript config for source files                                                     |
-| `tsconfig.node.json` | TypeScript config for Vite/Node tooling                                                |
-| `eslint.config.js`   | ESLint flat config — excluded from linting itself                                      |
+| File                 | Purpose                                                                                                                                |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `vite.config.ts`     | Vite config — React plugin, auto-opens browser on dev, clears `dist/` on build, copies `FTC/` to `dist/` via `vite-plugin-static-copy` |
+| `tsconfig.json`      | TypeScript config for source files                                                                                                     |
+| `tsconfig.node.json` | TypeScript config for Vite/Node tooling                                                                                                |
+| `eslint.config.js`   | ESLint flat config — excluded from linting itself                                                                                      |
 
 ---
 

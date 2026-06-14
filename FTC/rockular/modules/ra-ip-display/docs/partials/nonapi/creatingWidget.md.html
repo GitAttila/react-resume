@@ -1,0 +1,57 @@
+<h1><code ng:non-bindable=""></code>
+<div><span class="hint"></span>
+</div>
+</h1>
+<div><div class="creating-widget-page"><h2 id="creating-widget">Creating widget</h2>
+<p>When implementing a widget, widget should also define its own constant service 
+with specific pattern <widgetName>ConstSvc and implement these methods: getSchema (returns widget schema), 
+getExamples (returns widgets examples). In case there are constants needed, there may also be defined 
+getConstant method.</p>
+<p>Example:</p>
+<pre><code>```
+    angular.module(&#39;myModule&#39;)
+        .service(&quot;myWidgetConstSvc&quot;, [function () {
+                &quot;use strict&quot;;
+                var constants = {};
+                constants.myConstant = &#39;example&#39;;
+
+                /**
+                 * @description Function to return predefined schema only. Schema can have translations included, which
+                 * cannot be used in service initialization state.
+                 * @returns {Object} - schema
+                 */
+                this.getSchema = function getSchema() {
+                    return {
+                        &quot;name&quot;: &quot;My Widget&quot;,
+                        &quot;supportMultiple&quot;: false,
+                        &quot;schemaVersion&quot;: &quot;2.0.0&quot;,
+                        &quot;allowPreview&quot;: false,
+                        &quot;schema&quot;: []
+                    };
+                };
+
+                /**
+                 * @description Function to return predefined examples only.
+                 * @returns {Array}
+                 */
+                this.getExamples = function getExamples() {
+                    return [];
+                };
+
+                /**
+                 * @description Function to return predefined static constant.
+                 * @param {string} name - name of constant
+                 * @returns {any} - predefined constant
+                 */
+                this.getConstant = function getConstant(name) {
+                    return angular.copy(constants[name]);
+                };
+            }
+        ])
+        .directive(&#39;myWidget&#39;, [&#39;myWidgetConstSvc&#39;, function (myWidgetConstSvc) { 
+            var myConstant = myWidgetConstSvc.getConstant(&#39;myConstant&#39;)
+            ...
+        });
+```
+</code></pre><h3 id="creating-widget_todo-create-comprehensive-widget-creation-manual">TODO: Create comprehensive widget creation manual</h3>
+</div></div>

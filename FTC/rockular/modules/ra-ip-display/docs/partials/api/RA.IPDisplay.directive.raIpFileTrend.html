@@ -1,0 +1,202 @@
+<h1><code ng:non-bindable="">raIpFileTrend</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipfiletrend-page"><p>This raIpFileTrend component is responsible for rendering File Trend Widget. This widget parses CSV file and renders chart from its data.
+There is a specific service to handle widget constants, schema and examples, see <a href="#/api/RA.IPDisplay.service:raIpFileTrendConstSvc">RA.IPDisplay.service:raIpFileTrendConstSvc</a>.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ra-ip-file-trend
+       rb-parameters="{object}"
+       ri-fqn="{string}"
+       rb-is-active="{boolean}"
+       ro-schema="{function}"
+       ro-examples="{function}"
+       rb-design-mode="{boolean}"
+       rb-timezone="{string}"&gt;
+&lt;/ra-ip-file-trend&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rbParameters</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipfiletrend-page"><p>An object representing the parameters of File Trend Widget.</p>
+<p>Common Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lookBackwardHours</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>Number of Seconds the value are being displayed for. Special treatment for value 0 (see startTime and endTime parameters) and -1 (see lastSeconds parameter).</td>
+<td>600 sec (5 minutes)</td>
+</tr>
+<tr>
+<td>lastSeconds (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>Mandatory and used in case when lookBackwardHours equals -1 (Last N seconds). Number of Seconds the value are being displayed for when Last N seconds is chosen.</td>
+<td></td>
+</tr>
+<tr>
+<td>startTime (optional)</td>
+<td><a href="#" class="label type-hint type-hint-date">Date</a></td>
+<td>Start time date. Mandatory and used in case when lookBackwardHours equals 0 (Custom range).</td>
+<td></td>
+</tr>
+<tr>
+<td>endTime (optional)</td>
+<td><a href="#" class="label type-hint type-hint-date">Date</a></td>
+<td>End time date. Mandatory and used in case when lookBackwardHours equals 0 (Custom range).</td>
+<td></td>
+</tr>
+<tr>
+<td>hideTimeControl (optional)</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>Should widget time control be hidden</td>
+<td>False</td>
+</tr>
+<tr>
+<td>hasFileHeader (optional)</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>Flag indicating that file has a row which contains header</td>
+<td>True</td>
+</tr>
+<tr>
+<td>fileHeaderRowNumber (optional - mandatory when hasFileHeader is true)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>File header row number - at which row there is file header. All lines before “fileHeaderRowNumber” are ignored by file parser.</td>
+<td>1</td>
+</tr>
+<tr>
+<td>timeBase (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Definition where to take datetime values from. Possible values &#39;absoluteTime&#39; (values are separete datetime definitions at each row/column) and &#39;timePlusIncrement&#39; (there is only one datetime base and there is a column with increments)</td>
+<td>&#39;timePlusIncrement&#39;</td>
+</tr>
+<tr>
+<td>absoluteTimeColumn (mandatory when timeBase = &#39;absoluteTime&#39;)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>Column number for absolute datetime</td>
+<td>1</td>
+</tr>
+<tr>
+<td>timePlusIncrement (mandatory when timeBase = &#39;timePlusIncrement&#39;)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Possible values: &#39;absoluteTime&#39; (there is timeseries VQT taken as base datetime), &#39;cell&#39; (there is base time in CSV file)</td>
+<td>&#39;absoluteTime&#39;</td>
+</tr>
+<tr>
+<td>intervalColumnNumber (mandatory when timeBase = &#39;timePlusIncrement&#39;)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>Column number for column with increse interval values</td>
+<td>1</td>
+</tr>
+<tr>
+<td>intervalColumnUnit (mandatory when timeBase = &#39;timePlusIncrement&#39;)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Interval column values unit. Possible values: &#39;milliseconds&#39;, &#39;seconds&#39;, &#39;minutes&#39;, &#39;hours&#39;, &#39;days&#39;</td>
+<td>&#39;seconds&#39;</td>
+</tr>
+<tr>
+<td>cellRowNumber (mandatory when timePlusIncrement is &#39;cell&#39;)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>Row number for row with base datetime (row identification)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>cellColumnNumber (mandatory when timePlusIncrement is &#39;cell&#39;)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>Column number for column with base datetime (column identification)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>highlightIntervalZeroValue (optional, used when timeBase = &#39;timePlusIncrement&#39;)</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>Flag indicating that zero based interval value have to be highlighted</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p>Common parameters dependency:</p>
+<pre class="prettyprint linenums">
+-&gt; hasFileHeader == true
+         -&gt; fileHeaderRowNumber
+-&gt; timeBase == 'absoluteTime'
+         -&gt; absoluteTimeColumn
+-&gt; timeBase == 'timePlusIncrement'
+         -&gt; timePlusIncrement == 'absoluteTime'
+             -&gt; intervalColumnNumber
+         -&gt; timePlusIncrement == 'cell'
+             -&gt; cellRowNumber
+             -&gt; cellColumnNumber
+             -&gt; intervalColumnNumber
+         -&gt; highlightIntervalZeroValue
+</pre>
+Schema Type: String</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>FQN of the string item in data model (File tag only)</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>columns</td>
+<td><a href="#" class="label type-hint type-hint-array">Array</a></td>
+<td>Array with definition for each column to select from CSV file</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>columns.columnIndex</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>Column index to choose from CSV file (column number)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>columns.caption</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Custom caption (optional)</td>
+<td>&#39;&#39;</td>
+</tr>
+<tr>
+<td>columns.precision</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>Decimal precision (optional)</td>
+<td>2</td>
+</tr>
+<tr>
+<td>columns.unit</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Custom unit (optional)</td>
+<td>&#39;&#39;</td>
+</tr>
+<tr>
+<td>columns.lineColor</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Custom line color (optional)</td>
+<td>undefined</td>
+</tr>
+</tbody>
+</table>
+</div></td></tr><tr><td>riFqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipfiletrend-page"><p>FQN the widget is relative to.</p>
+</div></td></tr><tr><td>rbIsActive</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipfiletrend-page"><p>Flag which shows whether the widget should be active.</p>
+</div></td></tr><tr><td>roSchema</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipfiletrend-page"><p>Function which should be called to intialize the widget schema in outside environment.</p>
+</div></td></tr><tr><td>roExamples</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipfiletrend-page"><p>Function which should be called to intialize the widget examples in outside
+environment.</p>
+</div></td></tr><tr><td>rbDesignMode</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipfiletrend-page"><p>Flag which indicates whether the widget is in design mode.</p>
+</div></td></tr><tr><td>rbTimezone</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipfiletrend-page"><p>Optional timezone string e.g. America/Toronto to force all widget date and time to show in this timezone.</p>
+</div></td></tr></tbody></table></div>
+</div>

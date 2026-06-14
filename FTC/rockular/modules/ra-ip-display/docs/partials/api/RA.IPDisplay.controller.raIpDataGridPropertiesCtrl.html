@@ -1,0 +1,65 @@
+<h1><code ng:non-bindable="">raIpDataGridPropertiesCtrl</code>
+<div><span class="hint">controller in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-controller-page ra-ipdisplay-controller-raipdatagridpropertiesctrl-page"><p>This controller is responsible for handling the raIpDataGrid Properties</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">raIpDataGridPropertiesCtrl($scope, config);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-controller-page ra-ipdisplay-controller-raipdatagridpropertiesctrl-page"><p>scope</p>
+</div></td></tr><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-controller-page ra-ipdisplay-controller-raipdatagridpropertiesctrl-page"><p>configuration properties</p>
+</div></td></tr></tbody></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_cancel">cancel()</h3>
+<div class="cancel"><div class="ra-ipdisplay-controller-page ra-ipdisplay-controller-raipdatagridpropertiesctrl-cancel-page"><p>CANCEL button handler that Close the modal window with no data passing</p>
+</div></div>
+</li>
+<li><h3 id="methods_isemptydate">isEmptyDate(dateValue)</h3>
+<div class="isemptydate"><div class="ra-ipdisplay-controller-page ra-ipdisplay-controller-raipdatagridpropertiesctrl-isemptydate-page"><p>Checks if the date is empty or not</p>
+</div><h5 id="methods_isemptydate_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>dateValue</td><td><a href="" class="label type-hint type-hint-datetime">DateTime</a></td><td><div class="ra-ipdisplay-controller-page ra-ipdisplay-controller-raipdatagridpropertiesctrl-isemptydate-page"><p>value of date</p>
+</div></td></tr></tbody></table><h5 id="methods_isemptydate_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipdisplay-controller-page ra-ipdisplay-controller-raipdatagridpropertiesctrl-isemptydate-page"><p>True if dateValue is undefined or null.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isvaliddate">isValidDate(dateValue)</h3>
+<div class="isvaliddate"><div class="ra-ipdisplay-controller-page ra-ipdisplay-controller-raipdatagridpropertiesctrl-isvaliddate-page"><p>Checks if the date is valid or not</p>
+</div><h5 id="methods_isvaliddate_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>dateValue <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-date">Date</a></td><td><div class="ra-ipdisplay-controller-page ra-ipdisplay-controller-raipdatagridpropertiesctrl-isvaliddate-page"><p>Validated date</p>
+</div></td></tr></tbody></table><h5 id="methods_isvaliddate_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipdisplay-controller-page ra-ipdisplay-controller-raipdatagridpropertiesctrl-isvaliddate-page"><p>True if dateValue is valid date otherwise it
+returns False. If the dateValue is empty (undefined ot null) the
+result will be set to True.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_ok">ok()</h3>
+<div class="ok"><div class="ra-ipdisplay-controller-page ra-ipdisplay-controller-raipdatagridpropertiesctrl-ok-page"><p>OK button handler that Validates the data and if all is valid it closes the
+modal window returning as result the modified object of properties</p>
+</div></div>
+</li>
+<li><h3 id="methods_setdateinputstate">setDateInputState(stateObject, isValid, errorMessage)</h3>
+<div class="setdateinputstate"><div class="ra-ipdisplay-controller-page ra-ipdisplay-controller-raipdatagridpropertiesctrl-setdateinputstate-page"><p>Sets information of validation in given state object</p>
+</div><h5 id="methods_setdateinputstate_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>stateObject</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-controller-page ra-ipdisplay-controller-raipdatagridpropertiesctrl-setdateinputstate-page"><p>state object</p>
+</div></td></tr><tr><td>isValid</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-controller-page ra-ipdisplay-controller-raipdatagridpropertiesctrl-setdateinputstate-page"><p>True if Date is Valid</p>
+</div></td></tr><tr><td>errorMessage</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-controller-page ra-ipdisplay-controller-raipdatagridpropertiesctrl-setdateinputstate-page"><p>Error Message</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_validatedate">validateDate(dateValue, emptyIsValid)</h3>
+<div class="validatedate"><div class="ra-ipdisplay-controller-page ra-ipdisplay-controller-raipdatagridpropertiesctrl-validatedate-page"><p>Checks whether dateValue is valid date and it is not
+empty</p>
+</div><h5 id="methods_validatedate_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>dateValue <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-date">Date</a></td><td><div class="ra-ipdisplay-controller-page ra-ipdisplay-controller-raipdatagridpropertiesctrl-validatedate-page"><p>Checked date value</p>
+</div></td></tr><tr><td>emptyIsValid</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-controller-page ra-ipdisplay-controller-raipdatagridpropertiesctrl-validatedate-page"><p>Determines if an empty date value
+is treated as invalid or not</p>
+</div></td></tr></tbody></table><h5 id="methods_validatedate_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-isvalid">isValid: boolean, errorMessage: string</a></td><td><div class="ra-ipdisplay-controller-page ra-ipdisplay-controller-raipdatagridpropertiesctrl-validatedate-page"><p>Object that
+contains information whether dateValue is valid or not. If
+the value is invalid the appropriate error message is returned.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_validatedateranges">validateDateRanges()</h3>
+<div class="validatedateranges"><div class="ra-ipdisplay-controller-page ra-ipdisplay-controller-raipdatagridpropertiesctrl-validatedateranges-page"><p>Validates a range of dates for &#39;Custom Range&#39; time
+horizon item.</p>
+</div><h5 id="methods_validatedateranges_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipdisplay-controller-page ra-ipdisplay-controller-raipdatagridpropertiesctrl-validatedateranges-page"><p>True if validation ended success otherwise it
+returns False</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

@@ -1,0 +1,36 @@
+<h1><code ng:non-bindable="">operationSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPCommon.Services</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-operationsvc-page"><p>Service for Operation Request and Manipulations</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_createoperationrequest">createOperationRequest(target, operation, [parameters])</h3>
+<div class="createoperationrequest"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-operationsvc-createoperationrequest-page"><p>Create or Return the Operation Request.</p>
+</div><h5 id="methods_createoperationrequest_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>target</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-operationsvc-createoperationrequest-page"><p>The FQN of target item</p>
+</div></td></tr><tr><td>operation</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-operationsvc-createoperationrequest-page"><p>The name of the operation</p>
+</div></td></tr><tr><td>[parameters] <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-operationsvc-createoperationrequest-page"><p>The parameters for the request</p>
+</div></td></tr></tbody></table><h5 id="methods_createoperationrequest_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-operationrequest">OperationRequest</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-operationsvc-createoperationrequest-page"><p><a href="#/api/RA.IPCommon.Services.object:OperationRequest">RA.IPCommon.Services.object:OperationRequest</a></p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getoperationdata">getOperationData(operationReq, [raPassError], [cancelPromise])</h3>
+<div class="getoperationdata"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-operationsvc-getoperationdata-page"><p>Makes a request to JSON Operation service on the server.</p>
+</div><h5 id="methods_getoperationdata_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>operationReq</td><td><a href="" class="label type-hint type-hint-operationrequest">OperationRequest</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-operationsvc-getoperationdata-page"><p><a href="#/api/RA.IPCommon.Services.object:OperationRequest">RA.IPCommon.Services.object:OperationRequest</a></p>
+</div></td></tr><tr><td>[raPassError] <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-operationsvc-getoperationdata-page"><ul>
+<li>flag indicating whether to turn off
+common error&#39;s interception mechanism</li>
+</ul>
+</div></td></tr><tr><td>[cancelPromise] <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-operationsvc-getoperationdata-page"><ul>
+<li>promise that should abort the request when resolved</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_getoperationdata_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-ipromise">IPromise&lt;T&gt;</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-operationsvc-getoperationdata-page"><ul>
+<li>Promise to resolve when answer
+will be available.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

@@ -1,0 +1,901 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@ra-wcftcloud/ra-ftc-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@ra-wcftcloud/ra-ftc-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>SimpleIconPickerComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">API</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/icon-picker/simple-icon-picker.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">encapsulation</td>
+                <td class="col-md-9"><code>ViewEncapsulation.None</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>ra-ftc-simple-icon-picker</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>simple-icon-picker.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./simple-icon-picker.component.html</code></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#_fontList">_fontList</a>
+                            </li>
+                            <li>
+                                <a href="#_fontListVisible">_fontListVisible</a>
+                            </li>
+                            <li>
+                                <a href="#_selectedIcon">_selectedIcon</a>
+                            </li>
+                            <li>
+                                <a href="#_visibleFontSets">_visibleFontSets</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#clearSelection">clearSelection</a>
+                            </li>
+                            <li>
+                                <a href="#iconClick">iconClick</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#fontList">fontList</a>
+                            </li>
+                            <li>
+                                <a href="#selectedIcon">selectedIcon</a>
+                            </li>
+                            <li>
+                                <a href="#visibleFontSets">visibleFontSets</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#iconSelected">iconSelected</a>
+                            </li>
+                            <li>
+                                <a href="#selectionCleared">selectionCleared</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Accessors</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#fontList">fontList</a>
+                                </li>
+                                <li>
+                                    <a href="#selectedIcon">selectedIcon</a>
+                                </li>
+                                <li>
+                                    <a href="#visibleFontSets">visibleFontSets</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(changeDetectorRef: <a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank">ChangeDetectorRef</a>)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>changeDetectorRef</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/core/ChangeDetectorRef" target="_blank" >ChangeDetectorRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="fontList"></a>
+                        <code>fontList</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="../interfaces/IFont.html" target="_self" >IFont[]</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="selectedIcon"></a>
+                        <code>selectedIcon</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="../interfaces/ISelectedIcon.html" target="_self" >ISelectedIcon</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="visibleFontSets"></a>
+                        <code>visibleFontSets</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code>string[]</code>
+
+                            </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="iconSelected"></a>
+                        <code>iconSelected</code>
+                    </td>
+                    <td class="col-md-10">
+                        <div><p>An event fired after icon clicked.
+Fires selected icon.</p>
+</div>
+                        <em><code>$event</code> Type:</em>    <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="selectionCleared"></a>
+                        <code>selectionCleared</code>
+                    </td>
+                    <td class="col-md-10">
+                        <div><p>Emits when the simpleiconpicker has unselected selected icons. </p>
+</div>
+                        <em><code>$event</code> Type:</em>    <code>EventEmitter&lt;void&gt;</code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="clearSelection"></a>
+                        <span class="name">
+                            <b>
+                            clearSelection
+                            </b>
+                            <a href="#clearSelection"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>clearSelection()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Method fired after click on clear icon.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="iconClick"></a>
+                        <span class="name">
+                            <b>
+                            iconClick
+                            </b>
+                            <a href="#iconClick"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>iconClick(icon: <a href="../interfaces/IIcon.html">IIcon</a>, fontSet: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, useLigature: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank">boolean</a>)</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Method fired after click on icon.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>icon</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/IIcon.html" target="_self" >IIcon</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><ul>
+<li>clicked icon</li>
+</ul>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>fontSet</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>useLigature</td>
+                                                        <td>
+                                                                    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_fontList"></a>
+                        <span class="name">
+                            <b>
+                            _fontList
+                            </b>
+                            <a href="#_fontList"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>_fontList:     <code><a href="../interfaces/IFont.html" target="_self" >IFont[]</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/IFont.html" target="_self" >IFont[]</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_fontListVisible"></a>
+                        <span class="name">
+                            <b>
+                            _fontListVisible
+                            </b>
+                            <a href="#_fontListVisible"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>_fontListVisible:     <code><a href="../interfaces/IFont.html" target="_self" >IFont[]</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/IFont.html" target="_self" >IFont[]</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_selectedIcon"></a>
+                        <span class="name">
+                            <b>
+                            _selectedIcon
+                            </b>
+                            <a href="#_selectedIcon"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>_selectedIcon:     <code><a href="../interfaces/ISelectedIcon.html" target="_self" >ISelectedIcon</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/ISelectedIcon.html" target="_self" >ISelectedIcon</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_visibleFontSets"></a>
+                        <span class="name">
+                            <b>
+                            _visibleFontSets
+                            </b>
+                            <a href="#_visibleFontSets"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>_visibleFontSets:     <code>string[]</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>string[]</code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="accessors">
+        Accessors
+    </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fontList"></a>
+                        <span class="name"><b>fontList</b><a href="#fontList"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>fontList(newFontList: [])</code></span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                        <td>Type</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>newFontList</td>
+                                                    
+                                                            <td>
+                                                                        <code>[]</code>
+                                                            </td>
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectedIcon"></a>
+                        <span class="name"><b>selectedIcon</b><a href="#selectedIcon"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>selectedIcon(newSelectedIcon: )</code></span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>newSelectedIcon</td>
+                                                    
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="visibleFontSets"></a>
+                        <span class="name"><b>visibleFontSets</b><a href="#visibleFontSets"><span class="icon ion-ios-link"></span></a></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="col-md-4">
+                        <span class="accessor"><b>set</b><code>visibleFontSets(newVisibleFontSets: [])</code></span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                        <td>Type</td>
+                                                    <td>Optional</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                            <td>newVisibleFontSets</td>
+                                                    
+                                                            <td>
+                                                                        <code>[]</code>
+                                                            </td>
+                                                    
+                                                        <td>
+                                                                No
+                                                        </td>
+                                                        
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                                </div>
+                        </td>
+                    </tr>
+            </tbody>
+        </table>
+</section>
+</div>
+
+
+
+
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="ra-icon-picker-container">  <div>    <mat-tab-group *ngIf="_fontListVisible" class="demo-tab-group">      <mat-tab *ngFor="let font of _fontListVisible" [label]="font.name">        <mat-grid-list cols="6" gutterSize="0" rowHeight="43">          <mat-grid-tile>            <div class="ra-icon-picker-clear-item" (click)="clearSelection()">              <mat-icon></mat-icon>            </div>          </mat-grid-tile>          <mat-grid-tile #iconsList *ngFor="let icon of font.icons">            <div class="ra-icon-picker-item" (click)="iconClick(icon, font.fontSet, font.useLigature)" [title]="icon.name" [ngClass]="{\'selected\': _selectedIcon && _selectedIcon.code === icon.code}">                <mat-icon fxFlex fxLayoutAlign="center center" *ngIf="!font.useLigature" [fontSet]="font.fontSet" [fontIcon]="icon.code"></mat-icon>                <mat-icon fxFlex fxLayoutAlign="center center" *ngIf="font.useLigature">{{icon.code}}</mat-icon>            </div>          </mat-grid-tile>        </mat-grid-list>      </mat-tab>    </mat-tab-group>  </div>  <div *ngIf="!_fontListVisible || _fontListVisible.length === 0">    <div class="ra-icon-picker-message">      <mat-icon>info</mat-icon> <span>{{\'RA_FTC_COMPONENTS.RA_FTC_ICON_PICKER.INVALID_CONFIGURATION\' | translate}}</span>    </div>  </div></div></div>'
+    var COMPONENTS = [{'name': 'BreadcrumbComponent', 'selector': 'ra-ftc-breadcrumb'},{'name': 'DatetimePickerComponent', 'selector': 'ra-ftc-datetime-picker'},{'name': 'DialogMessageComponent', 'selector': 'ra-ftc-dialog-message'},{'name': 'ExpansionPanel', 'selector': 'ra-ftc-expansion-panel'},{'name': 'ExpansionPanelHeader', 'selector': 'ra-ftc-expansion-panel-header'},{'name': 'ExpansionToolPanelComponent', 'selector': 'ra-ftc-expansion-tool-panel'},{'name': 'FileInputComponent', 'selector': 'ra-ftc-file-input'},{'name': 'IconPickerComponent', 'selector': 'ra-ftc-icon-picker'},{'name': 'IconPickerPopupContentComponent', 'selector': 'ra-ftc-icon-picker-popup-content'},{'name': 'LabelComponent', 'selector': 'ra-ftc-label'},{'name': 'MapComponent', 'selector': 'ra-ftc-map'},{'name': 'NavbarContextMenuComponent', 'selector': 'ra-ftc-navbar-context-menu'},{'name': 'PaletteColorPickerComponent', 'selector': 'ra-ftc-palette-color-picker'},{'name': 'PaletteColorPickerPopupContentComponent', 'selector': 'ra-ftc-palette-colorpicker-popup-content'},{'name': 'RasterImageComponent', 'selector': 'ra-ftc-raster-image'},{'name': 'SimpleIconPickerComponent', 'selector': 'ra-ftc-simple-icon-picker'},{'name': 'SimplePaletteColorPickerComponent', 'selector': 'ra-ftc-simple-palette-color-picker'},{'name': 'SimpleStandardColorPickerComponent', 'selector': 'ra-ftc-simple-standard-color-picker'},{'name': 'StandardColorPickerComponent', 'selector': 'ra-ftc-standard-color-picker'},{'name': 'StandardColorPickerPopupContentComponent', 'selector': 'ra-ftc-standard-colorpicker-popup-content'},{'name': 'StringValuePickerComponent', 'selector': 'ra-ftc-string-value-picker'},{'name': 'TruncateComponent', 'selector': 'ra-ftc-truncate'},{'name': 'ValuePickerContentComponent', 'selector': 'ra-ftc-value-picker-content'},{'name': 'ValueTableComponent', 'selector': 'ra-ftc-value-table'},{'name': 'ValueTitleComponent', 'selector': 'ra-ftc-value-title'},{'name': 'VerticalIconNavbarComponent', 'selector': 'ra-ftc-vertical-icon-navbar'}];
+    var DIRECTIVES = [{'name': 'Accordion', 'selector': 'ra-ftc-accordion'},{'name': 'ExpansionPanelActionRow', 'selector': 'ra-ftc-action-row'},{'name': 'ExpansionPanelContent', 'selector': 'ng-template[ExpansionPanelContent]'},{'name': 'ExpansionPanelHeaderContent', 'selector': 'ra-ftc-panel-header-content'},{'name': 'ExpansionPanelHeaderDescription', 'selector': 'ra-ftc-panel-header-description'},{'name': 'ExpansionPanelHeaderTitle', 'selector': 'ra-ftc-panel-header-title'},{'name': 'NavbarLabelWrapperDirective', 'selector': 'mat-toolbar-row[navbarLabelWrapper]'}];
+    var ACTUAL_COMPONENT = {'name': 'SimpleIconPickerComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'SimpleIconPickerComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

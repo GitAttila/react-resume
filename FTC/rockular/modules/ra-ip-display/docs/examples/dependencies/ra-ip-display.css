@@ -1,0 +1,3253 @@
+/********************************************************************************
+ * This file contains styles that provide behaviors similar to native mobile
+ * apps.  Users that are creating a mobile app should @import this file into
+ * their application's LESS file:
+ *
+ * @import (less) "./path/to/mobile-toolkit-ra-mobileapp.less"
+ */
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* make transparent link selection */
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 14px;
+}
+body {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -webkit-touch-callout: none;
+  margin: 0;
+  padding: 0;
+}
+.ra-flex-item-dynamic {
+  min-height: 1px;
+}
+.ra-transparent-background {
+  background-color: transparent;
+}
+.gridstack-placeholder {
+  visibility: hidden;
+}
+.ra-height-100 {
+  height: 100%;
+}
+.widget-info-msg {
+  position: relative;
+  display: table;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%) !important;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  text-align: center;
+}
+.widget-info-msg h1 {
+  margin: 10px 0;
+  color: #6d6e70;
+  text-align: center;
+}
+.widget-info-msg .highlight {
+  color: #000000;
+}
+.btn-lg {
+  border-radius: 0;
+}
+ra-ip-widget-wrapper .widget-wrapper {
+  padding: 8px;
+  /* If this value is changed, also the WIDGET_PADDING constant should be changed */
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.layout-planner ra-ip-widget-wrapper {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: auto;
+  margin-right: auto;
+}
+.layout-planner {
+  display: block;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.indicator_bulb {
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+}
+.indicator_innerBox {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%) !important;
+  -moz-transform: translateY(-50%);
+}
+.data-ra-ip-indicator {
+  position: relative;
+}
+.data-ra-ip-indicator:before {
+  font-family: ra-icons;
+  color: #6d6e70;
+  font-size: 1.5em;
+  content: "\e61b";
+}
+.textIndicator {
+  font-weight: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.indicator_label {
+  color: black;
+  font-weight: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.value-box-main {
+  text-align: center;
+  overflow: hidden !important;
+}
+.value-box {
+  display: inline-block;
+  vertical-align: top;
+}
+.value-box .inner-box {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%) !important;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+.value-box .caption {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 100%;
+  padding-bottom: 4px;
+}
+.value-box .value {
+  padding: 3px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0 auto;
+  min-height: 28px;
+}
+.data-ra-ip-value-box {
+  position: relative;
+}
+.data-ra-ip-value-box:before {
+  font-family: ra-icons;
+  color: #6d6e70;
+  font-size: 1.5em;
+  content: "\e61c";
+}
+w-image-indicator .w-image-indicator-text-only {
+  font-weight: bold;
+}
+w-image-indicator .w-image-indicator-caption {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+w-image-indicator .info-message-container {
+  width: 100%;
+  /* ie9 width fix for info message */
+  overflow: hidden;
+}
+.data-ra-ip-image-indicator {
+  position: relative;
+}
+.data-ra-ip-image-indicator:before {
+  font-family: ra-icons;
+  color: #6d6e70;
+  font-size: 1.5em;
+  content: "\e61b";
+}
+/*
+   raIpTrend
+*/
+.dropZone > ra-ip-trend,
+.dropZone > [ra-ip-trend],
+.dropZone > [data-ra-ip-trend] {
+  display: block;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+}
+.ra-ip-trend-title {
+  font-size: 1.2em;
+}
+.ra-ip-trend-title-btn {
+  padding: 0 0 0 0;
+  position: absolute!important;
+  top: -1rem;
+  right: 1rem;
+  border: 0;
+  z-index: 100;
+}
+.ra-ip-trend-title-btn span.ra-icon .ra-icon-drop-down {
+  font-size: 2em;
+  text-align: center;
+}
+.ra-ip-trend-title-block .open .ra-ip-trend-title-btn {
+  background-color: #a7a9ab;
+  color: white;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.ra-ip-trend-title-block .open .ra-ip-trend-title-btn:hover {
+  background-color: #a7a9ab;
+  color: #808284;
+  border-top: none;
+  border-bottom: none;
+}
+.ra-ip-trend-title-block .btn-lg {
+  font-size: 2em;
+  line-height: 80%;
+  border-top: none;
+  border-bottom: none;
+}
+.ra-ip-trend-menu {
+  position: absolute;
+  top: -1rem;
+  right: 3rem!important;
+  border: 1px solid #ffffff;
+  box-shadow: 0px 7px 12px 0px rgba(50, 50, 50, 0.3);
+  -ms-box-shadow: 0px 7px 12px 0px rgba(50, 50, 50, 0.3);
+  -o-box-shadow: 0px 7px 12px 0px rgba(50, 50, 50, 0.3);
+  font-size: 14px;
+  color: #ffffff;
+  padding: 0;
+  text-align: left;
+  margin-right: 0;
+  margin-top: 0;
+  border-top: none;
+}
+.ra-ip-trend-menu > li {
+  background-color: #a7a9ab;
+  padding: 5px 5px 5px 5px;
+  cursor: pointer;
+}
+.ra-ip-trend-menu > li > a {
+  color: #ffffff;
+  vertical-align: middle;
+  padding: 2px 5px;
+}
+.ra-ip-trend-menu > li > a > span {
+  float: left;
+  margin-top: -2px;
+  padding: 0 12px 0 0;
+  font-size: 1.6em;
+}
+.ra-ip-trend-menu > li > a:hover {
+  background-color: #6d6e71;
+  color: inherit;
+}
+.ra-ip-trend-menu > li:hover {
+  background-color: #6d6e71;
+}
+.ra-ip-trend-title-btn.ra-ip-trend-design-mode {
+  margin-right: 2rem;
+}
+.data-ra-ip-trend {
+  position: relative;
+}
+.data-ra-ip-trend:before {
+  font-family: ra-icons;
+  color: #6d6e70;
+  font-size: 1.5em;
+  content: "\e60b";
+}
+.legendItem {
+  padding-right: 5px;
+}
+.iconTrend:after {
+  font-family: ra-icons;
+  color: #6d6e70;
+  font-size: 0.8em;
+  content: "\e63f";
+}
+/*
+   End of raIpTrend
+*/
+/*
+ Copyright (c) Rockwell Automation 2016
+*/
+.data-ra-ip-vertical-gauge {
+  position: relative;
+}
+.data-ra-ip-vertical-gauge:before {
+  font-family: ra-icons;
+  color: #6d6e70;
+  font-size: 1.5em;
+  content: "\e63b";
+}
+.data-ra-ip-horizontal-gauge:before {
+  font-family: ra-icons;
+  color: #6d6e70;
+  font-size: 1.5em;
+  content: "\e685";
+}
+.vertical-center {
+  top: 50%;
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%) !important;
+  -moz-transform: translateY(-50%);
+  position: relative;
+}
+.ellipsis-label {
+  word-break: break-all;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ra-linear-gauge-title {
+  color: black;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ra-linear-gauge-value {
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  border: 1px solid #aaa;
+  background-color: #f5f5f5;
+  color: #666666;
+  border-radius: 3px;
+  display: inline-block;
+}
+.gauge-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.horizontal-gauge,
+.vertical-gauge {
+  border: 1px solid #D8D8D8;
+  box-sizing: content-box;
+}
+.vertical-gauge {
+  display: inline-block;
+  position: relative;
+}
+.vertical-gauge > div {
+  position: absolute;
+  transition: height 1s;
+}
+.horizontal-gauge > div {
+  transition: width 1s;
+}
+.vertical-scale {
+  display: inline-block;
+  vertical-align: top;
+  text-align: right;
+  position: relative;
+  padding-right: 5px;
+}
+.horizontal-max {
+  position: absolute;
+  right: 0;
+}
+.vertical-min {
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+}
+.horizontal-min {
+  position: absolute;
+  left: 0;
+}
+.linear-gauge-innerBox {
+  width: 100%;
+  height: 100%;
+}
+.linear-gauge-innerBox svg {
+  width: 100%;
+  height: 100%;
+}
+.gauge_tooltip_content {
+  text-align: left;
+}
+.gauge-outerBox {
+  display: block;
+  text-align: center;
+}
+.gauge-innerBox {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: auto;
+  margin-right: auto;
+}
+.gauge-innerBox svg {
+  width: 100%;
+  height: 100%;
+}
+.data-ra-gauge {
+  position: relative;
+}
+.data-ra-ip-gauge:before {
+  font-family: ra-icons;
+  color: #6d6e70;
+  font-size: 1.5em;
+  content: "\e61d";
+}
+.gauge_tooltip_content {
+  text-align: left;
+}
+/*
+   raIpDbQuery
+*/
+.ra-ip-db-query-container > div {
+  background-color: #ffffff;
+}
+.ra-ip-db-query-container #pagingControls {
+  background-color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.ra-ip-db-query-container #pagingControls #pagingControlsTotal {
+  top: 10px;
+  padding-left: 15px;
+}
+.dropZone > ra-ip-db-query,
+.dropZone > [ra-ip-db-query],
+.dropZone > [data-ra-ip-db-query] {
+  display: block;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+}
+.ra-ip-db-query,
+[ra-ip-db-query],
+[data-ra-ip-db-query] {
+  text-align: center;
+}
+.ra-ip-db-query .ui-grid-top-panel,
+[ra-ip-db-query] .ui-grid-top-panel,
+[data-ra-ip-db-query] .ui-grid-top-panel {
+  background: transparent;
+}
+.ra-ip-db-query .ui-grid,
+[ra-ip-db-query] .ui-grid,
+[data-ra-ip-db-query] .ui-grid {
+  border: none;
+}
+.ra-ip-db-query .ui-grid-row:nth-child(even) .ui-grid-cell,
+[ra-ip-db-query] .ui-grid-row:nth-child(even) .ui-grid-cell,
+[data-ra-ip-db-query] .ui-grid-row:nth-child(even) .ui-grid-cell {
+  background-color: transparent;
+}
+.ra-ip-db-query .ui-grid-row:nth-child(odd) .ui-grid-cell,
+[ra-ip-db-query] .ui-grid-row:nth-child(odd) .ui-grid-cell,
+[data-ra-ip-db-query] .ui-grid-row:nth-child(odd) .ui-grid-cell {
+  background-color: transparent;
+}
+.ra-ip-db-query .ui-grid-cell,
+[ra-ip-db-query] .ui-grid-cell,
+[data-ra-ip-db-query] .ui-grid-cell {
+  border: none;
+}
+.ra-ip-db-query .ui-grid-header-cell .ui-grid-vertical-bar,
+[ra-ip-db-query] .ui-grid-header-cell .ui-grid-vertical-bar,
+[data-ra-ip-db-query] .ui-grid-header-cell .ui-grid-vertical-bar,
+.ra-ip-db-query .ui-grid-cell .ui-grid-vertical-bar,
+[ra-ip-db-query] .ui-grid-cell .ui-grid-vertical-bar,
+[data-ra-ip-db-query] .ui-grid-cell .ui-grid-vertical-bar {
+  width: 0px;
+}
+.ra-ip-db-query .ui-grid-icon-down-dir:before,
+[ra-ip-db-query] .ui-grid-icon-down-dir:before,
+[data-ra-ip-db-query] .ui-grid-icon-down-dir:before {
+  content: '\e603';
+  font-family: 'ra-icons';
+}
+.ra-ip-db-query .ui-grid-icon-up-dir:before,
+[ra-ip-db-query] .ui-grid-icon-up-dir:before,
+[data-ra-ip-db-query] .ui-grid-icon-up-dir:before {
+  content: '\e604';
+  font-family: 'ra-icons';
+}
+.ra-ip-db-query .ui-grid-header-cell,
+[ra-ip-db-query] .ui-grid-header-cell,
+[data-ra-ip-db-query] .ui-grid-header-cell {
+  text-align: left;
+}
+/*
+Mixin function that applies height: 100% to
+- widget's root element (having class ra-flex-column)
+- the grid container (having class ra-flex-item-dynamic)
+*/
+.dropZone ra-ip-db-query div.ra-flex-column,
+.dropZone [ra-ip-db-query] div.ra-flex-column,
+.dropZone [data-ra-ip-db-query] div.ra-flex-column {
+  height: 100%;
+}
+.dropZone ra-ip-db-query div.ra-flex-item-dynamic.ra-ip-db-query-container,
+.dropZone [ra-ip-db-query] div.ra-flex-item-dynamic.ra-ip-db-query-container,
+.dropZone [data-ra-ip-db-query] div.ra-flex-item-dynamic.ra-ip-db-query-container {
+  height: 100%;
+}
+.dropZone ra-ip-data-grid div.ra-flex-column,
+.dropZone [ra-ip-data-grid] div.ra-flex-column,
+.dropZone [data-ra-ip-data-grid] div.ra-flex-column {
+  height: 100%;
+}
+.dropZone ra-ip-data-grid div.ra-flex-item-dynamic.ra-ip-data-grid-container,
+.dropZone [ra-ip-data-grid] div.ra-flex-item-dynamic.ra-ip-data-grid-container,
+.dropZone [data-ra-ip-data-grid] div.ra-flex-item-dynamic.ra-ip-data-grid-container {
+  height: 100%;
+}
+.ra-ip-db-query-last-column {
+  padding-right: 20px;
+}
+.ra-ip-db-query-number {
+  text-align: right;
+}
+.ra-ip-db-query-string {
+  text-align: left;
+}
+.ra-ip-db-query-datetime {
+  text-align: left;
+}
+.ra-ip-db-query-title {
+  font-size: 1.2em;
+}
+.ra-ip-db-query-footer {
+  font-size: 0.7em;
+}
+.ra-ip-db-query-title-btn {
+  padding: 0 0 0 0;
+  margin-right: 0.8em;
+}
+.ra-ip-db-query-title-btn span.ra-icon .ra-icon-drop-down {
+  font-size: 2em;
+  text-align: center;
+}
+.ra-ip-db-query-title-block .open .ra-ip-db-query-title-btn {
+  background-color: #a7a9ab;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.ra-ip-db-query-title-block .btn-lg {
+  font-size: 2em;
+  line-height: 80%;
+  border-top: none;
+  border-bottom: none;
+}
+.ra-ip-db-query-title-block .btn-lg:hover {
+  border-top: none;
+  border-bottom: none;
+}
+.ra-ip-db-query-menu {
+  border: 1px solid #ffffff;
+  box-shadow: 0px 7px 12px 0px rgba(50, 50, 50, 0.3);
+  -ms-box-shadow: 0px 7px 12px 0px rgba(50, 50, 50, 0.3);
+  -o-box-shadow: 0px 7px 12px 0px rgba(50, 50, 50, 0.3);
+  font-size: 14px;
+  color: #ffffff;
+  padding: 0;
+  text-align: left;
+  margin-right: 1.533em;
+  margin-top: 0;
+  border-top: none;
+}
+.ra-ip-db-query-menu > li {
+  background-color: #a7a9ab;
+  padding: 5px 5px 5px 5px;
+  cursor: pointer;
+}
+.ra-ip-db-query-menu > li > a {
+  color: #ffffff;
+  vertical-align: middle;
+  padding: 8px 8px;
+}
+.ra-ip-db-query-menu > li > a > span {
+  float: left;
+  margin-top: -2px;
+  padding: 0 12px 0 0;
+  font-size: 1.6em;
+}
+.ra-ip-db-query-menu > li > a:hover {
+  background-color: #6d6e71;
+  color: inherit;
+}
+.ra-ip-db-query-menu > li:hover {
+  background-color: #6d6e71;
+}
+.ra-ip-db-query-title-btn.ra-ip-db-query-design-mode {
+  margin-right: 2em;
+}
+.data-ra-ip-db-query {
+  position: relative;
+}
+.data-ra-ip-db-query:before {
+  font-family: ra-icons;
+  color: #6d6e70;
+  font-size: 1.5em;
+  content: "\e63a";
+}
+/*
+   End of raIpDbQuery
+*/
+/*
+   raIpDataGrid
+*/
+.ra-ip-data-grid-container > div {
+  background-color: #ffffff;
+}
+.grid-color_ef5d80 {
+  color: #ef5d80;
+}
+.grid-bg-color_ef5d80 {
+  background-color: #ef5d80 !important;
+}
+.grid-color_26a9e0 {
+  color: #26a9e0;
+}
+.grid-bg-color_26a9e0 {
+  background-color: #26a9e0 !important;
+}
+.grid-color_434348 {
+  color: #434348;
+}
+.grid-bg-color_434348 {
+  background-color: #434348 !important;
+}
+.grid-color_7f81be {
+  color: #7f81be;
+}
+.grid-bg-color_7f81be {
+  background-color: #7f81be !important;
+}
+.grid-color_138200 {
+  color: #138200;
+}
+.grid-bg-color_138200 {
+  background-color: #138200 !important;
+}
+.grid-color_f5a25c {
+  color: #f5a25c;
+}
+.grid-bg-color_f5a25c {
+  background-color: #f5a25c !important;
+}
+.grid-color_f5a25c {
+  color: #f5a25c;
+}
+.grid-bg-color_f5a25c {
+  background-color: #f5a25c !important;
+}
+.grid-color_0000ff {
+  color: #0000ff;
+}
+.grid-bg-color_0000ff {
+  background-color: #0000ff !important;
+}
+.grid-color_ffe5d2 {
+  color: #ffe5d2;
+}
+.grid-bg-color_ffe5d2 {
+  background-color: #ffe5d2 !important;
+}
+.grid-color_ffcca6 {
+  color: #ffcca6;
+}
+.grid-bg-color_ffcca6 {
+  background-color: #ffcca6 !important;
+}
+.grid-color_ffb279 {
+  color: #ffb279;
+}
+.grid-bg-color_ffb279 {
+  background-color: #ffb279 !important;
+}
+.grid-color_ff8021 {
+  color: #ff8021;
+}
+.grid-bg-color_ff8021 {
+  background-color: #ff8021 !important;
+}
+.grid-color_fdeada {
+  color: #fdeada;
+}
+.grid-bg-color_fdeada {
+  background-color: #fdeada !important;
+}
+.grid-color_fde5cc {
+  color: #fde5cc;
+}
+.grid-bg-color_fde5cc {
+  background-color: #fde5cc !important;
+}
+.grid-color_fcd9d3 {
+  color: #fcd9d3;
+}
+.grid-bg-color_fcd9d3 {
+  background-color: #fcd9d3 !important;
+}
+.grid-color_fbd5b5 {
+  color: #fbd5b5;
+}
+.grid-bg-color_fbd5b5 {
+  background-color: #fbd5b5 !important;
+}
+.grid-color_fbcb9a {
+  color: #fbcb9a;
+}
+.grid-bg-color_fbcb9a {
+  background-color: #fbcb9a !important;
+}
+.grid-color_fac090 {
+  color: #fac090;
+}
+.grid-bg-color_fac090 {
+  background-color: #fac090 !important;
+}
+.grid-color_f9b3a7 {
+  color: #f9b3a7;
+}
+.grid-bg-color_f9b3a7 {
+  background-color: #f9b3a7 !important;
+}
+.grid-color_f9b268 {
+  color: #f9b268;
+}
+.grid-bg-color_f9b268 {
+  background-color: #f9b268 !important;
+}
+.grid-color_f79646 {
+  color: #f79646;
+}
+.grid-bg-color_f79646 {
+  background-color: #f79646 !important;
+}
+.grid-color_f68c7b {
+  color: #f68c7b;
+}
+.grid-bg-color_f68c7b {
+  background-color: #f68c7b !important;
+}
+.grid-color_f2f2f2 {
+  color: #f2f2f2;
+}
+.grid-bg-color_f2f2f2 {
+  background-color: #f2f2f2 !important;
+}
+.grid-color_f2eadd {
+  color: #f2eadd;
+}
+.grid-bg-color_f2eadd {
+  background-color: #f2eadd !important;
+}
+.grid-color_f2dbdb {
+  color: #f2dbdb;
+}
+.grid-bg-color_f2dbdb {
+  background-color: #f2dbdb !important;
+}
+.grid-color_f2cdd1 {
+  color: #f2cdd1;
+}
+.grid-bg-color_f2cdd1 {
+  background-color: #f2cdd1 !important;
+}
+.grid-color_f14124 {
+  color: #f14124;
+}
+.grid-bg-color_f14124 {
+  background-color: #f14124 !important;
+}
+.grid-color_f07f09 {
+  color: #f07f09;
+}
+.grid-bg-color_f07f09 {
+  background-color: #f07f09 !important;
+}
+.grid-color_eeece1 {
+  color: #eeece1;
+}
+.grid-bg-color_eeece1 {
+  background-color: #eeece1 !important;
+}
+.grid-color_edfadc {
+  color: #edfadc;
+}
+.grid-bg-color_edfadc {
+  background-color: #edfadc !important;
+}
+.grid-color_ebf1dd {
+  color: #ebf1dd;
+}
+.grid-bg-color_ebf1dd {
+  background-color: #ebf1dd !important;
+}
+.grid-color_eaf4d7 {
+  color: #eaf4d7;
+}
+.grid-bg-color_eaf4d7 {
+  background-color: #eaf4d7 !important;
+}
+.grid-color_e6d5bc {
+  color: #e6d5bc;
+}
+.grid-bg-color_e6d5bc {
+  background-color: #e6d5bc !important;
+}
+.grid-color_e5e0ec {
+  color: #e5e0ec;
+}
+.grid-bg-color_e5e0ec {
+  background-color: #e5e0ec !important;
+}
+.grid-color_e5b9b7 {
+  color: #e5b9b7;
+}
+.grid-bg-color_e5b9b7 {
+  background-color: #e5b9b7 !important;
+}
+.grid-color_e59ca4 {
+  color: #e59ca4;
+}
+.grid-bg-color_e59ca4 {
+  background-color: #e59ca4 !important;
+}
+.grid-color_e3ded1 {
+  color: #e3ded1;
+}
+.grid-bg-color_e3ded1 {
+  background-color: #e3ded1 !important;
+}
+.grid-color_e36c09 {
+  color: #e36c09;
+}
+.grid-bg-color_e36c09 {
+  background-color: #e36c09 !important;
+}
+.grid-color_e2dfcc {
+  color: #e2dfcc;
+}
+.grid-bg-color_e2dfcc {
+  background-color: #e2dfcc !important;
+}
+.grid-color_dff0d3 {
+  color: #dff0d3;
+}
+.grid-bg-color_dff0d3 {
+  background-color: #dff0d3 !important;
+}
+.grid-color_dfd7e7 {
+  color: #dfd7e7;
+}
+.grid-bg-color_dfd7e7 {
+  background-color: #dfd7e7 !important;
+}
+.grid-color_def5ef {
+  color: #def5ef;
+}
+.grid-bg-color_def5ef {
+  background-color: #def5ef !important;
+}
+.grid-color_def4fc {
+  color: #def4fc;
+}
+.grid-bg-color_def4fc {
+  background-color: #def4fc !important;
+}
+.grid-color_ddd9c3 {
+  color: #ddd9c3;
+}
+.grid-bg-color_ddd9c3 {
+  background-color: #ddd9c3 !important;
+}
+.grid-color_dcf3fd {
+  color: #dcf3fd;
+}
+.grid-bg-color_dcf3fd {
+  background-color: #dcf3fd !important;
+}
+.grid-color_dbf6b9 {
+  color: #dbf6b9;
+}
+.grid-bg-color_dbf6b9 {
+  background-color: #dbf6b9 !important;
+}
+.grid-color_dbeff5 {
+  color: #dbeff5;
+}
+.grid-bg-color_dbeff5 {
+  background-color: #dbeff5 !important;
+}
+.grid-color_dbeef3 {
+  color: #dbeef3;
+}
+.grid-bg-color_dbeef3 {
+  background-color: #dbeef3 !important;
+}
+.grid-color_dbe5f1 {
+  color: #dbe5f1;
+}
+.grid-bg-color_dbe5f1 {
+  background-color: #dbe5f1 !important;
+}
+.grid-color_dbe0f3 {
+  color: #dbe0f3;
+}
+.grid-bg-color_dbe0f3 {
+  background-color: #dbe0f3 !important;
+}
+.grid-color_d9f2ec {
+  color: #d9f2ec;
+}
+.grid-bg-color_d9f2ec {
+  background-color: #d9f2ec !important;
+}
+.grid-color_d9ead5 {
+  color: #d9ead5;
+}
+.grid-bg-color_d9ead5 {
+  background-color: #d9ead5 !important;
+}
+.grid-color_d9c19b {
+  color: #d9c19b;
+}
+.grid-bg-color_d9c19b {
+  background-color: #d9c19b !important;
+}
+.grid-color_d99694 {
+  color: #d99694;
+}
+.grid-bg-color_d99694 {
+  background-color: #d99694 !important;
+}
+.grid-color_d8d8d8 {
+  color: #d8d8d8;
+}
+.grid-bg-color_d8d8d8 {
+  background-color: #d8d8d8 !important;
+}
+.grid-color_d86b77 {
+  color: #d86b77;
+}
+.grid-bg-color_d86b77 {
+  background-color: #d86b77 !important;
+}
+.grid-color_d85c00 {
+  color: #d85c00;
+}
+.grid-bg-color_d85c00 {
+  background-color: #d85c00 !important;
+}
+.grid-color_d6eaaf {
+  color: #d6eaaf;
+}
+.grid-bg-color_d6eaaf {
+  background-color: #d6eaaf !important;
+}
+.grid-color_d6e3bc {
+  color: #d6e3bc;
+}
+.grid-bg-color_d6e3bc {
+  background-color: #d6e3bc !important;
+}
+.grid-color_d6e1db {
+  color: #d6e1db;
+}
+.grid-bg-color_d6e1db {
+  background-color: #d6e1db !important;
+}
+.grid-color_d6d6d6 {
+  color: #d6d6d6;
+}
+.grid-bg-color_d6d6d6 {
+  background-color: #d6d6d6 !important;
+}
+.grid-color_d3f0e2 {
+  color: #d3f0e2;
+}
+.grid-bg-color_d3f0e2 {
+  background-color: #d3f0e2 !important;
+}
+.grid-color_d2cdb0 {
+  color: #d2cdb0;
+}
+.grid-bg-color_d2cdb0 {
+  background-color: #d2cdb0 !important;
+}
+.grid-color_d2cab5 {
+  color: #d2cab5;
+}
+.grid-bg-color_d2cab5 {
+  background-color: #d2cab5 !important;
+}
+.grid-color_ccc0d9 {
+  color: #ccc0d9;
+}
+.grid-bg-color_ccc0d9 {
+  background-color: #ccc0d9 !important;
+}
+.grid-color_caf297 {
+  color: #caf297;
+}
+.grid-bg-color_caf297 {
+  background-color: #caf297 !important;
+}
+.grid-color_c7cce4 {
+  color: #c7cce4;
+}
+.grid-bg-color_c7cce4 {
+  background-color: #c7cce4 !important;
+}
+.grid-color_c6d9f0 {
+  color: #c6d9f0;
+}
+.grid-bg-color_c6d9f0 {
+  background-color: #c6d9f0 !important;
+}
+.grid-color_c4e1f2 {
+  color: #c4e1f2;
+}
+.grid-bg-color_c4e1f2 {
+  background-color: #c4e1f2 !important;
+}
+.grid-color_c4bd97 {
+  color: #c4bd97;
+}
+.grid-bg-color_c4bd97 {
+  background-color: #c4bd97 !important;
+}
+.grid-color_c3d69b {
+  color: #c3d69b;
+}
+.grid-bg-color_c3d69b {
+  background-color: #c3d69b !important;
+}
+.grid-color_c3260c {
+  color: #c3260c;
+}
+.grid-bg-color_c3260c {
+  background-color: #c3260c !important;
+}
+.grid-color_c1df87 {
+  color: #c1df87;
+}
+.grid-bg-color_c1df87 {
+  background-color: #c1df87 !important;
+}
+.grid-color_c19859 {
+  color: #c19859;
+}
+.grid-bg-color_c19859 {
+  background-color: #c19859 !important;
+}
+.grid-color_c0504d {
+  color: #c0504d;
+}
+.grid-bg-color_c0504d {
+  background-color: #c0504d !important;
+}
+.grid-color_bfe2a8 {
+  color: #bfe2a8;
+}
+.grid-bg-color_bfe2a8 {
+  background-color: #bfe2a8 !important;
+}
+.grid-color_bfbfbf {
+  color: #bfbfbf;
+}
+.grid-bg-color_bfbfbf {
+  background-color: #bfbfbf !important;
+}
+.grid-color_bfafcf {
+  color: #bfafcf;
+}
+.grid-bg-color_bfafcf {
+  background-color: #bfafcf !important;
+}
+.grid-color_beebdf {
+  color: #beebdf;
+}
+.grid-bg-color_beebdf {
+  background-color: #beebdf !important;
+}
+.grid-color_beeafa {
+  color: #beeafa;
+}
+.grid-bg-color_beeafa {
+  background-color: #beeafa !important;
+}
+.grid-color_bbb387 {
+  color: #bbb387;
+}
+.grid-bg-color_bbb387 {
+  background-color: #bbb387 !important;
+}
+.grid-color_b9e6fc {
+  color: #b9e6fc;
+}
+.grid-bg-color_b9e6fc {
+  background-color: #b9e6fc !important;
+}
+.grid-color_b9ad8d {
+  color: #b9ad8d;
+}
+.grid-bg-color_b9ad8d {
+  background-color: #b9ad8d !important;
+}
+.grid-color_b8e0eb {
+  color: #b8e0eb;
+}
+.grid-bg-color_b8e0eb {
+  background-color: #b8e0eb !important;
+}
+.grid-color_b8cce4 {
+  color: #b8cce4;
+}
+.grid-bg-color_b8cce4 {
+  background-color: #b8cce4 !important;
+}
+.grid-color_b8c2e9 {
+  color: #b8c2e9;
+}
+.grid-bg-color_b8c2e9 {
+  background-color: #b8c2e9 !important;
+}
+.grid-color_b6dde8 {
+  color: #b6dde8;
+}
+.grid-bg-color_b6dde8 {
+  background-color: #b6dde8 !important;
+}
+.grid-color_b4e6da {
+  color: #b4e6da;
+}
+.grid-bg-color_b4e6da {
+  background-color: #b4e6da !important;
+}
+.grid-color_b4dcfa {
+  color: #b4dcfa;
+}
+.grid-bg-color_b4dcfa {
+  background-color: #b4dcfa !important;
+}
+.grid-color_b3d5ab {
+  color: #b3d5ab;
+}
+.grid-bg-color_b3d5ab {
+  background-color: #b3d5ab !important;
+}
+.grid-color_b35f06 {
+  color: #b35f06;
+}
+.grid-bg-color_b35f06 {
+  background-color: #b35f06 !important;
+}
+.grid-color_b2a2c7 {
+  color: #b2a2c7;
+}
+.grid-bg-color_b2a2c7 {
+  background-color: #b2a2c7 !important;
+}
+.grid-color_aec4b8 {
+  color: #aec4b8;
+}
+.grid-bg-color_aec4b8 {
+  background-color: #aec4b8 !important;
+}
+.grid-color_adadad {
+  color: #adadad;
+}
+.grid-bg-color_adadad {
+  background-color: #adadad !important;
+}
+.grid-color_a8e2c5 {
+  color: #a8e2c5;
+}
+.grid-bg-color_a8e2c5 {
+  background-color: #a8e2c5 !important;
+}
+.grid-color_a7ea52 {
+  color: #a7ea52;
+}
+.grid-bg-color_a7ea52 {
+  background-color: #a7ea52 !important;
+}
+.grid-color_a5a5a5 {
+  color: #a5a5a5;
+}
+.grid-bg-color_a5a5a5 {
+  background-color: #a5a5a5 !important;
+}
+.grid-color_9fd37c {
+  color: #9fd37c;
+}
+.grid-bg-color_9fd37c {
+  background-color: #9fd37c !important;
+}
+.grid-color_9f87b7 {
+  color: #9f87b7;
+}
+.grid-bg-color_9f87b7 {
+  background-color: #9f87b7 !important;
+}
+.grid-color_9f2936 {
+  color: #9f2936;
+}
+.grid-bg-color_9f2936 {
+  background-color: #9f2936 !important;
+}
+.grid-color_9ee0f7 {
+  color: #9ee0f7;
+}
+.grid-bg-color_9ee0f7 {
+  background-color: #9ee0f7 !important;
+}
+.grid-color_9de1cf {
+  color: #9de1cf;
+}
+.grid-bg-color_9de1cf {
+  background-color: #9de1cf !important;
+}
+.grid-color_9bbb59 {
+  color: #9bbb59;
+}
+.grid-bg-color_9bbb59 {
+  background-color: #9bbb59 !important;
+}
+.grid-color_99cb38 {
+  color: #99cb38;
+}
+.grid-bg-color_99cb38 {
+  background-color: #99cb38 !important;
+}
+.grid-color_997339 {
+  color: #997339;
+}
+.grid-bg-color_997339 {
+  background-color: #997339 !important;
+}
+.grid-color_974806 {
+  color: #974806;
+}
+.grid-bg-color_974806 {
+  background-color: #974806 !important;
+}
+.grid-color_96dafb {
+  color: #96dafb;
+}
+.grid-bg-color_96dafb {
+  background-color: #96dafb !important;
+}
+.grid-color_95b3d7 {
+  color: #95b3d7;
+}
+.grid-bg-color_95b3d7 {
+  background-color: #95b3d7 !important;
+}
+.grid-color_953734 {
+  color: #953734;
+}
+.grid-bg-color_953734 {
+  background-color: #953734 !important;
+}
+.grid-color_94d1e2 {
+  color: #94d1e2;
+}
+.grid-bg-color_94d1e2 {
+  background-color: #94d1e2 !important;
+}
+.grid-color_94a3de {
+  color: #94a3de;
+}
+.grid-bg-color_94a3de {
+  background-color: #94a3de !important;
+}
+.grid-color_93cddc {
+  color: #93cddc;
+}
+.grid-bg-color_93cddc {
+  background-color: #93cddc !important;
+}
+.grid-color_938953 {
+  color: #938953;
+}
+.grid-bg-color_938953 {
+  background-color: #938953 !important;
+}
+.grid-color_909aca {
+  color: #909aca;
+}
+.grid-bg-color_909aca {
+  background-color: #909aca !important;
+}
+.grid-color_903d00 {
+  color: #903d00;
+}
+.grid-bg-color_903d00 {
+  background-color: #903d00 !important;
+}
+.grid-color_8ed9c7 {
+  color: #8ed9c7;
+}
+.grid-bg-color_8ed9c7 {
+  background-color: #8ed9c7 !important;
+}
+.grid-color_8dc182 {
+  color: #8dc182;
+}
+.grid-bg-color_8dc182 {
+  background-color: #8dc182 !important;
+}
+.grid-color_8db3e2 {
+  color: #8db3e2;
+}
+.grid-bg-color_8db3e2 {
+  background-color: #8db3e2 !important;
+}
+.grid-color_8bc9f7 {
+  color: #8bc9f7;
+}
+.grid-bg-color_8bc9f7 {
+  background-color: #8bc9f7 !important;
+}
+.grid-color_89c3e5 {
+  color: #89c3e5;
+}
+.grid-bg-color_89c3e5 {
+  background-color: #89c3e5 !important;
+}
+.grid-color_89814d {
+  color: #89814d;
+}
+.grid-bg-color_89814d {
+  background-color: #89814d !important;
+}
+.grid-color_877852 {
+  color: #877852;
+}
+.grid-bg-color_877852 {
+  background-color: #877852 !important;
+}
+.grid-color_86a795 {
+  color: #86a795;
+}
+.grid-bg-color_86a795 {
+  background-color: #86a795 !important;
+}
+.grid-color_848484 {
+  color: #848484;
+}
+.grid-bg-color_848484 {
+  background-color: #848484 !important;
+}
+.grid-color_821908 {
+  color: #821908;
+}
+.grid-bg-color_821908 {
+  background-color: #821908 !important;
+}
+.grid-color_81d319 {
+  color: #81d319;
+}
+.grid-bg-color_81d319 {
+  background-color: #81d319 !important;
+}
+.grid-color_8064a2 {
+  color: #8064a2;
+}
+.grid-bg-color_8064a2 {
+  background-color: #8064a2 !important;
+}
+.grid-color_7dd4a8 {
+  color: #7dd4a8;
+}
+.grid-bg-color_7dd4a8 {
+  background-color: #7dd4a8 !important;
+}
+.grid-color_783f04 {
+  color: #783f04;
+}
+.grid-bg-color_783f04 {
+  background-color: #783f04 !important;
+}
+.grid-color_771e28 {
+  color: #771e28;
+}
+.grid-bg-color_771e28 {
+  background-color: #771e28 !important;
+}
+.grid-color_76923c {
+  color: #76923c;
+}
+.grid-bg-color_76923c {
+  background-color: #76923c !important;
+}
+.grid-color_739a28 {
+  color: #739a28;
+}
+.grid-bg-color_739a28 {
+  background-color: #739a28 !important;
+}
+.grid-color_664d26 {
+  color: #664d26;
+}
+.grid-bg-color_664d26 {
+  background-color: #664d26 !important;
+}
+.grid-color_63a537 {
+  color: #63a537;
+}
+.grid-bg-color_63a537 {
+  background-color: #63a537 !important;
+}
+.grid-color_632423 {
+  color: #632423;
+}
+.grid-bg-color_632423 {
+  background-color: #632423 !important;
+}
+.grid-color_604878 {
+  color: #604878;
+}
+.grid-bg-color_604878 {
+  background-color: #604878 !important;
+}
+.grid-color_5f497a {
+  color: #5f497a;
+}
+.grid-bg-color_5f497a {
+  background-color: #5f497a !important;
+}
+.grid-color_5eccf3 {
+  color: #5eccf3;
+}
+.grid-bg-color_5eccf3 {
+  background-color: #5eccf3 !important;
+}
+.grid-color_5dceaf {
+  color: #5dceaf;
+}
+.grid-bg-color_5dceaf {
+  background-color: #5dceaf !important;
+}
+.grid-color_5967af {
+  color: #5967af;
+}
+.grid-bg-color_5967af {
+  background-color: #5967af !important;
+}
+.grid-color_595959 {
+  color: #595959;
+}
+.grid-bg-color_595959 {
+  background-color: #595959 !important;
+}
+.grid-color_568c11 {
+  color: #568c11;
+}
+.grid-bg-color_568c11 {
+  background-color: #568c11 !important;
+}
+.grid-color_548dd4 {
+  color: #548dd4;
+}
+.grid-bg-color_548dd4 {
+  background-color: #548dd4 !important;
+}
+.grid-color_51c3f9 {
+  color: #51c3f9;
+}
+.grid-bg-color_51c3f9 {
+  background-color: #51c3f9 !important;
+}
+.grid-color_4facf3 {
+  color: #4facf3;
+}
+.grid-bg-color_4facf3 {
+  background-color: #4facf3 !important;
+}
+.grid-color_4f81bd {
+  color: #4f81bd;
+}
+.grid-bg-color_4f81bd {
+  background-color: #4f81bd !important;
+}
+.grid-color_4f6128 {
+  color: #4f6128;
+}
+.grid-bg-color_4f6128 {
+  background-color: #4f6128 !important;
+}
+.grid-color_4f141a {
+  color: #4f141a;
+}
+.grid-bg-color_4f141a {
+  background-color: #4f141a !important;
+}
+.grid-color_4eb3cf {
+  color: #4eb3cf;
+}
+.grid-bg-color_4eb3cf {
+  background-color: #4eb3cf !important;
+}
+.grid-color_4ea5d8 {
+  color: #4ea5d8;
+}
+.grid-bg-color_4ea5d8 {
+  background-color: #4ea5d8 !important;
+}
+.grid-color_4e8542 {
+  color: #4e8542;
+}
+.grid-bg-color_4e8542 {
+  background-color: #4e8542 !important;
+}
+.grid-color_4e67c8 {
+  color: #4e67c8;
+}
+.grid-bg-color_4e67c8 {
+  background-color: #4e67c8 !important;
+}
+.grid-color_4c661a {
+  color: #4c661a;
+}
+.grid-bg-color_4c661a {
+  background-color: #4c661a !important;
+}
+.grid-color_4bacc6 {
+  color: #4bacc6;
+}
+.grid-bg-color_4bacc6 {
+  background-color: #4bacc6 !important;
+}
+.grid-color_4a7b29 {
+  color: #4a7b29;
+}
+.grid-bg-color_4a7b29 {
+  background-color: #4a7b29 !important;
+}
+.grid-color_494429 {
+  color: #494429;
+}
+.grid-bg-color_494429 {
+  background-color: #494429 !important;
+}
+.grid-color_473659 {
+  color: #473659;
+}
+.grid-bg-color_473659 {
+  background-color: #473659 !important;
+}
+.grid-color_455f51 {
+  color: #455f51;
+}
+.grid-bg-color_455f51 {
+  background-color: #455f51 !important;
+}
+.grid-color_44c1a3 {
+  color: #44c1a3;
+}
+.grid-bg-color_44c1a3 {
+  background-color: #44c1a3 !important;
+}
+.grid-color_444026 {
+  color: #444026;
+}
+.grid-bg-color_444026 {
+  background-color: #444026 !important;
+}
+.grid-color_433c29 {
+  color: #433c29;
+}
+.grid-bg-color_433c29 {
+  background-color: #433c29 !important;
+}
+.grid-color_3f3f3f {
+  color: #3f3f3f;
+}
+.grid-bg-color_3f3f3f {
+  background-color: #3f3f3f !important;
+}
+.grid-color_3f3151 {
+  color: #3f3151;
+}
+.grid-bg-color_3f3151 {
+  background-color: #3f3151 !important;
+}
+.grid-color_3a6331 {
+  color: #3a6331;
+}
+.grid-bg-color_3a6331 {
+  background-color: #3a6331 !important;
+}
+.grid-color_37a76f {
+  color: #37a76f;
+}
+.grid-bg-color_37a76f {
+  background-color: #37a76f !important;
+}
+.grid-color_366092 {
+  color: #366092;
+}
+.grid-bg-color_366092 {
+  background-color: #366092 !important;
+}
+.grid-color_34ac8b {
+  color: #34ac8b;
+}
+.grid-bg-color_34ac8b {
+  background-color: #34ac8b !important;
+}
+.grid-color_33473c {
+  color: #33473c;
+}
+.grid-bg-color_33473c {
+  background-color: #33473c !important;
+}
+.grid-color_323232 {
+  color: #323232;
+}
+.grid-bg-color_323232 {
+  background-color: #323232 !important;
+}
+.grid-color_31859b {
+  color: #31859b;
+}
+.grid-bg-color_31859b {
+  background-color: #31859b !important;
+}
+.grid-color_31521b {
+  color: #31521b;
+}
+.grid-bg-color_31521b {
+  background-color: #31521b !important;
+}
+.grid-color_31479f {
+  color: #31479f;
+}
+.grid-bg-color_31479f {
+  background-color: #31479f !important;
+}
+.grid-color_30937b {
+  color: #30937b;
+}
+.grid-bg-color_30937b {
+  background-color: #30937b !important;
+}
+.grid-color_2f243c {
+  color: #2f243c;
+}
+.grid-bg-color_2f243c {
+  background-color: #2f243c !important;
+}
+.grid-color_2d8da8 {
+  color: #2d8da8;
+}
+.grid-bg-color_2d8da8 {
+  background-color: #2d8da8 !important;
+}
+.grid-color_297d53 {
+  color: #297d53;
+}
+.grid-bg-color_297d53 {
+  background-color: #297d53 !important;
+}
+.grid-color_274221 {
+  color: #274221;
+}
+.grid-bg-color_274221 {
+  background-color: #274221 !important;
+}
+.grid-color_262626 {
+  color: #262626;
+}
+.grid-bg-color_262626 {
+  background-color: #262626 !important;
+}
+.grid-color_252525 {
+  color: #252525;
+}
+.grid-bg-color_252525 {
+  background-color: #252525 !important;
+}
+.grid-color_244061 {
+  color: #244061;
+}
+.grid-bg-color_244061 {
+  background-color: #244061 !important;
+}
+.grid-color_22725c {
+  color: #22725c;
+}
+.grid-bg-color_22725c {
+  background-color: #22725c !important;
+}
+.grid-color_222f28 {
+  color: #222f28;
+}
+.grid-bg-color_222f28 {
+  background-color: #222f28 !important;
+}
+.grid-color_212745 {
+  color: #212745;
+}
+.grid-bg-color_212745 {
+  background-color: #212745 !important;
+}
+.grid-color_206252 {
+  color: #206252;
+}
+.grid-bg-color_206252 {
+  background-color: #206252 !important;
+}
+.grid-color_205867 {
+  color: #205867;
+}
+.grid-bg-color_205867 {
+  background-color: #205867 !important;
+}
+.grid-color_202f6a {
+  color: #202f6a;
+}
+.grid-bg-color_202f6a {
+  background-color: #202f6a !important;
+}
+.grid-color_1f497d {
+  color: #1f497d;
+}
+.grid-bg-color_1f497d {
+  background-color: #1f497d !important;
+}
+.grid-color_1e5e70 {
+  color: #1e5e70;
+}
+.grid-bg-color_1e5e70 {
+  background-color: #1e5e70 !important;
+}
+.grid-color_1d1b10 {
+  color: #1d1b10;
+}
+.grid-bg-color_1d1b10 {
+  background-color: #1d1b10 !important;
+}
+.grid-color_1b587c {
+  color: #1b587c;
+}
+.grid-bg-color_1b587c {
+  background-color: #1b587c !important;
+}
+.grid-color_1b5337 {
+  color: #1b5337;
+}
+.grid-bg-color_1b5337 {
+  background-color: #1b5337 !important;
+}
+.grid-color_1b190f {
+  color: #1b190f;
+}
+.grid-bg-color_1b190f {
+  background-color: #1b190f !important;
+}
+.grid-color_1b1810 {
+  color: #1b1810;
+}
+.grid-bg-color_1b1810 {
+  background-color: #1b1810 !important;
+}
+.grid-color_191919 {
+  color: #191919;
+}
+.grid-bg-color_191919 {
+  background-color: #191919 !important;
+}
+.grid-color_181d33 {
+  color: #181d33;
+}
+.grid-bg-color_181d33 {
+  background-color: #181d33 !important;
+}
+.grid-color_17365d {
+  color: #17365d;
+}
+.grid-bg-color_17365d {
+  background-color: #17365d !important;
+}
+.grid-color_14415d {
+  color: #14415d;
+}
+.grid-bg-color_14415d {
+  background-color: #14415d !important;
+}
+.grid-color_11b2eb {
+  color: #11b2eb;
+}
+.grid-bg-color_11b2eb {
+  background-color: #11b2eb !important;
+}
+.grid-color_101322 {
+  color: #101322;
+}
+.grid-bg-color_101322 {
+  background-color: #101322 !important;
+}
+.grid-color_0f243e {
+  color: #0f243e;
+}
+.grid-bg-color_0f243e {
+  background-color: #0f243e !important;
+}
+.grid-color_0d78c9 {
+  color: #0d78c9;
+}
+.grid-bg-color_0d78c9 {
+  background-color: #0d78c9 !important;
+}
+.grid-color_0d2b3e {
+  color: #0d2b3e;
+}
+.grid-bg-color_0d2b3e {
+  background-color: #0d2b3e !important;
+}
+.grid-color_0c0c0c {
+  color: #0c0c0c;
+}
+.grid-bg-color_0c0c0c {
+  background-color: #0c0c0c !important;
+}
+.grid-color_0b769c {
+  color: #0b769c;
+}
+.grid-bg-color_0b769c {
+  background-color: #0b769c !important;
+}
+.grid-color_08a4ef {
+  color: #08a4ef;
+}
+.grid-bg-color_08a4ef {
+  background-color: #08a4ef !important;
+}
+.grid-color_063c64 {
+  color: #063c64;
+}
+.grid-bg-color_063c64 {
+  background-color: #063c64 !important;
+}
+.grid-color_056d9f {
+  color: #056d9f;
+}
+.grid-bg-color_056d9f {
+  background-color: #056d9f !important;
+}
+.grid-color_021828 {
+  color: #021828;
+}
+.grid-bg-color_021828 {
+  background-color: #021828 !important;
+}
+.grid-color_00a2e8 {
+  color: #00a2e8;
+}
+.grid-bg-color_00a2e8 {
+  background-color: #00a2e8 !important;
+}
+.grid-color_99d9ea {
+  color: #99d9ea;
+}
+.grid-bg-color_99d9ea {
+  background-color: #99d9ea !important;
+}
+.grid-color_a349a4 {
+  color: #a349a4;
+}
+.grid-bg-color_a349a4 {
+  background-color: #a349a4 !important;
+}
+.grid-color_c8bfe7 {
+  color: #c8bfe7;
+}
+.grid-bg-color_c8bfe7 {
+  background-color: #c8bfe7 !important;
+}
+.grid-color_22b14c {
+  color: #22b14c;
+}
+.grid-bg-color_22b14c {
+  background-color: #22b14c !important;
+}
+.grid-color_b5e61d {
+  color: #b5e61d;
+}
+.grid-bg-color_b5e61d {
+  background-color: #b5e61d !important;
+}
+.grid-color_3f48cc {
+  color: #3f48cc;
+}
+.grid-bg-color_3f48cc {
+  background-color: #3f48cc !important;
+}
+.grid-color_7092be {
+  color: #7092be;
+}
+.grid-bg-color_7092be {
+  background-color: #7092be !important;
+}
+.grid-color_fff200 {
+  color: #fff200;
+}
+.grid-bg-color_fff200 {
+  background-color: #fff200 !important;
+}
+.grid-color_efe4b0 {
+  color: #efe4b0;
+}
+.grid-bg-color_efe4b0 {
+  background-color: #efe4b0 !important;
+}
+.grid-color_880015 {
+  color: #880015;
+}
+.grid-bg-color_880015 {
+  background-color: #880015 !important;
+}
+.grid-color_b97a57 {
+  color: #b97a57;
+}
+.grid-bg-color_b97a57 {
+  background-color: #b97a57 !important;
+}
+.grid-color_ff7f27 {
+  color: #ff7f27;
+}
+.grid-bg-color_ff7f27 {
+  background-color: #ff7f27 !important;
+}
+.grid-color_ffc90e {
+  color: #ffc90e;
+}
+.grid-bg-color_ffc90e {
+  background-color: #ffc90e !important;
+}
+.grid-color_7f7f7f {
+  color: #7f7f7f;
+}
+.grid-bg-color_7f7f7f {
+  background-color: #7f7f7f !important;
+}
+.grid-color_c3c3c3 {
+  color: #c3c3c3;
+}
+.grid-bg-color_c3c3c3 {
+  background-color: #c3c3c3 !important;
+}
+.grid-color_ed1c24 {
+  color: #ed1c24;
+}
+.grid-bg-color_ed1c24 {
+  background-color: #ed1c24 !important;
+}
+.grid-color_ffaec9 {
+  color: #ffaec9;
+}
+.grid-bg-color_ffaec9 {
+  background-color: #ffaec9 !important;
+}
+.grid-color_000000 {
+  color: #000000;
+}
+.grid-bg-color_000000 {
+  background-color: #000000 !important;
+}
+.grid-color_ffffff {
+  color: #ffffff;
+}
+.grid-bg-color_ffffff {
+  background-color: #ffffff !important;
+}
+ra-ip-data-grid ra-ip-widget-header {
+  margin-bottom: 0.5rem;
+}
+.ra-ip-data-grid,
+[ra-ip-data-grid],
+[data-ra-ip-data-grid] {
+  text-align: center;
+}
+.ra-ip-data-grid .ui-grid-top-panel,
+[ra-ip-data-grid] .ui-grid-top-panel,
+[data-ra-ip-data-grid] .ui-grid-top-panel {
+  background: transparent;
+}
+.ra-ip-data-grid .ui-grid,
+[ra-ip-data-grid] .ui-grid,
+[data-ra-ip-data-grid] .ui-grid {
+  border: none;
+}
+.ra-ip-data-grid .ui-grid-row:nth-child(even) .ui-grid-cell,
+[ra-ip-data-grid] .ui-grid-row:nth-child(even) .ui-grid-cell,
+[data-ra-ip-data-grid] .ui-grid-row:nth-child(even) .ui-grid-cell {
+  background-color: transparent;
+}
+.ra-ip-data-grid .ui-grid-row:nth-child(odd) .ui-grid-cell,
+[ra-ip-data-grid] .ui-grid-row:nth-child(odd) .ui-grid-cell,
+[data-ra-ip-data-grid] .ui-grid-row:nth-child(odd) .ui-grid-cell {
+  background-color: transparent;
+}
+.ra-ip-data-grid .ui-grid-cell,
+[ra-ip-data-grid] .ui-grid-cell,
+[data-ra-ip-data-grid] .ui-grid-cell {
+  border: none;
+}
+.ra-ip-data-grid .ui-grid-header-cell .ui-grid-vertical-bar,
+[ra-ip-data-grid] .ui-grid-header-cell .ui-grid-vertical-bar,
+[data-ra-ip-data-grid] .ui-grid-header-cell .ui-grid-vertical-bar,
+.ra-ip-data-grid .ui-grid-cell .ui-grid-vertical-bar,
+[ra-ip-data-grid] .ui-grid-cell .ui-grid-vertical-bar,
+[data-ra-ip-data-grid] .ui-grid-cell .ui-grid-vertical-bar {
+  width: 0px;
+}
+.ra-ip-data-grid .ui-grid-icon-down-dir:before,
+[ra-ip-data-grid] .ui-grid-icon-down-dir:before,
+[data-ra-ip-data-grid] .ui-grid-icon-down-dir:before {
+  content: '\e603';
+  font-family: 'ra-icons';
+}
+.ra-ip-data-grid .ui-grid-icon-up-dir:before,
+[ra-ip-data-grid] .ui-grid-icon-up-dir:before,
+[data-ra-ip-data-grid] .ui-grid-icon-up-dir:before {
+  content: '\e604';
+  font-family: 'ra-icons';
+}
+.ra-ip-data-grid .ui-grid-header-cell,
+[ra-ip-data-grid] .ui-grid-header-cell,
+[data-ra-ip-data-grid] .ui-grid-header-cell {
+  text-align: left;
+}
+.ra-ip-data-grid .overflow-x-auto .ui-grid-viewport,
+[ra-ip-data-grid] .overflow-x-auto .ui-grid-viewport,
+[data-ra-ip-data-grid] .overflow-x-auto .ui-grid-viewport {
+  overflow-x: auto !important;
+}
+/*
+Mixin function that applies height: 100% to
+- widget's root element (having class ra-flex-column)
+- the grid container (having class ra-flex-item-dynamic)
+*/
+.dropZone ra-ip-db-query div.ra-flex-column,
+.dropZone [ra-ip-db-query] div.ra-flex-column,
+.dropZone [data-ra-ip-db-query] div.ra-flex-column {
+  height: 100%;
+}
+.dropZone ra-ip-db-query div.ra-flex-item-dynamic.ra-ip-db-query-container,
+.dropZone [ra-ip-db-query] div.ra-flex-item-dynamic.ra-ip-db-query-container,
+.dropZone [data-ra-ip-db-query] div.ra-flex-item-dynamic.ra-ip-db-query-container {
+  height: 100%;
+}
+.dropZone ra-ip-data-grid div.ra-flex-column,
+.dropZone [ra-ip-data-grid] div.ra-flex-column,
+.dropZone [data-ra-ip-data-grid] div.ra-flex-column {
+  height: 100%;
+}
+.dropZone ra-ip-data-grid div.ra-flex-item-dynamic.ra-ip-data-grid-container,
+.dropZone [ra-ip-data-grid] div.ra-flex-item-dynamic.ra-ip-data-grid-container,
+.dropZone [data-ra-ip-data-grid] div.ra-flex-item-dynamic.ra-ip-data-grid-container {
+  height: 100%;
+}
+.ra-ip-data-grid-number {
+  text-align: right;
+}
+.ra-ip-data-grid-title {
+  font-size: 1.2em;
+}
+.ra-ip-data-grid-footer {
+  font-size: 0.7em;
+}
+.ra-ip-data-grid-title-btn {
+  padding: 0 0 0 0;
+  margin-right: 0.8em;
+}
+.ra-ip-data-grid-title-btn span.ra-icon .ra-icon-drop-down {
+  font-size: 2em;
+  text-align: center;
+}
+.ra-ip-data-grid-title-block .open .ra-ip-data-grid-title-btn {
+  background-color: #a7a9ab;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.ra-ip-data-grid-title-block .btn-lg {
+  font-size: 2em;
+  line-height: 80%;
+  border-top: none;
+  border-bottom: none;
+}
+.ra-ip-data-grid-title-block .btn-lg:hover {
+  border-top: none;
+  border-bottom: none;
+}
+div#pagingControls {
+  margin-bottom: 0px !important;
+}
+.data-ra-ip-data-grid {
+  position: relative;
+}
+.data-ra-ip-data-grid:before {
+  font-family: ra-icons;
+  color: #6d6e70;
+  font-size: 1.5em;
+  content: "\e645";
+}
+/*
+   End of raIpDataGrid
+*/
+ra-ip-alarm-state-screen .ra-ip-data-grid-container > div {
+  background-color: #ffffff;
+}
+.dropZone > ra-ip-alarm-state-screen,
+.dropZone > [ra-ip-alarm-state-screen],
+.dropZone > [data-ra-ip-alarm-state-screen] {
+  display: block;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+}
+.dropZone .ra-ip-alarm-state-screen div.ra-flex-column,
+.dropZone [ra-ip-alarm-state-screen] div.ra-flex-column,
+.dropZone [data-ra-ip-alarm-state-screen] div.ra-flex-column,
+.dropZone ra-ip-alarm-state-screen div.ra-flex-column {
+  height: 100%;
+}
+.dropZone .ra-ip-alarm-state-screen div.ra-flex-item-dynamic.ra-ip-data-grid-container,
+.dropZone [ra-ip-alarm-state-screen] div.ra-flex-item-dynamic.ra-ip-data-grid-container,
+.dropZone [data-ra-ip-alarm-state-screen] div.ra-flex-item-dynamic.ra-ip-data-grid-container,
+.dropZone ra-ip-alarm-state-screen div.ra-flex-item-dynamic.ra-ip-data-grid-container {
+  height: 100%;
+}
+.ra-ip-alarm-state-screen,
+[ra-ip-alarm-state-screen],
+[data-ra-ip-alarm-state-screen],
+data-ra-ip-alarm-state-screen,
+ra-ip-alarm-state-screen {
+  padding: 5px 5px 0 5px;
+}
+.ra-ip-alarm-state-screen .ui-grid-top-panel,
+[ra-ip-alarm-state-screen] .ui-grid-top-panel,
+[data-ra-ip-alarm-state-screen] .ui-grid-top-panel,
+data-ra-ip-alarm-state-screen .ui-grid-top-panel,
+ra-ip-alarm-state-screen .ui-grid-top-panel {
+  background: transparent;
+}
+.ra-ip-alarm-state-screen .ui-grid,
+[ra-ip-alarm-state-screen] .ui-grid,
+[data-ra-ip-alarm-state-screen] .ui-grid,
+data-ra-ip-alarm-state-screen .ui-grid,
+ra-ip-alarm-state-screen .ui-grid {
+  border: none;
+}
+.ra-ip-alarm-state-screen .ui-grid-row:nth-child(even) .ui-grid-cell,
+[ra-ip-alarm-state-screen] .ui-grid-row:nth-child(even) .ui-grid-cell,
+[data-ra-ip-alarm-state-screen] .ui-grid-row:nth-child(even) .ui-grid-cell,
+data-ra-ip-alarm-state-screen .ui-grid-row:nth-child(even) .ui-grid-cell,
+ra-ip-alarm-state-screen .ui-grid-row:nth-child(even) .ui-grid-cell {
+  background-color: transparent;
+}
+.ra-ip-alarm-state-screen .ui-grid-row:nth-child(odd) .ui-grid-cell,
+[ra-ip-alarm-state-screen] .ui-grid-row:nth-child(odd) .ui-grid-cell,
+[data-ra-ip-alarm-state-screen] .ui-grid-row:nth-child(odd) .ui-grid-cell,
+data-ra-ip-alarm-state-screen .ui-grid-row:nth-child(odd) .ui-grid-cell,
+ra-ip-alarm-state-screen .ui-grid-row:nth-child(odd) .ui-grid-cell {
+  background-color: transparent;
+}
+.ra-ip-alarm-state-screen .ui-grid-cell,
+[ra-ip-alarm-state-screen] .ui-grid-cell,
+[data-ra-ip-alarm-state-screen] .ui-grid-cell,
+data-ra-ip-alarm-state-screen .ui-grid-cell,
+ra-ip-alarm-state-screen .ui-grid-cell {
+  border: none;
+}
+.ra-ip-alarm-state-screen .ui-grid-header-cell .ui-grid-vertical-bar,
+[ra-ip-alarm-state-screen] .ui-grid-header-cell .ui-grid-vertical-bar,
+[data-ra-ip-alarm-state-screen] .ui-grid-header-cell .ui-grid-vertical-bar,
+data-ra-ip-alarm-state-screen .ui-grid-header-cell .ui-grid-vertical-bar,
+ra-ip-alarm-state-screen .ui-grid-header-cell .ui-grid-vertical-bar,
+.ra-ip-alarm-state-screen .ui-grid-cell .ui-grid-vertical-bar,
+[ra-ip-alarm-state-screen] .ui-grid-cell .ui-grid-vertical-bar,
+[data-ra-ip-alarm-state-screen] .ui-grid-cell .ui-grid-vertical-bar,
+data-ra-ip-alarm-state-screen .ui-grid-cell .ui-grid-vertical-bar,
+ra-ip-alarm-state-screen .ui-grid-cell .ui-grid-vertical-bar {
+  width: 0px;
+}
+.ra-ip-alarm-state-screen .ui-grid-icon-down-dir:before,
+[ra-ip-alarm-state-screen] .ui-grid-icon-down-dir:before,
+[data-ra-ip-alarm-state-screen] .ui-grid-icon-down-dir:before,
+data-ra-ip-alarm-state-screen .ui-grid-icon-down-dir:before,
+ra-ip-alarm-state-screen .ui-grid-icon-down-dir:before {
+  content: '\e603';
+  font-family: 'ra-icons';
+}
+.ra-ip-alarm-state-screen .ui-grid-icon-up-dir:before,
+[ra-ip-alarm-state-screen] .ui-grid-icon-up-dir:before,
+[data-ra-ip-alarm-state-screen] .ui-grid-icon-up-dir:before,
+data-ra-ip-alarm-state-screen .ui-grid-icon-up-dir:before,
+ra-ip-alarm-state-screen .ui-grid-icon-up-dir:before {
+  content: '\e604';
+  font-family: 'ra-icons';
+}
+.ra-ip-alarm-state-screen .ui-grid-header-cell,
+[ra-ip-alarm-state-screen] .ui-grid-header-cell,
+[data-ra-ip-alarm-state-screen] .ui-grid-header-cell,
+data-ra-ip-alarm-state-screen .ui-grid-header-cell,
+ra-ip-alarm-state-screen .ui-grid-header-cell {
+  text-align: left;
+}
+.ra-ip-alarm-state-screen .ui-grid-viewport,
+[ra-ip-alarm-state-screen] .ui-grid-viewport,
+[data-ra-ip-alarm-state-screen] .ui-grid-viewport,
+data-ra-ip-alarm-state-screen .ui-grid-viewport,
+ra-ip-alarm-state-screen .ui-grid-viewport {
+  overflow-x: hidden !important;
+}
+.ra-ip-alarm-state-screen .overflow-x-auto .ui-grid-viewport,
+[ra-ip-alarm-state-screen] .overflow-x-auto .ui-grid-viewport,
+[data-ra-ip-alarm-state-screen] .overflow-x-auto .ui-grid-viewport,
+data-ra-ip-alarm-state-screen .overflow-x-auto .ui-grid-viewport,
+ra-ip-alarm-state-screen .overflow-x-auto .ui-grid-viewport {
+  overflow-x: auto !important;
+}
+.ra-ip-alarm-state-screen .ui-grid-render-container-body,
+[ra-ip-alarm-state-screen] .ui-grid-render-container-body,
+[data-ra-ip-alarm-state-screen] .ui-grid-render-container-body,
+data-ra-ip-alarm-state-screen .ui-grid-render-container-body,
+ra-ip-alarm-state-screen .ui-grid-render-container-body {
+  margin-left: 0 !important;
+}
+.ra-ip-alarm-state-screen .ui-grid-pinned-container-left,
+[ra-ip-alarm-state-screen] .ui-grid-pinned-container-left,
+[data-ra-ip-alarm-state-screen] .ui-grid-pinned-container-left,
+data-ra-ip-alarm-state-screen .ui-grid-pinned-container-left,
+ra-ip-alarm-state-screen .ui-grid-pinned-container-left {
+  display: none;
+}
+.ra-ip-alarm-state-screen .ui-grid-row .ui-grid-cell.ui-grid-cell-border-bottom,
+[ra-ip-alarm-state-screen] .ui-grid-row .ui-grid-cell.ui-grid-cell-border-bottom,
+[data-ra-ip-alarm-state-screen] .ui-grid-row .ui-grid-cell.ui-grid-cell-border-bottom,
+data-ra-ip-alarm-state-screen .ui-grid-row .ui-grid-cell.ui-grid-cell-border-bottom,
+ra-ip-alarm-state-screen .ui-grid-row .ui-grid-cell.ui-grid-cell-border-bottom {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.ra-ip-alarm-state-screen .ui-grid-row .ui-grid-cell-contents,
+[ra-ip-alarm-state-screen] .ui-grid-row .ui-grid-cell-contents,
+[data-ra-ip-alarm-state-screen] .ui-grid-row .ui-grid-cell-contents,
+data-ra-ip-alarm-state-screen .ui-grid-row .ui-grid-cell-contents,
+ra-ip-alarm-state-screen .ui-grid-row .ui-grid-cell-contents,
+.ra-ip-alarm-state-screen .ui-grid-row .ra-grid-expandable-row,
+[ra-ip-alarm-state-screen] .ui-grid-row .ra-grid-expandable-row,
+[data-ra-ip-alarm-state-screen] .ui-grid-row .ra-grid-expandable-row,
+data-ra-ip-alarm-state-screen .ui-grid-row .ra-grid-expandable-row,
+ra-ip-alarm-state-screen .ui-grid-row .ra-grid-expandable-row {
+  text-align: left !important;
+}
+.mobile-device .ra-ip-alarm-state-screen .ui-grid-viewport,
+.mobile-device [ra-ip-alarm-state-screen] .ui-grid-viewport,
+.mobile-device [data-ra-ip-alarm-state-screen] .ui-grid-viewport,
+.mobile-device data-ra-ip-alarm-state-screen .ui-grid-viewport,
+.mobile-device ra-ip-alarm-state-screen .ui-grid-viewport {
+  overflow-y: scroll !important;
+}
+.data-ra-ip-alarm-state-screen {
+  position: relative;
+}
+.data-ra-ip-alarm-state-screen:before {
+  font-family: ra-icons;
+  color: #6d6e70;
+  font-size: 1.5em;
+  content: "\e731";
+}
+.powerbiHeaderWrapper {
+  height: 80px;
+  padding: 5px 0 5px 0;
+  position: relative;
+}
+.powerBiReportContainer {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.powerBiReportContainer iframe {
+  border: 0;
+  min-height: 320px;
+  min-width: 296px;
+  height: 99% !important;
+}
+.powerbiInput {
+  float: left;
+  width: 50%;
+  padding: 3px;
+  position: relative;
+}
+.powerbiInput .k-state-disabled .k-input {
+  background-color: #eee;
+  border-bottom: 1px solid #ddd;
+  border-radius: 4px;
+}
+.powerbiInput .pe-enum-component {
+  text-align: left;
+}
+.powerbi-state-hidden {
+  display: none;
+}
+.data-ra-ip-power-bi-report:before {
+  font-family: ra-icons;
+  color: #6d6e70;
+  font-size: 1.5em;
+  content: "\e732";
+}
+/*
+   raIpPieChart
+*/
+.dropZone > ra-ip-pie-chart,
+.dropZone > [ra-ip-pie-chart],
+.dropZone > [data-ra-ip-pie-chart] {
+  display: block;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+}
+.ra-icon-pie-chart:before {
+  content: "\e656";
+}
+.data-ra-ip-pie-chart:before {
+  font-family: ra-icons;
+  color: #6d6e70;
+  font-size: 1.5em;
+  content: "\e656";
+}
+.ra-pie-chart-container .highcharts-xaxis-labels {
+  opacity: 0 !important;
+}
+.ra-pie-chart-container {
+  overflow: hidden;
+}
+.fullSizeChart {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+/*
+   End of raIpPieChart
+*/
+/*
+    raIpImageContainer
+*/
+.data-ra-ip-image-container {
+  position: relative;
+}
+.data-ra-ip-image-container:before {
+  font-family: ra-icons;
+  color: #6d6e70;
+  font-size: 1.5em;
+  content: "\e6a4";
+}
+.ra-ip-image-container {
+  width: 100%;
+  height: 100%;
+}
+/*
+    End of raIpImageContainer
+*/
+/*
+   raBarChart
+*/
+.dropZone > ra-ip-bar-chart,
+.dropZone > [ra-ip-bar-chart],
+.dropZone > [data-ra-ip-bar-chart] {
+  display: block;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+}
+.ra-icon-bar-chart:before {
+  content: "\e64e";
+}
+.data-ra-ip-bar-chart:before {
+  font-family: ra-icons;
+  color: #6d6e70;
+  font-size: 1.5em;
+  content: "\e64e";
+}
+.blankAxis .highcharts-xaxis-labels {
+  opacity: 0 !important;
+}
+/*
+   End of raIpBarChart
+*/
+.button-innerBox {
+  width: 100%;
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.button-innerBox button {
+  box-sizing: content-box;
+}
+.button-innerBox span {
+  overflow: hidden;
+  white-space: nowrap;
+  display: block;
+  text-overflow: ellipsis;
+}
+.data-ra-ip-button:before {
+  font-family: 'ra-icons';
+  color: #6d6e70;
+  font-size: 1.5em;
+  content: "\e6a2";
+}
+.data-ra-ip-query:before {
+  font-family: 'ra-icons';
+  color: #6d6e70;
+  font-size: 1.5em;
+  content: "\e658";
+}
+ra-ip-query .compiled-element {
+  display: block;
+}
+ra-ip-query .queryCaption {
+  height: 40px;
+  text-overflow: ellipsis;
+  position: relative;
+  margin-left: 35px;
+  margin-right: 35px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+ra-ip-query .queryCenterAlign {
+  text-align: center;
+}
+ra-ip-query .queryOuterContainer {
+  height: 100%;
+  position: relative;
+}
+ra-ip-query .queryContainer {
+  height: 100%;
+}
+ra-ip-query .queryInput {
+  float: left;
+  width: 33%;
+  padding: 3px;
+  position: relative;
+}
+ra-ip-query .queryInput .k-state-disabled .k-input {
+  background-color: #eee;
+  border-bottom: 1px solid #ddd;
+  border-radius: 4px;
+}
+ra-ip-query .queryWrapper {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+ra-ip-query .queryHeaderWrapper {
+  height: 80px;
+  padding: 5px;
+  position: relative;
+}
+ra-ip-query .queryWidgetWrapper {
+  position: relative;
+}
+ra-ip-query .queryWidgetWrapperOverlay {
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  position: absolute;
+}
+/*
+ Copyright (c) Rockwell Automation 2014
+*/
+.data-ra-ip-map {
+  position: relative;
+}
+.data-ra-ip-map:before {
+  font-family: ra-icons;
+  color: #6d6e70;
+  font-size: 1.5em;
+  content: "\e68d";
+}
+.map {
+  height: 100%;
+}
+.angular-leaflet-map {
+  height: 100%;
+  width: 100%;
+}
+.leaflet-marker-shadow {
+  display: none;
+}
+.hideLegend .legend {
+  display: none;
+}
+.editorBox .legend {
+  display: none;
+}
+.error_container {
+  background-color: #fff;
+  color: red;
+}
+.error_container div {
+  padding: 0px 5px;
+}
+.leaflet-popup-content {
+  min-height: 1px;
+}
+.leaflet-bottom .legend {
+  margin-bottom: 10px;
+}
+.map_caption {
+  font-weight: bold;
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+.map_link {
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+.legend {
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 6px 8px;
+  width: auto;
+  line-height: 18px;
+  color: #555;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%) !important;
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+.legend i {
+  width: 16px;
+  height: 16px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
+}
+.leaflet-top.leaflet-right {
+  margin-top: 40px;
+}
+.leaflet-left {
+  width: calc(100% - 50px);
+}
+.info-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.legend.leaflet-control {
+  overflow: auto;
+}
+.composite_cell .composer_dlink {
+  display: none;
+}
+.composer_dlink {
+  text-decoration: underline;
+}
+.cell​ .composite_dlink {
+  display: none;
+}
+.cell .composite_dlink {
+  display: none;
+}
+.leaflet-control-zoom {
+  margin-bottom: 15px !important;
+}
+.legend .outline {
+  margin-right: 2px;
+  margin-left: 4px;
+}
+.legend .info-label {
+  margin-right: 4px;
+}
+.error_container {
+  border-radius: 0px !important;
+}
+.leaflet-div-icon {
+  background: none !important;
+  border: none !important;
+}
+.leaflet-control-layers {
+  visibility: hidden !important;
+}
+.data-ra-ip-label:before {
+  font-family: ra-icons;
+  color: #6d6e70;
+  font-size: 1.5em;
+  content: "\e6a5";
+}
+.ra-label-textitem {
+  position: relative;
+  overflow: hidden;
+}
+.ra-label-container {
+  width: 100% !important;
+  height: 100% !important;
+}
+.ra-label-textitem-ghost {
+  position: absolute;
+  padding: 5px;
+  left: 0;
+  top: 0;
+  width: 100% !important;
+  opacity: 0;
+  text-decoration: inherit;
+  word-wrap: break-word;
+}
+.ra-label-textitem > div:first-of-type {
+  padding: 5px;
+}
+.robotoFont {
+  font-family: Roboto, sans-serif;
+}
+.serifFont {
+  font-family: Times, "Times New Roman", Georgia, serif;
+}
+.sansSerifFont {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.monospaceFont {
+  font-family: "Lucida Console", Courier, monospace;
+}
+.cursiveFont {
+  font-family: cursive;
+}
+.fantasyFont {
+  font-family: fantasy;
+}
+ra-ip-widget-header > div {
+  margin: 0 1rem;
+  height: 34px;
+}
+ra-ip-widget-header-properties-combo .k-dropdown {
+  width: 100%;
+}
+ra-ip-widget-header-properties-interval {
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 200px;
+}
+ra-ip-widget-header-properties-interval .input-group-addon,
+ra-ip-widget-header-properties-interval .input-group-btn {
+  width: auto;
+  height: 34px;
+}
+ra-ip-widget-header-properties-interval .input-step {
+  width: 34px;
+}
+ra-ip-widget-header-properties-interval .form-control {
+  height: 34px;
+}
+ra-ip-widget-header-properties-interval .ra-ip-trend-interval-box .glyphicon {
+  top: 0;
+  padding: 0.6499em;
+  cursor: pointer;
+}
+ra-ip-widget-header-properties-interval .ra-ip-trend-interval-box .glyphicon.disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+  pointer-events: none;
+}
+ra-ip-widget-header-bar .input-group-addon,
+ra-ip-widget-header-bar .input-group-btn {
+  width: auto;
+  height: 34px;
+}
+ra-ip-widget-header-bar .input-step {
+  width: 34px;
+}
+ra-ip-widget-header-bar .widget-header-controls-item {
+  margin-right: 10px;
+}
+ra-ip-widget-header-bar ra-date-time-picker .input-group {
+  /* ra-flex-row */
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  /* ra-flex-item-dynamic */
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+}
+ra-ip-widget-header-bar label {
+  margin-right: 10px;
+}
+ra-ip-widget-header-bar .widget-header-controls-refresh {
+  max-width: 40px;
+}
+ra-ip-widget-header-bar .widget-header-controls-custom-duration input {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 4px;
+}
+ra-ip-widget-header-bar .widget-header-controls-interval .ra-ip-trend-interval-input {
+  max-width: 80px;
+  min-width: 40px;
+}
+ra-ip-widget-header-bar .widget-header-number-input-container {
+  display: -ms-flexbox;
+  display: flex;
+}
+ra-ip-widget-header-bar .widget-header-number-input-container .widget-header-number-unit {
+  width: 48px;
+}
+ra-ip-widget-header-bar .widget-header-number-input-container .widget-header-number-button {
+  width: 34px;
+  cursor: pointer;
+}
+ra-ip-widget-header-bar .widget-header-number-input-container .glyphicon {
+  top: 0px;
+}
+ra-ip-widget-header-bar .widget-header-number-input-container .input-group-addon {
+  line-height: 1.4;
+}
+ra-ip-widget-header-bar .k-dropdown-wrap {
+  height: 34px !important;
+}
+ra-ip-widget-header-bar .k-input {
+  line-height: 2.2 !important;
+}
+ra-ip-widget-header-bar .form-control {
+  height: 34px;
+}
+ra-ip-composite {
+  display: block;
+}
+ra-ip-composite .gridstack-wrapper {
+  padding-top: 3px;
+}
+ra-ip-composite .grid-stack-item {
+  transition: height 0.3s ease-in-out, width 0.3s ease-in-out, top 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+ra-ip-composite .grid-stack-item[data-gs-x='0'] {
+  left: 0%;
+}
+ra-ip-composite .cell_title {
+  -moz-box-sizing: border-box;
+  background-color: #ddd;
+  border-radius: 3px;
+  border: 2px solid #c5c5c5;
+  padding-left: 5px;
+  margin-right: 10px;
+}
+ra-ip-composite .abs {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+ra-ip-composite .outerBox {
+  border: none;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+ra-ip-composite .editorBox {
+  text-align: center;
+  border: 1px solid #aaa;
+  margin: 0px 0px 5px 0px !important;
+  padding: 0px 0px 5px 0px !important;
+  overflow-y: auto;
+}
+ra-ip-composite .editorBox .outerBox {
+  border: none !important;
+  margin-bottom: 0px !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+  height: calc(100% - 45px);
+}
+ra-ip-composite .block {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+ra-ip-composite .box-model {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+ra-ip-composite .blank-cell {
+  box-sizing: border-box;
+  border-radius: 3px;
+  height: 100%;
+  padding: 5px;
+  border: 1px solid #AAA;
+  min-height: 55px;
+}
+ra-ip-composite .container_fluid .row {
+  padding: 5px 5px 0px 5px !important;
+}
+ra-ip-composite .report {
+  background-color: #eeeeee;
+  border: 1px solid #cccccc;
+  margin: 10px;
+  padding: 10px;
+  text-align: left;
+}
+ra-ip-composite .reportCaption {
+  font-weight: bold;
+}
+ra-ip-composite .reportDescription {
+  margin: 10px 0px;
+}
+ra-ip-composite .reportButton {
+  float: right;
+}
+ra-ip-composite .reportParam {
+  font-weight: bold;
+}
+ra-ip-composite .reportToggle {
+  cursor: pointer;
+  text-decoration: underline;
+}
+ra-ip-composite .ra-rounded-corners {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+}
+ra-ip-composite .grid-stack-item-content {
+  overflow: hidden !important;
+  left: 3px !important;
+  right: 3px !important;
+}
+ra-ip-composite.mobileViewComposite {
+  overflow: auto;
+}
+.composite_cell *:not(svg):not(svg *):not(.leaflet-objects-pane):not(.leaflet-control-container):not(.ra-disable-translate):not(.ra-disable-translate-recursively):not(.ra-disable-translate-recursively *) {
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.composite_cell {
+  height: 100%;
+}
+.composite_cell *:not(svg):not(svg *):not(.leaflet-objects-pane):not(.leaflet-control-container):not(.ra-disable-translate):not(.ra-disable-translate-recursively):not(.ra-disable-translate-recursively *) {
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.composite_cell .widgetArea {
+  position: relative;
+}
+.composite_cell .widgetAreaWithoutTitle {
+  height: 100%;
+  position: relative;
+}
+.composite_cell .widgetAreaWithTitle {
+  position: relative;
+  height: calc(100% - 20px);
+}
+.composite_cell .title {
+  height: 20px;
+  width: 100%;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  padding: 1px 4px 4px 4px;
+  font-weight: bold;
+  color: #6d6e70;
+}
+.composite_cell .k-widget {
+  box-shadow: inset 0 0 0 ;
+  webkit-box-shadow: inset 0 0 0 ;
+}
+.composite_cell .cellTitle {
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+.composite_cell .drillLink,
+.composite_cell .drillLink:hover {
+  position: absolute;
+  bottom: 0;
+  right: 3px;
+  width: calc(100% - 6px);
+  height: 22px;
+  line-height: 15px;
+  overflow: hidden;
+  color: #333;
+  z-index: 1100;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+.composite_cell .drillCaption,
+.composite_cell .drillCaptionDisabled {
+  width: calc(100% - 30px);
+}
+.composite_cell .drillCaption {
+  position: relative;
+  height: 22px;
+  line-height: 15px;
+  display: block;
+  top: 1px;
+  float: right;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: break-word;
+  text-align: right;
+  text-decoration: underline;
+  right: 5px;
+  -webkit-transform: translate3d(0, 0, 0);
+  z-index: 1020;
+  padding-left: 5px;
+}
+.composite_cell .drillCaptionDisabled {
+  position: relative;
+  height: 22px;
+  line-height: 15px;
+  display: block;
+  top: 1px;
+  float: right;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: break-word;
+  text-align: right;
+  text-decoration: line-through;
+  right: 5px;
+  -webkit-transform: translate3d(0, 0, 0);
+  z-index: 1020;
+  padding-left: 5px;
+}
+.composite_cell .drillCaptionPending {
+  position: relative;
+  float: right;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: break-word;
+  text-align: right;
+  right: 5px;
+  -webkit-transform: translate3d(0, 0, 0);
+  z-index: 1020;
+  padding-left: 5px;
+}
+.composite_cell .drillDisabled,
+.composite_cell .drillDisabled:hover {
+  color: #6d6e70;
+}
+.composite_cell .compositeCellContentWithoutDrill {
+  height: 100%;
+}
+.composite_cell .compositeCellContentWithDrill {
+  min-height: 0;
+  height: calc(100% - 23px);
+}
+.composite_cell .drillWrapper {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+}
+.composite_cell .innerCell {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  overflow: hidden;
+}
+.composite_cell .ra-icon-link-view:before {
+  font-size: 1.2em;
+  text-align: center;
+  float: right;
+  position: relative;
+  right: 1px;
+  top: 1px;
+}
+.composite_cell .maxmin-icon-wrapper {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+}
+.composite_cell .maxmin-icon-wrapper .ra-icon {
+  color: #404041;
+  cursor: pointer;
+  display: none;
+}
+.composite_cell .maxmin-icon-wrapper.icon-max .ra-icon-maximize {
+  display: block;
+}
+.composite_cell .maxmin-icon-wrapper.icon-min .ra-icon-minimize {
+  display: block;
+}
+.data-ra-ip-doughnut-chart:before {
+  font-family: 'ra-icons';
+  color: #6d6e70;
+  font-size: 1.5em;
+  content: "\e6d9";
+}
+.ra-ip-doughnut-chart {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.ra-ip-doughnut-chart .widget-info-msg {
+  z-index: 100;
+}
+.ra-ip-doughnut-chart .ra-doughnut-title-row {
+  font-size: 1em;
+  text-align: center;
+}
+.ra-ip-doughnut-chart .ra-doughnut-title-row .ra-od-machine-states-chart-title-btn {
+  padding: 0 0 0 0;
+  z-index: 1;
+  font-size: 1.2em;
+}
+.ra-ip-doughnut-chart .ra-doughnut-title-row .ra-od-machine-states-chart-title-btn span.ra-icon .ra-icon-drop-down {
+  font-size: 1.5em;
+  text-align: center;
+}
+.ra-ip-doughnut-chart .ra-doughnut-title-row .ra-doughnut-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+  text-align: left;
+}
+.ra-ip-doughnut-chart .ra-doughnut-title-row .ra-doughnut-time-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0;
+  font-size: 0.9em;
+}
+.ra-ip-doughnut-chart .ra-doughnut-title-row .ra-doughnut-title-menu {
+  border: 1px solid #ffffff;
+  box-shadow: 0px 7px 12px 0px rgba(50, 50, 50, 0.3);
+  -ms-box-shadow: 0px 7px 12px 0px rgba(50, 50, 50, 0.3);
+  -o-box-shadow: 0px 7px 12px 0px rgba(50, 50, 50, 0.3);
+  font-size: 14px;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  margin-right: 0;
+  margin-top: 0;
+  border-top: none;
+}
+.ra-ip-doughnut-chart .ra-doughnut-title-row .ra-doughnut-title-menu > li {
+  cursor: pointer;
+  background-color: #a7a9ab;
+  padding: 5px 5px 5px 5px;
+}
+.ra-ip-doughnut-chart .ra-doughnut-title-row .ra-doughnut-title-menu > li > a {
+  color: #ffffff;
+  vertical-align: middle;
+  padding: 8px 8px;
+}
+.ra-ip-doughnut-chart .ra-doughnut-title-row .ra-doughnut-title-menu > li > a > span {
+  float: left;
+  margin-top: -2px;
+  padding: 0 12px 0 0;
+  font-size: 1.6em;
+}
+.ra-ip-doughnut-chart .ra-doughnut-title-row .ra-doughnut-title-menu > li > a:hover {
+  background-color: #6d6e71;
+  color: inherit;
+}
+.ra-ip-doughnut-chart .ra-doughnut-title-row .ra-doughnut-title-menu > li:hover {
+  background-color: #6d6e71;
+}
+.ra-ip-doughnut-chart .ra-od-machine-chart-overview .ra-od-machine-chart .highcharts-title {
+  font-size: 1.1em;
+}
+.ra-ip-doughnut-chart .ra-od-machine-chart-overview .ra-od-machine-stats .row {
+  margin-left: 0;
+  margin-right: 0;
+  line-height: 14px;
+}
+.ra-ip-doughnut-chart .ra-od-machine-chart-overview .ra-od-machine-stats .row .label {
+  float: left;
+  color: #333333;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+  fill: #333333;
+  padding: 2px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ra-ip-doughnut-chart .ra-od-machine-chart-overview .ra-od-machine-stats .row .value {
+  float: right;
+  width: 50%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ra-ip-doughnut-chart .ra-od-machine-chart-overview .ra-od-machine-stats .row .value .time-format {
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  cursor: pointer;
+  fill: #333333;
+}
+.ra-ip-doughnut-chart .ra-od-machine-chart-overview .ra-od-machine-stats .row .value .unit {
+  color: #333333;
+  font-size: 12px;
+  font-weight: normal;
+  cursor: pointer;
+  fill: #333333;
+}
+.data-ra-ip-timeline:before {
+  font-family: 'ra-icons';
+  color: #6d6e70;
+  font-size: 1.5em;
+  content: "\e6d8";
+}
+.ra-ip-timeline {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.ra-ip-timeline .chevron-container {
+  padding: 0;
+  margin-right: 10px;
+}
+.ra-ip-export-data-dialog-alt-body {
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+}
+.ra-ip-export-data-dialog-alt-body > div > select {
+  margin-bottom: 12px;
+  margin-top: 12px;
+  padding: 12px 20px 12px 8px;
+  width: 100%;
+}
+.ra-ip-export-data-dialog-loading {
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.ra-ip-export-data-dialog-loading > .ra-ip-export-data-dialog-loading-message {
+  margin-left: 12px;
+  font-size: 20px;
+}
+.export-message {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.error-message {
+  color: red;
+}
+.data-ra-ip-file-trend:before {
+  font-family: 'ra-icons';
+  color: #6d6e70;
+  font-size: 1.5em;
+  content: "\e767";
+}
+.ra-ip-file-trend-chart {
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.ra-ip-file-trend-chart .chevron-container {
+  padding: 0;
+  margin-right: 10px;
+}
+.ra-ip-file-trend-chart .info-icon-container {
+  text-align: center;
+}
+.ra-ip-file-trend-chart .info-icon-container > .info-icon {
+  font-size: 2rem;
+}
+.ra-ip-file-trend-chart .line-chart-container {
+  height: 12rem;
+  /* line chart data label container with date and time parts */
+}
+.ra-ip-file-trend-chart .line-chart-container .ra-chart-container {
+  height: 12rem;
+}
+.ra-ip-file-trend-chart .line-chart-container.no-scrollbar {
+  height: 8rem;
+}
+.ra-ip-file-trend-chart .line-chart-container.no-scrollbar .ra-chart-container {
+  height: 8rem;
+}
+.ra-ip-file-trend-chart .line-chart-container.no-scrollbar .highcharts-scrollbar {
+  display: none;
+}
+.ra-ip-file-trend-chart .line-chart-container .line-chart-data-label > div {
+  text-align: center;
+}
+.ra-ip-file-trend-chart .stock-chart-info-message-container {
+  min-height: 5rem;
+}

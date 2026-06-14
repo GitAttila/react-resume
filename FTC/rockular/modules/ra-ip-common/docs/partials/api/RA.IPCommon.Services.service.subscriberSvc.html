@@ -1,0 +1,62 @@
+<h1><code ng:non-bindable="">subscriberSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPCommon.Services</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-subscribersvc-page"><p>A wrapper service used to make certain object (service) inherit properties and methods from
+<a href="#/api/RA.IPCommon.Services.object:Subscriber">Subscriber</a> base.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_getconsumer">getConsumer()</h3>
+<div class="getconsumer"><div class="ra-ipcommon-services-object-page ra-ipcommon-services-object-subscriber-getconsumer-page"><p>Gets consumer by given id</p>
+</div></div>
+</li>
+<li><h3 id="methods_extend">extend(service)</h3>
+<div class="extend"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-subscribersvc-extend-page"><p>Extends given service with methods and properties from
+<a href="#/api/RA.IPCommon.Services.object:Subscriber">Subscriber</a> base.</p>
+</div><h5 id="methods_extend_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>service</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-subscribersvc-extend-page"><p>Target object which will inherit from <a href="#/api/RA.IPCommon.Services.object:Subscriber">Subscriber</a> base.</p></div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-subscribersvc-page"><pre class="prettyprint linenums">
+var promise;
+
+var dummySvc = {
+    subscribed: function(consumer) {
+        console.log("consumer subscribed " + consumer.foo);
+
+        // do whatever initialization logic here
+    },
+    unsubscribed: function(consumer) {
+        console.log("consumer un-subscribed " + consumer.foo);
+
+        // do whatever cleanup logic here
+    },
+    update: function(consumer) {
+        console.log("consumer updated " + consumer.foo);
+
+        // now you can use promise object declared above to do whatever async tasks and then
+        // call notify, resolve, reject etc., other objects (for example widgets using dummySvc)
+        // can of course hook to this promise their own callbacks
+        try {
+            throw "error";
+        }
+        catch (e) {
+            console.error(e);
+
+            // methods from Subscriber base are available
+            this.rejectAll(e);
+        }
+    }
+);
+
+subscriberSvc.extend(dummySvc);
+
+promise = subscriberSvc.subscribe(
+    "#1", { foo: "bar" ), {}, dummySvc.subscribed, dummySvc.unsubscribed, dummySvc.update
+);
+</pre>
+</div></div>
+</div>

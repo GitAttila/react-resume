@@ -1,0 +1,136 @@
+<h1><code ng:non-bindable="">gridstackSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-gridstacksvc-page"><p>Facade to gridstack API.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_creategridstack">createGridstack(staticGrid, useMobileCellHeight, onResizeCallback, onDragStopCallback, DaD)</h3>
+<div class="creategridstack"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-gridstacksvc-creategridstack-page"><p>Initializes and configures the gridstack object. This gridstack object is created on top
+of the HTML element with &quot;gridstack-wrapper&quot; id. This ID is then suffixed by the ID of
+<a href="#/api/RA.IPDisplay.object:GridstackWrapper">GridstackWrapper</a> object.</p>
+<p>The drag area of the gridstack cells has to have</p>
+</div><h5 id="methods_creategridstack_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>staticGrid</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-gridstacksvc-creategridstack-page"><p>Indication whether the gridstack grid should be static
+(cannot be changed by user interactions).</p>
+</div></td></tr><tr><td>useMobileCellHeight</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-gridstacksvc-creategridstack-page"><p>Indication whether the height of each gridstack cell should be
+defined by service itself (mobileCellHeight constant).</p>
+</div></td></tr><tr><td>onResizeCallback</td><td><a href="" class="label type-hint type-hint-function">Function</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-gridstacksvc-creategridstack-page"><p>Callback function which is called when gridstack cell is resized.
+This parameter is useless when staticGrid parameter is set to <strong>true</strong>.</p>
+</div></td></tr><tr><td>onDragStopCallback</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-gridstacksvc-creategridstack-page"><p>Callback function which is called when gridstack cell is moved.
+This parameter is useless when staticGrid parameter is set to <strong>true</strong>.</p>
+</div></td></tr><tr><td>DaD</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-gridstacksvc-creategridstack-page"><p>Identifier of D&amp;D provider.
+2 values are accepted - <strong>RA</strong> for MFT D&amp;D or <strong>kendo</strong> for kendo D&amp;D. <strong>RA</strong> is used by default.</p>
+</div></td></tr></tbody></table><h5 id="methods_creategridstack_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-gridstacksvc-creategridstack-page"><p>Instance of <a href="#/api/RA.IPDisplay.object:GridstackWrapper">GridstackWrapper</a></p>
+</div></td></tr></table><h4 id="methods_creategridstack_example">Example</h4>
+<div class="example"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-gridstacksvc-creategridstack-page"><p>The example below shows adding random values into the Bar Chart:
+<h6 id="methods_creategridstack_example_source">Source</h6>
+<div source-edit="exampleAppOne" source-edit-deps="angular.js script.js" source-edit-html="index.html-78" source-edit-css="" source-edit-js="script.js-79" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-78" ng-html-wrap-loaded="exampleAppOne angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-78">
+       <style>
+           .placeholder-content {
+             border: 3px dashed lightgrey !important;
+           }
+           .dropInvalid {
+             color: red;
+           }
+       </style>
+       <div ng-controller="exampleCtrl">
+           <div style="margin-bottom: 10px; display: inline-block;">
+             <div style="border: 1px solid black; background-color: white; float: left; padding: 10px"
+                 ra-draggable="draggable"
+                 id="draggable">
+                 DRAG ME!
+             </div>
+             <div style="float: left; margin-left: 10px;">Logs:</div>
+             <div id="log"
+                 style="width: 408px; height: 150px; float: left; margin-left: 10px;
+                     border: 1px solid black; overflow: auto">
+             </div>
+           </div>
+           <div id="gridstack-wrapper"
+             ra-drop-target="dropTarget"
+             style="width: 500px; height: 400px; border: 1px solid black;background-color: white;
+                 clear: both; position: relative; left: 50px;">
+                 <div class="grid-stack"></div>
+           </div>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-79"></pre>
+<script type="text/ng-template" id="script.js-79">
+       var mod = angular.module('exampleAppOne', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope', 'gridstackSvc', '$timeout', '$compile',
+           function ($scope, gridstackSvc, $timeout, $compile) {
+               'use strict';
+               var id = 0;
+
+               $scope.curItem = {
+                 dragId: "emptyWidget"
+               };
+
+               $scope.draggable = {
+                 draggableHint: function() {
+                     return $("#draggable").clone();
+                 }
+               };
+
+               $scope.dropTarget = {
+                 onDragEnter: function (event) {
+                     angular.element("#log").prepend("<p>addPlaceholder called</p>");
+                     gridstackWrapper.addPlaceholder(false, event);
+                 },
+                 onDragLeave: function (event) {
+                     angular.element("#log").prepend("<p>deletePlaceholderIfNeeded called</p>");
+                     gridstackWrapper.deletePlaceholderIfNeeded(event);
+                 },
+                 onDrop: function (e) {
+                     angular.element("#log").prepend("<p>confirmPlaceholder called</p>");
+                     var cell = $compile('<div class="cellDragArea" id="id' + id +
+                         '" style="width: 100%; height: 100%; border: 1px solid black"><button ' +
+                         'ng-click="delete(' + id + ')">DELETE</button></div>')($scope);
+                     id++;
+                     gridstackWrapper.confirmPlaceholder(e, cell);
+                 }
+               };
+
+               $scope.delete = function (id) {
+                 angular.element("#log").prepend("<p>deleting " + id + "</p>");
+                 gridstackWrapper.deleteElement( angular.element("#id" + id).parent().parent());
+               };
+
+               var gridstackWrapper;
+
+               $scope.$evalAsync(function () {
+                 gridstackWrapper = gridstackSvc.createGridstack();
+                 gridstackWrapper.adjustHeight();
+               })
+           }
+       ]);
+
+   </script>
+</div>
+</div><h6 id="methods_creategridstack_example_demo">Demo</h6>
+<div class="well live-example-container"><iframe src="examples/example-41-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="member property"><h2 id="properties">Properties</h2>
+<ul class="properties"><li><h3 id="properties_num_of_columns">NUM_OF_COLUMNS</h3>
+<div class="num_of_columns"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-gridstacksvc-num-of-columns-page"><p>Number of columns in grid</p>
+</div></div>
+</li>
+<li><h3 id="properties_num_of_rows">NUM_OF_ROWS</h3>
+<div class="num_of_rows"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-gridstacksvc-num-of-rows-page"><p>Number of rows in grid</p>
+</div></div>
+</li>
+</ul>
+</div>
+</div>

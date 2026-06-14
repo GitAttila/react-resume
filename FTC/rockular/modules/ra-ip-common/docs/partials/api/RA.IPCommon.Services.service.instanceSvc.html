@@ -1,0 +1,87 @@
+<h1><code ng:non-bindable="">instanceSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPCommon.Services</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-page"><p>Service for Instance based Request and Manipulations</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_createinstancerequest">createInstanceRequest([camelCasePropertyNames])</h3>
+<div class="createinstancerequest"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-createinstancerequest-page"><p>Create the Instance Request Object</p>
+</div><h5 id="methods_createinstancerequest_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>[camelCasePropertyNames] <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-bool">bool</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-createinstancerequest-page"><p>true if property names are camelCase</p>
+</div></td></tr></tbody></table><h5 id="methods_createinstancerequest_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-createinstancerequest-page"><p><a href="#/api/RA.IPCommon.Services.object:InstanceRequest">RA.IPCommon.Services.object:InstanceRequest</a></p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_execquery">execQuery(queryExpression, [includeAcl], [depth], [includeShortcuts], [camelCasePropertyNames])</h3>
+<div class="execquery"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-execquery-page"><p>Makes a single query request to the JSON Instance service on the server.</p>
+</div><h5 id="methods_execquery_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>queryExpression</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-execquery-page"><ul>
+<li>a string containing a query expression.</li>
+</ul>
+</div></td></tr><tr><td>[includeAcl] <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-execquery-page"><p>Tells the instance query to return item ACL
+information for the item</p>
+</div></td></tr><tr><td>[depth] <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-execquery-page"><p>Tells the query service to prefetch N-Levels
+of items for the item returned</p>
+</div></td></tr><tr><td>[includeShortcuts] <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-execquery-page"><p>Tells the query service to prefetch N-Levels
+of items for the item returned</p>
+</div></td></tr><tr><td>[camelCasePropertyNames] <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-execquery-page"><p>Tells the service to return property names
+either in camelCase or using original
+casing</p>
+</div></td></tr></tbody></table><h5 id="methods_execquery_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-ipromise">IPromise&lt;T&gt;</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-execquery-page"><p>Promise to resolve when answer will be available.</p>
+<p>Example:
+  instanceSvc.execQuery(&quot;FROM MyEnterprise WHERE name = &#39;Extruder001&#39;&quot;).then(processResults);</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_execqueryset">execQuerySet(instanceRequest)</h3>
+<div class="execqueryset"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-execqueryset-page"><p>Makes a multi-query request to the JSON Instance service on the server.</p>
+</div><h5 id="methods_execqueryset_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>instanceRequest</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-execqueryset-page"><p><a href="#/api/RA.IPCommon.Services.object:InstanceRequest">RA.IPCommon.Services.object:InstanceRequest</a></p>
+</div></td></tr></tbody></table><h5 id="methods_execqueryset_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-ipromise">IPromise&lt;T&gt;</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-execqueryset-page"><p>Promise to resolve when answer will be available.</p>
+<p>Example:
+   var includeAcl = true, depth = 2, includeShortcuts = true;</p>
+<p>   var q = createInstanceRequest();
+   q.addQuery(&quot;FROM MyEnterprise WHERE name = &#39;Extruder001&#39;&quot;, includeAcl, depth, includeShortcuts);
+   q.addQuery(&quot;FROM MyEnterprise WHERE TypeName = &quot;Portal.Hyperlink&quot;);</p>
+<p>   instanceSvc.execQuerySet(q).then(processResults);</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getinstance">getInstance(fqn, [isProperty], [includeAcl], [depth], [includeShortcuts], [camelCasePropertyNames])</h3>
+<div class="getinstance"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-getinstance-page"><p>Makes a request to JSON Instance service on the server.</p>
+</div><h5 id="methods_getinstance_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>fqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-getinstance-page"><ul>
+<li>FQN of the item to get data for.</li>
+</ul>
+</div></td></tr><tr><td>[isProperty] <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-getinstance-page"><p>Tells if the fqn given refers to a property
+(or if an item, should apply to its default property)</p>
+</div></td></tr><tr><td>[includeAcl] <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-getinstance-page"><p>Tells the query service to return item ACL
+information for the item</p>
+</div></td></tr><tr><td>[depth] <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-getinstance-page"><p>Tells the query service to prefetch N-Levels
+of items for the item returned</p>
+</div></td></tr><tr><td>[includeShortcuts] <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-getinstance-page"><p>Tells the query service to prefetch N-Levels
+of items for the item returned</p>
+</div></td></tr><tr><td>[camelCasePropertyNames] <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-getinstance-page"><p>Tells the service to return property names
+either in camelCase or using original
+casing</p>
+</div></td></tr></tbody></table><h5 id="methods_getinstance_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-ipromise">IPromise&lt;T&gt;</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-getinstance-page"><p>Promise to resolve when answer will be available.</p>
+<p>Example:
+  instanceSvc.getInstance(&quot;System.Applications.Portal&quot;).then(function (item) {
+                    var portalAppName = item.props.AppName;}</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getinstances">getInstances(instanceRequest, [raPassError])</h3>
+<div class="getinstances"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-getinstances-page"><p>Makes a multi-item request to the JSON Instance service on the server.
+Request types (itemFqn, propertyFqn, query) can be freely intermixed in the request.</p>
+</div><h5 id="methods_getinstances_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>instanceRequest</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-getinstances-page"><p><a href="#/api/RA.IPCommon.Services.object:InstanceRequest">RA.IPCommon.Services.object:InstanceRequest</a></p>
+</div></td></tr><tr><td>[raPassError] <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-getinstances-page"><p>Flag indicating whether to turn off
+common error&#39;s interception mechanism</p>
+</div></td></tr></tbody></table><h5 id="methods_getinstances_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-ipromise">IPromise&lt;T&gt;</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-instancesvc-getinstances-page"><p>Promise to resolve when answer will be available.</p>
+<p>Example:
+   var includeAcl = true, depth = 2, includeShortcuts = true;</p>
+<p>   var instanceRequest = createInstanceRequest();
+   instanceRequest.addItemFqn(&quot;MyEnterprise&quot;, includeAcl, depth, includeShortcuts);
+   instanceRequest.addPropertyFqn(&quot;System.Applications&quot;);
+   instanceRequest.addQuery(&quot;FROM MyEnterprise WHERE name = &#39;Extruder001&#39;&quot; );</p>
+<p>   instanceSvc.getInstances(instanceRequest).then(processResults);</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

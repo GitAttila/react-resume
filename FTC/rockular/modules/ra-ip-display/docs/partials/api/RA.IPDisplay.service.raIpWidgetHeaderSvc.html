@@ -1,0 +1,52 @@
+<h1><code ng:non-bindable="">raIpWidgetHeaderSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipwidgetheadersvc-page"><p>Common utilities for the raIpWidgetHeader component.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_hasbarvisible">hasBarVisible(widgetPixelWidth, widgetPixelHeight)</h3>
+<div class="hasbarvisible"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipwidgetheadersvc-hasbarvisible-page"><p>Checks if widget header bar should be visible based on widget width and height (in pixels).</p>
+</div><h5 id="methods_hasbarvisible_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>widgetPixelWidth</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipwidgetheadersvc-hasbarvisible-page"><p>number</p>
+</div></td></tr><tr><td>widgetPixelHeight</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipwidgetheadersvc-hasbarvisible-page"><p>tells if valid</p>
+</div></td></tr></tbody></table><h5 id="methods_hasbarvisible_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipwidgetheadersvc-hasbarvisible-page"><p>True if there is minimum space to show bar otherwise False</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isemptyvalue">isEmptyValue(val)</h3>
+<div class="isemptyvalue"><h5 id="methods_isemptyvalue_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>val</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipwidgetheadersvc-isemptyvalue-page"><p>the object to check</p>
+</div></td></tr></tbody></table><h5 id="methods_isemptyvalue_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipwidgetheadersvc-isemptyvalue-page"><p>True if val is undefined or null.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_setdateinputstate">setDateInputState(stateObject, isValid, errorMessage)</h3>
+<div class="setdateinputstate"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipwidgetheadersvc-setdateinputstate-page"><p>Sets information of validation in given state object</p>
+</div><h5 id="methods_setdateinputstate_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>stateObject</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipwidgetheadersvc-setdateinputstate-page"><p>output object</p>
+</div></td></tr><tr><td>isValid</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipwidgetheadersvc-setdateinputstate-page"><p>tells if valid</p>
+</div></td></tr><tr><td>errorMessage</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipwidgetheadersvc-setdateinputstate-page"><p>tells error message</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_validatedate">validateDate(dateValue, emptyIsValid, componentName)</h3>
+<div class="validatedate"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipwidgetheadersvc-validatedate-page"><p>Checks whether dateValue is valid date and it is not
+empty</p>
+</div><h5 id="methods_validatedate_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>dateValue <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-date">Date</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipwidgetheadersvc-validatedate-page"><p>Checked date value</p>
+</div></td></tr><tr><td>emptyIsValid</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipwidgetheadersvc-validatedate-page"><p>Determines if an empty date value</p>
+</div></td></tr><tr><td>componentName</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipwidgetheadersvc-validatedate-page"><p>name of date component (From or To)
+is treated as invalid or not</p>
+</div></td></tr></tbody></table><h5 id="methods_validatedate_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipwidgetheadersvc-validatedate-page"><p>Object that
+contains information whether dateValue is valid or not. If
+the value is invalid the appropriate error message is returned.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_validatedateranges">validateDateRanges()</h3>
+<div class="validatedateranges"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipwidgetheadersvc-validatedateranges-page"><p>Validates a range of dates for &#39;Custom Range&#39; time
+horizon item.
+Name of this function should be &#39;areRangesValid&#39;, also properties should be first parameter.
+But this code will be obsolete once property editor will be used instead.</p>
+</div><h5 id="methods_validatedateranges_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipwidgetheadersvc-validatedateranges-page"><p>True if validation ended success otherwise it
+returns False</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

@@ -1,0 +1,372 @@
+<h1><code ng:non-bindable="">raIpFilterSearch</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">RA.IPComponents</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipfiltersearch-page"><p>The component filters data, it has multiple modes, and filter methods have to be provided by user. Filter has three modes. Basic without combining filters, combining filters using input element and custom combining.</p>
+<h4 id="description_basic-mode-–-fulltext-search">Basic mode – fulltext search</h4>
+<p>Very basic fulltext search. No menu to choose filter options. No keywords can be used in input line. Callback function has to be provided.
+ Argument to callback function ($ctrl.callback) example:
+<pre class="prettyprint linenums">
+queryData: [{
+    name: 'all',
+    query: "controller"
+}]
+</pre>
+<h4 id="description_string-mode-–-keywords-in-input">String mode – keywords in input</h4>
+<p>After clicking on filter option, its name will be added to input line. User can write query after that string. Multiple filters can be added. E.g. “name:text category:basic name:field”. Filter results depend on filter implementation. Query can be erased by clicking cancel icon. Default is fulltext search without option choosen.
+Argument to callback function ($ctrl.callback) example:
+<pre class="prettyprint linenums">
+queryData: [{
+    name: "name",
+    query: "ellipse"
+},{
+    name: "category",
+    query: "general"
+}]
+</pre>
+<h4 id="description_advanced-mode-–-custom-implementation-of-graphic-representation-of-active-filters">Advanced mode – custom implementation of graphic representation of active filters</h4>
+<p>After clicking on filter option, user can write query which belongs only this filter, after clicking on another filter option and writing another query, this query will be overwritten. After clicking on enter or checkmark, data will be sent to callback function which handles the search.
+Argument to callback function ($ctrl.callback) example:
+<pre class="prettyprint linenums">
+queryData: [{
+    name: "name",
+    query: "controller"
+}]
+</pre>
+<h4 id="description_cancel-callback">Cancel callback</h4>
+<p>When user clicks on cancel button, callback is send in this format:
+<pre class="prettyprint linenums">
+queryData: [{
+    cancel: true
+}]
+</pre>
+<h4 id="description_delay-and-minchars">delay and minChars</h4>
+<p>When not specified delay will be set to 300ms and minChars to 1. Whispers will be activated when query &gt;= minChars. Callback will be activated when query &gt;= minChars and after delay.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;ANY ra-ip-filter-search
+     filters="{array}"
+     do-confirm="{boolean}"
+     delay="{number}"
+     debounce="{number}"
+     min-chars="{number}"
+     mode="{string}"
+     reset="{boolean}"
+     whisper-last-query="{boolean}"
+     buttons="{object}"
+     default="{number}"
+     callback="{function}"
+     whispers="{function}"
+     set-api="{function}"&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>filters</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipfiltersearch-page"><p>An array of objects representing filter and
+its configuration. When no filter is choosen, callback will be called with default filter &#39;all&#39; (search in all properties).</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>icon (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>CSS class of the filter icon</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>name</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Unique name of filter, will be used as ID</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>label (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Filter label will be visible in filter options menu</td>
+<td>same as name</td>
+</tr>
+<tr>
+<td>color (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Background color of filter icon</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>placeholder (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Input placeholder</td>
+<td>undefined</td>
+</tr>
+</tbody>
+</table>
+</div></td></tr><tr><td>doConfirm</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipfiltersearch-page"><p>Does user has to confirm search query by clicking enter or check icon? //default: false</p>
+</div></td></tr><tr><td>delay</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipfiltersearch-page"><p>Time in ms after which callback function will be called, if query length is same or higher than minChars. //default: 300</p>
+</div></td></tr><tr><td>debounce</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipfiltersearch-page"><p>Input debounce in ms. //default: 1000</p>
+</div></td></tr><tr><td>minChars</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipfiltersearch-page"><p>Minimal number of chars after which callback function will be called. //default: 1</p>
+</div></td></tr><tr><td>mode</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipfiltersearch-page"><p>(&#39;basic&#39;/&#39;string&#39;/&#39;advanced&#39;) Which mode to use. //required</p>
+</div></td></tr><tr><td>reset</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipfiltersearch-page"><p>Only in advanced mode. If chosen filter should reset to default after sending callback.</p>
+</div></td></tr><tr><td>whisperLastQuery</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipfiltersearch-page"><p>Only in string mode. Should apply whisper only to last keyword in input. //default: false</p>
+</div></td></tr><tr><td>buttons</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipfiltersearch-page"><p>Makes buttons visible/invisible. They are visible by default.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>okButton</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>Visible?</td>
+<td>true</td>
+</tr>
+<tr>
+<td>cancelButton</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>Visible?</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+</div></td></tr><tr><td>default</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipfiltersearch-page"><p>Only for advanced mode. Index of default filter from filters array. //default: 0 (first element in array)</p>
+</div></td></tr><tr><td>callback</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipfiltersearch-page"><p>Function which handles filter action. Query is provided as attribute. When no filter is chosen, it get filter with name &#39;all&#39; //required</p>
+</div></td></tr><tr><td>whispers</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipfiltersearch-page"><p>Function which returns whisper for given search query. Query is provided as attribute. Only when combineFilters.</p>
+</div></td></tr><tr><td>setApi</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipfiltersearch-page"><p>Function which sets api to control filter. Has only one method - reinit. It can be used to reinitialize filter in different mode.</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipfiltersearch-page"><h4 id="example_source">Source</h4>
+<div source-edit="example1" source-edit-deps="angular.js script.js" source-edit-html="index.html-12" source-edit-css="style.css" source-edit-js="script.js-13" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-12" ng-html-wrap-loaded="example1 angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-12">
+  <div ng-controller="raIpFilterSearchCtrl">
+  <ra-ip-filter-search filters="filters" default="default" do-confirm="doConfirm" delay="delay" debounce="debounce" min-chars="minChars" mode="mode" placeholder="placeholder" reset="reset" callback="callback(query)" whispers="whispers(query)" whisper-last-query="whisperLastQuery" set-api="setApi(api)"></ra-ip-filter-search>
+  <h6 ng-show="results" id="example_source_filtered-results">Filtered results:</h6>
+      <ul class="search-results">
+         <li ng-repeat="result in results">{{result}}</li>
+      </ul>
+      <h6 id="example_source_configuration">Configuration</h6>
+          <div>
+              <label for="doConfirm">doConfirm</label>
+              <input id="doConfirm" type="checkbox" ng-model="doConfirm">
+              <label for="delay">delay</label>
+              <input id="delay" type="number" min="0" ng-model="delay">
+              <label for="minChars">minChars</label>
+              <input id="minChars" type="number" min="0" ng-model="minChars">
+          </div>
+          <div>
+             <label for="mode">mode</label>
+              <select id="mode" ng-model="mode" ng-change="api.reinit(mode)">
+              <option value="basic">Basic</option>
+              <option value="string">String</option>
+              <option value="advanced">Advanced</option>
+              </select>
+              <label for="whisperLastQuery">whisperLastQuery</label>
+              <input id="whisperLastQuery" type="checkbox" ng-model="whisperLastQuery">
+              <label for="reset">reset</label>
+              <input id="reset" type="checkbox" ng-model="reset">
+          </div>
+      <h6 id="example_source_array-of-objects-to-filter">Array of objects to filter:</h6>
+      <pre>{{array | json}}</pre>
+
+      <h6 id="example_source_push-item-to-array">Push item to array</h6>
+      <label for="objName">name:</label>
+      <input id="objName" type="text" ng-model="objName">
+      <label for="objCat">category:</label>
+      <input id="objCat" type="text" ng-model="objCat">
+      <button ng-click="array.push({name: objName, category: objCat})">Push</button>
+      <h6 id="example_source_delete-item-from-array">Delete item from array</h6>
+      <label for="objId">ID</label>
+      <input id="objId" type="number" min="0" ng-model="objId">
+      <button ng-click="array.splice(objId,1)">Delete</button>
+  </div>
+</script>
+</div>
+<div class="tab-pane" title="style.css">
+<pre class="prettyprint linenums" ng-set-text="style.css"></pre>
+<template id="style.css">
+ label { margin: 0 2px 0 5px; }
+</template>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-13"></pre>
+<script type="text/ng-template" id="script.js-13">
+    angular.module('example1', ['mobile-toolkit-ra', 'RA.IPComponents']);
+    angular.module('example1')
+    .controller('raIpFilterSearchCtrl', ['$scope', '$q',
+    function ($scope, $q) {
+     $scope.filters = [
+         {
+             icon: 'ra-icon-home',
+             name: 'name',
+             label: 'Name',
+             color: 'orange',
+             placeholder: 'Type sth...'
+         },
+         {
+             icon: 'ra-icon-information',
+             name: 'category',
+             label: 'Category',
+             color: 'blue',
+             placeholder: 'Type some desc...'
+         }
+     ];
+     $scope.default = undefined;
+     $scope.doConfirm = true;
+     $scope.reset = true;
+     $scope.delay = 2000;
+     $scope.debounce = 500;
+     $scope.minChars = 3;
+     $scope.mode = 'basic';
+     $scope.placeholder = 'Type something.';
+     $scope.whisperLastQuery = true;
+     $scope.array = [{
+         name: 'Controller',
+         category: 'Allen Bradley'
+     },
+     {
+         name: 'Ellipse',
+         category: 'Basic'
+     },
+     {
+         name: 'Text',
+         category: 'Basic'
+     },
+     {
+         name: 'Text Field',
+         category: 'Basic'
+     },
+     {
+         name: 'Numeric',
+         category: 'Basic'
+     },
+     {
+         name: 'Ball Valve Wheel',
+         category: 'General Equipment'
+     },
+     {
+         name: 'Tank',
+         category: 'General Equipment'
+     }];
+     $scope.callback = function (queryData) {
+         if (queryData[0].cancel) {
+             $scope.results = [];
+             return;
+         }
+         var queries = {};
+         var results = $scope.array;
+         angular.forEach(queryData, function(filter) {
+             queries[filter.name] = queries[filter.name] || [];
+             queries[filter.name].push(filter.query);
+         });
+         angular.forEach(queries, function (queries, filter) {
+             if (filter !== 'all') {
+                 results = results.filter(function (it) {
+                     var found = false;
+                     angular.forEach(queries, function(query) {
+                         if (it[filter].toLowerCase().indexOf(query.toLowerCase()) !== -1) {
+                             found = true;
+                         }
+                     });
+                     return found;
+                 });
+             } else {
+                 var newResults = [];
+                 angular.forEach(results, function (item) {
+                     var found = false;
+                     angular.forEach(item, function (prop, key) {
+                         var foundInItem = false;
+                         angular.forEach(queries, function(query) {
+                             if (it[filter].toLowerCase().indexOf(query.toLowerCase()) !== -1) {
+                                 foundInItem = true;
+                             }
+                         });
+                         if (key !== '$$hashKey' && foundInItem && !found) {
+                             newResults.push(item);
+                             found = true;
+                         }
+                     });
+                 });
+                 results = newResults;
+             }
+         });
+         $scope.results = results;
+     };
+     $scope.whispers = function (queryData) {
+         var deferred = $q.defer(),
+             queries = {},
+             results = $scope.array,
+             props = [],
+             lastQuery = queryData[queryData.length - 1];
+
+         angular.forEach(queryData, function(filter) {
+             queries[filter.name] = queries[filter.name] || [];
+             queries[filter.name].push(filter.query);
+         });
+         angular.forEach(queries, function (queries, filter) {
+             if (filter !== 'all') {
+                 results = results.filter(function (it) {
+                     var found = false, reject = false;
+                     angular.forEach(queries, function(query) {
+                         if (it[filter].toLowerCase().indexOf(query.toLowerCase()) !== -1) {
+                             found = true;
+                         } else if (query === lastQuery.query && filter === lastQuery.name) {
+                             reject = true;
+                         }
+                     });
+                     return found && !reject;
+                 });
+             } else {
+                 var newResults = [];
+                 angular.forEach(results, function (item) {
+                     var found = false;
+                     angular.forEach(item, function (prop, key) {
+                         var foundInItem = false, rejectItem = false;
+                         angular.forEach(queries, function(query) {
+                             if (item[key].toLowerCase().indexOf(query.toLowerCase()) !== -1) {
+                                 foundInItem = true;
+                             } else if (query === lastQuery.query && key === lastQuery.name) {
+                                 rejectItem = true;
+                             }
+                         });
+                         if (key !== '$$hashKey' && foundInItem && !rejectItem && !found) {
+                             newResults.push(item);
+                             props.push(prop);
+                             found = true;
+                         }
+                     });
+                 });
+                 results = newResults;
+             }
+         });
+         if (lastQuery.name !== 'all') {
+             angular.forEach(results, function (item) {
+                 props.push(item[lastQuery.name]);
+             });
+         }
+         deferred.resolve({
+             header: 'search',
+             results: _.uniq(props)
+         });
+         return deferred.promise;
+     };
+     $scope.setApi = function(api) {
+         $scope.api = api;
+     };
+    }]);
+</script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well live-example-container"><iframe src="examples/example-8-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>

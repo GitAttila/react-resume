@@ -1,0 +1,87 @@
+/* cannot use fill-viewport class since running in an example, so used fill-parent.
+    Since fill-viewport is relative to next positioned parent element, we needed
+    to specify a position on a containing div.*/
+
+
+.live-example-only-small {
+    position: relative;
+    min-height: 150px
+}
+
+.live-example-only-bigger {
+    position: relative;
+    min-height: 250px
+}
+
+.live-example-only-big {
+    position: relative;
+    min-height: 400px
+}
+
+.live-example-only-biggest {
+    position: relative;
+    height: 550px
+}
+/* These styles make this page more visually appealing.
+   These styles are visual only and do not implement any
+   behaviors.
+*/
+.ra-flex-highlight .ra-flex-item-static {
+    background-color: rgba(0, 128, 0, 0.3);
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
+.ra-flex-highlight .ra-flex-item-dynamic {
+    background-color: rgba(0, 128, 96, 0.30);
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    padding: 10px;
+}
+
+#content-area {
+    /* Extra space to provide a larger touch target for scrolling */
+    padding-right: 50px;
+}
+
+.content-block {
+    height: 150px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    margin: 5px;
+}
+
+.wide-content-item {
+    width: 1500px;
+    border: 2px dotted rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    margin: 5px;
+}
+
+.tall-content-item {
+    height: 600px;
+    border: 2px dotted rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    margin: 5px;
+}
+
+.tall-wide-content-item {
+    height: 600px;
+    width: 1500px;
+    border: 2px dotted rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    margin: 5px;
+}
+
+.ra-flex-highlight .ra-flex-row {
+    border-top:2px dashed rgba(0, 0, 0, 0.3);
+    border-bottom:2px dashed rgba(0, 0, 0, 0.3);
+    border-left:2px solid rgba(0, 0, 0, 0.3);
+    border-right:2px solid rgba(0, 0, 0, 0.3);
+}
+
+.ra-flex-highlight .ra-flex-column {
+    border-top:2px solid rgba(0, 0, 0, 0.3);
+    border-bottom:2px solid rgba(0, 0, 0, 0.3);
+    border-left:2px dashed rgba(0, 0, 0, 0.3);
+    border-right:2px dashed rgba(0, 0, 0, 0.3);
+}

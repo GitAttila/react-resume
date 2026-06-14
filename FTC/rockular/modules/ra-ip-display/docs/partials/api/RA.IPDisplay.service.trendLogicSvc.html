@@ -1,0 +1,350 @@
+<h1><code ng:non-bindable="">trendLogicSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-page"><p>Basically this service is the functional part of raIpTrend directive.
+Scope passed around is the scope which directive is creating. Besides the
+binded variables (like rbParameters, riFqn and so on) scope holds up the
+information which is passed into or related to Highcharts.Chart object:</p>
+<ul>
+<li>scope.fqnsList is an array with fqn for every series. This list keeps
+the order of the fqns.</li>
+<li>scope.fqns is a hash table, where keys are indices from fqnsList array,
+which holds information about series like unit, type and index
+(i.e. series order)</li>
+<li>scope.series is an array of data suitable to push into
+Highcharts.Chart.series object, with some additional information (not
+defined in Series):<ul>
+<li>seriesType</li>
+<li>seriesName</li>
+<li>seriesUnit</li>
+<li>stringData
+which can be reached in formatting functions so the entire process of
+creating such functions can be simplified.</li>
+</ul>
+</li>
+</ul>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_applychanges">applyChanges(scope, recreate)</h3>
+<div class="applychanges"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-applychanges-page"><p>React on change of rbParameters and/or riFqn</p>
+</div><h5 id="methods_applychanges_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-applychanges-page"><p>object</p>
+</div></td></tr><tr><td>recreate</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-applychanges-page"><p>to indicate if the entire chart have to
+be created again or just updated. If true the Highcharts
+chart will be recreated.</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_applypropertydata">applyPropertyData(scope, properties)</h3>
+<div class="applypropertydata"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-applypropertydata-page"><p>Apply settings of properties returned by property window</p>
+</div><h5 id="methods_applypropertydata_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-applypropertydata-page"><p>scope</p>
+</div></td></tr><tr><td>properties</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-applypropertydata-page"><p>properties settings</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_combinedata">combineData(scope, series, startTs, dataStartTs)</h3>
+<div class="combinedata"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-combinedata-page"><p>Combine existing data in scope.series with new data in series
+object. This functionality works as follows:</p>
+<ul>
+<li>remove all points from scope.series, when x value (date) is
+older than startDate</li>
+<li>append points from series to scope.series, which x (date) is
+older than date from the last point of scope.series</li>
+</ul>
+</div><h5 id="methods_combinedata_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-combinedata-page"><p>scope</p>
+</div></td></tr><tr><td>series</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-combinedata-page"><p>object processed by processData function</p>
+</div></td></tr><tr><td>startTs</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-combinedata-page"><p>start date of current trend viewport
+expressed in timestamp</p>
+</div></td></tr><tr><td>dataStartTs</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-combinedata-page"><p>data portion start timestamp</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_createchart">createChart(scope)</h3>
+<div class="createchart"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-createchart-page"><p>Create the Highchart.Chart instance out of appropriate
+configuration</p>
+</div><h5 id="methods_createchart_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-createchart-page"><p>object</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_discovertype">discoverType(scope, data)</h3>
+<div class="discovertype"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-discovertype-page"><p>Discover type for the data returned by the timeSeriesSvc. Return true,
+if there is at least one valid plot to display, otherwise return false,
+and set appropriate error state and error message.</p>
+</div><h5 id="methods_discovertype_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-discovertype-page"><p>scope</p>
+</div></td></tr><tr><td>data</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-discovertype-page"><p>incoming data</p>
+</div></td></tr></tbody></table><h5 id="methods_discovertype_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-discovertype-page"><p>true for any data to display, false otherwise</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_fetchdata">fetchData(scope, anchorTime, duration, timeDeadBand, recreate)</h3>
+<div class="fetchdata"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-fetchdata-page"><p>Get the actual data for trends, prepare and pass to the current or
+newly created Highcharts object.</p>
+</div><h5 id="methods_fetchdata_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-fetchdata-page"><p>current scope</p>
+</div></td></tr><tr><td>anchorTime</td><td><a href="" class="label type-hint type-hint-number">Number</a><a href="" class="label type-hint type-hint-null">null</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-fetchdata-page"><p>represented in milliseconds time or
+null, means &quot;now&quot;</p>
+</div></td></tr><tr><td>duration</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-fetchdata-page"><p>the period of time from or to anchorTime
+expressed in seconds. Negative duration means getting data
+from the left of the anchor time (past), and positive on
+the right (future). Note, that the latter have only sense
+when anchorTime is not null.</p>
+</div></td></tr><tr><td>timeDeadBand</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-fetchdata-page"><p>interval for getting the data for the
+chart in right format. See getTimeDeadBand for details.</p>
+</div></td></tr><tr><td>recreate</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-fetchdata-page"><p>flag to indicate if the entire chart have
+to be created again or just updated. If true the Highcharts
+chart will be recreated.</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_getautoreloadparameters">getAutoReloadParameters(scope)</h3>
+<div class="getautoreloadparameters"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getautoreloadparameters-page"><p>Returns auto-reload parameters based on scope.rbParameters</p>
+</div><h5 id="methods_getautoreloadparameters_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getautoreloadparameters-page"><p>Model data that contains rbParameters member. See
+prepareOptions function for details.</p>
+</div></td></tr></tbody></table><h5 id="methods_getautoreloadparameters_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getautoreloadparameters-page"><p>that defines whether auto-reload is enabled/disabled
+and the interval passed in milliseconds.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getaxisfqns">getAxisFqns(scope)</h3>
+<div class="getaxisfqns"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getaxisfqns-page"><p>Get fqns out of main fqn and tails with additional fields like
+EngineeringUnit, Min and Max. Useful with liveDataSvc.</p>
+</div><h5 id="methods_getaxisfqns_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getaxisfqns-page"><p>scope</p>
+</div></td></tr></tbody></table><h5 id="methods_getaxisfqns_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getaxisfqns-page"><p>of fqns</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getcharttitle">getChartTitle(scope)</h3>
+<div class="getcharttitle"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getcharttitle-page"><p>Return the title for the chart.</p>
+</div><h5 id="methods_getcharttitle_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getcharttitle-page"><p>scope</p>
+</div></td></tr></tbody></table><h5 id="methods_getcharttitle_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getcharttitle-page"><p>Title of the chart</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getcolor">getColor(index, scope)</h3>
+<div class="getcolor"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getcolor-page"><p>Return color definition suitable for CSS</p>
+</div><h5 id="methods_getcolor_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>index</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getcolor-page"><p>number for the tail serie</p>
+</div></td></tr><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getcolor-page"><p>scope</p>
+</div></td></tr></tbody></table><h5 id="methods_getcolor_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getcolor-page"><p>Color name</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getformat">getFormat(type)</h3>
+<div class="getformat"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getformat-page"><p>Return format for the chart.yAxis.labels.format Highcharts
+attribute for the trend. That is useful mainly for numeric data,
+otherwise return value would be undefined.</p>
+</div><h5 id="methods_getformat_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>type</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getformat-page"><p>string which indicate the type. One of
+&quot;string&quot;, &quot;number&quot;, &quot;boolean&quot; or &quot;none&quot;.</p>
+</div></td></tr></tbody></table><h5 id="methods_getformat_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getformat-page"><p>value suitable to the chart.yAxis.labels.format
+attribute</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getfulltail">getFullTail(rootFqn, tail)</h3>
+<div class="getfulltail"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getfulltail-page"><p>Get full FQNs out of rootFqn and tail.</p>
+</div><h5 id="methods_getfulltail_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rootFqn</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getfulltail-page"><p>Root Item Fqn</p>
+</div></td></tr><tr><td>tail</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getfulltail-page"><p>Tail Fqn</p>
+</div></td></tr></tbody></table><h5 id="methods_getfulltail_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String||undefined</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getfulltail-page"><p>of valid fqns</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getminmax">getMinMax(type, min, max, stringSeriesCount)</h3>
+<div class="getminmax"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getminmax-page"><p>Return calculated min/max for the yAxis</p>
+</div><h5 id="methods_getminmax_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>type</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getminmax-page"><p>string which indicate the type. One of
+&quot;string&quot;, &quot;number&quot;, &quot;boolean&quot; or &quot;none&quot;.</p>
+</div></td></tr><tr><td>min</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getminmax-page"><p>minimum</p>
+</div></td></tr><tr><td>max</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getminmax-page"><p>maximum</p>
+</div></td></tr><tr><td>stringSeriesCount</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getminmax-page"><p>series count</p>
+</div></td></tr></tbody></table><h5 id="methods_getminmax_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getminmax-page"><p>simple hash table with two attributes: min and
+max.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getrotation">getRotation(type)</h3>
+<div class="getrotation"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getrotation-page"><p>Return rotation for the labels on yAxis</p>
+</div><h5 id="methods_getrotation_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>type</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getrotation-page"><p>string which indicate the type. One of
+&quot;string&quot;, &quot;number&quot;, &quot;boolean&quot; or &quot;none&quot;.</p>
+</div></td></tr></tbody></table><h5 id="methods_getrotation_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getrotation-page"><p>angle</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_gettimedeadband">getTimeDeadBand(duration, screenWidth, count)</h3>
+<div class="gettimedeadband"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-gettimedeadband-page"><p>Return calculated time dead band for the request</p>
+</div><h5 id="methods_gettimedeadband_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>duration</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-gettimedeadband-page"><p>in seconds</p>
+</div></td></tr><tr><td>screenWidth</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-gettimedeadband-page"><p>width of screen</p>
+</div></td></tr><tr><td>count</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-gettimedeadband-page"><ul>
+<li>number of tags</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_gettimedeadband_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-gettimedeadband-page"><p>time formatted string in format
+&quot;HH:MM:SS.mmm&quot;, where HH is an hour 00-59, MM minute
+00-59, SS seconds 00-59 and mmm are milliseconds</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_gettimeperiodparameters">getTimePeriodParameters(scope)</h3>
+<div class="gettimeperiodparameters"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-gettimeperiodparameters-page"><p>Returns anchor time and duration based on scope.rbParameters.</p>
+</div><h5 id="methods_gettimeperiodparameters_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-gettimeperiodparameters-page"><p>Model data that contains rbParameters member. See
+prepareOptions function for details.</p>
+</div></td></tr></tbody></table><h5 id="methods_gettimeperiodparameters_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-anchortime">anchorTime, duration</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-gettimeperiodparameters-page"><p>Object that contains
+anchor time and calculated duration</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getyaxis">getYAxis(scope)</h3>
+<div class="getyaxis"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getyaxis-page"><p>Return yAxis which can be directly use as chart.yAxis.</p>
+</div><h5 id="methods_getyaxis_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getyaxis-page"><p>scope</p>
+</div></td></tr></tbody></table><h5 id="methods_getyaxis_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getyaxis-page"><p>yAxis</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getyformatter">getYFormatter(type)</h3>
+<div class="getyformatter"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getyformatter-page"><p>Return formatting function for values on yAxis for certain type of
+data</p>
+</div><h5 id="methods_getyformatter_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>type</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getyformatter-page"><p>string which indicate the type. One of
+&quot;string&quot;, &quot;number&quot;, &quot;boolean&quot; or &quot;none&quot;.</p>
+</div></td></tr></tbody></table><h5 id="methods_getyformatter_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-function">function|undefined</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getyformatter-page"><p>fromatter</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getzoomrange">getZoomRange(scope, startTs, endTs)</h3>
+<div class="getzoomrange"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getzoomrange-page"><p>Get the zoomed range object</p>
+</div><h5 id="methods_getzoomrange_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getzoomrange-page"><p>scope</p>
+</div></td></tr><tr><td>startTs</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getzoomrange-page"><p>start range timestamp</p>
+</div></td></tr><tr><td>endTs</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getzoomrange-page"><p>end range timestamp</p>
+</div></td></tr></tbody></table><h5 id="methods_getzoomrange_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getzoomrange-page"><p>containing two fields: verified start and end
+timestamps</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getzoomseriesfn">getZoomSeriesFn(scope)</h3>
+<div class="getzoomseriesfn"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getzoomseriesfn-page"><p>Returns the function used by raChart for zooming.</p>
+</div><h5 id="methods_getzoomseriesfn_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getzoomseriesfn-page"><p>the directive&#39;s scope</p>
+</div></td></tr></tbody></table><h5 id="methods_getzoomseriesfn_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-function">Function</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-getzoomseriesfn-page"><p>series function</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isvalueoutofrange">isValueOutOfRange(value, min, max)</h3>
+<div class="isvalueoutofrange"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-isvalueoutofrange-page"><p>Checks if the given Value if out of Range or not</p>
+</div><h5 id="methods_isvalueoutofrange_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>value</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-isvalueoutofrange-page"><p>Given Value</p>
+</div></td></tr><tr><td>min</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-isvalueoutofrange-page"><p>Minimum</p>
+</div></td></tr><tr><td>max</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-isvalueoutofrange-page"><p>Maximum</p>
+</div></td></tr></tbody></table><h5 id="methods_isvalueoutofrange_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-isvalueoutofrange-page"><p>True if value if out of range, false otherwise.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_overwriteseries">overwriteSeries(scope, series)</h3>
+<div class="overwriteseries"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-overwriteseries-page"><p>Overwrite the series in scope with the new series</p>
+</div><h5 id="methods_overwriteseries_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-overwriteseries-page"><p>scope</p>
+</div></td></tr><tr><td>series</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-overwriteseries-page"><p>of fresh data</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_prepareoptions">prepareOptions(scope)</h3>
+<div class="prepareoptions"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-prepareoptions-page"><p>Prepare options for trend, which will be easy to manipulate.
+fqns and fqnsList will be filled up regarding to the per fqn
+options and defaults params from rbParameters.</p>
+<p>In order to figure out the time frame for the Highcharts trend, there
+are three parameters are exposed to the user for change in
+rbParameters common section:</p>
+<ul>
+<li>startTime - if defined it means start date of time period</li>
+<li>endTime - if defined it means end date of time period</li>
+<li>lastSeconds - defines number of seconds that it should be calculated<pre><code>          for now as an anchor time.
+</code></pre></li>
+</ul>
+<p>If all three fields are defined, the start and end times takes
+precedence.</p>
+</div><h5 id="methods_prepareoptions_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-prepareoptions-page"><p>scope</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_processdata">processData(scope, data)</h3>
+<div class="processdata"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-processdata-page"><p>Process incoming time series data. This function may affects also
+scope.fqns[...] object in case of missing series type</p>
+<p>NOTE: This function doesn&#39;t care if timeSeriesSvc return bad data,
+it assumes that either it got data in following structure:
+ {
+     startTime: {Number}, // timestamps in fact
+     endTime: {Number},
+     messages: [
+         {Fqn1}: [
+             [x1, y1],
+             [x2, y2],
+             ...
+             [xn, yn]
+         ],
+         ...
+         {Fqnm}: [
+             [x1, y1],
+             [x2, y2],
+             ...
+             [xm, ym]
+         ]
+     ]
+ }</p>
+<p>or the error handling will catch such issue (in fact, this kind of
+checks should belong to the timeSeriesSvc service or some
+specialized VP service anyway)</p>
+<p>The only brief check which are performed are for existence of first
+elements on the object (so startTime, endTime and messages).</p>
+</div><h5 id="methods_processdata_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-processdata-page"><p>scope</p>
+</div></td></tr><tr><td>data</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-processdata-page"><p>incoming data</p>
+</div></td></tr></tbody></table><h5 id="methods_processdata_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-processdata-page"><p>data suitable for highcharts</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_protectcircularcalls">protectCircularCalls(scope, callbackFn)</h3>
+<div class="protectcircularcalls"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-protectcircularcalls-page"><p>Protects against occurrence circular calls when members of
+rbParameters are set inside this service.</p>
+</div><h5 id="methods_protectcircularcalls_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-protectcircularcalls-page"><p>Model where protectCircularCalls member is stored</p>
+</div></td></tr><tr><td>callbackFn</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-protectcircularcalls-page"><p>callback function</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_removeduplicatestringdata">removeDuplicateStringData(currentSet, newSet)</h3>
+<div class="removeduplicatestringdata"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-removeduplicatestringdata-page"><p>Compares the last data point from current series with first data point in new series
+and if they are equal, then the first one from the new series is removed.
+The comparison is performed using the &quot;stringData&quot; and &quot;quality&quot;
+members of data points. This function applies ONLY to series of type STRING.</p>
+</div><h5 id="methods_removeduplicatestringdata_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>currentSet</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-removeduplicatestringdata-page"><p>current data set</p>
+</div></td></tr><tr><td>newSet</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-removeduplicatestringdata-page"><p>the new data set</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_removeexceedpoints">removeExceedPoints(series, startTs)</h3>
+<div class="removeexceedpoints"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-removeexceedpoints-page"><p>Remove exceeded points out of the new data up to provided timestamp.
+Sometimes it may happen, that the timeout will be so big, that it
+exceeds actual view port refresh time + actual duration. This function
+will cut off the old data.</p>
+</div><h5 id="methods_removeexceedpoints_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>series</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-removeexceedpoints-page"><p>data to be examined</p>
+</div></td></tr><tr><td>startTs</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-removeexceedpoints-page"><p>timestamp to cut off the data to</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_removenodatafqns">removeNodataFqns(scope)</h3>
+<div class="removenodatafqns"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-removenodatafqns-page"><p>(Sliently) remove fqns, which does not have the data</p>
+</div><h5 id="methods_removenodatafqns_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-removenodatafqns-page"><p>scope</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_setdefaultzoomrange">setDefaultZoomRange(scope)</h3>
+<div class="setdefaultzoomrange"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-setdefaultzoomrange-page"><p>Set defaults for zoomed range</p>
+</div><h5 id="methods_setdefaultzoomrange_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-setdefaultzoomrange-page"><p>scope</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_seterrorstate">setErrorState(scope, message)</h3>
+<div class="seterrorstate"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-seterrorstate-page"><p>Set error state.</p>
+</div><h5 id="methods_seterrorstate_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-seterrorstate-page"><p>scope</p>
+</div></td></tr><tr><td>message</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-seterrorstate-page"><p>displayed (somehow) to the user</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_setwidgetstate">setWidgetState(scope, state)</h3>
+<div class="setwidgetstate"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-setwidgetstate-page"><p>Sets the widget state to one of following value:
+LOADING - it means that the widget and the data are currently loaded
+REFRESHING - it defines that chart is refreshed
+READY - it means that chart has already loaded the data</p>
+</div><h5 id="methods_setwidgetstate_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-setwidgetstate-page"><p>Scope that contains state member</p>
+</div></td></tr><tr><td>state <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-setwidgetstate-page"><p>New state of widget</p>
+</div></td></tr></tbody></table><h5 id="methods_setwidgetstate_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">*|displayState</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-setwidgetstate-page"><p>Value of state after setting</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_timeseries">timeSeries(scope, anchor, duration, tdb, recreate)</h3>
+<div class="timeseries"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-timeseries-page"><p>Get timeSeries data. This is simple wrapper on the timeSeries
+service.</p>
+</div><h5 id="methods_timeseries_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-timeseries-page"><p>scope</p>
+</div></td></tr><tr><td>anchor</td><td><a href="" class="label type-hint type-hint-number">Number</a><a href="" class="label type-hint type-hint-null">null</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-timeseries-page"><p>(see fetchData for description)</p>
+</div></td></tr><tr><td>duration</td><td><a href="" class="label type-hint type-hint-numeric">Numeric</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-timeseries-page"><p>(see fetchData for description)</p>
+</div></td></tr><tr><td>tdb</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-timeseries-page"><p>(see fetchData for description)</p>
+</div></td></tr><tr><td>recreate</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-timeseries-page"><p>(see fetchData for description)</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_toggleautoreload">toggleAutoReload(scope, flag)</h3>
+<div class="toggleautoreload"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-toggleautoreload-page"><p>Turn on subscribing to for the data for current chart.</p>
+</div><h5 id="methods_toggleautoreload_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-toggleautoreload-page"><p>scope</p>
+</div></td></tr><tr><td>flag</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-toggleautoreload-page"><p>if true, will subscribe for the data
+if timeseries request was not unsubscribed synchronously</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_updateunitsinseries">updateUnitsInSeries(scope)</h3>
+<div class="updateunitsinseries"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-updateunitsinseries-page"><p>Update series with unit data (which was collected during yAxis
+configuration). This function also set the name, which may be
+concatenated with unit if the latter exists. This name will be
+displayed in a legend box below the chart.</p>
+</div><h5 id="methods_updateunitsinseries_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-trendlogicsvc-updateunitsinseries-page"><p>scope</p>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+</div>

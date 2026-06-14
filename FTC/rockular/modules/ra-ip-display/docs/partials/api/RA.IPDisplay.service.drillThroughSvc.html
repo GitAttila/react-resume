@@ -1,0 +1,123 @@
+<h1><code ng:non-bindable="">drillThroughSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-drillthroughsvc-page"><p>Service which handles operations with Drill Through links.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_addhttptourl">addHttpToUrl(url)</h3>
+<div class="addhttptourl"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-drillthroughsvc-addhttptourl-page"><p>Adds http:// prefix to url if no protocol is present.</p>
+</div><h5 id="methods_addhttptourl_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>url</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-drillthroughsvc-addhttptourl-page"><p>URL to which http protocol prefix should be added.</p>
+</div></td></tr></tbody></table><h5 id="methods_addhttptourl_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-drillthroughsvc-addhttptourl-page"><p>Original input if it contains some protocol. Otherwise it prefixes it
+with &quot;http://&quot;</p>
+</div></td></tr></table><h4 id="methods_addhttptourl_example">Example</h4>
+<div class="example"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-drillthroughsvc-addhttptourl-page"><p>The example below shows usage of addHttpToUrl method and the visualization of its result:
+<h6 id="methods_addhttptourl_example_source">Source</h6>
+<div source-edit="exampleAppOne" source-edit-deps="angular.js script.js" source-edit-html="index.html-76" source-edit-css="" source-edit-js="script.js-77" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-76" ng-html-wrap-loaded="exampleAppOne angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-76">
+       <div ng-controller="exampleCtrl">
+           <div>
+               URL: <input ng-model="input" style="width: 300px; margin-bottom: 10px">
+               <button ng-click="process()">Process</button>
+               <div>
+                 Result: {{result}}
+               </div>
+               <div style="color: red; height: 30px">{{error}}</div>
+           </div>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-77"></pre>
+<script type="text/ng-template" id="script.js-77">
+       var mod = angular.module('exampleAppOne', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope', 'drillThroughSvc',
+           function ($scope, drillThroughSvc) {
+               'use strict';
+               $scope.input = "http://www.rockwellautomation.com";
+               $scope.result = "";
+               $scope.error = "";
+               $scope.process = function () {
+                 $scope.error = "";
+                 var input = $scope.input === "" ? undefined : $scope.input;
+
+                 try{
+                     $scope.result = drillThroughSvc.addHttpToUrl(input);
+                 }
+                 catch(e) {
+                     $scope.error = e.message;
+                 }
+               }
+           }
+       ]);
+
+   </script>
+</div>
+</div><h6 id="methods_addhttptourl_example_demo">Demo</h6>
+<div class="well live-example-container"><iframe src="examples/example-40-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_validateurl">validateUrl(url)</h3>
+<div class="validateurl"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-drillthroughsvc-validateurl-page"><p>Returns information whether the given URL string is valid.</p>
+</div><h5 id="methods_validateurl_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>url</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-drillthroughsvc-validateurl-page"><p>URL to be validated.</p>
+</div></td></tr></tbody></table><h5 id="methods_validateurl_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-drillthroughsvc-validateurl-page"><p><strong>true</strong> if given URL is valid.</p>
+</div></td></tr></table><h4 id="methods_validateurl_example">Example</h4>
+<div class="example"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-drillthroughsvc-validateurl-page"><p>The example below shows usage of validateUrl method and the visualization of its result:
+<h6 id="methods_validateurl_example_source">Source</h6>
+<div source-edit="exampleAppOne" source-edit-deps="angular.js script.js" source-edit-html="index.html-74" source-edit-css="" source-edit-js="script.js-75" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-74" ng-html-wrap-loaded="exampleAppOne angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-74">
+       <div ng-controller="exampleCtrl">
+           <div>
+               URL: <input ng-model="input" style="width: 300px; margin-bottom: 10px">
+               <button ng-click="process()">Process</button>
+               <div>
+                 Result: {{result}}
+               </div>
+               <div style="color: red; height: 30px">{{error}}</div>
+           </div>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-75"></pre>
+<script type="text/ng-template" id="script.js-75">
+       var mod = angular.module('exampleAppOne', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope', 'drillThroughSvc',
+           function ($scope, drillThroughSvc) {
+               'use strict';
+               $scope.input = "http://www.rockwellautomation.com";
+               $scope.result = "";
+               $scope.error = "";
+               $scope.process = function () {
+                 $scope.error = "";
+                 var input = $scope.input === "" ? undefined : $scope.input;
+
+                 try{
+                     $scope.result = drillThroughSvc.validateUrl(input);
+                 }
+                 catch(e) {
+                     $scope.error = e.message;
+                 }
+               }
+           }
+       ]);
+
+   </script>
+</div>
+</div><h6 id="methods_validateurl_example_demo">Demo</h6>
+<div class="well live-example-container"><iframe src="examples/example-39-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
