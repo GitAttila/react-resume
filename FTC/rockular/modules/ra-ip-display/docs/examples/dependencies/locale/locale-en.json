@@ -1,0 +1,54 @@
+{
+    "RA_IP_DISPLAY": {
+        "DEFAULT_FORM_FIELD_ERRORS": {
+            "ERR_INVALID_URL_FORMAT": "{{fieldname}} has invalid format",
+            "ERR_REQUIRED": "{{fieldname}} is required",
+            "ERR_POSITIVE_NUMBER": "Only positive number is allowed",
+            "ERR_POSITIVE_NUMBER_MORE_THAN_MIN": "Only positive number which is more than {{min}} is allowed",
+            "ERR_SELECT_REQUIRED": "Please select {{fieldname}}",
+            "ERR_FIELD1_LESS_THAN_FIELD2": "\"{{field1}}\" cannot be less than \"{{field2}}\"",
+            "ERR_FIELD1_MORE_THAN_FIELD2": "\"{{field1}}\" cannot be more than \"{{field2}}\"",
+            "ERR_FIELD1_LESS_THAN_OR_EQUAL_FIELD2": "\"{{field1}}\" cannot be less than or equal to \"{{field2}}\"",
+            "ERR_FIELD1_MORE_THAN_OR_EQUAL_FIELD2": "\"{{field1}}\" cannot be more than or equal to \"{{field2}}\"",
+            "ERR_FIELD1_REQUIRE_FIELD2": "\"{{field1}}\" can be used only in combination with \"{{field2}}\"",
+            "ERR_INVALID_DATE": "Invalid date and time",
+            "ERR_INVALID_LOCATION": "Invalid location format.",
+            "ERR_CAPTION_REDUNDANT": "Caption redundant. Please, delete it or fill out {{fieldname}}.",
+            "ERR_CUSTOM_DATA_SAMPLING": "Custom data sampling format must be: 2m(2 minutes), 3h(3 hours), 1d(1 day) etc."
+        },
+        "RA_IP_POWER_BI": {
+            "ERR_SELECT_REPORT": "Select report",
+            "ERR_SELECT_WORKSPACE": "Select workspace",
+            "ERR_NO_DATA": "Select a Power BI report to display data",
+            "ERR_INVALID_AUTHORISATION": "User is not authorised to create reports",
+            "ERR_AUTHENTICATION_FAILED": "Power BI Service authentication failed",
+            "ERR_WHILE_GETTING_WORKSPACES": "Error while getting workspaces.",
+            "ERR_WHILE_GETTING_REPORTS": "Error while getting reports.",
+            "ERR_GENERATING_TOKEN": "Error while generating token for report.",
+            "ERR_NO_REPORTS": "No reports",
+            "ERR_NO_WORKSPACE": "No workspace",
+            "ERR_NO_REPORT": "No report"
+        },
+        "RA_IP_FILE_TREND": {
+            "LOADING": "Loading...",
+            "INFO_MESSAGE": {
+                "SELECT_TAG": "Select tag to display data.",
+                "SELECT_COLUMNS": "Configure file columns to display data.",
+                "NO_TIMESERIES_DATA_FOR_PERIOD": "There are no timeseries data for selected period.",
+                "NO_TIMESERIES_DATA": "Passed FQN does not provide timeseries data.",
+                "ERR_LOAD_LINE_CHART_TIMESERIES_DATA": "Could not load timeseries data.",
+                "ERR_PARSING_CSV": "An error occured when parsing file.",
+                "ERR_PARSING_CSV_NO_TIME_FROM_CELL": "An error occured when parsing file. Could not retrieve timestamp from predefined row {{row}} and column {{column}}. Check widget settings or file content.",
+                "ERR_PARSING_CSV_TIME_FROM_CELL_FORMAT": "An error occured when parsing file. Invalid datetime format for datetime in file cell (row: {{row}}, column: {{column}}).",
+                "ERR_PARSING_CSV_ROW_NO_DATE_FOUND": "Could not parse datetime '{{datetime}}' for row {{row}}, column: {{column}}. Row has been skipped.",
+                "ERR_PARSING_CSV_ROW_NOT_SUPPORTED_DATE_FORMAT" : "Could not parse datetime '{{datetime}}' for row {{row}}, column: {{column}}. Row has been skipped.",
+                "ERR_PARSING_CSV_ROW_NO_VALID_INCREMENT_FOUND": "Could not add increment to datetime for row {{row}}, column: {{column}}. '{{increment}}' is not valid increment.",
+                "ERR_PARSING_CSV_UNIQUE_SERIES_TIMESTAMP": "Duplicate timestamp entries have been found. These rows has been skipped:",
+                "ERR_PARSING_CSV_VALUE_NOT_A_NUMBER": "Non-numeric value entries have been found. These rows has been skipped:",
+                "ERR_PARSING_CSV_ROW_COLUMN": "row {{row}}, column: {{column}}",
+                "ERR_EMPTY_STOCK_CHART_SERIES": "No data has been parsed.",
+                "ERR_PARSING_CSV_NO_HEADER": "CSV file does not have header row."
+            }
+        }
+    }
+}

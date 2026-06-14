@@ -1,0 +1,62 @@
+<h1><code ng:non-bindable="">timeSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timesvc-page"><p>Service which provides functions which help with working with time variables.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_getformateddatestring">getFormatedDateString(time)</h3>
+<div class="getformateddatestring"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timesvc-getformateddatestring-page"><p>Parses the input string and returns the time format &#39;M/d/yy h:mm AM/PM&#39;.</p>
+</div><h5 id="methods_getformateddatestring_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>time</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timesvc-getformateddatestring-page"><p>Time in any format the angular date filter
+(<a href="https://docs.angularjs.org/api/ng/filter/date">https://docs.angularjs.org/api/ng/filter/date</a>) can parse.</p>
+</div></td></tr></tbody></table><h5 id="methods_getformateddatestring_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timesvc-getformateddatestring-page"><p>Date in format : &#39;M/d/yy h:mm AM/PM&#39;</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_gettimeperiod">getTimePeriod(start, end)</h3>
+<div class="gettimeperiod"><h5 id="methods_gettimeperiod_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>start</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timesvc-gettimeperiod-page"><p>Start time. Any string which can be passed into Date object constructor.</p>
+</div></td></tr><tr><td>end</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timesvc-gettimeperiod-page"><p>End time. Any string which can be passed into Date object constructor.</p>
+</div></td></tr></tbody></table><h5 id="methods_gettimeperiod_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timesvc-gettimeperiod-page"><p>Time period between start and end in seconds.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_gettimezonelabel">getTimezoneLabel(timezoneValue)</h3>
+<div class="gettimezonelabel"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timesvc-gettimezonelabel-page"><p>Returns a timezone label.</p>
+</div><h5 id="methods_gettimezonelabel_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>timezoneValue</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timesvc-gettimezonelabel-page"><ul>
+<li>timezone value for which to return label.</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_gettimezonelabel_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timesvc-gettimezonelabel-page"><p>timezone label</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_gettimezones">getTimezones()</h3>
+<div class="gettimezones"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timesvc-gettimezones-page"><p>Returns an array of key/value pairs. Values are mapped Microsoft timezones to
+moment.tz.names() keys.</p>
+</div><h5 id="methods_gettimezones_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timesvc-gettimezones-page"><p>Array of key/value pairs</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_lastmonthsinseconds">lastMonthsInSeconds(dateFrom, count, negative)</h3>
+<div class="lastmonthsinseconds"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timesvc-lastmonthsinseconds-page"><p>Get the time difference between months in seconds</p>
+</div><h5 id="methods_lastmonthsinseconds_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>dateFrom</td><td><a href="" class="label type-hint type-hint-date">Date</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timesvc-lastmonthsinseconds-page"><p>date/time to count difference from</p>
+</div></td></tr><tr><td>count</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timesvc-lastmonthsinseconds-page"><p>Integer number of months to add to current date, can also be negative</p>
+</div></td></tr><tr><td>negative</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timesvc-lastmonthsinseconds-page"><p>flag indicating if only positive value should be returned,
+defaults as false - positive value is returned</p>
+</div></td></tr></tbody></table><h5 id="methods_lastmonthsinseconds_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timesvc-lastmonthsinseconds-page"><p>Difference in seconds, default in positive number unless negative flag is set to true</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_parsecustomtime">parseCustomTime(time)</h3>
+<div class="parsecustomtime"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timesvc-parsecustomtime-page"><p>Parses the input string and returns the time in seconds.
+For example &quot;3h25m&quot; will be returned as 205.</p>
+</div><h5 id="methods_parsecustomtime_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>time</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timesvc-parsecustomtime-page"><p>Custom time in format:
+y - year, M - month, w - week, d - day, h - hour, m - minute.</p>
+</div></td></tr></tbody></table><h5 id="methods_parsecustomtime_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-number">Number|Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timesvc-parsecustomtime-page"><p>Time in seconds. <strong>false</strong> if the input was invalid.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_subtractseconds">subtractSeconds(seconds)</h3>
+<div class="subtractseconds"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timesvc-subtractseconds-page"><p>Returns Date object which is set to <strong>seconds</strong> ago.</p>
+</div><h5 id="methods_subtractseconds_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>seconds</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timesvc-subtractseconds-page"><p>Number of seconds which should be subtracted from actual time.</p>
+</div></td></tr></tbody></table><h5 id="methods_subtractseconds_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-timesvc-subtractseconds-page"><p>Date object set to the demanded time.</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

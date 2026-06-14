@@ -1,0 +1,100 @@
+<h1><code ng:non-bindable="">raIpWidgetHeader</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-component-page ra-ipdisplay-component-raipwidgetheader-page"><p>Widget live mode controls, use to allow user interactively manage live mode properties of certain widget.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ra-ip-widget-header
+       config="{Object}"&gt;
+&lt;/ra-ip-widget-header&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-component-page ra-ipdisplay-component-raipwidgetheader-page"><p>An object with header bar configuration.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>autoReload</td>
+<td><a href="#" class="label type-hint type-hint-object">Object</a></td>
+<td>Object with properties isActive, period in seconds is autoreload interval</td>
+<td></td>
+</tr>
+<tr>
+<td>timeHorizonItems</td>
+<td><a href="#" class="label type-hint type-hint-array">Array</a></td>
+<td>Array with object definitions for duration select box.</td>
+<td></td>
+</tr>
+<tr>
+<td>anchorTime</td>
+<td><a href="#" class="label type-hint type-hint-date">Date</a></td>
+<td>End date to count start time for custom range. Start time is calculated as end time minus duration.</td>
+<td>null</td>
+</tr>
+<tr>
+<td>duration</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>Actual negative duration which will also be selected in selectbox defined by timeHorizon items.</td>
+<td></td>
+</tr>
+<tr>
+<td>showExportButton</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>Flag indicating that widget header should show export button (before refresh button)</td>
+<td></td>
+</tr>
+<tr>
+<td>showBar</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>Flag indicating that widget header should show as bar</td>
+<td>true</td>
+</tr>
+<tr>
+<td>hideLiveMode</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>Flag indicating that widget header have to hide live mode settings</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+</div></td></tr></tbody></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_createproperties">createProperties()</h3>
+<div class="createproperties"><div class="ra-ipdisplay-component-page ra-ipdisplay-component-raipwidgetheader-createproperties-page"><p>Prepares data of properties for property window</p>
+</div><h5 id="methods_createproperties_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-component-page ra-ipdisplay-component-raipwidgetheader-createproperties-page"><p>properties object</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_menuexportclicked">menuExportClicked()</h3>
+<div class="menuexportclicked"><div class="ra-ipdisplay-component-page ra-ipdisplay-component-raipwidgetheader-menuexportclicked-page"><p>Handles click action on export within a chevron menu.</p>
+</div></div>
+</li>
+<li><h3 id="methods_menupropertiesclicked">menuPropertiesClicked()</h3>
+<div class="menupropertiesclicked"><div class="ra-ipdisplay-component-page ra-ipdisplay-component-raipwidgetheader-menupropertiesclicked-page"><p>Handles click action on properties within a chevron menu.</p>
+</div></div>
+</li>
+<li><h3 id="methods_menurefreshclicked">menuRefreshClicked()</h3>
+<div class="menurefreshclicked"><div class="ra-ipdisplay-component-page ra-ipdisplay-component-raipwidgetheader-menurefreshclicked-page"><p>Handles click action on refresh within a chevron menu.</p>
+</div></div>
+</li>
+<li><h3 id="methods_onapplybar">onApplyBar(properties, refreshOnly, exportOnly)</h3>
+<div class="onapplybar"><div class="ra-ipdisplay-component-page ra-ipdisplay-component-raipwidgetheader-onapplybar-page"><p>Called when changes in bar properties have been submit.</p>
+</div><h5 id="methods_onapplybar_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>properties</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-component-page ra-ipdisplay-component-raipwidgetheader-onapplybar-page"><p>current properties</p>
+</div></td></tr><tr><td>refreshOnly</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-component-page ra-ipdisplay-component-raipwidgetheader-onapplybar-page"><p>indication if only refresh button has been clicked</p>
+</div></td></tr><tr><td>exportOnly</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-component-page ra-ipdisplay-component-raipwidgetheader-onapplybar-page"><p>indication if only export button has been clicked</p>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+</div>

@@ -1,0 +1,201 @@
+<h1><code ng:non-bindable="">fqnSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPCommon.Services</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-page"><p>Service for FQN Related Manipulations</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_absolutetorelative">absoluteToRelative(anchorFqn, fqn)</h3>
+<div class="absolutetorelative"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-absolutetorelative-page"><p>Calculates a relative FQN to resolve to the passed FQN from the anchor FQN,
+that could be used with the FQN.Resolve method.</p>
+</div><h5 id="methods_absolutetorelative_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>anchorFqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-absolutetorelative-page"><p>to which fqn the result would be relative</p>
+</div></td></tr><tr><td>fqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-absolutetorelative-page"><p>absolute fqn for which we want the relative calculated</p>
+</div></td></tr></tbody></table><h5 id="methods_absolutetorelative_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-absolutetorelative-page"><p>Relative Fqn</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_appendnamepart">appendNamePart(baseName, part)</h3>
+<div class="appendnamepart"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-appendnamepart-page"><p>Appends name parts to a given base name.</p>
+</div><h5 id="methods_appendnamepart_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>baseName</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-appendnamepart-page"><ul>
+<li>to append name parts to</li>
+</ul>
+</div></td></tr><tr><td>part</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-appendnamepart-page"><ul>
+<li>The name to append to the base name. Dots in the name will be escaped.</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_appendnamepart_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-appendnamepart-page"><p>Full FQN with Appended name part</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_appendnameparts">appendNameParts(baseName, parts)</h3>
+<div class="appendnameparts"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-appendnameparts-page"><p>Appends name parts to a given base name.</p>
+</div><h5 id="methods_appendnameparts_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>baseName</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-appendnameparts-page"><ul>
+<li>to append name parts to</li>
+</ul>
+</div></td></tr><tr><td>parts</td><td><a href="" class="label type-hint type-hint-array">array</a><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-appendnameparts-page"><ul>
+<li>unescaped fqn parts</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_appendnameparts_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-appendnameparts-page"><p>Full FQN with Appended name part(s)</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_areequal">areEqual(fqn1, fqn2)</h3>
+<div class="areequal"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-areequal-page"><p>Case insensitive check to determine if two FQN&#39;s are equal</p>
+</div><h5 id="methods_areequal_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>fqn1</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-areequal-page"><ul>
+<li>fqn1 to check</li>
+</ul>
+</div></td></tr><tr><td>fqn2</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-areequal-page"><ul>
+<li>fqn2 to check</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_areequal_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-areequal-page"><p>true if equal</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_buildfqn">buildFqn(parts)</h3>
+<div class="buildfqn"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-buildfqn-page"><p>Build a fully qualified name from an array of name parts.</p>
+</div><h5 id="methods_buildfqn_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>parts</td><td><a href="" class="label type-hint type-hint-array">array</a><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-buildfqn-page"><ul>
+<li>The name parts used to build the fully qualified name.</param></li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_buildfqn_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-buildfqn-page"><p>The fully qualified name built.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_buildfqn">buildFqn(parts)</h3>
+<div class="buildfqn"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-buildfqn-page"><p>Build a fully qualified name for a Query from an array of name parts.</p>
+</div><h5 id="methods_buildfqn_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>parts</td><td><a href="" class="label type-hint type-hint-array">array</a><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-buildfqn-page"><ul>
+<li>The name parts used to build the fully qualified name.</param></li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_buildfqn_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-buildfqn-page"><p>The fully qualified name built.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_buildfqnforquerywithescaping">buildFqnForQueryWithEscaping(fqn)</h3>
+<div class="buildfqnforquerywithescaping"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-buildfqnforquerywithescaping-page"><p>Build escaped fully qualified name for a Query from a fully qualified name or an array of name parts.</p>
+</div><h5 id="methods_buildfqnforquerywithescaping_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>fqn</td><td><a href="" class="label type-hint type-hint-array">array</a><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-buildfqnforquerywithescaping-page"><p>The fully qualified name or the name parts used to build the escaped fully
+qualified name.</param></p>
+</div></td></tr></tbody></table><h5 id="methods_buildfqnforquerywithescaping_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-buildfqnforquerywithescaping-page"><p>The escaped fully qualified name built.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_cutfqnpart">cutFqnPart(fqn, from, to)</h3>
+<div class="cutfqnpart"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-cutfqnpart-page"><p>Cut fqn part from - to</p>
+</div><h5 id="methods_cutfqnpart_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>fqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-cutfqnpart-page"><p>The fully qualified name</p>
+</div></td></tr><tr><td>from</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-cutfqnpart-page"><p>slice from</p>
+</div></td></tr><tr><td>to</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-cutfqnpart-page"><p>slice to</p>
+</div></td></tr></tbody></table><h5 id="methods_cutfqnpart_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-cutfqnpart-page"><p>cuted string</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_escape">escape(part)</h3>
+<div class="escape"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-escape-page"><p>Escapes the specified name if necessary</p>
+</div><h5 id="methods_escape_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>part</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-escape-page"><ul>
+<li>name part to escape</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_escape_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-escape-page"><p>escaped name part</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_escapeforjsonrequest">escapeForJsonRequest(parts)</h3>
+<div class="escapeforjsonrequest"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-escapeforjsonrequest-page"><p>Escape any special characters for the JSON request</p>
+</div><h5 id="methods_escapeforjsonrequest_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>parts</td><td><a href="" class="label type-hint type-hint-array">array</a><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-escapeforjsonrequest-page"><ul>
+<li>parts of the fqn to escape</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_escapeforjsonrequest_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">array|string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-escapeforjsonrequest-page"><p>parts of the fqn escaped for JSON request</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_findparameterinfqn">findParameterInFqn(fqn, parameter)</h3>
+<div class="findparameterinfqn"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-findparameterinfqn-page"><p>find string in fqn string</p>
+</div><h5 id="methods_findparameterinfqn_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>fqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-findparameterinfqn-page"><p>The fully qualified name</p>
+</div></td></tr><tr><td>parameter</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-findparameterinfqn-page"><p>string to search for</p>
+</div></td></tr></tbody></table><h5 id="methods_findparameterinfqn_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-findparameterinfqn-page"><p>-1 if parameter doesn&#39;t exists or number when parameter starts</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getcombinednameparts">getCombinedNameParts(anchorFqnParts, includedAnchorPartsCount, relativeFqnParts)</h3>
+<div class="getcombinednameparts"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-getcombinednameparts-page"><p>Combine anchor parts with relative parts</p>
+</div><h5 id="methods_getcombinednameparts_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>anchorFqnParts</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-getcombinednameparts-page"><ul>
+<li>Parts of Anchor Fqn</li>
+</ul>
+</div></td></tr><tr><td>includedAnchorPartsCount</td><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-getcombinednameparts-page"><ul>
+<li>Count of included Anchor Parts</li>
+</ul>
+</div></td></tr><tr><td>relativeFqnParts</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-getcombinednameparts-page"><ul>
+<li>Parts of Relative Fqn</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_getcombinednameparts_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-getcombinednameparts-page"><ul>
+<li>Combined Name Parts</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getlastname">getLastName(fqn)</h3>
+<div class="getlastname"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-getlastname-page"><p>Get the last part of a fully qualified name.</p>
+</div><h5 id="methods_getlastname_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>fqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-getlastname-page"><ul>
+<li>fqn from which to extract the last name part.</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_getlastname_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-getlastname-page"><p>The last name part.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isemptyorunassigned">isEmptyOrUnassigned(fqn)</h3>
+<div class="isemptyorunassigned"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-isemptyorunassigned-page"><p>Check if Fqn is empty or not</p>
+</div><h5 id="methods_isemptyorunassigned_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>fqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-isemptyorunassigned-page"><ul>
+<li>to check</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_isemptyorunassigned_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-isemptyorunassigned-page"><p>true or false based on if Fqn is empty or unassigned</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isrelative">isRelative(fqn)</h3>
+<div class="isrelative"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-isrelative-page"><p>Test if an FQN is relative</p>
+</div><h5 id="methods_isrelative_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>fqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-isrelative-page"><ul>
+<li>to test</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_isrelative_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-bool">bool</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-isrelative-page"><p>true if this is a relative FQN</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_relativefqndepth">relativeFqnDepth(relativeFqn)</h3>
+<div class="relativefqndepth"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-relativefqndepth-page"><p>Returns the number of leading dots for a string.</p>
+</div><h5 id="methods_relativefqndepth_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>relativeFqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-relativefqndepth-page"><ul>
+<li>Relative FQN</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_relativefqndepth_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-relativefqndepth-page"><p>relative depth</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_relativetoabsolute">relativeToAbsolute(anchorFqn, relativeFqn)</h3>
+<div class="relativetoabsolute"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-relativetoabsolute-page"><p>Calculates the FQN from the anchor FQN and provided relative FQN.</p>
+</div><h5 id="methods_relativetoabsolute_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>anchorFqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-relativetoabsolute-page"><ul>
+<li>to resolve the path with</li>
+</ul>
+</div></td></tr><tr><td>relativeFqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-relativetoabsolute-page"><ul>
+<li>path to resolve</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_relativetoabsolute_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-relativetoabsolute-page"><p>FQN that results from resolution with anchor</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_removelastnamepart">removeLastNamePart(fqn)</h3>
+<div class="removelastnamepart"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-removelastnamepart-page"><p>Removes the last name part of a fully qualified name. E.g. the result for the input string
+&quot;MyEnterprise.Pumps.Pump101.Temparature.Value&quot; is &quot;MyEnterprise.Pumps.Pump101.Temparature&quot;</p>
+</div><h5 id="methods_removelastnamepart_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>fqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-removelastnamepart-page"><ul>
+<li>fqn to be truncated.</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_removelastnamepart_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-removelastnamepart-page"><p>The passed in fqn without its last name part.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_requiresescaping">requiresEscaping(part)</h3>
+<div class="requiresescaping"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-requiresescaping-page"><p>(Internal Function) Test if name part needs to be escaped.</p>
+</div><h5 id="methods_requiresescaping_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>part</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-requiresescaping-page"><ul>
+<li>name part to escape</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_requiresescaping_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-requiresescaping-page"><p>escaped name part</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_splitfqn">splitFqn(fqn)</h3>
+<div class="splitfqn"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-splitfqn-page"><p>Split a fully qualified name into an array of name parts.</p>
+</div><h5 id="methods_splitfqn_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>fqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-splitfqn-page"><ul>
+<li>fqn to be split.</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_splitfqn_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">array|string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-splitfqn-page"><p>An array of name parts of the specified fully qualified name.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_unescaperawpart">unescapeRawPart(rawPart)</h3>
+<div class="unescaperawpart"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-unescaperawpart-page"><p>Internal Method to Unescape (Remove Escapes) fom Raw Parts</p>
+</div><h5 id="methods_unescaperawpart_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rawPart</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-unescaperawpart-page"><ul>
+<li>raw Fqn</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_unescaperawpart_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-fqnsvc-unescaperawpart-page"><ul>
+<li>Raw Parts with Escape Removed</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

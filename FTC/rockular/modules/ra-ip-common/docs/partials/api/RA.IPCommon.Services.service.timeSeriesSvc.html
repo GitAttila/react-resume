@@ -1,0 +1,86 @@
+<h1><code ng:non-bindable="">timeSeriesSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPCommon.Services</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-timeseriessvc-page"><p>Service for TimeSeries Request and Manipulations, it uses
+<a href="#/api/RA.IPCommon.Services.object:Subscriber">Subscriber</a> as a base so it has all it&#39;s methods available.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_getdataonce">getDataOnce(timeSeriesReq)</h3>
+<div class="getdataonce"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-timeseriessvc-getdataonce-page"><p>Get data from time series service</p>
+</div><h5 id="methods_getdataonce_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>timeSeriesReq</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-timeseriessvc-getdataonce-page"><p>A structure:
+{
+    fqns: {array(string)} List of fqns for request
+    duration: {number} duration time into history to look at
+    timeDeadBand: {string} timeDeadBand time dead band if
+      wanted
+    valueDeadBand: {number} valueDeadBand optional value dead
+      band
+    start: {date} start Optional start interval point other
+      than now
+    samplingDefinition: {object} Optional definition for
+      sampling data consisting of up to three parameters
+      <ul>
+        <li><b>samplingType: <i>string</i></b> <i>required</i>
+        One of the types returned in getSamplingTypes (the
+        string representation of key, not the
+        value/description)</li>
+        <li><b>sliceCount: <i>integer</i></b> <i>optional</i>
+        Number of slices to which the time interval should be
+        divided</li>
+        <li><b>deltaT: <i>integer</i></b> <i>optional</i>
+        Length of interval to which the time interval should be
+        divided</li>
+      </ul>
+      One of the optional parameters has to be defined
+}</p>
+</div></td></tr></tbody></table><h5 id="methods_getdataonce_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-ipromise">IPromise&lt;T&gt;</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-timeseriessvc-getdataonce-page"><p>Angular promise to be resolved later</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getdatarepeatedly">getDataRepeatedly(timeSeriesReq, id, ownRepeatInterval)</h3>
+<div class="getdatarepeatedly"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-timeseriessvc-getdatarepeatedly-page"><p>Get data from time series service repeatedly.</p>
+</div><h5 id="methods_getdatarepeatedly_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>timeSeriesReq</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-timeseriessvc-getdatarepeatedly-page"><p>A structure:
+{
+    fqns: {array(string)} List of fqns for request
+    duration: {number} duration time into history to look at, only negative values allowed
+    timeDeadBand: {string} timeDeadBand time dead band if
+      wanted
+    valueDeadBand: {number} valueDeadBand optional value dead
+      band
+    samplingDefinition: {object} Optional definition for
+      sampling data consisting of up to three parameters
+      <ul>
+        <li><b>samplingType: <i>string</i></b> <i>required</i>
+        One of the types returned in getSamplingTypes (the
+        string representation of key, not the
+        value/description)</li>
+        <li><b>sliceCount: <i>integer</i></b> <i>optional</i>
+        Number of slices to which the time interval should be
+        divided</li>
+        <li><b>deltaT: <i>integer</i></b> <i>optional</i>
+        Length of interval to which the time interval should be
+        divided</li>
+      </ul>
+      One of the optional parameters has to be defined
+}</p>
+</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-timeseriessvc-getdatarepeatedly-page"><p>identification</p>
+</div></td></tr><tr><td>ownRepeatInterval</td><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-timeseriessvc-getdatarepeatedly-page"><p>optional - set own repeat
+interval</p>
+</div></td></tr></tbody></table><h5 id="methods_getdatarepeatedly_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-ipromise">IPromise&lt;T&gt;</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-timeseriessvc-getdatarepeatedly-page"><p>Angular promise to resolve later</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getglobaltimerinterval">getGlobalTimerInterval()</h3>
+<div class="getglobaltimerinterval"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-timeseriessvc-getglobaltimerinterval-page"><p>Getter for the globalTimerInterval value</p>
+</div><h5 id="methods_getglobaltimerinterval_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-number">Number</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-timeseriessvc-getglobaltimerinterval-page"><p>Global Time Interval</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getsamplingtypes">getSamplingTypes()</h3>
+<div class="getsamplingtypes"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-timeseriessvc-getsamplingtypes-page"><p>Returns list of available sampling type names</p>
+</div><h5 id="methods_getsamplingtypes_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-timeseriessvc-getsamplingtypes-page"><p><a href="#/api/RA.IPCommon.Services.object:SamplingTypes">RA.IPCommon.Services.object:SamplingTypes</a></p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

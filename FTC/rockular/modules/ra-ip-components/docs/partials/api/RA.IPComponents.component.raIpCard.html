@@ -1,0 +1,98 @@
+<h1><code ng:non-bindable="">raIpCard</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">RA.IPComponents</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipcard-page"><p>This component is responsible for rendering card. It allows to put inside another component. Card is only wrapper
+with hover effect which can be disabled.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ra-ip-card
+       config="{Object}"&gt;
+&lt;/ra-ip-card&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipcard-page"><ul>
+<li><strong><code>class</code></strong> {string} to add specific class</li>
+<li><strong><code>disabledHover</code></strong> {boolean} to disable hover effect</li>
+</ul>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipcard-page"><p>Example of card component with hover effect.
+<h4 id="example_source">Source</h4>
+<div source-edit="example1" source-edit-deps="angular.js script.js" source-edit-html="index.html-2" source-edit-css="" source-edit-js="script.js-3" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-2" ng-html-wrap-loaded="example1 angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-2">
+      <div ng-controller="myCtrl">
+          <ra-ip-card>Card content</ra-ip-card>
+      </div>
+  </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-3"></pre>
+<script type="text/ng-template" id="script.js-3">
+     angular.module('example1', ['mobile-toolkit-ra', 'RA.IPComponents']);
+      angular.module('example1')
+          .controller('myCtrl',['$scope',
+              function() {}
+      ]);
+  </script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well live-example-container"><iframe src="examples/example-3-index.html" iframe-adjust-dimensions></iframe></div>
+<p>Example of card component without hover effect.
+<h4 id="example_source">Source</h4>
+<div source-edit="example2" source-edit-deps="angular.js script.js" source-edit-html="index.html-4" source-edit-css="" source-edit-js="script.js-5" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-4" ng-html-wrap-loaded="example2 angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-4">
+      <div ng-controller="myCtrl">
+          <ra-ip-card config="config">
+          Card content
+          </ra-ip-card>
+      </div>
+  </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-5"></pre>
+<script type="text/ng-template" id="script.js-5">
+      angular.module('example2', ['mobile-toolkit-ra', 'RA.IPComponents']);
+      angular.module('example2')
+          .controller('myCtrl',['$scope',
+              function($scope) {
+                  $scope.config = {
+                      disabledHover: true
+                  }
+              }
+          ]);
+   </script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well live-example-container"><iframe src="examples/example-4-index.html" iframe-adjust-dimensions></iframe></div>
+<p>Example of card component with body content.
+<h4 id="example_source">Source</h4>
+<div source-edit="example3" source-edit-deps="angular.js script.js" source-edit-html="index.html-6" source-edit-css="" source-edit-js="script.js-7" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-6" ng-html-wrap-loaded="example3 angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-6">
+       <div ng-controller="myCtrl">
+          <ra-ip-card config="config">
+              <div style="padding: 15px;">Body content</div>
+          </ra-ip-card>
+       </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-7"></pre>
+<script type="text/ng-template" id="script.js-7">
+       angular.module('example3', ['mobile-toolkit-ra', 'RA.IPComponents']);
+       angular.module('example3')
+          .controller('myCtrl',['$scope',
+              function() {}
+       ]);
+   </script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well live-example-container"><iframe src="examples/example-5-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>

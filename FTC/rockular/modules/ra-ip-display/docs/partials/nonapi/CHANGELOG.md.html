@@ -1,0 +1,354 @@
+<h1><code ng:non-bindable=""></code>
+<div><span class="hint"></span>
+</div>
+</h1>
+<div><div class="changelog-page"><!-----------------------------------------------------------------------------
+Changelog documentation should be updated for all changes to toolkit, especially breaking changes.
+Since we do not have a process to generate this changelog file, and at the time the changelog is updated on a branch,
+we won't know the version number, we'll keep a "v.next" section at the top that we can all append to and merge into.
+Then, before merge to master from develop, this can be updated.  Let's stick with the following format (comes from
+AngularJS changelog.md file:
+
+# [version number]
+
+## Deprecated
+
+## Bug Fixes
+
+## Features
+
+## Breaking Changes
+
+Then on the final release before build, we can delete sections that do not apply for that build.
+
+IMPORTANT: KEEP ONE LINE EMPTY AFTER THIS COMMENT TO GENERATE IT PROPERLY !!!
+-->
+<h2 id="v620">v6.2.0</h2>
+<h3 id="v620_deprecated">Deprecated</h3>
+<h3 id="v620_bug-fixes">Bug Fixes</h3>
+<ul>
+<li>Charts - remove duplicate calls to server</li>
+<li>Trend - fix missing Min/Max labels for traces</li>
+<li>Query Table - fix query table requests for boolean parameters</li>
+<li>Alarms state screen - add missing colors</li>
+<li>Doughnut chart - fix missing Datetime picker</li>
+</ul>
+<h3 id="v620_features">Features</h3>
+<ul>
+<li>Trend - optimize Trend performance for displaying more traces</li>
+<li>Trend - new option to hide Y-axis</li>
+<li>Trend - new option to use Min and Max for Y-axis</li>
+<li>Export - optimize export calls for larger amounts of data</li>
+<li>All widgets - change minimal size of widgets for Composer</li>
+</ul>
+<h3 id="v620_breaking-changes">Breaking Changes</h3>
+<h2 id="v601">v6.0.1</h2>
+<h3 id="v601_deprecated">Deprecated</h3>
+<h3 id="v601_bug-fixes">Bug Fixes</h3>
+<ul>
+<li>Bar chart - sampling fix</li>
+</ul>
+<h3 id="v601_features">Features</h3>
+<ul>
+<li>Export - new option, sampling by one second</li>
+</ul>
+<h3 id="v601_breaking-changes">Breaking Changes</h3>
+<h2 id="v600">v6.0.0</h2>
+<h3 id="v600_deprecated">Deprecated</h3>
+<h3 id="v600_bug-fixes">Bug Fixes</h3>
+<ul>
+<li>PowerBI widget - security enhancements</li>
+<li>Map - fix zoom and error message size issues</li>
+<li>Vertical Gauge - alignment of values fix</li>
+<li>Radial Gauge - fix default color</li>
+<li>Alarm state screen - fix default colors</li>
+<li>Trend - add min/max validations</li>
+<li>Time-control - fix format of time in exported data</li>
+<li>Label - fixed default font to Roboto</li>
+<li>Raster Image - fixed alignment</li>
+<li>Map - fix of cluster verbosity color</li>
+<li>Bar and Pie chart - added loading information</li>
+<li>Map - fixed default color of marker</li>
+<li>Vertical and Horizontal Gauge - fixed info icon position on mobile</li>
+</ul>
+<h3 id="v600_features">Features</h3>
+<ul>
+<li>File Trend widget</li>
+<li>Bar and Pie chart widgets - live mode</li>
+<li>Doughnut chart - ignore data limit option</li>
+<li>Time-control - ability to export to DI workflow (FT Cloud specific)</li>
+</ul>
+<h3 id="v600_breaking-changes">Breaking Changes</h3>
+<ul>
+<li>new Kendo library, 2017.3.1026</li>
+</ul>
+<h2 id="v500">v5.0.0</h2>
+<h3 id="v500_bug-fixes">Bug Fixes</h3>
+<ul>
+<li><p>Time Control - fixed issue with custom range</p>
+</li>
+<li><p>Time Control - fixed position of chevron</p>
+</li>
+<li><p>Export - alternative version for application without Property Editor</p>
+</li>
+<li><p>Export - fixed current time selection issue</p>
+</li>
+<li><p>Drill through - fixed issue with drill through to non-existing display</p>
+</li>
+<li><p>Alarm State Screen - fixed scroll with expanded values</p>
+</li>
+<li><p>Trend - fixed reload issues when resizing</p>
+</li>
+<li><p>Trend - fixed resize issue during init</p>
+</li>
+<li><p>Map widget - fixed bug with clusters and marker popups when more than one map is used</p>
+</li>
+</ul>
+<h3 id="v500_features">Features</h3>
+<ul>
+<li><p>Icons version 4.9.0 used, new icons for Radial Gauge</p>
+</li>
+<li><p>Highcharts version increased to 5.0.11</p>
+</li>
+<li><p>PowerBI widget - new widget for displaying Power BI reports</p>
+</li>
+<li><p>Map widget - added File Tag drill through option</p>
+</li>
+<li><p>Map widget - added option to use directive/html in marker</p>
+</li>
+<li><p>Alarm State Screen - add option to hide Value column</p>
+</li>
+<li><p>Alarm State Screen - ability to hide tags which are not in alarm state</p>
+</li>
+<li><p>Grid widgets - option to use horizontal scroll bar</p>
+</li>
+<li><p>Grid widgets - added export option</p>
+</li>
+<li><p>Export - increased upper limit for exported data to 225000 on desktop, 15000 on mobile</p>
+</li>
+<li><p>Indicator widget - removed shades</p>
+</li>
+<li><p>All widgets - date and time validations enhancement</p>
+</li>
+</ul>
+<h3 id="v500_breaking-changes">Breaking Changes</h3>
+<ul>
+<li><p>Highcharts widgets visuals - new visuals for Trend, Bar chart, Pie chart, Doughnut chart and Timeline widget from UX</p>
+</li>
+<li><p>Trend, Bar chart, Pie chart, Query - minimum size of widget is 3x3</p>
+</li>
+</ul>
+<h2 id="v400">v4.0.0</h2>
+<h3 id="v400_bug-fixes">Bug Fixes</h3>
+<ul>
+<li><p>Timeline Chart - fixed issue when legend may not update properly in live mode</p>
+</li>
+<li><p>Image Indicator - fixed info message visual on IE</p>
+</li>
+<li><p>Data Grid - fixed issue when cannot add boolean or string tag</p>
+</li>
+<li><p>Data Grid - fixed issue with properties which could not be edited in display mode, implemented time control</p>
+</li>
+<li><p>Radial Gauge - fixed issue with scaling</p>
+</li>
+<li><p>Trend - string tag is visible in trend chart</p>
+</li>
+<li><p>Trend - fixed schema definition</p>
+</li>
+<li><p>Time control - live mode interval cannot be set until live mode is turned on</p>
+</li>
+<li><p>Time control - fixed custom datetime range validation</p>
+</li>
+<li><p>Button - added support for drill through FileTag</p>
+</li>
+<li><p>TimeSeries table - refactored whole widget</p>
+</li>
+<li><p>Label widget - fixed text truncation</p>
+</li>
+</ul>
+<h3 id="v400_features">Features</h3>
+<ul>
+<li><p>updated MFT dependency to version 8.0.0</p>
+</li>
+<li><p>OpenSans font replaced by Roboto font</p>
+</li>
+<li><p>Map - added map marker clustering</p>
+</li>
+<li><p>Trend - added filters for data to show on trend, filters include option to hide interpolated data and show bad quality data</p>
+</li>
+<li><p>Radial gauge - added notification icon for warning messages</p>
+</li>
+<li><p>Radial gauge - added subtitle option</p>
+</li>
+<li><p>Trend - export Data feature</p>
+</li>
+<li><p>Linear Gauge - new visuals</p>
+</li>
+<li><p>Alarm State Screen - new widget</p>
+</li>
+<li><p>Trend - traces can be hidden in live mode</p>
+</li>
+<li><p>Composite directive - new zoom feature for each cell</p>
+</li>
+<li><p>Live data directive - added feature to work with direct live data result with value, quality and time</p>
+</li>
+</ul>
+<h3 id="v400_breaking-changes">Breaking Changes</h3>
+<ul>
+<li>Horizontal and Vertical Gauge - new visuals from UX</li>
+</ul>
+<h2 id="v300">v3.0.0</h2>
+<h3 id="v300_bug-fixes">Bug Fixes</h3>
+<ul>
+<li><p>Trend - fixed live data mode run twice when changed in time control</p>
+</li>
+<li><p>Trend - fixed trend view when trend scale is set to respect min and max in non-composer environment</p>
+</li>
+<li><p>Value box - fixed alignment for multiple value boxes with caption</p>
+</li>
+<li><p>Query - fixed issue that query widget did not pass design mode flag to its inner widgets</p>
+</li>
+<li><p>Data grid - fixed issue which caused browser to be unresponsive when too much data is passed to widget</p>
+</li>
+</ul>
+<h3 id="v300_breaking-changes">Breaking Changes</h3>
+<ul>
+<li><p>Removed attribute definition from widgets, removed directives definition &quot;replace&quot; property</p>
+</li>
+<li><p>New radial gauge visuals - no Speedmeter and VU meter options</p>
+</li>
+</ul>
+<h2 id="v201">v2.0.1</h2>
+<h3 id="v201_bug-fixes">Bug Fixes</h3>
+<ul>
+<li><p>Fix transformationSvc for mobile dashboards from Athens release</p>
+</li>
+<li><p>Button - fixed bug with caption for url</p>
+</li>
+<li><p>Map - fixed bug with marker in IE</p>
+</li>
+<li><p>Trend - fixed bugs for ad-hoc usage</p>
+</li>
+<li><p>RasterImage - fixed bugs when setting horizontal / vertical alignment in composer, fixed scrollbar which appeared after resize</p>
+</li>
+<li><p>TimeControl - fixed validation of large numbers for live mode (sec) input</p>
+</li>
+<li><p>TimeControl - in header mode added tooltip for <em>Refresh</em> button</p>
+</li>
+<li><p>Fix for Doughnut and Timeline with assigned tag which does not allow for timeseries data</p>
+</li>
+<li><p>Fix for Doughnut and Timeline when switching compatible widgets to bar chart / pie chart - timeseries data mode</p>
+</li>
+</ul>
+<h3 id="v201_features">Features</h3>
+<ul>
+<li><p>new validation service (validationFxSvc) to validate e.g. GPS coordinates, IP addresses, email etc.</p>
+</li>
+<li><p>upgrade to Jasmine 2</p>
+</li>
+</ul>
+<h3 id="v201_breaking-changes">Breaking Changes</h3>
+<h2 id="v200">v2.0.0</h2>
+<h3 id="v200_features">Features</h3>
+<ul>
+<li><h4 id="v200_features_new-widgets-timeline-and-doughnut">New widgets: Timeline and Doughnut</h4>
+</li>
+<li><h4 id="v200_features_time-control-header-timeline,-doughnut-and-trend-widgets-now-optionally-contains-header-for-control-the-time-ranges-for-visualized-timeseries-data">Time control header: Timeline, Doughnut and Trend widgets now optionally contains header for control the time ranges for visualized timeSeries data</h4>
+</li>
+<li><p>new service <strong>widgetsConstantsSvc</strong> used to get widgets schemas, examples and register widget aliases
+to handle schema and examples</p>
+</li>
+<li><p>enhanced <strong>raIpLiveData</strong> directive to support timeSeries</p>
+</li>
+<li><p>new service <strong>utilitySvc</strong> with basic utility methods</p>
+</li>
+<li><p><strong>gridstackSvc</strong> now supports both MFT and Kendo D&amp;D</p>
+</li>
+<li><p><strong>transformationSvc</strong> now supports hooks which can be registered outside of ra-ip-display module</p>
+</li>
+<li><p>B-108343: Refactored <strong>raIpQuery</strong> widget. It now contains the configuration header in design time which enables
+users to select type, related property and widget type. The schema of the widget is counted based on selected widget.
+The relative FQNs in the rbParameters.items array are now relative to the query result, the former version was
+relative to the context of the whole display. This should help to better usability of the widget.</p>
+</li>
+<li><p>B-153129: <strong>raIpTrend</strong> now uses new reusable chevron menu component, widget chevron menu is now shown if there is not
+enough space, otherwise bar with properties is displayed at top of the widget</p>
+</li>
+<li><p>B-155332: Enhanced test page to support manual tests described in JSON files</p>
+</li>
+</ul>
+<h3 id="v200_breaking-changes">Breaking Changes</h3>
+<ul>
+<li><p>removed <strong>liveDataGroupCtrl</strong> controller, use raIpLiveData directive instead</p>
+</li>
+<li><p>removed <strong>raIpTimeSeriesData</strong> directive, use raIpLiveData directive instead with timeSeries settings</p>
+</li>
+<li><p>removed <strong>raIpPropagateSchema</strong>, it is not needed anymore since the schema can be now obtained synchronously without a
+need of widget compilation</p>
+</li>
+<li><p>widgets should be compiled as elements because of new addition of Timeline and Doughnut widgets
+which are angular components and allow element definition only, for example compilation see raIpCompositeCell line 35</p>
+</li>
+<li><p>when implementing a widget, widget should also define its own constant service
+with specific pattern <widgetName>ConstSvc and implement these methods: getSchema (returns widget schema),
+getExamples (returns widgets examples). See Api documentation and &quot;Other docs&quot; section.</p>
+</li>
+</ul>
+<h3 id="v200_deprecated">Deprecated</h3>
+<ul>
+<li><p>directives API <strong>roExamples</strong> function and usage is deprecated, will be removed in future. To get widget examples
+use widgetsConstantsSvc getWidgetExamples method.</p>
+</li>
+<li><p>don&#39;t rely on directives API <strong>roSchema</strong> function, will be used in special cases and will be optional in future.
+To get widget schema use widgetsConstantsSvc getWidgetSchema method.</p>
+</li>
+</ul>
+<h3 id="v200_bug-fixes">Bug Fixes</h3>
+<ul>
+<li><p>B-152253 - BUG: error in Grid when contains string without Time series values</p>
+</li>
+<li><p>B-152078 - BUG: error in Image Indicator when delete String</p>
+</li>
+<li><p>B-151303 - BUG: Trend - Time period cannot be &quot;last month&quot; and &quot;last 6 months&quot;</p>
+</li>
+<li><p>B-149254 - BUG: Label widget cuts last 1-2 chars from string</p>
+</li>
+<li><p>TK-460878 - BUG: error in log when smaller browser size</p>
+</li>
+<li><p>B-149515 - BUG: indicators icon is not same when it has caption/eng.units</p>
+</li>
+<li><p>Disabled compatible widgets for ImageContainer (raster image) through disableCompatible schema property</p>
+</li>
+<li><p>B-154237 - BUG: alarm and transaction grid can manually rebind</p>
+</li>
+<li><p>B-161294 - BUG RC2: S2 images are not centered correctly + caption is not under image</p>
+</li>
+<li><p>B-161449 - BUG RC2: Trend changes colors when there is string tag</p>
+</li>
+</ul>
+<h2 id="v100">v1.0.0</h2>
+<p>The initial version of RA.IPDisplay module. This version contains widgets which schema is already defined to use
+validation functions. If you want to adopt this module and you are using Composer, make sure that your Property Editor
+supports validations.</p>
+<h3 id="v100_features">Features</h3>
+<ul>
+<li><p><strong>widgetsConfigurationSvc</strong> function <strong>init</strong> now accepts parameters. If they are specified, the widgetLibrary on
+server is not used at all.</p>
+</li>
+<li><p><strong>ra-disable-translate-recursively</strong> and <strong>ra-disable-translate</strong> classes in <strong>raIpComposite</strong>.
+These should be used to disabled 3d translate on iOS devices</p>
+</li>
+</ul>
+<h3 id="v100_breaking-changes">Breaking Changes</h3>
+<ul>
+<li><p><strong>gridstackSvc</strong>: composerInit, microComposerInit and compositeInit were merged into more parametrized
+createGridstack function.</p>
+</li>
+<li><p><strong>grdistackWrapper</strong> object (result of gridstackSvc.createGridstack function) property
+<strong>gridstackWrapper.gridstackWrapper</strong> renamed to <strong>grdistackWrapper.wrapperElement</strong></p>
+</li>
+<li><p>From old application&#39;s <strong>composerSvc</strong> functions <em>getSchemaTypePropertyName</em> and <em>loadWidgetsSchema</em> were divided
+into the new <strong>schemaSvc</strong></p>
+</li>
+</ul>
+</div></div>

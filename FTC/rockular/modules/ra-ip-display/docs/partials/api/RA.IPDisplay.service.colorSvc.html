@@ -1,0 +1,64 @@
+<h1><code ng:non-bindable="">colorSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-page"><p>Provides functionality for work with color formats</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_getcolorshade">getColorShade(color)</h3>
+<div class="getcolorshade"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-getcolorshade-page"><p>Returns variation of original color, use + percent for darker, - percent for lighter color</p>
+</div><h5 id="methods_getcolorshade_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>color</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-getcolorshade-page"><p>in hex format</p>
+</div></td></tr></tbody></table><h5 id="methods_getcolorshade_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-getcolorshade-page"><p>color in hex format</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getgrayscale">getGrayScale(hex)</h3>
+<div class="getgrayscale"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-getgrayscale-page"><p>Get grayscale version of color</p>
+</div><h5 id="methods_getgrayscale_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>hex</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-getgrayscale-page"><p>format of color</p>
+</div></td></tr></tbody></table><h5 id="methods_getgrayscale_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-getgrayscale-page"><p>hex format of grayscale color</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getopacityforgrayscale">getOpacityForGrayScale(hex)</h3>
+<div class="getopacityforgrayscale"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-getopacityforgrayscale-page"><p>Get opacity for black color to simulate grayscale version of color</p>
+</div><h5 id="methods_getopacityforgrayscale_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>hex</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-getopacityforgrayscale-page"><p>format of color</p>
+</div></td></tr></tbody></table><h5 id="methods_getopacityforgrayscale_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-number">number</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-getopacityforgrayscale-page"><p>opacity</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_hextorgb">hexToRgb(hex)</h3>
+<div class="hextorgb"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-hextorgb-page"><p>Transform Hex format of color to RGB one</p>
+</div><h5 id="methods_hextorgb_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>hex</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-hextorgb-page"><p>format of color</p>
+</div></td></tr></tbody></table><h5 id="methods_hextorgb_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-hextorgb-page"><p>rgb format of color</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_hsltorgb">hslToRgb(hue, saturation, luminosity)</h3>
+<div class="hsltorgb"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-hsltorgb-page"><p>Converts an HSL color value to RGB. Conversion formula
+adapted from <a href="http://en.wikipedia.org/wiki/HSL_color_space">http://en.wikipedia.org/wiki/HSL_color_space</a>.
+Assumes h is contained in [0, 1] or [0, 360] and s and l are contained [0, 1] or [0, 100]
+returns r, g, and b in the set [0, 255].</p>
+</div><h5 id="methods_hsltorgb_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>hue</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-hsltorgb-page"><p>part of color</p>
+</div></td></tr><tr><td>saturation</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-hsltorgb-page"><p>part of color</p>
+</div></td></tr><tr><td>luminosity</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-hsltorgb-page"><p>part of color</p>
+</div></td></tr></tbody></table><h5 id="methods_hsltorgb_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-hsltorgb-page"><p>rgb format of color</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_rgbtohex">rgbToHex(rgb)</h3>
+<div class="rgbtohex"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-rgbtohex-page"><p>Transform RGB format of color to hex one</p>
+</div><h5 id="methods_rgbtohex_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rgb</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-rgbtohex-page"><p>format of color</p>
+</div></td></tr></tbody></table><h5 id="methods_rgbtohex_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-rgbtohex-page"><p>hex format of color</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_rgbtohsl">rgbToHsl(red, green, blue)</h3>
+<div class="rgbtohsl"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-rgbtohsl-page"><p>Converts an RGB color value to HSL. Conversion formula
+adapted from <a href="http://en.wikipedia.org/wiki/HSL_color_space">http://en.wikipedia.org/wiki/HSL_color_space</a>.
+Assumes r, g, and b are contained in [0, 255] or [0, 1]
+returned value { h, s, l } in [0,1]</p>
+</div><h5 id="methods_rgbtohsl_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>red</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-rgbtohsl-page"><p>part of color</p>
+</div></td></tr><tr><td>green</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-rgbtohsl-page"><p>part of color</p>
+</div></td></tr><tr><td>blue</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-rgbtohsl-page"><p>part of color</p>
+</div></td></tr></tbody></table><h5 id="methods_rgbtohsl_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorsvc-rgbtohsl-page"><p>hsl format of color</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

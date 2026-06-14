@@ -1,0 +1,18 @@
+[
+    {
+        "date":"04/01/2018",
+        "releaseName":"",
+        "versionNumber":"2.0.0",
+        "path":"",
+        "description":"This release contains various bug fixes in core functionality reported in 1.x version and improved transaction logic design and implementation. This release is compliant with Design for Security  class 3 (checklist v5.0). Adopters may request the checklist document via InfoPlatform@ra.rockwell.com.",
+        "note": ""
+    },
+    {
+        "date":"11/30/2018",
+        "releaseName":"",
+        "versionNumber":"3.0.0",
+        "path":"",
+        "description":"This version introduces support for .NET Standard(.NET Core and .NET Framework) and adds new modularity interfaces. This release is compliant with DFS checklist version 6.0 (class 3). Adopters may request the checklist document via InfoPlatform@ra.rockwell.com.",
+        "note": ""
+    }
+]

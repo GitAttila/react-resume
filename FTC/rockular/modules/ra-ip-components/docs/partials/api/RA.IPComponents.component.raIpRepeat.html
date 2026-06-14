@@ -1,0 +1,49 @@
+<h1><code ng:non-bindable="">raIpRepeat</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">RA.IPComponents</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raiprepeat-page"><p>This component is responsible for repeating items in array.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ra-ip-repeat
+       config="{object}"&gt;
+&lt;/ra-ip-repeat&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raiprepeat-page"><ul>
+<li><strong><code>template</code></strong> {string} template html template string</li>
+<li><strong><code>items</code></strong> {array} items for raIpRepeatItem</li>
+</ul>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raiprepeat-page"><h4 id="example_source">Source</h4>
+<div source-edit="example1" source-edit-deps="angular.js script.js" source-edit-html="index.html-24" source-edit-css="" source-edit-js="script.js-25" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-24" ng-html-wrap-loaded="example1 angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-24">
+    <div ng-controller="myCtrl">
+        <ra-ip-repeat config="config"></ra-ip-repeat>
+    </div>
+</script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-25"></pre>
+<script type="text/ng-template" id="script.js-25">
+    angular.module('example1', ['mobile-toolkit-ra', 'RA.IPComponents']);
+    angular.module('example1').controller('myCtrl',['$scope',
+        function($scope) {
+            $scope.config = {
+                template: '<ra-ip-card>' +
+                '<span style="display:block; padding:30px 20px;">test</span></ra-ip-card>',
+                items:[{
+
+                },{}]
+            };
+        }
+    ]);
+</script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well live-example-container"><iframe src="examples/example-14-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>

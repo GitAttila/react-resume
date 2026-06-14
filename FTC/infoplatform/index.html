@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Information and download site for the InfoPlatform toolkit.">
+    <meta name="author" content="Attila Hazay / UX Prague / Rockwell Automation">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#bb2322">
+    <meta name="msapplication-TileColor" content="#bb2322">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>InfoPlatform toolkit by Rockwell Automation</title>
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Oswald:200,400,700|Roboto:300,300i,400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+    <!-- vendors CSS -->
+    <link href="lib/css/vendors.css" rel="stylesheet">
+    <!-- Site custom styles -->
+    <link href="lib/css/site.css" rel="stylesheet">
+</head>
+<body>
+
+<nav id="navbar" class="navbar navbar-expand-md navbar-inverse fixed-top">
+    <div class="container">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="ion-navicon"></i></span>
+        </button>
+        <a class="navbar-brand" href="http://www.rockwellautomation.com/" target="_blank">
+            <img id="brand-white" src="lib/images/ra_logo_white_withbug.png" alt="Rockwell Automation logo white">
+            <img id="brand-original" class="hide-brand" src="lib/images/ra_logo_color_withbug.png" alt="Rockwell Automation logo">
+        </a>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+            <ul class="navbar-nav text-center">
+                <li id="nav-item-mainsite"
+                    class="nav-item"
+                    data-toggle="tooltip"
+                    data-placement="bottom"
+                    title="back to main site">
+                    <a class="nav-link" href="../ftc-main-site/index.html#toolkits">
+                        <i class="ion-ios-undo-outline"></i>
+                    </a>
+                </li>
+                <li id="nav-item-home" class="nav-item active">
+                    <a class="nav-link" href="#homeCarousel">Home </a>
+                </li>
+                <li id="nav-item-about" class="nav-item">
+                    <a class="nav-link" href="#about">About </a>
+                </li>
+                <li id="nav-item-download" class="nav-item">
+                    <a class="nav-link" href="#download">Releases </a>
+                </li>
+                <li id="nav-item-plugins" class="nav-item">
+                    <a class="nav-link" href="#plugins">Plugins </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="homeCarousel" class="gradient-deepspace carousel slide" data-ride="carousel" data-interval="8000">
+
+    <ol class="carousel-indicators">
+        <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#homeCarousel" data-slide-to="1"></li>
+        <li data-target="#homeCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+
+        <div class="carousel-header-fixed text-center">
+            <div class="main-logo-container shadowed">
+                <img src="lib/images/ip_logo.png" alt="InfoPlatform logo">
+            </div>
+            <h1>InfoPlatform</h1>
+            <h2>Modular back-end toolkit with plug-in architecture.</h2>
+            <h3 class="d-none d-sm-block">Built on top of .NET Framework/ .NET Core, it facilitates rapid HTML5 client application development.</h3>
+            <div id="hero-btn-download">
+                <a class="btn btn-site" href="#download" role="button">take me to releases</a>
+            </div>
+        </div>
+
+        <div class="carousel-item active shadowed-deep">
+            <div class="img-carousel img-carousel-1 d-none d-sm-block"></div>
+            <div class="container">
+                <div class="carousel-caption">
+                    <h2 class="d-none d-sm-block">Model with embedded role-based security</h2>
+                    <p>Provides modelling capabilities with seamlessly integrated role-based security.</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item shadowed-deep">
+            <div class="img-carousel img-carousel-2 d-none d-sm-block"></div>
+            <div class="container">
+                <div class="carousel-caption">
+                    <h2 class="d-none d-sm-block">Rapid HTML5 application development</h2>
+                    <p>Provides standardized REST and socket APIs to model and time-series data.</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item shadowed-deep">
+            <div class="img-carousel img-carousel-3 d-none d-sm-block"></div>
+            <div class="container">
+                <div class="carousel-caption">
+                    <h2 class="d-none d-sm-block">Rich set of plug-ins readily available</h2>
+                    <p>Offers open framework for Rockwell teams to share reusable plug-in components handling model information, time-series data, connectors to other RA services and more.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+
+    <div class=" subtle-overlay subtle-overlay-15"></div>
+
+    <div id="jump-up" class="btn-rounded btn-rounded-fixed">
+        <i class="btn-rounded-inner ion-chevron-up"></i>
+    </div>
+
+    <div id="jump-down" class="btn-rounded">
+        <i class="btn-rounded-inner ion-chevron-down"></i>
+    </div>
+
+</section> <!-- End of  carousel -->
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+
+<section id="about" class="marketing marketing-shadow-down">
+    <div class="container">
+        <h2 class="display-3 section-header section-header-grey">about</h2>
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="img-logo-container bg-lightgrey about-logo-animation">
+                    <img class="shadowed" src="lib/images/rolesecurity_white.png" alt="angular logo">
+                </div>
+                <h3 class="about-text-animation">Model with embedded role-based security</h3>
+                <p class="about-text-animation">Provides modelling capabilities with seamlessly integrated role-based security.</p>
+            </div><!-- /.col-md-4 -->
+            <div class="col-md-4">
+                <div class="img-logo-container bg-lightgrey about-logo-animation">
+                    <img class="shadowed" src="lib/images/api_white.png" alt="html5 logo">
+                </div>
+                <h3 class="about-text-animation">Rapid HTML5 application development</h3>
+                <p class="about-text-animation">Provides standardized REST and socket APIs to model and time-series data.</p>
+            </div><!-- /.col-md-4 -->
+            <div class="col-md-4">
+                <div class="img-logo-container bg-lightgrey about-logo-animation">
+                    <img class="shadowed" src="lib/images/plugins_white.png" alt="UX logo">
+                </div>
+                <h3 class="about-text-animation">Rich set of plug-ins readily available</h3>
+                <p class="about-text-animation">Offers open framework for Rockwell teams to share reusable plug-in components handling model information, time-series data, connectors to other RA services and more.</p>
+            </div><!-- /.col-md-4 -->
+        </div><!-- /.row -->
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr id="divider1" class="featurette-divider">
+
+        <div id="rotate-logo" class="img-theme-left"></div>
+
+        <div class="row featurette">
+            <div class="col-md-7">
+                <h2 class="display-3 featurette-heading feature-animation">InfoPlatform core toolkit
+                </h2>
+                <p class="lead feature-animation">The toolkit provides basic building blocks for every InfoPlatform-based application:</p>
+                <h4 class="feature-animation">Core</h4>
+                <p class="lead text-indent-2 feature-animation">General interfaces for InfoPlatform development</p>
+                <h4 class="feature-animation">Runtime</h4>
+                <p class="lead text-indent-2 feature-animation">Request and data-processing engine</p>
+                <h4 class="feature-animation">WebServices</h4>
+                <p class="lead text-indent-2 feature-animation">Common REST and SignalR APIs</p>
+            </div>
+            <div class="col-md-5">
+                <img src="lib/images/plugins_red.png" class="featurette-image img-fluid mx-auto feature-animation"
+                     alt="infoplatform plugins chart">
+            </div>
+        </div>
+
+    </div><!-- /.container -->
+
+</section>
+
+<!-- DOWNLOAD SECTION -->
+<section id="download" class="downloads downloads-shadow-down">
+
+    <div class="parallax-wrapper">
+        <ul id="parallax-scene2" class="parallax-scene">
+            <li class="layer" data-depth="0.10"><div class="layer-content img-ip-outline-0"></div></li>
+            <li class="layer" data-depth="0.20"><div class="layer-content img-ip-outline-1"></div></li>
+            <li class="layer" data-depth="0.30"><div class="layer-content img-ip-outline-2"></div></li>
+            <li class="layer" data-depth="0.50"><div class="layer-content img-ip-outline-3"></div></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2 class="display-3 section-header section-header-white">releases</h2>
+        <div class="row">
+
+            <div class="download-wrapper col">
+                <div class="download text-center justify-content-between downloads-animation">
+                    <!-- list of releases written into HTML via Javascript based on a content of JSON file -->
+                    <ul id="releases-list" class="collapse"></ul>
+
+                    <h2>InfoPlatform Core Toolkit</h2>
+                    <h4>
+                        <!-- Javascript updates content here-->
+                        <span id="release-name-version">Release name / release version number</span>
+                        <div id="release-version-stat"></div>
+                    </h4>
+                    <!-- Javascript updates content here-->
+                    <h5 id="release-date">dd of mm,yyyy</h5>
+                    <!-- Javascript updates content here-->
+                    <p id="release-description">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+                    <p class="download-note mobile-off">
+                        <!-- Javascript updates content here-->
+                        <i><strong id="release-note">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                            when an unknown printer took a galley</strong></i>
+                    </p>
+
+                    <div class="row">
+                        <div class="col-md-6 mobile-off">
+                            <p>
+                                <!-- Javascript updates link here-->
+                                <a id="getstarted-btn"
+                                   class="btn btn-outline-site"
+                                   data-toggle="modal"
+                                   data-target="#getStartedModal"
+                                   href=""
+                                   role="button">get&nbsp;me&nbsp;started&#42;</a>
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>
+                                <a id="read-docs-btn"
+                                   class="btn btn-outline-site"
+                                   href="documentation/index.html"
+                                   target="_blank"
+                                   role="button">read&nbsp;documentation</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="download-note mobile-off">
+                        <i>&#42;Released modules are available as packages at <strong>CAT NuGet Repository.</strong>
+                        </i>
+                    </p>
+
+                    <a class="release-list-icon mobile-off" data-toggle="collapse" data-target="#releases-list" role="button">
+                        <i class="carousel-contract ion-android-list"></i>
+                    </a>
+                </div>
+            </div><!-- /.col -->
+
+        </div>
+    </div> <!-- END OF CONTAINER -->
+</section>
+
+<!-- MODAL-->
+<div class="modal modal-ra-site fade" id="getStartedModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Get started with InfoPlatform</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h3>How to get started</h3>
+                <p>When using a NuGet repository you can either work with the NuGet client directly or with Visual Studio.</p>
+                <h5>Visual Studio Configuration</h5>
+                <p>To add the InfoPlatform repository as a Package Source under NuGet Package Manager:</p>
+                <ol>
+                    <li>Access the corresponding repositories in the "Options" window (Options | Tools) and select to add another Package Source.
+                        Name: ENTER_RESOURCE_NAME (e.g. InfoPlatform NuGet repository)
+                    </li>
+                    <li>Paste the snippet below in the URL field
+                        <p>
+                            <a href="https://cat.ra-int.com/artifactory/api/nuget/infoplatform-build" target="_blank">https://cat.ra-int.com/artifactory/api/nuget/infoplatform-build</a>
+                        </p>
+                    </li>
+                    <li>
+                        Make sure it is checked.
+                    </li>
+                </ol>
+                <h5>NuGet Client Configuration</h5>
+                <p>To add this repository to the list of sources of your NuGet client use the following command</p>
+                <code>nuget sources Add -Name InfoPlatform -Source </code>
+                <p>
+                    <a href="https://cat.ra-int.com/artifactory/api/nuget/infoplatform-build" target="_blank">https://cat.ra-int.com/artifactory/api/nuget/infoplatform-build</a>
+                </p>
+                <h5>Adding the source to nuget.config</h5>
+                <p>You can also add the repository in either the global nuget.config or the nuget.config of your project by adding the following line to the 'packageSources' section: </p>
+                <p>
+                    <code>&lt;add key=&quot;InfoPlatform&quot; value=&quot;https://cat.ra-int.com/artifactory/api/nuget/infoplatform-build&quot; /&gt;</code>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <a type="button" class="btn btn-site" data-dismiss="modal">close</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END OF MODAL -->
+
+<!-- PLUGINS SECTION -->
+<section id="plugins" class="team">
+
+    <div class="container">
+        <h2 class="display-3 section-header section-header-grey">plugins</h2>
+
+        <ul id="team-filter-list" class="filter-list">
+            <!-- a place for Javascript to write in filtering buttons based on 'data-filtertags' -->
+        </ul>
+
+        <div id="plugin-cards">
+            <!-- a place for Javascript to write in plugin cards -->
+        </div>
+
+    </div> <!-- END OF CONTAINER -->
+
+</section> <!-- END OF PLUGINS SECTION -->
+
+<section class="tech-stripe gradient-lightgrey shadow-up">
+    <div class="subtle-overlay image-lts"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-6 col-md-2">
+                <div class="img-logo-container tech-animation">
+                    <img class="shadowed" src="lib/images/csharp_white.png" alt="c# logo">
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-2">
+                <div class="img-logo-container tech-animation">
+                    <img class="shadowed" src="lib/images/netframework_white.png" alt=".net logo">
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-2">
+                <div class="img-logo-container tech-animation">
+                    <img class="shadowed" src="lib/images/netcore_white.png" alt=".net core logo">
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-2">
+                <div class="img-logo-container tech-animation">
+                    <img class="shadowed" src="lib/images/signalr_white.png" alt="SignalR logo">
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-2">
+                <div class="img-logo-container tech-animation">
+                    <img class="shadowed" src="lib/images/owinlogo.png" alt="Owin logo">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="gradient-deepspace">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-7 order-2 order-md-1 text-center text-md-left">
+                <p>&copy; <span class="copyright-year">2017</span>&nbsp;&nbsp;Rockwell&nbsp;Automation,&nbsp;Inc.<br>
+                    <a href="http://www.rockwellautomation.com/global/legal-notices/overview.page?#/C132" target="_blank">Privacy</a>
+                    &nbsp; &middot; &nbsp;
+                    <a href="http://www.rockwellautomation.com/global/legal-notices/overview.page?#/C131" target="_blank">Terms</a>
+                </p>
+            </div>
+            <div class="col-12 col-md-5 order-1 order-md-2">
+                <div class="social-links text-center text-md-right">
+                    <a href="https://www.facebook.com/ROKAutomation" target="_blank" class="social-icon facebook" title="Facebook">
+                        <i class="ion-social-facebook"></i>
+                    </a>
+                    <a href="https://plus.google.com/+RockwellautomationInc" target="_blank" class="social-icon google" title="Google+">
+                        <i class="ion-social-googleplus"></i>
+                    </a>
+                    <a href="http://twitter.com/ROKAutomation" target="_blank" class="social-icon twitter" title="Twitter">
+                        <i class="ion-social-twitter"></i>
+                    </a>
+                    <a href="http://www.youtube.com/rokautomation" target="_blank" class="social-icon youtube" title="YouTube">
+                        <i class="ion-social-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-6">
+                <div class="logo-container">
+                    <img src="lib/images/ra_logo_white_withbug.png" alt="Rockwell Automation logo white">
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="logo-container logo-container--right">
+                    <img src="lib/images/ftc-logo-white.png" alt="FactoryTalk logo white">
+                </div>
+            </div>
+        </div>
+</div>
+</footer>
+
+<!-- VENDOR BASED JAVASCRIPT files -->
+<!-- JQuery plugin -->
+<script src="lib/js/jquery.min.js"></script>
+<!-- popper.js plugin -->
+<script src="lib/js/popper.min.js"></script>
+<!-- Bootstrap's 4 javascript plugin and popper.js-->
+<script src="lib/js/bootstrap.min.js"></script>
+<!-- Isotope plugin -->
+<script src="lib/js/isotope.pkgd.min.js"></script>
+<!-- Clamp plugin -->
+<script src="lib/js/clamp.min.js"></script>
+<!-- ScrollMagic javascript plugin -->
+<script src="lib/js/TweenMax.min.js"></script>
+<script src="lib/js/ScrollMagic.min.js"></script>
+<script src="lib/js/animation.gsap.js"></script>
+<script src="lib/js/ScrollToPlugin.min.js"></script>
+<script src="lib/js/debug.addIndicators.min.js"></script>  <!--uncomment this in the production version-->
+<script src="lib/js/parallax.min.js"></script>
+
+<!-- SITE SPECIFIC JAVASCRIPT files -->
+<script src="lib/js/scripts.js"></script>
+
+</body>
+</html>

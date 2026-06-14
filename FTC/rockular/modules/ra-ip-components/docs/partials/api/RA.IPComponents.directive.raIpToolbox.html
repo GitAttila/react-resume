@@ -1,0 +1,384 @@
+<h1><code ng:non-bindable="">raIpToolbox</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">RA.IPComponents</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipcomponents-directive-page ra-ipcomponents-directive-raiptoolbox-page"><p>The directive lists given items and divides them into defined categories. Items can be draggable and selectable, they can be displayed either in grid or in lines. Categories are displayed in collapsible tree. There is a button to collapse all tree nodes. Toolbox can be minimized to side of parent container.</p>
+<h4 id="description_minimized-version">Minimized version</h4>
+<p>Items are displayed in squares, one item per row. There is a button to open category tree dropdown and another button to return to wide panel display.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as attribute<pre class="prettyprint linenums">&lt;ANY ra-ip-toolbox
+     expanded="{boolean}"
+     min-panel="{object}"
+     display="{string}"
+     config="{object}"
+     callbacks="{object}"
+     set-api="{function}"&gt;
+   ...
+&lt;/ANY&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>expanded</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipcomponents-directive-page ra-ipcomponents-directive-raiptoolbox-page"><p>Is toolbox expanded?</p>
+</div></td></tr><tr><td>minPanel</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcomponents-directive-page ra-ipcomponents-directive-raiptoolbox-page"><p>Minimized pane configuration.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enabled</td>
+<td><a href="#" class="label type-hint type-hint-boolean">boolean</a></td>
+<td>If there should be added option to switch to minPanel</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>active</td>
+<td><a href="#" class="label type-hint type-hint-boolean">boolean</a></td>
+<td>If minPanel is currently active</td>
+<td>undefined</td>
+</tr>
+</tbody>
+</table>
+</div></td></tr><tr><td>display</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcomponents-directive-page ra-ipcomponents-directive-raiptoolbox-page"><p>How items are displayed (&#39;inline&#39;/&#39;grid&#39;)</p>
+</div></td></tr><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcomponents-directive-page ra-ipcomponents-directive-raiptoolbox-page"><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>service (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">string</a></td>
+<td>Name of custom service to use instead of default raIpToolboxSvc</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>items</td>
+<td><a href="#" class="label type-hint type-hint-array">array</a></td>
+<td>Array of items to put into toolbox. If not using default service</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>commonlyUsed</td>
+<td><a href="#" class="label type-hint type-hint-array">array</a></td>
+<td>Array of commonly used items</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>filter</td>
+<td><a href="#" class="label type-hint type-hint-object">object</a></td>
+<td>Filter configuration object, see raIpFilterSearchComponent</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>orderBy</td>
+<td><a href="#" class="label type-hint type-hint-string">string</a></td>
+<td>By which property to order items</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>dragDrop</td>
+<td><a href="#" class="label type-hint type-hint-boolean">boolean</a></td>
+<td>Enable dragdrop items</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>selection</td>
+<td><a href="#" class="label type-hint type-hint-boolean">boolean</a></td>
+<td>Enable selection of items</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>contextMenu</td>
+<td><a href="#" class="label type-hint type-hint-object">object</a></td>
+<td>contextMenu config object</td>
+<td>undefined</td>
+</tr>
+</tbody>
+</table>
+</div></td></tr><tr><td>callbacks</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcomponents-directive-page ra-ipcomponents-directive-raiptoolbox-page"><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>onToggleMinPanel</td>
+<td><a href="#" class="label type-hint type-hint-function">function</a></td>
+<td>Function to call on toggle minimized panel</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>onToggleToolbox</td>
+<td><a href="#" class="label type-hint type-hint-function">function</a></td>
+<td>Function to call on toggle toolbox</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>onSelectElement</td>
+<td><a href="#" class="label type-hint type-hint-function">function</a></td>
+<td>Function to call on select element</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>onSelectCategory</td>
+<td><a href="#" class="label type-hint type-hint-function">function</a></td>
+<td>Function to call on select category</td>
+<td>undefined</td>
+</tr>
+</tbody>
+</table>
+</div></td></tr><tr><td>setApi</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipcomponents-directive-page ra-ipcomponents-directive-raiptoolbox-page"><p>A callback function that returns an API object. It takes a single parameter named &#39;api&#39;
+that will contain the API object when called.</p>
+<p>The object passed to the callback function has the functions and properties listed below.</p>
+<ul>
+<li><strong>switchDisplay()</strong> - <code>{function}</code> -
+A function that switches between item display modes.</li>
+<li><strong>toggleMinPanel()</strong> - <code>{function}</code> -
+A function that toggles between normal (wide) pane and minimized pane.</li>
+<li><strong>selectElement(&#39;id&#39;)</strong> - <code>{function}</code> -
+A function that selects element(item) from displayed category.</li>
+<li><strong>selectCategory(&#39;category.subcategory&#39;)</strong> - <code>{function}</code> -
+A function that selects category.</li>
+<li><strong>updateContextMenu([object])</strong> - <code>{function}</code> -
+A function that updates context menu. Takes one argument - configuration object of $.contextMenu.</li>
+<li><strong>refreshTree(newItems, category, element)</strong> - <code>{function}</code> -
+A function that refreshes tree.<ul>
+<li>newItems - items to fill toolbox with, if using customSvc, leave this out</li>
+<li>category - category to select after refresh (type string) eg. &#39;Basic.Shapes&#39;</li>
+<li>element - element to select after refresh (type string), id of element eg. &#39;4&#39; or &#39;myItem&#39;</li>
+</ul>
+</li>
+</ul>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ra-ipcomponents-directive-page ra-ipcomponents-directive-raiptoolbox-page"><h4 id="example_source">Source</h4>
+<div source-edit="example1" source-edit-deps="angular.js script.js" source-edit-html="index.html-31" source-edit-css="style.css-30" source-edit-js="script.js-32" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-31" ng-html-wrap-loaded="example1 angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-31">
+<div ng-controller="raIpToolboxCtrl">
+    <div class="toolbox-wrapper ra-flex-column">
+        <ra-ip-toolbox
+            min-panel="minPanel"
+            display="display"
+            config="config"
+            callbacks="callbacks"
+            expanded="expanded"
+            set-api="setApi(api)"
+            >
+        </ra-ip-toolbox>
+    </div>
+    <h6 id="example_source_configuration">Configuration</h6>
+    <div>
+        <label for="expanded">expanded</label>
+        <input id="expanded" type="checkbox" ng-model="expanded">
+        <br />
+        <button ng-click="api.switchDisplay()">Switch display</button>
+        <br />
+
+        <h5 id="example_source_minpanel">MinPanel</h5>
+        <button ng-click="api.toggleMinPanel()">Toggle minPanel</button>
+        <br />
+        <button ng-click="refreshTree()">Refresh tree with new items</button>
+        <br />
+        <label for="elementID">element ID</label>
+        <input id="elementID" type="text" ng-model="elementID">
+        <button ng-click="api.selectElement(elementID)">Select element</button>
+        <br />
+        <label for="categoryID">category ID</label>
+        <input id="categoryID" type="text" ng-model="categoryID">
+        <button ng-click="api.selectCategory(categoryID)">Select category</button>
+    </div>
+</div>
+</script>
+</div>
+<div class="tab-pane" title="style.css">
+<pre class="prettyprint linenums" ng-set-text="style.css-30"></pre>
+<template id="style.css-30">
+.toolbox-wrapper {
+   position: relative;
+   color: black;
+   width: 220px;
+}
+</template>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-32"></pre>
+<script type="text/ng-template" id="script.js-32">
+angular.module('example1', ['mobile-toolkit-ra', 'RA.IPComponents']);
+angular.module('example1')
+    .controller('raIpToolboxCtrl', ['$scope', '$http',
+    function ($scope, $http) {
+       var itemsVariant = 'old';
+       $scope.refreshTree = function () {
+           if (itemsVariant === 'old') {
+               $scope.api.refreshTree(newItems);
+               itemsVariant = 'new';
+           } else {
+               $scope.api.refreshTree(oldItems, 'Basic', 3);
+               itemsVariant = 'old';
+           }
+       };
+
+       $scope.displayOpts = [
+           {
+               value: 'inline',
+               label: 'Inline'
+           },
+           {
+               value: 'grid',
+               label: 'Grid'
+           }
+       ];
+
+       var items = [];
+
+       var commonlyUsed = {
+           max: 5,
+           label: 'Most commonly used',
+           items: []
+       };
+       var filter = {
+           mode: 'basic',
+           whispers: true,
+           doConfirm: false,
+           delay: 2000,
+           minChars: 3,
+           filters: [
+               {
+                   name: 'name',
+                   label: 'Name',
+                   placeholder: 'Type sth...'
+               },
+               {
+                   name: 'category',
+                   label: 'Category',
+                   placeholder: 'Type some category...'
+               },
+               {
+                   name: 'description',
+                   label: 'Description',
+                   placeholder: 'Type some desc...'
+               }
+           ]
+       };
+       var contextMenu = {
+           items: {
+               callback: function (key, opt) {
+                   $scope.$apply(function () {
+                       var id = JSON.parse(opt.$trigger.context.dataset.id);
+                       switch (key) {
+                           case 'console':
+                               console.log(id);
+                               break;
+                           case 'screen':
+                               $scope.contextDisplay = id;
+                               break;
+                       }
+                   });
+               },
+               className: 'tb-items',
+               items: {
+                   console: {
+                       name: 'console.log',
+                       isHtmlName: false
+                   },
+                   screen: {
+                       name: 'show on screen',
+                       isHtmlName: false
+                   }
+               }
+           },
+           categories: {
+               callback: function (key, opt) {
+                   $scope.$apply(function () {
+                       var item = JSON.parse(opt.$trigger.context.dataset.items);
+                       switch (key) {
+                           case 'console':
+                               console.log(item.category);
+                               break;
+                           case 'screen':
+                               $scope.contextDisplay = item.category;
+                               break;
+                       }
+                   });
+               },
+               className: 'tb-categories',
+               items: {
+                   console: {
+                       name: 'console.log',
+                       isHtmlName: false
+                   },
+                   screen: {
+                       name: 'show on screen',
+                       isHtmlName: false
+                   }
+               }
+           }
+       };
+       var oldItems = angular.copy(items);
+       var newItems = [
+           items[0]
+       ];
+
+       $scope.expanded = true;
+       $scope.minPanel = {
+           active: false,
+           enabled: true
+       };
+       $scope.display = 'grid';
+       $scope.expanded = true;
+       $scope.config = {
+           service: undefined,
+           items: items,
+           commonlyUsed: commonlyUsed,
+           filter: filter,
+           orderBy: 'name',
+           dragDrop: true,
+           selection: true,
+           contextMenu: contextMenu
+       };
+       $scope.callbacks = {
+           onToggleMinPanel: function() {
+               console.log('Min panel toggled.');
+           },
+           onToggleToolbox: function() {
+               console.log('Toolbox toggled');
+           },
+           onSelectElement: function() {
+               console.log('Element was selected');
+           },
+           onSelectCategory: function() {
+               console.log('Category was selected');
+           }
+       };
+       $scope.setApi = function (api) {
+           $scope.api = api;
+       };
+
+       $http.get('../grunt-styles/docs/toolboxItems.json').success(function(response) {
+           items = response.items;
+           $scope.api.refreshTree(items);
+       });
+   }
+]);
+</script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well live-example-container"><iframe src="examples/example-17-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>

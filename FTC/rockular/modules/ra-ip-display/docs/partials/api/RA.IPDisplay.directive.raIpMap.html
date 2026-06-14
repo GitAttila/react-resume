@@ -1,0 +1,232 @@
+<h1><code ng:non-bindable="">raIpMap</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipmap-page"><p>The raIpMap directive is responsible for rendering the Map Widget.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ra-ip-map
+       rb-parameters="{object}"
+       ri-fqn="{string}"
+       rb-is-active="{boolean}"
+       ro-schema="{function}"
+       ro-examples="{function}"
+       [rb-style="{string}"]
+       ro-params-changed="{function}"&gt;
+&lt;/ra-ip-map&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rbParameters</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipmap-page"><p>An object representing common parameters and
+the parameters of Map Widget.</p>
+<p>Common Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>center (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The geographic coordinates of center of map</td>
+<td>0,0</td>
+</tr>
+<tr>
+<td>zoom (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The zoom level of map, minimum value is 0, maximum value is 18</td>
+<td>0</td>
+</tr>
+<tr>
+<td>hideLegend (optional)</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>Disable legend in Map widget</td>
+<td>false</td>
+</tr>
+<tr>
+<td>clusterSize (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>Radius of cluster for markers, minimum vlaue is 10, maximum is 20</td>
+<td>15</td>
+</tr>
+<tr>
+<td>popupVerbosity</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The enum with options which minimum info display in cluster popup. Values are - disabled, low, medium, high, urgent</td>
+<td>urgent</td>
+</tr>
+<tr>
+<td>indication (optional)</td>
+<td><a href="#" class="label type-hint type-hint-array">Array</a></td>
+<td>The array with members of legend for Map widget</td>
+<td></td>
+</tr>
+<tr>
+<td>indication.from (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The beginning of indication range</td>
+<td></td>
+</tr>
+<tr>
+<td>indication.to (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The end of indication range</td>
+</tr>
+<tr>
+<td>indication.color (optional)</td>
+<td><a href="#" class="label type-hint type-hint-object">Object</a></td>
+<td>The color of legend member. Color object(see <a href="#/api/RA.IPDisplay.service:colorTypeSvc">* <em>colorTypeSvc</em></a>) or hexadecimal String for compatibly reasons</td>
+<td>#ffffff</td>
+</tr>
+<tr>
+<td>indication.label (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The text of legend member</td>
+<td></td>
+</tr>
+<tr>
+<td>indication.verbosity (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The enum with option which verbosity level range is. Values are - disabled, low, medium, high, urgent</td>
+<td>disabled</td>
+</tr>
+</tbody>
+</table>
+<p>Map Widget Specific Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Main property, geographic coordinates of marker</td>
+<td></td>
+</tr>
+<tr>
+<td>caption (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The caption of markers popup</td>
+<td></td>
+</tr>
+<tr>
+<td>text (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The text inside of markers popup</td>
+<td></td>
+</tr>
+<tr>
+<td>colorIndication (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The value which determines color of marker based on legend</td>
+<td></td>
+</tr>
+<tr>
+<td>drillThrough (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The enum with options to add link to markers popup. Values are - disabled, displayRel, url</td>
+<td>disabled</td>
+</tr>
+<tr>
+<td>drillLink</td>
+<td><a href="#" class="label type-hint type-hint-object">Object</a> or <a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>For drillThrough set to displayRel this is link to another display. For drillThrough set to url this is external url link</td>
+<td></td>
+</tr>
+<tr>
+<td>drillCaption</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Valid only for drillThrough set to displayRel or url. Caption of link.</td>
+</tr>
+</tbody>
+</table>
+</div></td></tr><tr><td>riFqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipmap-page"><p>FQN the widget is relative to.</p>
+</div></td></tr><tr><td>rbIsActive</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipmap-page"><p>Flag which shows whether the widget should be active.</p>
+</div></td></tr><tr><td>roSchema</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipmap-page"><p>Function which should be called to initialize the widget schema in outside environment.</p>
+</div></td></tr><tr><td>roExamples</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipmap-page"><p>Function which should be called to initialize the widget examples in outside
+environment.</p>
+</div></td></tr><tr><td>rbStyle <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipmap-page"><p>String indicating which class should be used in widget.</p>
+</div></td></tr><tr><td>roParamsChanged</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipmap-page"><p>Function which should be called when center of map was changed by mouse event</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipmap-page"><p>The example below shows how to use the <em>raIpMap</em> directive:
+<h4 id="example_source">Source</h4>
+<div source-edit="exampleAppOne" source-edit-deps="angular.js script.js" source-edit-html="index.html-36" source-edit-css="" source-edit-js="script.js-37" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-36" ng-html-wrap-loaded="exampleAppOne angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-36">
+       <div ng-controller="exampleCtrl" style="width:650px; height: 400px;" >
+Geographic coordinates of marker, format: number, number:
+<input type="string"
+     ng-model="value"
+     ng-change="valueChange()"><br>
+Color indication number (0 - 4):
+           <input type="number"
+     ng-model="valueColor"
+     ng-change="valueColorChange()">
+           <ra-ip-map
+             rb-parameters="example1.params"
+             rb-is-active="example1.isActive"
+             ri-fqn="example1.fqn"
+             ri-schema="example1.getSchema(schema)"
+             style="height:100%;width:100%;">
+           </ra-ip-map>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-37"></pre>
+<script type="text/ng-template" id="script.js-37">
+       var mod = angular.module('exampleAppOne', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope',
+           function ($scope) {
+               'use strict';
+               $scope.valueColor = 1;
+               $scope.value = "0,0";
+               $scope.valueColorChange = function () {
+                 $scope.example1.params.items[0].colorIndication = $scope.valueColor;
+               }
+
+               $scope.valueChange = function () {
+                 $scope.example1.params.items[0].value = $scope.value;
+               }
+
+               $scope.example1 = {};
+               $scope.example1.isActive = true;
+               $scope.example1.fqn = "MyEnterprise";
+               $scope.example1.getSchema = function (schema) {};
+               $scope.example1.params = {
+     "items": [
+     {
+     "value": "0,0",
+     "caption": "Marker caption",
+     "text": "Marker text",
+     "colorIndication": 1,
+     "schemaType": "string"
+     }
+     ]
+     }
+           }
+       ]);
+
+   </script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well live-example-container"><iframe src="examples/example-20-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>

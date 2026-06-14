@@ -1,0 +1,35 @@
+<h1><code ng:non-bindable="">securityContextSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPCommon.Services</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-securitycontextsvc-page"><p>Service for Security Context Request and Manipulations</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_checkpermissions">checkPermissions(fqn, requiredPermissions)</h3>
+<div class="checkpermissions"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-securitycontextsvc-checkpermissions-page"><p>Makes a request to services on the server to get item&#39;s permissions.</p>
+</div><h5 id="methods_checkpermissions_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>fqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-securitycontextsvc-checkpermissions-page"><ul>
+<li>FQN of the item to get permissions for.</li>
+</ul>
+</div></td></tr><tr><td>requiredPermissions</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-securitycontextsvc-checkpermissions-page"><ul>
+<li>permissions to check in VP rwde format
+e.g. &#39;YNNN&#39; that checks whether item is read-only.</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_checkpermissions_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-ipromise">IPromise&lt;T&gt;</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-securitycontextsvc-checkpermissions-page"><ul>
+<li>Promise to resolve when answer
+will be available, the answer is boolean.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getsecuritycontextdata">getSecurityContextData()</h3>
+<div class="getsecuritycontextdata"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-securitycontextsvc-getsecuritycontextdata-page"><p>Makes a request to JSON Security Context service on the server.</p>
+</div><h5 id="methods_getsecuritycontextdata_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-ipromise">IPromise&lt;T&gt;</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-securitycontextsvc-getsecuritycontextdata-page"><ul>
+<li>Promise to resolve when answer
+will be available.</li>
+</ul>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

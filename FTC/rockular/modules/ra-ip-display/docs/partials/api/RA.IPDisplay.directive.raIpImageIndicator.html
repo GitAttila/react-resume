@@ -1,0 +1,427 @@
+<h1><code ng:non-bindable="">raIpImageIndicator</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipimageindicator-page"><p>The raIpTrend directive is responsible for rendering the Image Indicator Widget.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ra-ip-image-indicator
+       rb-parameters="{object}"
+       ri-fqn="{string}"
+       rb-is-active="{boolean}"
+       ro-schema="{function}"
+       ro-examples="{function}"&gt;
+&lt;/ra-ip-image-indicator&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rbParameters</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipimageindicator-page"><p>An object representing common parameters and
+the parameters of Image Indicator Widget.</p>
+<p>Image Indicator Widget Specific Parameters</p>
+<p> <strong>Schema type: Boolean</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caption (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The text which is displayed as caption of image indicator</td>
+<td>This property is autobound to model .Name property of tag or it is empty</td>
+</tr>
+<tr>
+<td>size (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Size of the image to be displayed (small/medium/large)</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>value</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>Boolean value or FQN of the item to bind to the image indicator</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>trueValue</td>
+<td><a href="#" class="label type-hint type-hint-array">Array</a></td>
+<td>Array with one object inside</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>trueValue.source</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>source type of the image to be displaysed   (FQN/FQNnoReb/URL)</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>trueValue.url</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>URL of bound image when trueValue.source is URL</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>trueValue.fqn</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>FQN of bound image when trueValue.source is FQN or FQNnoReb</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>falseValue</td>
+<td><a href="#" class="label type-hint type-hint-array">Array</a></td>
+<td>Array with one object inside</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>falseValue.source</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>FQN/FQNnoReb/URL</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>falseValue.url</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>URL of bound image when falseValue.source is URL</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>falseValue.fqn</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>FQN of bound image when falseValue.source is FQN or FQNnoReb</td>
+<td>undefined</td>
+</tr>
+</tbody>
+</table>
+<p> <strong>Schema type: Number</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caption (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The text which is displayed as caption of image indicator</td>
+<td>This property is autobound to model .Name property of tag or it is empty</td>
+</tr>
+<tr>
+<td>size (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Size of the image to be displayed (small/medium/large)</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>value</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>Number value or FQN of the item to bind to the image indicator</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>outOfRange</td>
+<td><a href="#" class="label type-hint type-hint-array">Array</a></td>
+<td>Array with one object inside</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>outOfRange.source</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>source type of the image to be displaysed   (FQN/FQNnoReb/URL)</td>
+<td>undeinfed</td>
+</tr>
+<tr>
+<td>outOfRange.fqn</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>FQN of bound image when outOfRange.source is FQN or FQNnoReb</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>outOfRange.url</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>URL of bound image when outOfRange.source is URL</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>ranges</td>
+<td><a href="#" class="label type-hint type-hint-array">Array</a></td>
+<td>Range of Valid values that helps decide if the value is valid or out of bounds</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>ranges.from</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>From where to start the valid number range (lower bound)</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>ranges.to</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>To up to where to end the valid number range (upper bound)</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>ranges.source</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>source type of the image to be displaysed   (FQN/FQNnoReb/URL)</td>
+<td>undeinfed</td>
+</tr>
+<tr>
+<td>ranges.fqn</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>FQN of bound image when ranges.source is FQN or FQNnoReb</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>ranges.url</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>URL of bound image when ranges.source is URL</td>
+<td>undefined</td>
+</tr>
+</tbody>
+</table>
+<p> <strong>Schema type: String</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>caption (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The text which is displayed as caption of image indicator</td>
+<td>This property is autobound to model .Name property of tag or it is empty</td>
+</tr>
+<tr>
+<td>size (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Size of the image to be displayed (small/medium/large)</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>value</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>FQN of the item to bind to the image indicator</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>outOfKeywordRange</td>
+<td><a href="#" class="label type-hint type-hint-array">Array</a></td>
+<td>Array with one object inside</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>outOfKeywordRange.source</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>source type of the image to be displaysed   (FQN/FQNnoReb/URL)</td>
+<td>undeinfed</td>
+</tr>
+<tr>
+<td>outOfKeywordRange.fqn</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>FQN of bound image when outOfKeywordRange.source is FQN or FQNnoReb</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>outOfKeywordRange.url</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>URL of bound image when outOfKeywordRange.source is URL</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>keywordRange</td>
+<td><a href="#" class="label type-hint type-hint-array">Array</a></td>
+<td>Range of Valid values that helps decide if the value is valid or out of bounds</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>keywordRange.keywords</td>
+<td><a href="#" class="label type-hint type-hint-array">Array</a></td>
+<td>Comma seperated list of valid keywords</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>keywordRange.source</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>source type of the image to be displaysed   (FQN/FQNnoReb/URL)</td>
+<td>undeinfed</td>
+</tr>
+<tr>
+<td>keywordRange.fqn</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>FQN of bound image when keywordRange.source is FQN or FQNnoReb</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>keywordRange.url</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>URL of bound image when keywordRange.source is URL</td>
+<td>undefined</td>
+</tr>
+</tbody>
+</table>
+</div></td></tr><tr><td>riFqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipimageindicator-page"><p>FQN the widget is relative to.</p>
+</div></td></tr><tr><td>rbIsActive</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipimageindicator-page"><p>Flag which shows whether the widget sould be active.</p>
+</div></td></tr><tr><td>roSchema</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipimageindicator-page"><p>Function which should be called to intialize the widget schema in outside environment.</p>
+</div></td></tr><tr><td>roExamples</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipimageindicator-page"><p>Function which should be called to intialize the widget examples in outside
+environment.</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipimageindicator-page"><p>The example below shows how to use the <em>raIpImageIndicator</em> directive with boolean value:
+<h4 id="example_source">Source</h4>
+<div source-edit="exampleAppOne" source-edit-deps="angular.js script.js" source-edit-html="index.html-12" source-edit-css="" source-edit-js="script.js-13" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-12" ng-html-wrap-loaded="exampleAppOne angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-12">
+       <div ng-controller="exampleCtrl" style="width:400px; height: 400px;" >
+           <input type="checkbox"
+     ng-model="isChecked"
+     ng-change="checkChange()">
+           <ra-ip-image-indicator
+             rb-parameters="example1.params"
+             rb-is-active="example1.isActive"
+             ri-fqn="example1.fqn"
+             ri-schema="example1.getSchema(schema)">
+           </ra-ip-image-indicator>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-13"></pre>
+<script type="text/ng-template" id="script.js-13">
+       var mod = angular.module('exampleAppOne', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope',
+           function ($scope) {
+               'use strict';
+               $scope.isChecked = true;
+               $scope.checkChange = function () {
+                 $scope.example1.params.items[0].value = $scope.isChecked;
+               }
+
+               $scope.example1 = {};
+               $scope.example1.isActive = true;
+               $scope.example1.fqn = "MyEnterprise";
+               $scope.example1.getSchema = function (schema) {};
+               $scope.example1.params = {
+     items: [{
+     schemaType: 'boolean',
+     value: true,
+     size: 'large',
+     falseValue: [
+     {
+     source: 'URL',
+     url: 'dependencies/multiply.png'
+     }
+     ],
+     trueValue: [
+     {
+     source: 'URL',
+     url: 'dependencies/check-mark.png'
+     }
+     ]
+     }]
+     }
+           }
+       ]);
+
+   </script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well live-example-container"><iframe src="examples/example-8-index.html" iframe-adjust-dimensions></iframe></div>
+<ul>
+<li>The example below shows how to use the <em>raIpImageIndicator</em> directive with number value:
+<h4 id="example_source">Source</h4>
+<div source-edit="exampleAppTwo" source-edit-deps="angular.js script.js" source-edit-html="index.html-14" source-edit-css="" source-edit-js="script.js-15" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-14" ng-html-wrap-loaded="exampleAppTwo angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-14">
+       <div ng-controller="exampleCtrl" style="width:400px; height: 400px;" >
+           <input type="number"
+     ng-model="value"
+     ng-change="valueChange()">
+           <ra-ip-image-indicator
+             rb-parameters="example1.params"
+             rb-is-active="example1.isActive"
+             ri-fqn="example1.fqn"
+             ri-schema="example1.getSchema(schema)">
+           </ra-ip-image-indicator>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-15"></pre>
+<script type="text/ng-template" id="script.js-15">
+       var mod = angular.module('exampleAppTwo', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope',
+           function ($scope) {
+               'use strict';
+               $scope.value = 100;
+               $scope.valueChange = function () {
+                 $scope.example1.params.items[0].value = $scope.value;
+               }
+
+               $scope.example1 = {};
+               $scope.example1.isActive = true;
+               $scope.example1.fqn = "MyEnterprise";
+               $scope.example1.getSchema = function (schema) {};
+               $scope.example1.params = {
+     items: [{
+     schemaType: 'number',
+     value: 100,
+     size: 'large',
+     outOfRange: [
+     {
+     source: 'URL',
+     url: 'dependencies/lightning-bolt.png'
+     }
+     ],
+     ranges: [
+     {
+     from: -99,
+     to: 0,
+     source: 'URL',
+     url: 'dependencies/diamond.png'
+     },
+     {
+     from: 1,
+     to: 100,
+     source: 'URL',
+     url: 'dependencies/ellipse.png'
+     },
+     {
+     from: 101,
+     to: 200,
+     source: 'URL',
+     url: 'dependencies/pentagon.png'
+     }
+     ]
+     }]
+     }
+           }
+       ]);
+
+   </script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well live-example-container"><iframe src="examples/example-9-index.html" iframe-adjust-dimensions></iframe></div></li>
+</ul>
+</div></div>
+</div>

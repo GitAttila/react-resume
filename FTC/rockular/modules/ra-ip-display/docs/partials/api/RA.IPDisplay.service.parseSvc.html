@@ -1,0 +1,27 @@
+<h1><code ng:non-bindable="">parseSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-parsesvc-page"><p>Provides parsing methods e.g. for GPS coordinates.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_parselatlong">parseLatLong(actualValue, modifyByModulo)</h3>
+<div class="parselatlong"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-parsesvc-parselatlong-page"><p>Returns latitude and longitude from string input.
+Supported formats:</p>
+<ul>
+<li>decimal 41.553291, -81.747669</li>
+<li>degrees minutes seconds 40° 26′ 46″ N, 79° 58′ 56″ W</li>
+<li>degrees decimal minutes 40° 26.767′ N, 79° 58.933′ W</li>
+<li>decimal degrees 40.446° N, 79.982° W</li>
+</ul>
+</div><h5 id="methods_parselatlong_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>actualValue</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-parsesvc-parselatlong-page"><p>string to parse latitude and longitude from</p>
+</div></td></tr><tr><td>modifyByModulo</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-parsesvc-parselatlong-page"><p>modify lat and long by modulo</p>
+</div></td></tr></tbody></table><h5 id="methods_parselatlong_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-parsesvc-parselatlong-page"><p>array with latitude and longitude [lat, long]
+or undefined in case input string does not contain valid coordinate data</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

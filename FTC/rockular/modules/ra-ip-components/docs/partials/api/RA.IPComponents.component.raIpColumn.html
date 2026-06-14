@@ -1,0 +1,95 @@
+<h1><code ng:non-bindable="">raIpColumn</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">RA.IPComponents</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipcolumn-page"><p>This component is responsible for rendering columns body. Column body component has predefined logic to
+divide items to columns. Parameter hidden allows to hide whole item in a column. For icon is used raIpBadge.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ra-ip-column
+       -="{object}"&gt;
+&lt;/ra-ip-column&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>-</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipcolumn-page"><p><strong><code>numberOfColumns</code></strong> {int} columns number of columns</p>
+<ul>
+<li><strong><code>items</code></strong> {Array} items<ul>
+<li><strong><code>label</code></strong> {string}</li>
+<li><strong><code>value</code></strong> {string} or [array] raIpBadge <a href="#/api/RA.IPComponents.component:raIpBadge">RA.IPComponents.component:raIpBadge</a></li>
+<li><strong><code>hidden</code></strong> {bool} to hide</li>
+</ul>
+</li>
+</ul>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipcolumn-page"><h4 id="example_source">Source</h4>
+<div source-edit="example1" source-edit-deps="angular.js script.js" source-edit-html="index.html-10" source-edit-css="" source-edit-js="script.js-11" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-10" ng-html-wrap-loaded="example1 angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-10">
+    <div ng-controller="myCtrl">
+        <ra-ip-column config="config"></ra-ip-column>
+    </div>
+</script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-11"></pre>
+<script type="text/ng-template" id="script.js-11">
+    angular.module('example1', ['mobile-toolkit-ra', 'RA.IPComponents']);
+    angular.module('example1')
+        .controller('myCtrl',['$scope',
+            function($scope) {
+                $scope.config = {
+                    numberOfColumns: 3,
+                    items: [
+                        {
+                            label: "label 1",
+                            value: "value 1"
+                        },
+                        {
+                            label: "label 2",
+                            value: "value 2"
+                        },
+                        {
+                            label: "label 3",
+                            value: "value 3"
+                        },
+                        {
+                            label: "label 4",
+                            value: "value 4"
+                        },
+                        {
+                            label: "label 5",
+                            value: [
+                                {
+                                    class: "ra-icon-home",
+                                    badgeNumber: 2,
+                                    size: "small"
+                                },
+                                {
+                                    class: "ra-icon-clear",
+                                    tooltip: "tooltip text",
+                                    badgeNumber: 2,
+                                    size: "medium"
+                                },
+                                {
+                                    class: "ra-icon-edit",
+                                    disabled: true,
+                                    badgeNumber: 2,
+                                    size: "large"
+                                }
+                            ]
+                        },
+                        {
+                            label: "label 6",
+                            value: ""
+                        }
+                    ]
+                }
+            }]);
+</script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well live-example-container"><iframe src="examples/example-7-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>

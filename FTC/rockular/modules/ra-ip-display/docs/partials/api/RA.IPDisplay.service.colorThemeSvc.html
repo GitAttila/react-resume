@@ -1,0 +1,255 @@
+<h1><code ng:non-bindable="">colorThemeSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-page"><p>Provides functionality to work with color themes and palettes</p>
+<p>Palettes consist of following:</p>
+<ul>
+<li>White and Black color</li>
+<li>8 palette specific colors</li>
+<li>6 shades from each basic color -&gt; 60 (6 * (8 + 2)) color total</li>
+</ul>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_colorstringtosimplepalettehex">colorStringToSimplePaletteHex(colorString)</h3>
+<div class="colorstringtosimplepalettehex"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-colorstringtosimplepalettehex-page"><p>Function to convert string named color to predefined hex found in simple palette.</p>
+</div><h5 id="methods_colorstringtosimplepalettehex_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>colorString</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-colorstringtosimplepalettehex-page"><ul>
+<li>color string name e.g. red</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_colorstringtosimplepalettehex_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-colorstringtosimplepalettehex-page"><p>color in Hexa</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getdefaultpalette">getDefaultPalette()</h3>
+<div class="getdefaultpalette"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-getdefaultpalette-page"><p>Returns the default palette&#39;s name.</p>
+</div><h5 id="methods_getdefaultpalette_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-getdefaultpalette-page"><p>Name of the default palette.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getnewthemepalette">getNewThemePalette(newPalette, oldColor)</h3>
+<div class="getnewthemepalette"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-getnewthemepalette-page"><p>Returns color from newPalette on the position which is specified in oldColor.index.
+If newPalette does not exist, it returns the color from default palette.
+If color does not have specified index, or the index is invalid, it throws RAError.</p>
+<p>If the color is in string format it is returned as it is.</p>
+</div><h5 id="methods_getnewthemepalette_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>newPalette</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-getnewthemepalette-page"><p>Name of new palette</p>
+</div></td></tr><tr><td>oldColor</td><td><a href="" class="label type-hint type-hint-object">Object</a><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-getnewthemepalette-page"><p>Color object (see <a href="#/api/RA.IPDisplay.service:colorTypeSvc"><em>colorTypeSvc</em></a>) or hexadecimal String describing the old color</p>
+</div></td></tr></tbody></table><h5 id="methods_getnewthemepalette_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-getnewthemepalette-page"><p>If the color is <a href="#/api/RA.IPDisplay:COLOR_TYPES">THEME_COLOR</a> it returns color
+object (see <a href="#/api/RA.IPDisplay.service:colorTypeSvc"><em>colorTypeSvc</em></a>)
+describing color in new palette on same index as the oldColor was in old palette.
+Else it returns unchanged oldColor parameter.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getpalettes">getPalettes()</h3>
+<div class="getpalettes"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-getpalettes-page"><p>Returns object with all palettes.</p>
+</div><h5 id="methods_getpalettes_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-getpalettes-page"><p>Object key mean name of the palette.
+Value of object is array with 8 items - each is string with hexadecimal value of color.</p>
+</div></td></tr></table><h4 id="methods_getpalettes_example">Example</h4>
+<div class="example"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-getpalettes-page"><p>The example below shows usage of getPalettes method and the visualization of its result:
+<h6 id="methods_getpalettes_example_source">Source</h6>
+<div source-edit="exampleAppOne" source-edit-deps="angular.js script.js" source-edit-html="index.html-46" source-edit-css="" source-edit-js="script.js-47" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-46" ng-html-wrap-loaded="exampleAppOne angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-46">
+       <div ng-controller="exampleCtrl">
+           <div ng-repeat="(key, value) in palettes"
+                 class="panel panel-default"
+                 style="clear: both;">
+               <div>{{key}}</div>
+               <div>
+                 <div ng-repeat="color in value"
+                     ng-style="{'background-color': color}"
+                     style="width: 30px; height: 30px; float: left">
+                 </div>
+               </div>
+           </div>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-47"></pre>
+<script type="text/ng-template" id="script.js-47">
+       var mod = angular.module('exampleAppOne', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope', 'colorThemeSvc',
+           function ($scope, colorThemeSvc) {
+               'use strict';
+               $scope.palettes = colorThemeSvc.getPalettes();
+           }
+       ]);
+
+   </script>
+</div>
+</div><h6 id="methods_getpalettes_example_demo">Demo</h6>
+<div class="well live-example-container"><iframe src="examples/example-25-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_getsimplepalette">getSimplePalette()</h3>
+<div class="getsimplepalette"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-getsimplepalette-page"><p>Returns the simple palette - this pallete contains all
+<a href="#/api/RA.IPDisplay:COLOR_TYPES">FIXED_COLOR</a>.</p>
+</div><h5 id="methods_getsimplepalette_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-getsimplepalette-page"><p>Array containing 20 strings. Each string represents 1
+<a href="#/api/RA.IPDisplay:COLOR_TYPES">FIXED_COLOR</a>.</p>
+<p>Result strings are hexadecimal color definition without &#39;#&#39; sign. E.g &quot;123ABC&quot;.</p>
+</div></td></tr></table><h4 id="methods_getsimplepalette_example">Example</h4>
+<div class="example"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-getsimplepalette-page"><p>The example below shows usage of getSimplePalette method and the visualization of its result:
+<h6 id="methods_getsimplepalette_example_source">Source</h6>
+<div source-edit="exampleAppOne" source-edit-deps="angular.js script.js" source-edit-html="index.html-50" source-edit-css="" source-edit-js="script.js-51" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-50" ng-html-wrap-loaded="exampleAppOne angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-50">
+       <div ng-controller="exampleCtrl">
+           <div style="width: 200px">
+               <div ng-repeat="color in palette track by $index"
+                     ng-style="{'background-color': '#' + color}"
+                     style="width: 20px; height: 20px; float: left">
+                   </div>
+           </div>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-51"></pre>
+<script type="text/ng-template" id="script.js-51">
+       var mod = angular.module('exampleAppOne', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope', 'colorThemeSvc',
+           function ($scope, colorThemeSvc) {
+               'use strict';
+               $scope.palette = colorThemeSvc.getSimplePalette();
+           }
+       ]);
+
+   </script>
+</div>
+</div><h6 id="methods_getsimplepalette_example_demo">Demo</h6>
+<div class="well live-example-container"><iframe src="examples/example-27-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_getsimplepalletecolor">getSimplePalleteColor(colorName)</h3>
+<div class="getsimplepalletecolor"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-getsimplepalletecolor-page"><p>Function to try to pair color given by string name
+e.g. &#39;red&#39; to hex cgulp buildDocs
+color from simple palette</p>
+</div><h5 id="methods_getsimplepalletecolor_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>colorName</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-getsimplepalletecolor-page"><p>English name of color. Supported colors are:</p>
+<ul>
+<li>yellow</li>
+<li>blue</li>
+<li>red</li>
+<li>green</li>
+<li>gray</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_getsimplepalletecolor_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-getsimplepalletecolor-page"><p>color in Hexa</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getthemepalette">getThemePalette(paletteName)</h3>
+<div class="getthemepalette"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-getthemepalette-page"><p>Returns the palette with specified name.</p>
+</div><h5 id="methods_getthemepalette_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>paletteName</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-getthemepalette-page"><p>The name of the palette it should return.</p>
+</div></td></tr></tbody></table><h5 id="methods_getthemepalette_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-getthemepalette-page"><p>Array containing 60 strings. Each string represents 1 color.
+These colors are determined by the palette definition which contains 10 colors
+(White, Black and 8 palette specific). The result array contains those colors +
+5 more shades for each color.</p>
+<p>Result strings are hexadecimal color definition without &#39;#&#39; sign. E.g &quot;123ABC&quot;.</p>
+</div></td></tr></table><h4 id="methods_getthemepalette_example">Example</h4>
+<div class="example"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-getthemepalette-page"><p>The example below shows usage of getThemePalette method and the visualization of its result:
+<h6 id="methods_getthemepalette_example_source">Source</h6>
+<div source-edit="exampleAppOne" source-edit-deps="angular.js script.js" source-edit-html="index.html-48" source-edit-css="" source-edit-js="script.js-49" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-48" ng-html-wrap-loaded="exampleAppOne angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-48">
+       <div ng-controller="exampleCtrl">
+           <div style="width: 200px">
+               <div>{{paletteName}}</div>
+               <div ng-repeat="color in palette track by $index"
+                     ng-style="{'background-color': '#' + color}"
+                     style="width: 20px; height: 20px; float: left">
+               </div>
+           </div>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-49"></pre>
+<script type="text/ng-template" id="script.js-49">
+       var mod = angular.module('exampleAppOne', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope', 'colorThemeSvc',
+           function ($scope, colorThemeSvc) {
+               'use strict';
+               $scope.paletteName = colorThemeSvc.getDefaultPalette();
+               $scope.palette = colorThemeSvc.getThemePalette($scope.paletteName);
+           }
+       ]);
+
+   </script>
+</div>
+</div><h6 id="methods_getthemepalette_example_demo">Demo</h6>
+<div class="well live-example-container"><iframe src="examples/example-26-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_gettimeseriespalette">getTimeSeriesPalette()</h3>
+<div class="gettimeseriespalette"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-gettimeseriespalette-page"><p>Returns the palette which is designed to be used in widgets for distinguishing
+time series.</p>
+</div><h5 id="methods_gettimeseriespalette_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-gettimeseriespalette-page"><p>Array containing 20 strings. Each string represents 1 color.</p>
+<p>Result strings are hexadecimal color definition without &#39;#&#39; sign. E.g &quot;123ABC&quot;.</p>
+</div></td></tr></table><h4 id="methods_gettimeseriespalette_example">Example</h4>
+<div class="example"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-gettimeseriespalette-page"><p>The example below shows usage of getTimeSeriesPalette method and the visualization of its result:
+<h6 id="methods_gettimeseriespalette_example_source">Source</h6>
+<div source-edit="exampleAppOne" source-edit-deps="angular.js script.js" source-edit-html="index.html-52" source-edit-css="" source-edit-js="script.js-53" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-52" ng-html-wrap-loaded="exampleAppOne angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-52">
+       <div ng-controller="exampleCtrl">
+           <div style="width: 240px">
+               <div ng-repeat="color in palette track by $index"
+                     ng-style="{'background-color': '#' + color}"
+                     style="width: 20px; height: 20px; float: left">
+                   </div>
+           </div>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-53"></pre>
+<script type="text/ng-template" id="script.js-53">
+       var mod = angular.module('exampleAppOne', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope', 'colorThemeSvc',
+           function ($scope, colorThemeSvc) {
+               'use strict';
+               $scope.palette = colorThemeSvc.getTimeSeriesPalette();
+           }
+       ]);
+
+   </script>
+</div>
+</div><h6 id="methods_gettimeseriespalette_example_demo">Demo</h6>
+<div class="well live-example-container"><iframe src="examples/example-28-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_issimplecolor">isSimpleColor(colorObj)</h3>
+<div class="issimplecolor"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-issimplecolor-page"><p>Returns the information whether the colorObj parameter describes color in
+simple palette.</p>
+</div><h5 id="methods_issimplecolor_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>colorObj</td><td><a href="" class="label type-hint type-hint-string">String</a><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-issimplecolor-page"><p>String or object representing color.</p>
+</div></td></tr></tbody></table><h5 id="methods_issimplecolor_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-issimplecolor-page"><p>True if colorObj is present in simple palette.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isthemecolor">isThemeColor(color)</h3>
+<div class="isthemecolor"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-isthemecolor-page"><p>Function to check if given color is theme color.</p>
+</div><h5 id="methods_isthemecolor_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>color</td><td><a href="" class="label type-hint type-hint-string">String</a><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-isthemecolor-page"><ul>
+<li>definition for color, string or object</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_isthemecolor_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-isthemecolor-page"><p>True if passed color is theme color.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_isvalidcolor">isValidColor(color)</h3>
+<div class="isvalidcolor"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-isvalidcolor-page"><p>Function to check if given color is valid color. That means if color is from simple
+palette or whether it is theme color.</p>
+</div><h5 id="methods_isvalidcolor_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>color</td><td><a href="" class="label type-hint type-hint-string">String</a><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-isvalidcolor-page"><p>to be validated</p>
+</div></td></tr></tbody></table><h5 id="methods_isvalidcolor_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-colorthemesvc-isvalidcolor-page"><p>True if passed color is valid</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

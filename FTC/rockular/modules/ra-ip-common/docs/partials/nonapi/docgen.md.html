@@ -1,0 +1,14 @@
+<h1><code ng:non-bindable=""></code>
+<div><span class="hint"></span>
+</div>
+</h1>
+<div><div class="generating-documentation-page"><h2 id="generating-documentation">Generating documentation</h2>
+<p>To generate the documentation, run <strong><code>gulp buildDocs</code></strong> from command line. It is a wrapper task for running <strong>grunt-ngdocs</strong> plugin.</p>
+<h2 id="output-location">Output location</h2>
+<p>Currently, the <strong>grunt-ngdocs</strong> is configured to output the generated documentation to <em>dist/docs</em> folder. In order to view the documentation, the directory containing the docs has to be hosted on a web server.</p>
+<h2 id="markdown-to-ngdoc-conversion">Markdown (.md) to .ngdoc conversion</h2>
+<p>Documentation in this section is generated from markdown-formatted documents, which are bare .md files. <strong>grunt-ngdocs</strong> only recognizes .ngdoc files, so .md files need to be renamed and correctly annotated using ngdoc tags. This is done by gulp, but in order to have gulp correctly annotate a particular markdown file, you need to define the document&#39;s title. You do it by defining a <strong>meta</strong> tag with <strong><code>name=&quot;ngdocTitle&quot;</code></strong> and <strong><code>content</code></strong> attribute being the title:</p>
+<p><code>&lt;meta name=&quot;ngdocTitle&quot; content=&quot;Generating documentation&quot; /&gt;</code></p>
+<p>NOTE: you <strong>must</strong> use double quotes to enclose attribute values. Using apostrophes will cause gulp not to recognize the tag. </p>
+<p>If you don&#39;t provide text in content attribute or forget to provide the <meta> tag at all or the tag is malformed and not recognized, the document will be skipped and will not be included in the output.</p>
+</div></div>

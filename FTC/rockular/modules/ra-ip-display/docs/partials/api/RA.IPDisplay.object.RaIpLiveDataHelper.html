@@ -1,0 +1,134 @@
+<h1><code ng:non-bindable="">RaIpLiveDataHelper</code>
+<div><span class="hint">object in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-object-page ra-ipdisplay-object-raiplivedatahelper-page"><p>Instance representing the RaIpLiveDataHelper and its API.
+Created by calling new raIpLiveDataHelper,
+see <a href="#/api/RA.IPDisplay.service:raIpLiveDataHelper">raIpLiveDataHelper</a>.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">RaIpLiveDataHelper(schemaParam, valueItemsParam, contextFQNParam);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>schemaParam</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-raiplivedatahelper-page"><p>whole widget schema</p>
+</div></td></tr><tr><td>valueItemsParam</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-raiplivedatahelper-page"><p>widget items parameters</p>
+</div></td></tr><tr><td>contextFQNParam</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-raiplivedatahelper-page"><p>current context FQN value</p>
+</div></td></tr></tbody></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_clonedatawithoutbinding">cloneDataWithoutBinding(source)</h3>
+<div class="clonedatawithoutbinding"><div class="ra-ipdisplay-object-page ra-ipdisplay-object-raiplivedatahelper-clonedatawithoutbinding-page"><p>Clone inner array/object data from one object into another, creates structure
+without its binding.</p>
+</div><h5 id="methods_clonedatawithoutbinding_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>source</td><td><a href="" class="label type-hint type-hint-array">Array</a><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-raiplivedatahelper-clonedatawithoutbinding-page"><p>source to clone data from</p>
+</div></td></tr></tbody></table><h5 id="methods_clonedatawithoutbinding_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-array">Array|Object</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-raiplivedatahelper-clonedatawithoutbinding-page"><p>cloned object without binded properties</p>
+<p>Example:
+<pre class="prettyprint linenums">
+source: [{
+     testA: 'testA',
+     testB: {innerTestB: true},
+     testC: ['a', 'b']
+}]
+</pre>
+Result:
+<pre class="prettyprint linenums">
+[{
+     testB: {},
+     testC: []
+}]
+</pre>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_createfqnlistandmapping">createFqnListAndMapping(addAutobind)</h3>
+<div class="createfqnlistandmapping"><div class="ra-ipdisplay-object-page ra-ipdisplay-object-raiplivedatahelper-createfqnlistandmapping-page"><p>Function to create list of FQNs and their mapping by schema to allow to fill
+into proper place in value object.
+Also returns immediately resolved autobind values for binding to &#39;Name&#39; property.</p>
+</div><h5 id="methods_createfqnlistandmapping_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>addAutobind</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-raiplivedatahelper-createfqnlistandmapping-page"><p>process data as for getOnce request, it adds autobinded values</p>
+</div></td></tr></tbody></table><h5 id="methods_createfqnlistandmapping_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-raiplivedatahelper-createfqnlistandmapping-page"><p>with structure:
+<pre class="prettyprint linenums">
+{
+      fqnList: fqnList,
+      //array of FQNs for server request
+      mapping: mapping,
+      //mapping for each fqnList item paired by same index as in fqnList
+      resolvedAutobindValues: resolvedAutobindValues,
+      // array of immediatelly resolved values in proper structure as value object
+      duplicateFqnList: duplicateFqnList
+      // duplicateFqnList - array of duplicate fqns and its mapping with structure:
+      [ 5 : [&lt;mapping&gt;, &lt;mapping&gt;], ...] where by index there is pairing to same fqn in fqnList
+  }
+</pre>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_filllivedatawithconstant">fillLiveDataWithConstant(object)</h3>
+<div class="filllivedatawithconstant"><div class="ra-ipdisplay-object-page ra-ipdisplay-object-raiplivedatahelper-filllivedatawithconstant-page"><p>Function to fill object with &quot;constant&quot; live data. &quot;constant&quot; means there is other than
+FQN value in schema component which can return an FQN for live data.</p>
+</div><h5 id="methods_filllivedatawithconstant_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>object</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-raiplivedatahelper-filllivedatawithconstant-page"><p>object to fill data to</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_fillvaluetoobject">fillValueToObject(object, mapping, value)</h3>
+<div class="fillvaluetoobject"><div class="ra-ipdisplay-object-page ra-ipdisplay-object-raiplivedatahelper-fillvaluetoobject-page"><p>Function to fill specific property of given object by given mapping.</p>
+</div><h5 id="methods_fillvaluetoobject_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>object</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-raiplivedatahelper-fillvaluetoobject-page"><p>object to fill properties to</p>
+</div></td></tr><tr><td>mapping</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-raiplivedatahelper-fillvaluetoobject-page"><p>mapping structure, based on this it fills data, each index means
+one level of object
+Examples:
+<pre class="prettyprint linenums">
+Mapping:
+[
+     {type: 'object', key: 'firstLvl'},
+     {type: 'object', key: 'test'},
+     {type: 'value', key: 'valueProperty'}
+]
+Result:
+{
+     firstLvl: {
+         test: {
+             valueProperty: 'valueToFill'
+         }
+     }
+}
+</pre>
+<pre class="prettyprint linenums">
+Mapping:
+[
+     {type: 'object', key: 'firstLvl'},
+     {type: 'array', key: 'test'},
+     {type: 'value', key: 'valueProperty'}
+]
+Result:
+{
+     firstLvl : {
+         test : [ 'valueToFill' ]
+     }
+}
+</pre>
+<pre class="prettyprint linenums">
+Mapping:
+[
+    {type: 'object', key: 'firstLvl'},
+    {type: 'array', key: 'test'},
+    {type: 'object', key: 0},
+    {type: 'value', key: 'valueProperty'}
+]
+Result:
+{
+     firstLvl : {
+         test : [
+             { valueProperty : 'valueToFill' }
+         ]
+     }
+}
+</pre>
+<p>Beware of setting wrong mapping as this one:
+<pre class="prettyprint linenums">
+[
+     {type: 'object', key: 'firstLvl'},
+     {type: 'array', key: 'test'},
+     {type: 'value', key: 'stringKey'}
+     //string key ('stringKey') in array will result in wrong array
+]
+</pre>
+</div></td></tr><tr><td>value</td><td><a href="" class="label type-hint type-hint-mixed">Mixed</a></td><td><div class="ra-ipdisplay-object-page ra-ipdisplay-object-raiplivedatahelper-fillvaluetoobject-page"><p>value which will be filled to last mapping path</p>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+</div>

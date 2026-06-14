@@ -1,0 +1,178 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@ra-wcftcloud/ra-ftc-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	      <link rel="stylesheet" href="./styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">@ra-wcftcloud/ra-ftc-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<h1 id="-ra-wcftcloud-ra-ftc-components">@ra-wcftcloud/ra-ftc-components</h1>
+<h2 id="about">About</h2>
+<p>This javascript library consists of common components to be used across any client application.</p>
+<h2 id="adding-to-an-angular-cli-app">Adding to an Angular CLI app</h2>
+<p>When adding this library to new application please check out the
+<a href="https://cli.angular.io/">Angular CLI</a>.</p>
+<h3 id="use-npm-to-install-the-ra-wcftcloud-ra-ftc-components-library">Use npm to install the @ra-wcftcloud/ra-ftc-components library</h3>
+<p>NOTE: The library should be installed using over SSH connection using SSH key from your GitLab profile.
+<a href="https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key">How to generate SSH key</a>.</p>
+<p>Install with npm using the release version (<code>1.0.0</code> in the examples below).</p>
+<div><pre class="line-numbers"><code class="language-sh">npm install git+ssh://git&#64;gitlabpra.ra.rockwell.com:CAT_WCFTCloud/releases/ra-ftc-components.git#1.0.0</code></pre></div><p>or add the @ra-wcftcloud/ra-ftc-components library to your <code>package.json</code></p>
+<div><pre class="line-numbers"><code class="language-none">&quot;&#64;ra-wcftcloud/ra-ftc-components&quot;: &quot;git+ssh://git&#64;gitlabpra.ra.rockwell.com:CAT_WCFTCloud/releases/ra-ftc-components.git#1.0.0&quot;</code></pre></div><h4 id="add-peer-dependencies">Add peer dependencies</h4>
+<p>Add peer dependencies to your <code>package.json</code> file:</p>
+<div><pre class="line-numbers"><code class="language-none">&quot;&#64;angular/common&quot;: &quot;^6.0.1&quot;,
+&quot;&#64;angular/core&quot;: &quot;^6.0.1&quot;,
+&quot;&#64;angular/flex-layout&quot;: &quot;^6.0.0-beta.16&quot;,
+&quot;&#64;angular/material&quot;: &quot;^6.0.1&quot;,
+&quot;&#64;asymmetrik/ngx-leaflet&quot;: &quot;^3.0.2&quot;,
+&quot;&#64;asymmetrik/ngx-leaflet-markercluster&quot;: &quot;^1.0.0&quot;,
+&quot;&#64;ctrl/tinycolor&quot;: &quot;^2.2.0&quot;,
+&quot;&#64;daimoonis/ngx-color&quot;: &quot;^0.0.8&quot;,
+&quot;&#64;ngx-translate/core&quot;: &quot;^10.0.2&quot;,
+&quot;&#64;ra-web-tech-ui-toolkit/common-utils&quot;: &quot;^1.0.0&quot;,
+&quot;lodash&quot;: &quot;^4.17.10&quot;,
+&quot;leaflet&quot;: &quot;^1.3.1&quot;,
+&quot;leaflet.markercluster&quot;: &quot;^1.3.0&quot;,
+&quot;material-colors&quot;: &quot;^1.2.6&quot;,
+&quot;rxjs&quot;: &quot;^6.1.0&quot;</code></pre></div><p>Run <code>npm install</code> to install all of the packages that you just added.</p>
+<h3 id="add-library-to-your-app-s-module-file">Add library to your app&#39;s module file</h3>
+<p>In your app, import any library module, e.g.:</p>
+<div><pre class="line-numbers"><code class="language-ts">import { RaFtcStringValuePickerModule } from &#39;&#64;ra-wcftcloud/ra-ftc-components&#39;;
+
+&#64;NgModule({
+  ...
+  imports: [
+    ...
+    RaFtcStringValuePickerModule
+  ],
+  ...
+}</code></pre></div><h3 id="include-library-themes">Include library themes</h3>
+<p>For correct visual you should apply styles in your app <code>style.scss</code> file, import the styles from library sources:</p>
+<div><pre class="line-numbers"><code class="language-scss">&#64;import &quot;~&#64;ra-wcftcloud/ra-ftc-components/styles&quot;;
+
+&#64;include ra-ftc-components-theme($theme);</code></pre></div><p>Example using WTUI predefined theme:</p>
+<div><pre class="line-numbers"><code class="language-scss">&#64;import &quot;~&#64;ra-web-tech-ui-toolkit/common-utils/styles&quot;;
+// source with $theme, $custom-typography definitions and more:
+&#64;import &quot;~&#64;ra-web-tech-ui-toolkit/common-utils/themes/variables/rockwell-blue&quot;;
+&#64;import &quot;~&#64;ra-wcftcloud/ra-ftc-components/styles&quot;;
+
+$app-typography-config: mat-typography-config();
+
+&#64;include mat-core($app-typography-config);
+&#64;include common-utils-theme($theme, $app-typography-config);
+&#64;include ra-ftc-components-theme($theme);</code></pre></div><p>Example using pure Angular material theme:</p>
+<div><pre class="line-numbers"><code class="language-scss">// in material theming there are definitions for palettes, typography and more:
+&#64;import &quot;~&#64;angular/material/theming&quot;;
+&#64;import &quot;~&#64;ra-wcftcloud/ra-ftc-components/styles&quot;;
+
+$app-typography-config: mat-typography-config($input: mat-typography-level(16px, 1.3, 400), $body-1: mat-typography-level(16px, 21px, 400));
+
+&#64;include mat-core($app-typography-config);
+
+// example of a class to be applied to body or application&#39;s root element, 
+// also in such case this has to be applied to angular material overlays
+.indigo-pink-theme {
+    $primary: mat-palette($mat-indigo);
+    $accent: mat-palette($mat-pink, A200, A100, A40);
+    $theme: mat-light-theme($primary, $accent);
+    &#64;include angular-material-theme($theme);
+    &#64;include common-utils-theme($theme, $app-typography-config);
+    &#64;include ra-ftc-components-theme($theme);
+    // example of custom styles:
+    &amp;.primary-color {
+        color: mat-color($primary, 500);
+    }
+    &amp;.primary-background-color {
+        background-color: mat-color($primary, 500);
+    }
+}</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+       <script src="./js/menu-wc.js"></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

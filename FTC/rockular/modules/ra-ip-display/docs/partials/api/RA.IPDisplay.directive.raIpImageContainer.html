@@ -1,0 +1,185 @@
+<h1><code ng:non-bindable="">raIpImageContainer</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipimagecontainer-page"><p>The raIpImageContainer directive is responsible for rendering the Raster Image Widget.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ra-ip-image-container
+       rb-parameters="{object}"
+       ri-fqn="{string}"
+       rb-is-active="{boolean}"
+       ro-schema="{function}"
+       ro-examples="{function}"&gt;
+&lt;/ra-ip-image-container&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rbParameters</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipimagecontainer-page"><p>An object representing common parameters and
+the parameters of Image Widget.</p>
+<p>Image Widget Specific Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>source</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Source of the Image (fromModel/noReb/URL)</td>
+<td>fromModel</td>
+</tr>
+<tr>
+<td>fqn (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>If the Source is fromModel, FQN of the Image in the data model</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>URL (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>If the Source is URL, URL string of the image to display</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>horizontalAlign (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Horizontal Alignment of Image (left/right/center)</td>
+<td>center</td>
+</tr>
+<tr>
+<td>keepRatio (optional)</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>Keep the image ratio in proportion</td>
+<td>true</td>
+</tr>
+<tr>
+<td>autoSize (optional)</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>Autosize the image container as per image size</td>
+<td>false</td>
+</tr>
+<tr>
+<td>verticalAlign (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Vertical Alignment of Image  (top/bottom/center)</td>
+<td>center</td>
+</tr>
+</tbody>
+</table>
+</div></td></tr><tr><td>riFqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipimagecontainer-page"><p>FQN the widget is relative to.</p>
+</div></td></tr><tr><td>rbIsActive</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipimagecontainer-page"><p>Flag which shows whether the widget sould be active.</p>
+</div></td></tr><tr><td>roSchema</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipimagecontainer-page"><p>Function which should be called to intialize the widget schema in outside environment.</p>
+</div></td></tr><tr><td>roExamples</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipimagecontainer-page"><p>Function which should be called to intialize the widget examples in outside
+environment.</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipimagecontainer-page"><p>The example below shows how to use the <em>raIpImageContainer</em> directive with URL:
+<h4 id="example_source">Source</h4>
+<div source-edit="exampleAppTwo" source-edit-deps="angular.js script.js" source-edit-html="index.html-10" source-edit-css="" source-edit-js="script.js-11" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-10" ng-html-wrap-loaded="exampleAppTwo angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-10">
+     <div ng-controller="exampleCtrl" style="width:600px; height: 400px;" >
+     <span style="float: left; margin-right: 10px;">URL : </span>
+     <input type="string"
+     style="float: left; margin-right: 10px; margin-bottom: 10px; width: 80%"
+     ng-model="urlVal"
+     ng-change="urlValChange()"/><br>
+     <span style="float: left; margin-right: 10px;">Horizontal Alignment :</span>
+     <select type="string"
+     style="float: left;"
+     ng-model="hAlign"
+     ng-change="hAlignChange()">
+     <option value="left" >Left</option>
+     <option value="right" >Right</option>
+     <option value="center" >Center</option>
+     </select><br>
+     <br><span style="float: left; margin-right: 10px;">Vertical Alignment :</span>
+     <select type="string"
+     style="float: left;"
+     ng-model="vAlign"
+     ng-change="vAlignChange()">
+     <option value="top" >Top</option>
+     <option value="bottom" >Bottom</option>
+     <option value="center" >Center</option>
+     </select><br>
+     <br><input type="checkbox"
+     style="float: left;"
+     ng-model="keepRatio"
+     ng-change="ratioChange()">Keep Ratio<br>
+     <input type="checkbox"
+     style="float: left;"
+     ng-model="autoSize"
+     ng-change="sizeChange()">Auto Size<br>
+     <ra-ip-image-container
+     rb-parameters="example1.params"
+     rb-is-active="example1.isActive"
+     ri-fqn="example1.fqn"
+     ri-schema="example1.getSchema(schema)">
+     </ra-ip-image-container>
+     </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-11"></pre>
+<script type="text/ng-template" id="script.js-11">
+       var mod = angular.module('exampleAppTwo', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope',
+           function ($scope) {
+               'use strict';
+               $scope.urlVal = "http://www.rockwellautomation.com/resources/images/rockwellautomation/" +
+     "webgui/logos/ralogo.gif";
+               $scope.hAlign = "center";
+               $scope.vAlign = "center";
+               $scope.keepRatio = true;
+               $scope.autoSize = false;
+               $scope.urlValChange = function () {
+                 $scope.example1.params.items[0].URL = $scope.urlVal;
+               };
+               $scope.hAlignChange = function () {
+                 $scope.example1.params.items[0].horizontalAlign = $scope.hAlign;
+               };
+               $scope.vAlignChange = function () {
+                 $scope.example1.params.items[0].verticalAlign = $scope.vAlign;
+               };
+               $scope.ratioChange = function () {
+                 $scope.example1.params.items[0].keepRatio = $scope.keepRatio;
+               };
+               $scope.sizeChange = function () {
+                 $scope.example1.params.items[0].autoSize = $scope.autoSize;
+               };
+               $scope.example1 = {};
+               $scope.example1.isActive = true;
+               $scope.example1.fqn = "MyEnterprise";
+               $scope.example1.getSchema = function (schema) {};
+               $scope.example1.params = {
+                 "items": [{
+     source: "URL",
+     URL: "http://www.rockwellautomation.com/resources/images/rockwellautomation/" +
+     "webgui/logos/ralogo.gif",
+     keepRatio: true,
+     autosize: false,
+     horizontalAlign: "center",
+     verticalAlign: "center",
+     schemaType: "mimeImageGif"
+     }]
+               }
+           }
+       ]);
+
+   </script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well live-example-container"><iframe src="examples/example-7-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>

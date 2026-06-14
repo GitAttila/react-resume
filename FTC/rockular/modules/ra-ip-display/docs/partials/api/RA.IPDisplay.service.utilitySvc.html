@@ -1,0 +1,90 @@
+<h1><code ng:non-bindable="">utilitySvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-utilitysvc-page"><p>Provides basic utilities.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_camelcase">camelCase(name)</h3>
+<div class="camelcase"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-utilitysvc-camelcase-page"><p>Returns camelCase name, converted name to camelCase form, based on special characters.
+Based on code from Angular 1 <a href="https://github.com/angular/angular.js/pull/15249/files">https://github.com/angular/angular.js/pull/15249/files</a> and
+<a href="https://github.com/angular/angular.js/blob/master/src/ng/compile.js#L3605">https://github.com/angular/angular.js/blob/master/src/ng/compile.js#L3605</a> because $normalize is not public.</p>
+</div><h5 id="methods_camelcase_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-utilitysvc-camelcase-page"><ul>
+<li>name with special symbols to be converted, symbols &#39;-&#39;, &#39;:&#39;, &#39;_&#39;  will be replaced
+and next character converted to uppercase</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_camelcase_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-utilitysvc-camelcase-page"><p>camelCase string name.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_ismobile">isMobile()</h3>
+<div class="ismobile"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-utilitysvc-ismobile-page"><p>Checks if user browser/navigator is mobile one based on window navigator userAgent string.</p>
+</div><h5 id="methods_ismobile_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-utilitysvc-ismobile-page"><p>true when user is using mobile browser</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_normalizedirectivename">normalizeDirectiveName(name)</h3>
+<div class="normalizedirectivename"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-utilitysvc-normalizedirectivename-page"><p>Returns normalized directive name. Converts name (e.g. dash/colon/underscore-delimited string,
+optionally prefixed with x- or data-) to its normalized, camelCase form.</p>
+</div><h5 id="methods_normalizedirectivename_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-utilitysvc-normalizedirectivename-page"><ul>
+<li>name to be converted</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_normalizedirectivename_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-utilitysvc-normalizedirectivename-page"><p>Normalized string name.</p>
+</div></td></tr></table><h4 id="methods_normalizedirectivename_example">Example</h4>
+<div class="example"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-utilitysvc-normalizedirectivename-page"><p>The example below shows usage of normalizeDirectiveName method and result.</p>
+<ul>
+<li><strong>data-ra-example:</strong> Result &#39;raExample&#39;</li>
+<li><strong>x-ra-example:</strong> Result &#39;raExample&#39;</li>
+<li><strong>example:</strong> Result &#39;example&#39;</li>
+<li><strong>raExample:</strong> Result &#39;raExample&#39;
+<h6 id="methods_normalizedirectivename_example_source">Source</h6>
+<div source-edit="exampleAppOne" source-edit-deps="angular.js script.js" source-edit-html="index.html-80" source-edit-css="" source-edit-js="script.js-81" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-80" ng-html-wrap-loaded="exampleAppOne angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-80">
+       <div ng-controller="exampleCtrl">
+           <div>
+               Directive name: <input ng-model="value" type="text" ng-change="valueChange()">
+           </div>
+           Result:
+           <div ng-bind="result"></div>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-81"></pre>
+<script type="text/ng-template" id="script.js-81">
+       var mod = angular.module('exampleAppOne', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope', 'utilitySvc',
+           function ($scope, utilitySvc) {
+               'use strict';
+               $scope.value = '';
+               var valueChange = function () {
+                 $scope.result = utilitySvc.normalizeDirectiveName($scope.value);
+               };
+
+               valueChange();
+               $scope.valueChange = valueChange;
+           }
+       ]);
+
+   </script>
+</div>
+</div><h6 id="methods_normalizedirectivename_example_demo">Demo</h6>
+<div class="well live-example-container"><iframe src="examples/example-42-index.html" iframe-adjust-dimensions></iframe></div></li>
+</ul>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_removedirectivedefinitionprefix">removeDirectiveDefinitionPrefix(name)</h3>
+<div class="removedirectivedefinitionprefix"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-utilitysvc-removedirectivedefinitionprefix-page"><p>Returns string without prefix. It is supposed to be used on directive&#39;s definitions
+e.g. data-ra-ip-query or ra-ip-query
+Supported prefixes are by angular definition: data-, x-.</p>
+</div><h5 id="methods_removedirectivedefinitionprefix_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-utilitysvc-removedirectivedefinitionprefix-page"><p>string to replace prefix from</p>
+</div></td></tr></tbody></table><h5 id="methods_removedirectivedefinitionprefix_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-utilitysvc-removedirectivedefinitionprefix-page"><p>name parameter without prefix</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

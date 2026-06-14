@@ -1,0 +1,17 @@
+body {
+	overflow: auto;
+}
+
+.live-example-container iframe {
+    overflow: hidden;
+    border: none;
+}
+
+.mft-version-picker {
+    width: 210px
+}
+
+.api-page.api-infoplatform-common-js-api-documentation-page p,
+.nonapi-page.nonapi-other-docs-page p {
+    line-height: 23px;
+}

@@ -1,0 +1,116 @@
+<h1><code ng:non-bindable="">raIpDbQueryLogicSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-page"><p>Basically this service is the functional part of raIpdbQuery directive.
+Scope passed around is the scope which directive is creating. Besides the
+bound variables (like rbParameters, riFqn and so on) scope holds up the
+information which is passed into or related to ra-data-grid object:</p>
+<ul>
+<li>scope.fqn is an fqn for query.</li>
+</ul>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods__getcellclass">_getCellClass(dataType, lastColumn)</h3>
+<div class="_getcellclass"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-getcellclass-page"><p>Returns the proper style class depending on the provided data type</p>
+</div><h5 id="methods__getcellclass_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>dataType</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-getcellclass-page"><p>Datatype</p>
+</div></td></tr><tr><td>lastColumn</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-getcellclass-page"><p>If the column is last</p>
+</div></td></tr></tbody></table><h5 id="methods__getcellclass_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-getcellclass-page"><p>style class</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods__getfullfqn">_getFullFQN(rootFqn, tail)</h3>
+<div class="_getfullfqn"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-getfullfqn-page"><p>Get full FQNs out of rootFqn and tail.</p>
+</div><h5 id="methods__getfullfqn_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rootFqn</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-getfullfqn-page"><p>Root item Fqn</p>
+</div></td></tr><tr><td>tail</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-getfullfqn-page"><p>Tail of Fqn</p>
+</div></td></tr></tbody></table><h5 id="methods__getfullfqn_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String||undefined</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-getfullfqn-page"><p>of valid fqns</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods__getqueryparameters">_getQueryParameters(rootFqn, parametersList)</h3>
+<div class="_getqueryparameters"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-getqueryparameters-page"><p>Prepare queryParameters.</p>
+</div><h5 id="methods__getqueryparameters_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rootFqn</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-getqueryparameters-page"><p>fqn</p>
+</div></td></tr><tr><td>parametersList</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-getqueryparameters-page"><p>List of parameters</p>
+</div></td></tr></tbody></table><h5 id="methods__getqueryparameters_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-getqueryparameters-page"><p>promise with valid list of parameters</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods__processdata">_processData(queryResult)</h3>
+<div class="_processdata"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-processdata-page"><p>Process incoming query result data.</p>
+</div><h5 id="methods__processdata_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>queryResult</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-processdata-page"><p>incoming data</p>
+</div></td></tr></tbody></table><h5 id="methods__processdata_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-processdata-page"><p>processed data</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods__setprotectcircularcalls">_setProtectCircularCalls(scope, value)</h3>
+<div class="_setprotectcircularcalls"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-setprotectcircularcalls-page"><p>Sets protectCircularCalls member of scope</p>
+</div><h5 id="methods__setprotectcircularcalls_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-setprotectcircularcalls-page"><p>scope</p>
+</div></td></tr><tr><td>value</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a><a href="" class="label type-hint type-hint-object">*</a><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-setprotectcircularcalls-page"><p>New value of
+protectCircularCalls</p>
+</div></td></tr></tbody></table><h5 id="methods__setprotectcircularcalls_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">boolean|*|Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-setprotectcircularcalls-page"><p>Previous value of
+protectCircularCalls</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_applychanges">applyChanges(scope, refresh)</h3>
+<div class="applychanges"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-applychanges-page"><p>React on change of rbParameters and/or riFqn</p>
+</div><h5 id="methods_applychanges_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-applychanges-page"><p>object</p>
+</div></td></tr><tr><td>refresh</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-applychanges-page"><p>refresh column definitions</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_fetchdata">fetchData(scope, refresh)</h3>
+<div class="fetchdata"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-fetchdata-page"><p>Get the actual data, prepare and pass to the current or
+newly created object.</p>
+</div><h5 id="methods_fetchdata_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-fetchdata-page"><p>current scope</p>
+</div></td></tr><tr><td>refresh</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-fetchdata-page"><p>boolean to refresh column definitions</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_getdbquerytitle">getDbQueryTitle(scope)</h3>
+<div class="getdbquerytitle"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-getdbquerytitle-page"><p>Return the title for the data grid.</p>
+</div><h5 id="methods_getdbquerytitle_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-getdbquerytitle-page"><p>scope</p>
+</div></td></tr></tbody></table><h5 id="methods_getdbquerytitle_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-getdbquerytitle-page"><p>query title</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_prepareoptions">prepareOptions(scope)</h3>
+<div class="prepareoptions"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-prepareoptions-page"><p>Prepare options for grid, which will be easy to manipulate.
+fqns and fqnsList will be filled up regarding to the per fqn
+options and defaults params from rbParameters.
+applayChanges is execute when parameters are ready.</p>
+</div><h5 id="methods_prepareoptions_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-prepareoptions-page"><p>scope</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_protectcircularcalls">protectCircularCalls(scope, callbackFn)</h3>
+<div class="protectcircularcalls"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-protectcircularcalls-page"><p>Protects against occurrence circular calls when members of
+rbParameters are set inside this service.</p>
+</div><h5 id="methods_protectcircularcalls_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-protectcircularcalls-page"><p>Model where protectCircularCalls member is stored</p>
+</div></td></tr><tr><td>callbackFn</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-protectcircularcalls-page"><p>callbackfunction</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_setgridheight">setGridHeight(scope)</h3>
+<div class="setgridheight"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-setgridheight-page"><p>Sets the grid element&#39;s CSS height to grid container&#39;s height.</p>
+</div><h5 id="methods_setgridheight_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-setgridheight-page"><p>scope</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_setwidgetstate">setWidgetState(scope, state)</h3>
+<div class="setwidgetstate"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-setwidgetstate-page"><p>Sets the widget state to one of following value:
+LOADING - it means that the widget and the data are currently loaded
+REFRESHING - it defines that chart is refreshed
+READY - it means that chart has already loaded the data</p>
+</div><h5 id="methods_setwidgetstate_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>scope</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-setwidgetstate-page"><p>Scope that contains state member</p>
+</div></td></tr><tr><td>state <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-setwidgetstate-page"><p>New state of widget</p>
+</div></td></tr></tbody></table><h5 id="methods_setwidgetstate_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">*|displayState</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-setwidgetstate-page"><p>Value of state after setting</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+<div class="member property"><h2 id="properties">Properties</h2>
+<ul class="properties"><li><h3 id="properties_widgetstates">widgetStates</h3>
+<div class="widgetstates"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-raipdbquerylogicsvc-widgetstates-page"><p>Widget state object with set of fixed values of following value:</p>
+<ul>
+<li>NODATA - it means widget has no data</li>
+<li>LOADING - it means that the widget and the data are currently loaded</li>
+<li>REFRESHING - it defines that chart is refreshed</li>
+<li>READY - it means that chart has already loaded the data</li>
+</ul>
+</div></div>
+</li>
+</ul>
+</div>
+</div>

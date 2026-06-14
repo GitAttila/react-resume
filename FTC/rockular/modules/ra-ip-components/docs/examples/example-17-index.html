@@ -1,0 +1,80 @@
+<!doctype html>
+<html ng-app="example1">
+<head>
+    <!-- JS Dependencies -->
+   <script src="dependencies/jquery.min.js"></script>
+   <script src="dependencies/jquery.contextMenu.js"></script>
+   <script src="dependencies/jquery.ui.position.js"></script>
+   <script src="dependencies/bootstrap.min.js"></script>
+   <script src="dependencies/lodash.js"></script>
+   <script src="dependencies/angular.min.js"></script>
+   <script src="dependencies/angular-animate.min.js"></script>
+   <script src="dependencies/angular-sanitize.min.js"></script>
+   <script src="dependencies/angular-ui-router.min.js"></script>
+   <script src="dependencies/ui-bootstrap-tpls.min.js"></script>
+   <script src="dependencies/moment.min.js"></script>
+   <script src="dependencies/angular-translate.min.js"></script>
+   <script src="dependencies/angular-translate-loader-static-files.min.js"></script>
+   <script src="dependencies/toaster.min.js"></script>
+   <script src="dependencies/hammer.min.js"></script>
+   <script src="dependencies/angular.hammer.min.js"></script>
+   <script src="dependencies/mobile-toolkit-ra.min.js"></script>
+   <script src="dependencies/ra-ip-common.js"></script>
+   <script src="dependencies/ra-ip-components.js"></script>
+
+    <!-- CSS Dependencies -->
+   <link rel="stylesheet" href="dependencies/toaster.min.css">
+   <link rel="stylesheet" href="dependencies/bootstrap.css">
+   <link rel="stylesheet" href="dependencies/jquery.contextMenu.css">
+   <link rel="stylesheet" href="dependencies/bootstrap-datetimepicker.min.css">
+   <link rel="stylesheet" href="dependencies/mobile-toolkit-ra.min.css">
+   <link rel="stylesheet" href="dependencies/ra-icons.min.css">
+   <link rel="stylesheet" href="dependencies/flex-examples.css">
+   <link rel="stylesheet" href="dependencies/doc-examples.css">
+   <link rel="stylesheet" href="dependencies/ra-ip-components.css">
+
+    <!-- CSS Styles from the example -->
+   <link rel="stylesheet" href="example-17-style.css">
+
+    <!-- Scripts from the example -->
+   <script src='example-17-script.js'></script>
+</head>
+<body>
+
+<div ng-controller="raIpToolboxCtrl">
+    <div class="toolbox-wrapper ra-flex-column">
+        <ra-ip-toolbox
+            min-panel="minPanel"
+            display="display"
+            config="config"
+            callbacks="callbacks"
+            expanded="expanded"
+            set-api="setApi(api)"
+            >
+        </ra-ip-toolbox>
+    </div>
+    <h4>Configuration</h4>
+    <div>
+        <label for="expanded">expanded</label>
+        <input id="expanded" type="checkbox" ng-model="expanded">
+        <br />
+        <button ng-click="api.switchDisplay()">Switch display</button>
+        <br />
+
+        <h3>MinPanel</h3>
+        <button ng-click="api.toggleMinPanel()">Toggle minPanel</button>
+        <br />
+        <button ng-click="refreshTree()">Refresh tree with new items</button>
+        <br />
+        <label for="elementID">element ID</label>
+        <input id="elementID" type="text" ng-model="elementID">
+        <button ng-click="api.selectElement(elementID)">Select element</button>
+        <br />
+        <label for="categoryID">category ID</label>
+        <input id="categoryID" type="text" ng-model="categoryID">
+        <button ng-click="api.selectCategory(categoryID)">Select category</button>
+    </div>
+</div>
+
+</body>
+</html>

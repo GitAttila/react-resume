@@ -1,0 +1,596 @@
+<h1><code ng:non-bindable="">displayWidgetSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-page"><p>Provides common functionality used in display widgets.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_addprefix">addPrefix(value)</h3>
+<div class="addprefix"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-addprefix-page"><p>Returnes string prefixed with fqnPrefix.</p>
+</div><h5 id="methods_addprefix_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>value</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-addprefix-page"><p>String representing the value to be prefixed.</p>
+</div></td></tr></tbody></table><h5 id="methods_addprefix_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-addprefix-page"><p>Prefixed string. If input value was already prefixed, it throws RAError.</p>
+</div></td></tr></table><h4 id="methods_addprefix_example">Example</h4>
+<div class="example"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-addprefix-page"><p>The example below shows usage of addPrefix method and the visualization of its result:
+<h6 id="methods_addprefix_example_source">Source</h6>
+<div source-edit="exampleAppOne" source-edit-deps="angular.js script.js" source-edit-html="index.html-58" source-edit-css="" source-edit-js="script.js-59" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-58" ng-html-wrap-loaded="exampleAppOne angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-58">
+       <div ng-controller="exampleCtrl">
+           <div>
+               Input: <input ng-model="input">
+               <button ng-click="process()">Process</button>
+               <div>Result: {{result}}</div>
+               <div style="color: red; height: 30px">{{error}}</div>
+           </div>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-59"></pre>
+<script type="text/ng-template" id="script.js-59">
+       var mod = angular.module('exampleAppOne', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope', 'displayWidgetSvc',
+           function ($scope, displayWidgetSvc) {
+               'use strict';
+               $scope.input = "MyEnterprise";
+               $scope.result = "";
+               $scope.error = "";
+               $scope.process = function () {
+                 $scope.error = "";
+                 var input = $scope.input === "" ? undefined : $scope.input;
+                 try{
+                     $scope.result = displayWidgetSvc.addPrefix(input);
+                 }
+                 catch(e) {
+                     $scope.error = e.message;
+                 }
+               }
+           }
+       ]);
+
+   </script>
+</div>
+</div><h6 id="methods_addprefix_example_demo">Demo</h6>
+<div class="well live-example-container"><iframe src="examples/example-31-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_checkdisplayfqndefinitionstructure">checkDisplayFqnDefinitionStructure(fqn, contextFqnPath)</h3>
+<div class="checkdisplayfqndefinitionstructure"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-checkdisplayfqndefinitionstructure-page"><p>Helper method to check and fill full structure for display fqn definition based on
+contextFqnPath</p>
+</div><h5 id="methods_checkdisplayfqndefinitionstructure_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>fqn</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-checkdisplayfqndefinitionstructure-page"><p>mandatory part with a minimum definition { displayFqn: &#39;&#39; }</p>
+</div></td></tr><tr><td>contextFqnPath</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-checkdisplayfqndefinitionstructure-page"><p>in case of thinui this is riFqn e.g. MyEnterprise or
+MyEnterprise.Extruders</p>
+</div></td></tr></tbody></table><h5 id="methods_checkdisplayfqndefinitionstructure_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-checkdisplayfqndefinitionstructure-page"><p>object filled with properties if they are missing
+{
+ dataFqn: &#39;MyEnterprise&#39;,
+ displayFqn: &#39;MyEnterprise.RdlcReport&#39;,
+ params: {
+     dataFqn: &#39;<fqn>.&#39;,
+     displayFqn: &#39;<fqn>MyEnterprise.RdlcReport&#39;
+ }
+}</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_convertencodedvaltoabsolute">convertEncodedValToAbsolute(rootFqn, value, options)</h3>
+<div class="convertencodedvaltoabsolute"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-convertencodedvaltoabsolute-page"><p>It converts encoded string from relative(to rootFqn) to absolute path</p>
+</div><h5 id="methods_convertencodedvaltoabsolute_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rootFqn</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-convertencodedvaltoabsolute-page"><p>Anchor for relative fqns (without fqnPrefix!)</p>
+</div></td></tr><tr><td>value</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-convertencodedvaltoabsolute-page"><p>Value to convert to absolute path (with fqnPrefix!)</p>
+</div></td></tr><tr><td>options</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-convertencodedvaltoabsolute-page"><ul>
+<li>object with extra options, currently supporting these options:</li>
+<li><strong>removePrefix</strong> : If <strong>true</strong> removes fqnPrefix from return value</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_convertencodedvaltoabsolute_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-convertencodedvaltoabsolute-page"><ul>
+<li>absolute fqn (without fqnPrefix if <strong>removePrefix</strong> flag is present)</li>
+</ul>
+</div></td></tr></table><h4 id="methods_convertencodedvaltoabsolute_example">Example</h4>
+<div class="example"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-convertencodedvaltoabsolute-page"><p>The example below shows usage of convertEncodedValToAbsolute method and the visualization
+of its result:
+<h6 id="methods_convertencodedvaltoabsolute_example_source">Source</h6>
+<div source-edit="exampleAppOne" source-edit-deps="angular.js script.js" source-edit-html="index.html-68" source-edit-css="" source-edit-js="script.js-69" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-68" ng-html-wrap-loaded="exampleAppOne angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-68">
+       <div ng-controller="exampleCtrl">
+           <div>
+               Anchor FQN: <input ng-model="rootFqn">
+               Value: <input ng-model="value">
+               Remove Prefix: <input type="checkbox" ng-model="removePrefix">
+               <button ng-click="process()">Process</button>
+               <div>Result: {{result}}</div>
+               <div style="color: red; height: 30px">{{error}}</div>
+           </div>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-69"></pre>
+<script type="text/ng-template" id="script.js-69">
+       var mod = angular.module('exampleAppOne', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope', 'displayWidgetSvc',
+           function ($scope, displayWidgetSvc) {
+               'use strict';
+               $scope.rootFqn = "MyEnterprise";
+               $scope.value = "<fqn>.Example";
+               $scope.removePrefix = false;
+               $scope.result = "";
+               $scope.error = "";
+               $scope.process = function () {
+                 $scope.error = "";
+                 var rootFqn = $scope.rootFqn === "" ? undefined : $scope.rootFqn;
+                 var value = $scope.value === "" ? undefined : $scope.value;
+                 try{
+                     $scope.result = displayWidgetSvc.convertEncodedValToAbsolute(
+                         rootFqn,
+                         value,
+                         {removePrefix: $scope.removePrefix}
+                     );
+                 }
+                 catch(e) {
+                     $scope.error = e.message;
+                 }
+               }
+           }
+       ]);
+
+   </script>
+</div>
+</div><h6 id="methods_convertencodedvaltoabsolute_example_demo">Demo</h6>
+<div class="well live-example-container"><iframe src="examples/example-36-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_convertencodedvaltorelative">convertEncodedValToRelative(rootFqn, value, options)</h3>
+<div class="convertencodedvaltorelative"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-convertencodedvaltorelative-page"><p>It converts encoded string from absolute to relative path (to rootFqn)</p>
+</div><h5 id="methods_convertencodedvaltorelative_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rootFqn</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-convertencodedvaltorelative-page"><p>Anchor for relative fqns (without fqnPrefix!)</p>
+</div></td></tr><tr><td>value</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-convertencodedvaltorelative-page"><p>Value to convert to absolute path (with fqnPrefix!)</p>
+</div></td></tr><tr><td>options</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-convertencodedvaltorelative-page"><ul>
+<li>object with extra options, currently supporting these options:</li>
+<li><strong>removePrefix</strong> : If <strong>true</strong> removes fqnPrefix from return value</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_convertencodedvaltorelative_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-convertencodedvaltorelative-page"><ul>
+<li>relative fqn to rootFqn (without fqnPrefix if <strong>removePrefix</strong> flag is present)</li>
+</ul>
+</div></td></tr></table><h4 id="methods_convertencodedvaltorelative_example">Example</h4>
+<div class="example"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-convertencodedvaltorelative-page"><p>The example below shows usage of convertEncodedValToRelative method and the visualization
+of its result:
+<h6 id="methods_convertencodedvaltorelative_example_source">Source</h6>
+<div source-edit="exampleAppOne" source-edit-deps="angular.js script.js" source-edit-html="index.html-66" source-edit-css="" source-edit-js="script.js-67" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-66" ng-html-wrap-loaded="exampleAppOne angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-66">
+       <div ng-controller="exampleCtrl">
+           <div>
+               Anchor FQN: <input ng-model="rootFqn">
+               Value: <input ng-model="value">
+               Remove Prefix: <input type="checkbox" ng-model="removePrefix">
+               <button ng-click="process()">Process</button>
+               <div>Result: {{result}}</div>
+               <div style="color: red; height: 30px">{{error}}</div>
+           </div>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-67"></pre>
+<script type="text/ng-template" id="script.js-67">
+       var mod = angular.module('exampleAppOne', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope', 'displayWidgetSvc',
+           function ($scope, displayWidgetSvc) {
+               'use strict';
+               $scope.rootFqn = "MyEnterprise";
+               $scope.value = "<fqn>MyEnterprise.Example";
+               $scope.removePrefix = false;
+               $scope.result = "";
+               $scope.error = "";
+               $scope.process = function () {
+                 $scope.error = "";
+                 var rootFqn = $scope.rootFqn === "" ? undefined : $scope.rootFqn;
+                 var value = $scope.value === "" ? undefined : $scope.value;
+                 try{
+                     $scope.result = displayWidgetSvc.convertEncodedValToRelative(
+                         rootFqn,
+                         value,
+                         {removePrefix: $scope.removePrefix}
+                     );
+                 }
+                 catch(e) {
+                     $scope.error = e.message;
+                 }
+               }
+           }
+       ]);
+
+   </script>
+</div>
+</div><h6 id="methods_convertencodedvaltorelative_example_demo">Demo</h6>
+<div class="well live-example-container"><iframe src="examples/example-35-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_convertlastnametorelative">convertLastNameToRelative(value)</h3>
+<div class="convertlastnametorelative"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-convertlastnametorelative-page"><p>It creates encoded relative fqn from last part of input fqn</p>
+</div><h5 id="methods_convertlastnametorelative_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>value</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-convertlastnametorelative-page"><ul>
+<li>fqn to convert (relative or absolute, encoded or not)</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_convertlastnametorelative_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-convertlastnametorelative-page"><ul>
+<li>relative fqn (where only last part is set as relative)</li>
+</ul>
+</div></td></tr></table><h4 id="methods_convertlastnametorelative_example">Example</h4>
+<div class="example"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-convertlastnametorelative-page"><p>The example below shows usage of convertLastNameToRelative method and the visualization
+of its result:
+<h6 id="methods_convertlastnametorelative_example_source">Source</h6>
+<div source-edit="exampleAppOne" source-edit-deps="angular.js script.js" source-edit-html="index.html-70" source-edit-css="" source-edit-js="script.js-71" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-70" ng-html-wrap-loaded="exampleAppOne angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-70">
+       <div ng-controller="exampleCtrl">
+           <div>
+               Input: <input ng-model="input">
+               <button ng-click="process()">Process</button>
+               <div>Result: {{result}}</div>
+               <div style="color: red; height: 30px">{{error}}</div>
+           </div>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-71"></pre>
+<script type="text/ng-template" id="script.js-71">
+       var mod = angular.module('exampleAppOne', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope', 'displayWidgetSvc',
+           function ($scope, displayWidgetSvc) {
+               'use strict';
+               $scope.input = "<fqn>MyEnterprise.Example1.Example";
+               $scope.result = "";
+               $scope.error = "";
+               $scope.process = function () {
+                 $scope.error = "";
+                 var input = $scope.input === "" ? undefined : $scope.input;
+                 try{
+                     $scope.result = displayWidgetSvc.convertLastNameToRelative(input);
+                 }
+                 catch(e) {
+                     $scope.error = e.message;
+                 }
+               }
+           }
+       ]);
+
+   </script>
+</div>
+</div><h6 id="methods_convertlastnametorelative_example_demo">Demo</h6>
+<div class="well live-example-container"><iframe src="examples/example-37-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_decodevalue">decodeValue(rootFqn, value)</h3>
+<div class="decodevalue"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-decodevalue-page"><p>Returns object with information about the value input.</p>
+</div><h5 id="methods_decodevalue_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rootFqn</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-decodevalue-page"><p>String representing the anchor FQN. Should be without fqnPrefix.</p>
+</div></td></tr><tr><td>value</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-decodevalue-page"><p>String representing the value to be decoded.</p>
+</div></td></tr></tbody></table><h5 id="methods_decodevalue_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-decodevalue-page"><p>Object with two properties.</p>
+<ul>
+<li><strong>isConstant:</strong> Boolean value which is <strong>true</strong> when value parameter does not contain fqnPrefix.</li>
+<li><strong>value:</strong> String property.<ul>
+<li>If isConstant is <strong>true</strong>, it returns unmodified value input parameter.</li>
+<li>If isConstant is <strong>false</strong>, it returns absolute FQN without fqnPrefix. This is built based on
+rootFqn parameter which the value is relative to. If the original value parameter was not relative
+(do not start with delimiter character) the rootFqn parameter is not used.</li>
+</ul>
+</li>
+</ul>
+<p>If the value is relative FQN and rootFqn is not specified, it throws RAError.</p>
+</div></td></tr></table><h4 id="methods_decodevalue_example">Example</h4>
+<div class="example"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-decodevalue-page"><p>The example below shows usage of decodeValue method and the visualization of its result:
+<h6 id="methods_decodevalue_example_source">Source</h6>
+<div source-edit="exampleAppOne" source-edit-deps="angular.js script.js" source-edit-html="index.html-56" source-edit-css="" source-edit-js="script.js-57" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-56" ng-html-wrap-loaded="exampleAppOne angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-56">
+       <div ng-controller="exampleCtrl">
+           <div>
+               Anchor FQN: <input ng-model="rootFqn">
+               Value: <input ng-model="value">
+               <button ng-click="decode()">Decode</button>
+               <textarea
+                 ng-model="decodedValue"
+                 style="resize: none; width: 300px; height: 120px; margin-top: 10px;">
+               </textarea>
+               <div style="color: red; height: 30px">{{error}}</div>
+           </div>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-57"></pre>
+<script type="text/ng-template" id="script.js-57">
+       var mod = angular.module('exampleAppOne', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope', 'displayWidgetSvc',
+           function ($scope, displayWidgetSvc) {
+               'use strict';
+               $scope.rootFqn = "MyEnterprise";
+               $scope.value = "<fqn>.Example";
+               $scope.decodedValue = "";
+               $scope.error = "";
+               $scope.decode = function () {
+                 $scope.error = "";
+                 var rootFqn = $scope.rootFqn === "" ? undefined : $scope.rootFqn;
+
+                 try{
+                     var result = displayWidgetSvc.decodeValue(rootFqn, $scope.value);
+                     $scope.decodedValue = angular.toJson(result, true);
+                 }
+                 catch(e) {
+                     $scope.error = e.message;
+                 }
+               }
+           }
+       ]);
+
+   </script>
+</div>
+</div><h6 id="methods_decodevalue_example_demo">Demo</h6>
+<div class="well live-example-container"><iframe src="examples/example-30-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_getfullfqnvalue">getFullFqnValue(rootFqn, value)</h3>
+<div class="getfullfqnvalue"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-getfullfqnvalue-page"><p>Get full FQN out of rootFqn and value.
+This method decodes value and returns proper full FQN or undefined in case of invalid FQN.
+This method internally uses RA.IPDisplay.service:displayWidgetSvc.decodeValue.
+This method throws error in case there is rootFqn invalid (undefined, null, false) or empty string.</p>
+</div><h5 id="methods_getfullfqnvalue_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rootFqn</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-getfullfqnvalue-page"><p>the root of the fqn</p>
+</div></td></tr><tr><td>value</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-getfullfqnvalue-page"><p>the value to decode fqn from</p>
+</div></td></tr></tbody></table><h5 id="methods_getfullfqnvalue_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String|undefined</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-getfullfqnvalue-page"><p>Full fqn without prefix or undefined in case of constant value.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_hasprefix">hasPrefix(value)</h3>
+<div class="hasprefix"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-hasprefix-page"><p>Returnes information whether the value parameter is prefixed with fqnPrefix.</p>
+</div><h5 id="methods_hasprefix_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>value</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-hasprefix-page"><p>String representing the value which should be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_hasprefix_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-hasprefix-page"><p>Returns <strong>true</strong> if the input value is prefixed with fqnPrefix.</p>
+</div></td></tr></table><h4 id="methods_hasprefix_example">Example</h4>
+<div class="example"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-hasprefix-page"><p>The example below shows usage of hasPrefix method and the visualization of its result:
+<h6 id="methods_hasprefix_example_source">Source</h6>
+<div source-edit="exampleAppOne" source-edit-deps="angular.js script.js" source-edit-html="index.html-62" source-edit-css="" source-edit-js="script.js-63" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-62" ng-html-wrap-loaded="exampleAppOne angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-62">
+       <div ng-controller="exampleCtrl">
+           <div>
+               Input: <input ng-model="input">
+               <button ng-click="process()">Process</button>
+               <div>Result: {{result}}</div>
+               <div style="color: red; height: 30px">{{error}}</div>
+           </div>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-63"></pre>
+<script type="text/ng-template" id="script.js-63">
+       var mod = angular.module('exampleAppOne', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope', 'displayWidgetSvc',
+           function ($scope, displayWidgetSvc) {
+               'use strict';
+               $scope.input = "<fqn>MyEnterprise";
+               $scope.result = "";
+               $scope.error = "";
+               $scope.process = function () {
+                 $scope.error = "";
+                 var input = $scope.input === "" ? undefined : $scope.input;
+                 try{
+                     $scope.result = displayWidgetSvc.hasPrefix(input);
+                 }
+                 catch(e) {
+                     $scope.error = e.message;
+                 }
+               }
+           }
+       ]);
+
+   </script>
+</div>
+</div><h6 id="methods_hasprefix_example_demo">Demo</h6>
+<div class="well live-example-container"><iframe src="examples/example-33-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_hasqueryprefix">hasQueryPrefix(value)</h3>
+<div class="hasqueryprefix"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-hasqueryprefix-page"><p>Returnes information whether the value parameter is prefixed with queryPrefix.</p>
+</div><h5 id="methods_hasqueryprefix_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>value</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-hasqueryprefix-page"><p>String representing the value which should be checked.</p>
+</div></td></tr></tbody></table><h5 id="methods_hasqueryprefix_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-hasqueryprefix-page"><p>Returns <strong>true</strong> if the input value is prefixed with queryPrefix.</p>
+</div></td></tr></table><h4 id="methods_hasqueryprefix_example">Example</h4>
+<div class="example"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-hasqueryprefix-page"><p>The example below shows usage of hasQueryPrefix method and the visualization of its result:
+<h6 id="methods_hasqueryprefix_example_source">Source</h6>
+<div source-edit="exampleAppOne" source-edit-deps="angular.js script.js" source-edit-html="index.html-64" source-edit-css="" source-edit-js="script.js-65" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-64" ng-html-wrap-loaded="exampleAppOne angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-64">
+       <div ng-controller="exampleCtrl">
+           <div>
+               Input: <input ng-model="input">
+               <button ng-click="process()">Process</button>
+               <div>Result: {{result}}</div>
+               <div style="color: red; height: 30px">{{error}}</div>
+           </div>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-65"></pre>
+<script type="text/ng-template" id="script.js-65">
+       var mod = angular.module('exampleAppOne', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope', 'displayWidgetSvc',
+           function ($scope, displayWidgetSvc) {
+               'use strict';
+               $scope.input = "<query>MyEnterprise";
+               $scope.result = "";
+               $scope.error = "";
+               $scope.process = function () {
+                 $scope.error = "";
+                 var input = $scope.input === "" ? undefined : $scope.input;
+                 try{
+                     $scope.result = displayWidgetSvc.hasQueryPrefix(input);
+                 }
+                 catch(e) {
+                     $scope.error = e.message;
+                 }
+               }
+           }
+       ]);
+
+   </script>
+</div>
+</div><h6 id="methods_hasqueryprefix_example_demo">Demo</h6>
+<div class="well live-example-container"><iframe src="examples/example-34-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_isrelativeafterprefixremove">isRelativeAfterPrefixRemove(value)</h3>
+<div class="isrelativeafterprefixremove"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-isrelativeafterprefixremove-page"><p>Returns information whether the passed FQN is relative.</p>
+</div><h5 id="methods_isrelativeafterprefixremove_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>value</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-isrelativeafterprefixremove-page"><p>FQN (with or without fqnPrefix).</p>
+</div></td></tr></tbody></table><h5 id="methods_isrelativeafterprefixremove_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-isrelativeafterprefixremove-page"><p>Returns <strong>true</strong> if the input value is relative.</p>
+</div></td></tr></table><h4 id="methods_isrelativeafterprefixremove_example">Example</h4>
+<div class="example"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-isrelativeafterprefixremove-page"><p>The example below shows usage of isRelativeAfterPrefixRemove method and the visualization of
+its result:
+<h6 id="methods_isrelativeafterprefixremove_example_source">Source</h6>
+<div source-edit="exampleAppOne" source-edit-deps="angular.js script.js" source-edit-html="index.html-72" source-edit-css="" source-edit-js="script.js-73" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-72" ng-html-wrap-loaded="exampleAppOne angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-72">
+       <div ng-controller="exampleCtrl">
+           <div>
+               Input: <input ng-model="input">
+               <button ng-click="process()">Process</button>
+               <div>Result: {{result}}</div>
+               <div style="color: red; height: 30px">{{error}}</div>
+           </div>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-73"></pre>
+<script type="text/ng-template" id="script.js-73">
+       var mod = angular.module('exampleAppOne', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope', 'displayWidgetSvc',
+           function ($scope, displayWidgetSvc) {
+               'use strict';
+               $scope.input = "<fqn>.Example";
+               $scope.result = "";
+               $scope.error = "";
+               $scope.process = function () {
+                 $scope.error = "";
+                 var input = $scope.input === "" ? undefined : $scope.input;
+                 try{
+                     $scope.result = displayWidgetSvc.isRelativeAfterPrefixRemove(input);
+                 }
+                 catch(e) {
+                     $scope.error = e.message;
+                 }
+               }
+           }
+       ]);
+
+   </script>
+</div>
+</div><h6 id="methods_isrelativeafterprefixremove_example_demo">Demo</h6>
+<div class="well live-example-container"><iframe src="examples/example-38-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_prepareparameters">prepareParameters(params, rootFqn, valueForTag)</h3>
+<div class="prepareparameters"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-prepareparameters-page"><p>Returns values of provided parameters</p>
+</div><h5 id="methods_prepareparameters_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>params</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-prepareparameters-page"><ul>
+<li>Array of parameters. Each parameter should be object with
+<strong>value</strong> property. Object also may contain <strong>type</strong> property. This is used to get default
+value when <strong>value</strong> is not specified. Supported types are <strong>boolean</strong> and <strong>string</strong>.</li>
+</ul>
+</div></td></tr><tr><td>rootFqn</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-prepareparameters-page"><ul>
+<li>anchor for relative fqns</li>
+</ul>
+</div></td></tr><tr><td>valueForTag</td><td><a href="" class="label type-hint type-hint-boolean">Boolean</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-prepareparameters-page"><ul>
+<li>If <strong>true</strong>, tag&#39;s value is returned. If <strong>false</strong>, tag&#39;s FQN is
+returned.</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_prepareparameters_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">Promise</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-prepareparameters-page"><p>Expected resut in <strong>success</strong> function is an array with values in same order
+as the <strong>params</strong> parameter was.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_removeprefix">removePrefix(value)</h3>
+<div class="removeprefix"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-removeprefix-page"><p>Returnes string with removed fqnPrefix (if exists).</p>
+</div><h5 id="methods_removeprefix_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>value</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-removeprefix-page"><p>String representing the value from which the prefix should be removed.</p>
+</div></td></tr></tbody></table><h5 id="methods_removeprefix_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-removeprefix-page"><p>String without prefix. If the prefix was not present in input value,
+it returns unmodified input value.</p>
+</div></td></tr></table><h4 id="methods_removeprefix_example">Example</h4>
+<div class="example"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-removeprefix-page"><p>The example below shows usage of removePrefix method and the visualization of its result:
+<h6 id="methods_removeprefix_example_source">Source</h6>
+<div source-edit="exampleAppOne" source-edit-deps="angular.js script.js" source-edit-html="index.html-60" source-edit-css="" source-edit-js="script.js-61" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-60" ng-html-wrap-loaded="exampleAppOne angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-60">
+       <div ng-controller="exampleCtrl">
+           <div>
+               Input: <input ng-model="input">
+               <button ng-click="process()">Process</button>
+               <div>Result: {{result}}</div>
+               <div style="color: red; height: 30px">{{error}}</div>
+           </div>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-61"></pre>
+<script type="text/ng-template" id="script.js-61">
+       var mod = angular.module('exampleAppOne', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope', 'displayWidgetSvc',
+           function ($scope, displayWidgetSvc) {
+               'use strict';
+               $scope.input = "<fqn>MyEnterprise";
+               $scope.result = "";
+               $scope.error = "";
+               $scope.process = function () {
+                 $scope.error = "";
+                 var input = $scope.input === "" ? undefined : $scope.input;
+                 try{
+                     $scope.result = displayWidgetSvc.removePrefix(input);
+                 }
+                 catch(e) {
+                     $scope.error = e.message;
+                 }
+               }
+           }
+       ]);
+
+   </script>
+</div>
+</div><h6 id="methods_removeprefix_example_demo">Demo</h6>
+<div class="well live-example-container"><iframe src="examples/example-32-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="member property"><h2 id="properties">Properties</h2>
+<ul class="properties"><li><h3 id="properties_fqnprefix">fqnPrefix</h3>
+<div class="fqnprefix"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-fqnprefix-page"><p>String prefix used to marking FQN values</p>
+</div></div>
+</li>
+<li><h3 id="properties_queryprefix">queryPrefix</h3>
+<div class="queryprefix"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-displaywidgetsvc-queryprefix-page"><p>String prefix used to marking Query values</p>
+</div></div>
+</li>
+</ul>
+</div>
+</div>

@@ -1,0 +1,269 @@
+<h1><code ng:non-bindable="">raIpWizard</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">RA.IPComponents</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipwizard-page"><p>This component is responsible for rendering wizard.
+The component expects to receive {object} <strong><code>config</code></strong>.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ra-ip-wizard
+       config="{object}"&gt;
+&lt;/ra-ip-wizard&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipwizard-page"><ul>
+<li><strong><code>sharedViewConfig</code></strong> {object} object to be shared across all controllers - used to pass data to and between 
+controllers</li>
+<li><strong><code>initialViewIndex</code></strong> {integer} index at which will wizard open its view on first render, defaults to 0</li>
+<li><strong><code>showButtons</code></strong> {boolean} flag indicating if wizard should have action buttons at bottom (prev/next actions)</li>
+<li><strong><code>hideSteps</code></strong> {boolean} flag indicating if wizard should hide steps</li>
+<li><strong><code>previousStepsAutoSuccess</code></strong> {boolean} flag indicating if wizard should mark previous 
+steps automatically as success (defaults to false)</li>
+<li><strong><code>stepsConfig</code></strong> {array} array with steps definition, see <a href="#/api/RA.IPComponents.component:raIpSteps">RA.IPComponents.component:raIpSteps</a></li>
+<li><strong><code>views</code></strong> {array} array with definition for each step - if no template and templateUrl is set then default 
+template &#39;components/raIpWizard/raIpWizardDefault.tpl.html&#39; is used</li>
+<li><strong><code>template</code></strong> {string} optional definition for inline template to be used for wizard content view</li>
+<li><strong><code>templateUrl</code></strong> {string} url for template to be used for wizard content view, template is loaded 
+  only from $templateCache
+  (&quot;components/raIpWizard/raIpWizard.tpl.html&quot; cannot be used as templateUrl)</li>
+<li><strong><code>controller</code></strong> {string} controller name, controller will be created</li>
+<li><strong><code>controllerAs</code></strong> {string} optional - alternative name for controller for template (controller scope alias),
+  if not set then default $ctrl is used</li>
+</ul>
+<p>There is wizard api which is passed to controller created for actual step as &#39;wizardApi&#39; injection.</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipwizard-page"><p>The example below shows how to use raIpWizard.</p>
+<h4 id="example_source">Source</h4>
+<div source-edit="example1" source-edit-deps="angular.js script.js" source-edit-html="index.html-33" source-edit-css="" source-edit-js="script.js-34" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-33" ng-html-wrap-loaded="example1 angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-33">
+<div ng-controller="myCtrlA" style="min-height: 280px;">
+<div ng-if="initialized">
+<div>With action buttons:</div>
+<ra-ip-wizard config="config"></ra-ip-wizard>
+</div>
+<div ng-if="!initialized">Loading example...</div>
+</div>
+</script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-34"></pre>
+<script type="text/ng-template" id="script.js-34">
+angular.module('example1', ['pascalprecht.translate', 'mobile-toolkit-ra', 'RA.IPComponents']);
+angular.module('example1')
+  .config(['$translateProvider',
+      function ($translateProvider) {
+      'use strict';
+      $translateProvider.useStaticFilesLoader({
+          "files": [
+          {
+              prefix: 'dependencies/locale/locale-',
+              suffix: '.json'
+          }]
+      })
+      // Registering a fallback language
+      .fallbackLanguage('en')
+      .registerAvailableLanguageKeys(['en'], {
+          'en-*': 'en'
+      })
+      // tells angular-translate to use the English
+      .preferredLanguage('en')
+      .useSanitizeValueStrategy('escaped');
+  }
+])
+.controller('myCtrlA',['$scope', '$translate',
+  function($scope, $translate) {
+      function init() {
+          $scope.config = {
+              showButtons: true,
+              stepsConfig: {
+                  type: 'icons',
+                  size: 'medium',
+                  autofillConnector: true,
+              steps: [
+                  {
+                      iconClass: 'ra-icon-home',
+                      tooltip: 'Tooltip text',
+                      active: true,
+                      clickable: false,
+                      title: 'Step 1',
+                      onAction: function () {
+                      $scope.config.stepsConfig.steps[1] = 
+                          angular.extend($scope.config.stepsConfig.steps[1], {
+                      active: false,
+                      clickable: true
+              });
+              $scope.config.stepsConfig.steps[0] = 
+              angular.extend($scope.config.stepsConfig.steps[0], {
+              active: true,
+              clickable: false
+          });
+      }
+  },
+{
+  tooltip: 'Tooltip text',
+  iconClass: 'ra-icon-no-data',
+  title: 'Step 2',
+  clickable: true,
+  onAction: function () {
+      $scope.config.stepsConfig.steps[0] = 
+      angular.extend($scope.config.stepsConfig.steps[0], {
+      active: false,
+      clickable: true
+  });
+  $scope.config.stepsConfig.steps[1] = 
+      angular.extend($scope.config.stepsConfig.steps[1], {
+  active: true,
+  clickable: false
+});
+}
+}
+]
+},
+views: [
+  {
+  template: '<div class="ra-flex-column ra-height-100 ra-flex-align-main-center' + 
+  ' ra-flex-align-cross-center">First step template</div>'
+  },
+  {
+  template: '<div class="ra-flex-column ra-height-100 ra-flex-align-main-center' + 
+  ' ra-flex-align-cross-center">Second step template</div>'
+  }
+  ]
+  };
+  $scope.initialized = true;
+  }
+
+$translate.onReady(init);
+}]);
+</script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well live-example-container"><iframe src="examples/example-18-index.html" iframe-adjust-dimensions></iframe></div>
+<h4 id="example_source">Source</h4>
+<div source-edit="example2" source-edit-deps="angular.js script.js" source-edit-html="index.html-35" source-edit-css="" source-edit-js="script.js-36" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-35" ng-html-wrap-loaded="example2 angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-35">
+<div ng-controller="myCtrlB" style="min-height: 280px;">
+<div ng-if="initialized">
+<div ng-if="initialized">
+<div>With shared view data passed:</div>
+<ra-ip-wizard config="config"></ra-ip-wizard>
+</div>
+<div ng-if="!initialized">Loading example...</div>
+</div>
+</script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-36"></pre>
+<script type="text/ng-template" id="script.js-36">
+angular.module('example2', ['pascalprecht.translate', 'mobile-toolkit-ra', 'RA.IPComponents']);
+angular.module('example2')
+.config(['$translateProvider',
+function ($translateProvider) {
+'use strict';
+$translateProvider.useStaticFilesLoader({
+"files": [
+{
+prefix: 'dependencies/locale/locale-',
+suffix: '.json'
+}]
+})
+// Registering a fallback language
+.fallbackLanguage('en')
+.registerAvailableLanguageKeys(['en'], {
+'en-*': 'en'
+})
+// tells angular-translate to use the English
+.preferredLanguage('en')
+.useSanitizeValueStrategy('escaped');
+}
+])
+.controller('wizardContentCtrl', ['config', function (config) {
+this.sharedCount = ++config.sharedCount;
+}])
+.controller('myCtrlB',['$scope', '$translate',
+function($scope, $translate) {
+function init() {
+$scope.config = {
+sharedViewConfig: {
+sharedCount: 0
+},
+showButtons: false,
+stepsConfig: {
+type: 'icons',
+size: 'medium',
+autofillConnector: true,
+steps: [
+{
+iconClass: 'ra-icon-home',
+tooltip: 'Tooltip text',
+active: true,
+clickable: false,
+title: 'Step 1',
+onAction: function () {
+$scope.config.stepsConfig.steps[1] = 
+angular.extend($scope.config.stepsConfig.steps[1], {
+active: false,
+clickable: true
+});
+$scope.config.stepsConfig.steps[0] = 
+angular.extend($scope.config.stepsConfig.steps[0], {
+active: true,
+clickable: false
+});
+}
+},
+{
+tooltip: 'Tooltip text',
+iconClass: 'ra-icon-no-data',
+title: 'Step 2',
+clickable: true,
+onAction: function () {
+$scope.config.stepsConfig.steps[0] = 
+angular.extend($scope.config.stepsConfig.steps[0], {
+active: false,
+clickable: true
+});
+$scope.config.stepsConfig.steps[1] = 
+angular.extend($scope.config.stepsConfig.steps[1], {
+active: true,
+clickable: false
+});
+}
+}
+]
+},
+views: [
+{
+template: '<div class="ra-flex-column ra-height-100 ra-flex-align-main-center' + 
+' ra-flex-align-cross-center">First step template ' + 
+'with sharedCount <span ng-bind="$ctrl.sharedCount"></span></div>',
+controller: 'wizardContentCtrl'
+},
+{
+template: '<div class="ra-flex-column ra-height-100 ra-flex-align-main-center' + 
+' ra-flex-align-cross-center">Second step template ' + 
+'with sharedCount <span ng-bind="$ctrl.sharedCount"></span></div>',
+controller: 'wizardContentCtrl'
+}
+]
+};
+$scope.initialized = true;
+}
+
+$translate.onReady(init);
+}]);
+</script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well live-example-container"><iframe src="examples/example-19-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>

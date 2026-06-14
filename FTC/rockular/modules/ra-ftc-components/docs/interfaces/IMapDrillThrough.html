@@ -1,0 +1,333 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@ra-wcftcloud/ra-ftc-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@ra-wcftcloud/ra-ftc-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content interface">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Interfaces</li>
+  <li>IMapDrillThrough</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">API</a>
+        </li>
+        <li >
+            <a href="#readme" role="tab" id="readme-tab" data-toggle="tab" data-link="readme">Overview</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/map/map.component.ts</code>
+        </p>
+
+
+
+        <section>
+            <h3 id="index">Index</h3>
+            <table class="table table-sm table-bordered index-table">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Properties</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                        <a href="#caption">caption</a>
+                                </li>
+                                <li>
+                                        <a href="#link">link</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+
+            <section>
+                <h3 id="inputs">Properties</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="caption"></a>
+                                        <span class="name"><b>caption</b><a href="#caption"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>caption:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="link"></a>
+                                        <span class="name"><b>link</b><a href="#link"><span class="icon ion-ios-link"></span></a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>link:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+
+                        </tbody>
+                    </table>
+            </section>
+    </div>
+
+    <div class="tab-pane fade " id="c-readme">
+        <p><p><code>MapComponent</code> component for displaying an interactive map.</p>
+<h3 id="map">Map</h3>
+<p>This module provides methods and definition to create a map with Leaflet packages for Angular.io (v2+), Leaflet map (<a href="https://leafletjs.com/)">https://leafletjs.com/)</a>.</p>
+<h3 id="configuration">Configuration</h3>
+<p>Component can be configured by passing config attribute of type IMapConfig.</p>
+<div><pre class="line-numbers"><code class="language-html">&lt;ra-ftc-map [config]=&quot;config&quot;&gt;&lt;/ra-ftc-map&gt;</code></pre></div><p>It is possible to set these configuration properties:</p>
+<ul>
+<li>center - The geographic coordinates of center of map. Default value is &#39;0, 0&#39;.</li>
+<li>zoom - The zoom level of map, minimum value is 0, maximum value is 18</li>
+<li>hideLegend - Disable legend in Map widget. Default value is false.</li>
+<li>clusterSize - Radius of cluster for markers, minimum vlaue is 10, maximum is 20. Default value is 15.</li>
+<li>clusterPopupMessage - Overrides message that appears above cluster markers.</li>
+<li>hideClusterPopup - Disable cluster popup in Map widget. Default value is false.</li>
+<li>popupVerbosity - The MapVerbosity enum with options which minimum info display in cluster popup. Values are - disabled, low, medium, high, urgent.</li>
+<li>indication - An object with properties to customize legend for Map widget.</li>
+<li>indication.defaultIndication - Object of type IMapBasicIndication to override default legend member.</li>
+<li>indication.defaultIndication.color - The color of default legend member. Default value is hexadecimal string &#39;#7f7f7f&#39;.</li>
+<li>indication.badQualityIndication - Object of type IMapBasicIndication to override bad quality legend member.</li>
+<li>indication.badQualityIndication.color - The color of bad quality legend member. Default value is hexadecimal string &#39;#000000&#39;.</li>
+<li>indication.customIndication - The array with custom members of legend. Array items are of type IMapIndication.</li>
+<li>indication.customIndication.from - The beginning of indication range.</li>
+<li>indication.customIndication.to - The end of indication range.</li>
+<li>indication.customIndication.color - The color of legend member as hexadecimal string.</li>
+<li>indication.customIndication.label - The text of legend member.</li>
+<li>indication.customIndication.verbosity - The MapVerbosity enum with option which verbosity level range is. Values are - disabled, low, medium, high, urgent.</li>
+<li>providers - The array of IMapProvider object with specification of custom map layers.</li>
+<li>providers.link - Link to the map provider. Default value is &#39;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#39;.</li>
+<li>providers.name - Name of the map provider that will be displayed in map layer panel. Default value is &#39;Open Street Map&#39;.</li>
+</ul>
+<p>See examples.</p>
+<div><pre class="line-numbers"><code class="language-typescript">const config: IMapConfig = {
+            zoom: 2,
+            center: &#39;10, 10&#39;,
+            hideLegend: true,
+            clusterSize: 20,
+            clusterPopupMessage: &#39;Nothing found&#39;,
+            hideClusterPopup: true,
+            popupVerbosity: MapVerbosity.medium,
+            zoomPosition: MapControlPosition.bottomright,
+            legendPosition: MapLegendPosition.top,
+            layersPosition: MapControlPosition.bottomleft,
+            providers: [{
+              link: &#39;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#39;,
+              name: &#39;OSM&#39;
+            }],
+            indication: {
+              defaultIndication: {
+                color: &#39;#7f7f7f&#39;
+              },
+              badQualityIndication: {
+                color: &#39;#000000&#39;
+              },
+              customIndication: [
+                {
+                  from: 1,
+                  to: 1,
+                  color: &#39;#22b14c&#39;,
+                  label: &#39;Good&#39;,
+                  verbosity: MapVerbosity.low
+                }, {
+                  from: 2,
+                  to: 2,
+                  color: &#39;#26a9e0&#39;,
+                  label: &#39;Maintenance&#39;,
+                  verbosity: MapVerbosity.medium
+                }, {
+                  from: 3,
+                  to: 3,
+                  color: &#39;#f5e11b&#39;,
+                  label: &#39;Warning&#39;,
+                  verbosity: MapVerbosity.high
+                }, {
+                  from: 4,
+                  to: 4,
+                  color: &#39;#e22028&#39;,
+                  label: &#39;Error&#39;,
+                  verbosity: MapVerbosity.urgent
+                }
+              ]
+            }
+         };</code></pre></div><p>Map markers can be added by passing value attribute which is an array of type IMapMarker.</p>
+<div><pre class="line-numbers"><code class="language-html">&lt;ra-ftc-map [value]=&quot;markers&quot;&gt;&lt;/ra-ftc-map&gt;</code></pre></div><p>IMapMarker parameters</p>
+<ul>
+<li>value - Main property, geographic coordinates of marker.</li>
+<li>caption - The caption of markers popup.</li>
+<li>text - The text inside of markers popup.</li>
+<li>colorIndication - The value which determines color of marker based on legend.</li>
+<li>colorIndication - The value which determines color of marker based on legend.</li>
+<li>colorIndicationBadQuality - The value which determines whether the marker has legend bad quality color.</li>
+<li>drillThrough - The array of IMapDrillThrough objects to add links to markers popup.</li>
+<li>drillThrough.link - External url link.</li>
+<li>drillThrough.caption - Caption link.</li>
+</ul>
+<p>See examples.</p>
+<div><pre class="line-numbers"><code class="language-typescript">const markers: IMapMarker[] = [
+      {
+        value: &#39;90, 90&#39;,
+        caption: &#39;Marker 2&#39;
+      }, {
+        value: &#39;50, 14&#39;,
+        colorIndicationBadQuality: true,
+        caption: &#39;Marker 1&#39;,
+        text: &#39;Text&#39;,
+        drillThrough: [{
+          link: &#39;https://google.com&#39;,
+          caption: &#39;Link&#39;
+        }],
+        colorIndication: 1
+      }, {
+        value: &#39;20, 10&#39;,
+        text: &#39;Text&#39;
+      }, {
+        value: &#39;20, 10.5&#39;
+      }
+    ];</code></pre></div></p>
+    </div>
+
+</div>
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
+            var COMPODOC_CURRENT_PAGE_URL = 'IMapDrillThrough.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

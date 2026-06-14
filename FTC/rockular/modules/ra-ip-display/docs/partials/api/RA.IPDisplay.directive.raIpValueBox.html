@@ -1,0 +1,392 @@
+<h1><code ng:non-bindable="">raIpValueBox</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipvaluebox-page"><p>The raIpValueBox directive is responsible for rendering the valuebox widget.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ra-ip-value-box
+       rb-parameters="{object}"
+       ri-fqn="{string}"
+       rb-is-active="{boolean}"
+       ro-schema="{function}"
+       ro-examples="{function}"&gt;
+&lt;/ra-ip-value-box&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rbParameters</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipvaluebox-page"><p>An object representing the parameters of ValueBox. This object contains array of objects (rbParameters.items) with these properties:</p>
+<p>Common Parameters</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>maximumFontSize</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>Maximum font size, it can be between 10 and 40</td>
+<td>14</td>
+</tr>
+</tbody>
+</table>
+<p> Schema Type: Number</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The main property, number value of valuebox</td>
+<td></td>
+</tr>
+<tr>
+<td>numberFormat (optional)</td>
+<td><a href="#" class="label type-hint type-hint-array">Array</a></td>
+<td>String enum defining format of number (General, Numeric, Currecny, Percent)</td>
+<td>General</td>
+</tr>
+<tr>
+<td>separator (optional)</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>Only for numberFormat Numeric, defines if thousands separator is used</td>
+<td>false</td>
+</tr>
+<tr>
+<td>prefix (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Only for numberFormat Currency, prefix before number</td>
+<td></td>
+</tr>
+<tr>
+<td>suffix (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Only for numberFormat Currency, suffix after number</td>
+<td></td>
+</tr>
+<tr>
+<td>caption (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The text which is displayed as caption of valuebox</td>
+<td>This property is autobound to model .Name property of tag or it is empty</td>
+</tr>
+<tr>
+<td>unit (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The text which is displayed as part of caption of valuebox in [].</td>
+<td>This property is autobound to model .EngineeringUnit property of tag or it is empty</td>
+</tr>
+<tr>
+<td>min (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The minimum value for outOfRange colors.</td>
+<td>This property is autobound to model .Min property of tag or it is empty</td>
+</tr>
+<tr>
+<td>max (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The maximum value for outOfRange colors.</td>
+<td>This property is autobound to model .Max property of tag or it is empty</td>
+</tr>
+<tr>
+<td>precision (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The decimal precision of value</td>
+<td>Default value is 2, minimum value is 0, maximum value is 4</td>
+</tr>
+<tr>
+<td>outOfRangeColor (optional)</td>
+<td><a href="#" class="label type-hint type-hint-object">Object</a></td>
+<td>The color of box when value is outside Min and Max. Color object (see <a href="#/api/RA.IPDisplay.service:colorTypeSvc">* <em>colorTypeSvc</em></a>) or hexadecimal String for compatibily reasons</td>
+<td>#e22028</td>
+</tr>
+<tr>
+<td>outOfRangeFontColor (optional)</td>
+<td><a href="#" class="label type-hint type-hint-object">Object</a></td>
+<td>The color of text when value is outside Min and Max. Color object see <a href="#/api/RA.IPDisplay.service:colorTypeSvc">* <em>colorTypeSvc</em></a>) or hexadecimal String for compatibily reasons</td>
+<td>#ffffff</td>
+</tr>
+<tr>
+<td>ranges (optional)</td>
+<td><a href="#" class="label type-hint type-hint-array">Array</a></td>
+<td>The array with ranges for valuebox</td>
+<td></td>
+</tr>
+<tr>
+<td>ranges.from (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The beggining of range</td>
+<td></td>
+</tr>
+<tr>
+<td>ranges.to (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The end of range</td>
+<td></td>
+</tr>
+<tr>
+<td>ranges.color (optional)</td>
+<td><a href="#" class="label type-hint type-hint-object">Object</a></td>
+<td>The color of box when value is inside range. Color object (see <a href="#/api/RA.IPDisplay.service:colorTypeSvc">* <em>colorTypeSvc</em></a>) or hexadecimal String for compatibily reasons</td>
+<td>#22b14c</td>
+</tr>
+<tr>
+<td>ranges.fontColor (optional)</td>
+<td><a href="#" class="label type-hint type-hint-object">Object</a></td>
+<td>The color of text when value is inside range. Color object (see <a href="#/api/RA.IPDisplay.service:colorTypeSvc">* <em>colorTypeSvc</em></a>) or hexadecimal String for compatibily reasons</td>
+<td>#ffffff</td>
+</tr>
+</tbody>
+</table>
+<p> Schema Type: String</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The main property, string value of valuebox</td>
+<td></td>
+</tr>
+<tr>
+<td>caption (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The text which is displayed as caption of valuebox</td>
+<td>This property is autobound to model .Name property of tag or it is empty</td>
+</tr>
+<tr>
+<td>keywordRange (optional)</td>
+<td><a href="#" class="label type-hint type-hint-array">Array</a></td>
+<td>The array with string ranges for valuebox</td>
+<td></td>
+</tr>
+<tr>
+<td>keywordRange.keywords (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Keywords for range, separated by comma</td>
+<td></td>
+</tr>
+<tr>
+<td>keywordRange.rangeColor (optional)</td>
+<td><a href="#" class="label type-hint type-hint-object">Object</a></td>
+<td>The color of box when value is one of keywords. Color object (see <a href="#/api/RA.IPDisplay.service:colorTypeSvc">* <em>colorTypeSvc</em></a>) or hexadecimal String for compatibily reasons</td>
+<td>#22b14c</td>
+</tr>
+<tr>
+<td>keywordRange.rangeFontColor (optional)</td>
+<td><a href="#" class="label type-hint type-hint-object">Object</a></td>
+<td>The color of text when value is one of keywords. Color object (see <a href="#/api/RA.IPDisplay.service:colorTypeSvc">* <em>colorTypeSvc</em></a>) or hexadecimal String for compatibily reasons</td>
+<td>#ffffff</td>
+</tr>
+</tbody>
+</table>
+<p> Schema Type: Boolean</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>value</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>The main property, boolean value of valuebox</td>
+<td></td>
+</tr>
+<tr>
+<td>caption (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The text which is displayed as caption of valuebox</td>
+<td>This property is autobound to model .Name property of tag or it is empty</td>
+</tr>
+<tr>
+<td>trueMessage (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Text which is displayed when value is true</td>
+<td></td>
+</tr>
+<tr>
+<td>falseMessage (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Text which is displayed when value is false</td>
+<td></td>
+</tr>
+<tr>
+<td>ranges (optional)</td>
+<td><a href="#" class="label type-hint type-hint-object">Object</a></td>
+<td>The object with ranges for boolean valuebox</td>
+<td></td>
+</tr>
+<tr>
+<td>ranges.valueIndication (optional)</td>
+<td><a href="#" class="label type-hint type-hint-array">Array</a></td>
+<td>String enum with options for which value is range used (True only, False only, Both)</td>
+<td>Both</td>
+</tr>
+<tr>
+<td>ranges.colorTrue (optional)</td>
+<td><a href="#" class="label type-hint type-hint-object">Object</a></td>
+<td>Used only for valueIndication Both or True only. The color of box when value is true. Color object (see <a href="#/api/RA.IPDisplay.service:colorTypeSvc">* <em>colorTypeSvc</em></a>) or hexadecimal String for compatibily reasons</td>
+<td>#ffffff</td>
+</tr>
+<tr>
+<td>ranges.fontColorTrue (optional)</td>
+<td><a href="#" class="label type-hint type-hint-object">Object</a></td>
+<td>Used only for valueIndication Both or True only. The color of text when value is true. Color object (see <a href="#/api/RA.IPDisplay.service:colorTypeSvc">* <em>colorTypeSvc</em></a>) or hexadecimal String for compatibily reasons</td>
+<td>#6d6e70</td>
+</tr>
+<tr>
+<td>ranges.colorFalse (optional)</td>
+<td><a href="#" class="label type-hint type-hint-object">Object</a></td>
+<td>Used only for valueIndication Both or False only. The color of box when value is false. Color object (see <a href="#/api/RA.IPDisplay.service:colorTypeSvc">* <em>colorTypeSvc</em></a>) or hexadecimal String for compatibily reasons</td>
+<td>#ffffff</td>
+</tr>
+<tr>
+<td>ranges.fontColorFalse (optional)</td>
+<td><a href="#" class="label type-hint type-hint-object">Object</a></td>
+<td>Used only for valueIndication Both or False only. The color of text when value is false. Color object (see <a href="#/api/RA.IPDisplay.service:colorTypeSvc">* <em>colorTypeSvc</em></a>) or hexadecimal String for compatibily reasons</td>
+<td>#6d6e70</td>
+</tr>
+</tbody>
+</table>
+</div></td></tr><tr><td>riFqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipvaluebox-page"><p>FQN the widget is relative to.</p>
+</div></td></tr><tr><td>rbIsActive</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipvaluebox-page"><p>Flag which shows whether the widget sould be active.</p>
+</div></td></tr><tr><td>roSchema</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipvaluebox-page"><p>Function which should be called to intialize the widget schema in outside environment.</p>
+</div></td></tr><tr><td>roExamples</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipvaluebox-page"><p>Function which should be called to intialize the widget examples in outside
+environment.</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipvaluebox-page"><p>The example below shows how to use the <em>raIpValueBox</em> directive with number value:
+<h4 id="example_source">Source</h4>
+<div source-edit="exampleAppOne" source-edit-deps="angular.js script.js" source-edit-html="index.html-42" source-edit-css="" source-edit-js="script.js-43" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-42" ng-html-wrap-loaded="exampleAppOne angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-42">
+       <div ng-controller="exampleCtrl" style="width:300px; height: 100px;" >
+           <input type="number" style="margin-bottom:20px;"
+     ng-model="value"
+     ng-change="valueChange()">
+           <ra-ip-value-box
+             rb-parameters="example1.params"
+             rb-is-active="example1.isActive"
+             ri-fqn="example1.fqn"
+             ri-schema="example1.getSchema(schema)">
+           </ra-ip-value-box>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-43"></pre>
+<script type="text/ng-template" id="script.js-43">
+       var mod = angular.module('exampleAppOne', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope',
+           function ($scope) {
+               'use strict';
+               $scope.value = 50;
+               $scope.valueChange = function () {
+                 $scope.example1.params.items[0].value = $scope.value;
+               }
+
+               $scope.example1 = {};
+               $scope.example1.isActive = true;
+               $scope.example1.fqn = "MyEnterprise";
+               $scope.example1.getSchema = function (schema) {};
+               $scope.example1.params = {
+     "items": [
+     {
+     "value": 50,
+     "caption": "Number Value",
+     "outOfRangeColor": '#ff0000',
+     "outOfRanfeFontColor": '#ffffff',
+     "unit": "kg",
+     "min": 0,
+     "max": 100,
+     "schemaType": "number"
+     }
+     ]
+     }
+           }
+       ]);
+
+   </script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well live-example-container"><iframe src="examples/example-23-index.html" iframe-adjust-dimensions></iframe></div>
+<p>The example below shows how multiple valueboxes are displayed in one cell (see <a href="#/api/RA.IPDisplay.directive:raIpLayoutPlanner">* <em>raIpLayoutPlanner</em></a>).
+<h4 id="example_source">Source</h4>
+<div source-edit="exampleAppOne" source-edit-deps="angular.js script.js" source-edit-html="index.html-44" source-edit-css="" source-edit-js="script.js-45" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-44" ng-html-wrap-loaded="exampleAppOne angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-44">
+       <div ng-controller="exampleCtrl" style="width:400px; height: 200px;" >
+   <button ng-click="addFunc()">Add another valuebox</button>
+           <ra-ip-value-box
+             rb-parameters="example1.params"
+             rb-is-active="example1.isActive"
+             ri-fqn="example1.fqn"
+             ri-schema="example1.getSchema(schema)">
+           </ra-ip-value-box>
+        </div>
+   </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-45"></pre>
+<script type="text/ng-template" id="script.js-45">
+       var mod = angular.module('exampleAppOne', ['RA.IPDisplay']);
+       mod.controller('exampleCtrl',
+       ['$scope',
+           function ($scope) {
+               'use strict';
+
+               $scope.example1 = {};
+               $scope.example1.isActive = true;
+               $scope.example1.fqn = "MyEnterprise";
+               $scope.example1.getSchema = function (schema) {};
+               $scope.example1.params = {
+     "items": [
+     ]
+     }
+
+                 $scope.addFunc = function () {
+                 $scope.example1.params.items.push({
+     "value": "This is custom very long string to test resizing of valuebox",
+     "caption": "Number Value",
+     "schemaType": "string"
+     });
+               }
+           }
+       ]);
+
+   </script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well live-example-container"><iframe src="examples/example-24-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>

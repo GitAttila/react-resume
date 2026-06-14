@@ -1,0 +1,224 @@
+<h1><code ng:non-bindable="">raIpTable</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">RA.IPComponents</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raiptable-page"><p>This component is responsible for rendering the table.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ra-ip-table
+       config="{Array}"
+       set-api="{Object}"&gt;
+&lt;/ra-ip-table&gt;</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>config</td><td><a href="" class="label type-hint type-hint-array">Array</a></td><td><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raiptable-page"><ul>
+<li><strong><code>class</code></strong> {String}</li>
+<li><strong><code>header</code></strong> {Array} header objects definitions<ul>
+<li><strong><code>value</code></strong> {string} value</li>
+</ul>
+</li>
+<li><strong><code>items</code></strong> {Array} items array of objects with this structure<ul>
+<li><strong><code>item</code></strong> {object} origin item not parsed</li>
+<li><strong><code>columns</code></strong> {Array} of column items<ul>
+<li><strong><code>label</code></strong> {string}</li>
+<li><strong><code>value</code></strong> {string}</li>
+</ul>
+</li>
+<li><strong><code>actions</code></strong> {Array} of action buttons raIpActions <a href="#/api/RA.IPComponents.component:raIpActions">RA.IPComponents.component:raIpActions</a></li>
+</ul>
+</li>
+</ul>
+</div></td></tr><tr><td>setApi</td><td><a href="" class="label type-hint type-hint-object">Object</a></td><td><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raiptable-page"><p>api</p>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raiptable-page"><p>The example below shows how to use raIpCardBody</p>
+<h4 id="example_source">Source</h4>
+<div source-edit="example1" source-edit-deps="angular.js script.js" source-edit-html="index.html-28" source-edit-css="" source-edit-js="script.js-29" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-28" ng-html-wrap-loaded="example1 angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-28">
+        <div ng-controller="myCtrl">
+           <ra-ip-table config="config" set-api="setApi">
+           </ra-ip-table>
+        </div>
+    </script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-29"></pre>
+<script type="text/ng-template" id="script.js-29">
+       angular.module('example1', ['mobile-toolkit-ra', 'RA.IPComponents']);
+       angular.module('example1')
+           .controller('myCtrl',['$scope',
+               function($scope) {
+                   $scope.config = {
+                       header: [
+                           {
+                               value: "header 1"
+                           },
+                           {
+                               value: "header 2"
+                           },
+                           {
+                               value: "header 3"
+                           },
+                           {
+                               value: "header 4"
+                           },
+                           {
+                               value: ""
+                           }
+                       ],
+                       items: [
+                           {
+                               action: {
+                                   align: "right",
+                                   actions: [
+                                       {
+                                           class:"ra-icon-edit",
+                                           size: "small",
+                                           onAction: function() {alert("edit window");}
+                                       },
+                                       {
+                                           class:"ra-icon-clear",
+                                           size: "small",
+                                           onAction: function() {alert("remove window");}
+                                       }
+                                   ]
+                               },
+                               columns: [
+                                   {
+                                       label: "title 1",
+                                       value: "value 1"
+                                   },
+                                   {
+                                       label: "title 2",
+                                       value: "value 2"
+                                   },
+                                   {
+                                       label: "title 3",
+                                       value: "value 3"
+                                   },
+                                   {
+                                       label: "title 4",
+                                       value: "value 4"
+                                   }
+                               ],
+                               item: {}
+                           },
+                           {
+                               action: {
+                                   align: "right",
+                                   actions: [
+                                       {
+                                           class:"ra-icon-edit",
+                                           size: "small",
+                                           onAction: function() {alert("edit window");}
+                                       },
+                                       {
+                                           class:"ra-icon-clear",
+                                           size: "small",
+                                           onAction: function() {alert("remove window");}
+                                       }
+                                   ]
+                               },
+                               columns: [
+                                   {
+                                       label: "title 1",
+                                       value: "value 1"
+                                   },
+                                   {
+                                       label: "title 2",
+                                       value: "value 2"
+                                   },
+                                   {
+                                       label: "title 3",
+                                       value: "value 3"
+                                   },
+                                   {
+                                       label: "title 4",
+                                       value: "value 4"
+                                   }
+                               ],
+                               item: {}
+                           },
+                           {
+                               action: {
+                                   align: "right",
+                                   actions: [
+                                       {
+                                           class:"ra-icon-edit",
+                                           size: "small",
+                                           onAction: function() {alert("edit window");}
+                                       },
+                                       {
+                                           class:"ra-icon-clear",
+                                           size: "small",
+                                           onAction: function() {alert("remove window");}
+                                       }
+                                   ]
+                               },
+                               columns: [
+                                   {
+                                       label: "title 1",
+                                       value: "value 1"
+                                   },
+                                   {
+                                       label: "title 2",
+                                       value: "value 2"
+                                   },
+                                   {
+                                       label: "title 3",
+                                       value: "value 3"
+                                   },
+                                   {
+                                       label: "title 4",
+                                       value: "value 4"
+                                   }
+                               ],
+                               item: {}
+                           },
+                           {
+                               action: {
+                                   align: "right",
+                                   actions: [
+                                       {
+                                           class:"ra-icon-edit",
+                                           size: "small",
+                                           onAction: function() {alert("edit window");}
+                                       },
+                                       {
+                                           class:"ra-icon-clear",
+                                           size: "small",
+                                           onAction: function() {alert("remove window");}
+                                       }
+                                   ]
+                               },
+                               columns: [
+                                   {
+                                       label: "title 1",
+                                       value: "value 1"
+                                   },
+                                   {
+                                       label: "title 2",
+                                       value: "value 2"
+                                   },
+                                   {
+                                       label: "title 3",
+                                       value: "value 3"
+                                   },
+                                   {
+                                       label: "title 4",
+                                       value: "value 4"
+                                   }
+                               ],
+                               item: {}
+                           }
+                       ]
+                   };
+               }]);
+</script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well live-example-container"><iframe src="examples/example-16-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>

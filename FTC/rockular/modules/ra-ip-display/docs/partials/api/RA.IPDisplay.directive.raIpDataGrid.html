@@ -1,0 +1,320 @@
+<h1><code ng:non-bindable="">raIpDataGrid</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipdatagrid-page"><p>The raIpDataGrid directive is responsible for rendering the TimeSeries Table Widget.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ra-ip-data-grid
+       rb-parameters="{object}"
+       ri-fqn="{string}"
+       rb-is-active="{boolean}"
+       ro-schema="{function}"
+       ro-examples="{function}"
+       [rb-style="{string}"]
+       rb-design-mode="{boolean}"&gt;
+&lt;/ra-ip-data-grid&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>rbParameters</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipdatagrid-page"><p>An object representing common parameters and
+the parameters of TimeSeries Table Widget.</p>
+<p><strong>Common Parameters</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>autoReload</td>
+<td><a href="#" class="label type-hint type-hint-boolean">Boolean</a></td>
+<td>Should the values be auto reload</td>
+<td>False</td>
+</tr>
+<tr>
+<td>autoReloadInterval (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>Time interval to auto reload after</td>
+<td>10 sec</td>
+</tr>
+<tr>
+<td>dataGridTitle (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Title of the widget</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>lastSeconds (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>Number of Seconds the value are being displayed for</td>
+<td>300 sec</td>
+</tr>
+<tr>
+<td>gridType (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Type of the Data Grid  (narrow/wide)</td>
+<td>narrow</td>
+</tr>
+<tr>
+<td>timeDeadBandValue (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>TimeDead Band Value</td>
+<td>0</td>
+</tr>
+<tr>
+<td>timeDeadBandUnit (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>TimeDead Band Unit (milliseconds/seconds/minutes/hours)</td>
+<td>miliseconds</td>
+</tr>
+<tr>
+<td>startTime (optional)</td>
+<td><a href="#" class="label type-hint type-hint-datetime">DateTime</a></td>
+<td>Start Date time of data being displayed</td>
+<td>lastSeconds value is used</td>
+</tr>
+<tr>
+<td>endTime (optional)</td>
+<td><a href="#" class="label type-hint type-hint-datetime">DateTime</a></td>
+<td>End Date time of data being displayed</td>
+<td>lastSeconds value is used</td>
+</tr>
+</tbody>
+</table>
+<p>TimeSeries Table Widget Specific Parameters</p>
+<p> <strong>Schema type: Number</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tail</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>FQN of the item whose data is to be displayed</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>caption (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The text which is displayed as caption of TimeSeries Table</td>
+<td>This property is autobound to model .Name property of tag or it is empty</td>
+</tr>
+<tr>
+<td>unit (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The text which is displayed as part of caption in []</td>
+<td>This property is autobound to model .EngineeringUnit property of tag or it is empty</td>
+</tr>
+<tr>
+<td>precision (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The decimal precision of value</td>
+<td>Default value is 2, minimum value is 0, maximum value is 4</td>
+</tr>
+<tr>
+<td>min (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The minimum value on scale.</td>
+<td>This property is autobound to model .Min property of tag or it is empty</td>
+</tr>
+<tr>
+<td>max (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The maximum value on scale.</td>
+<td>This property is autobound to model .Max property of tag or it is empty</td>
+</tr>
+<tr>
+<td>outOfRangeColor (optional)</td>
+<td><a href="#" class="label type-hint type-hint-object">Object</a></td>
+<td>Color of the Value column when data is out of range</td>
+<td>#e22028</td>
+</tr>
+<tr>
+<td>outOfRangeFontColor (optional)</td>
+<td><a href="#" class="label type-hint type-hint-object">Object</a></td>
+<td>Font Color of the value column when data is out of range</td>
+<td>#ffffff</td>
+</tr>
+<tr>
+<td>colorIndication (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Color Indication    (font/background/both)</td>
+<td>both</td>
+</tr>
+<tr>
+<td>ranges (optional)</td>
+<td><a href="#" class="label type-hint type-hint-array">Array</a></td>
+<td>Range of Valid Values helps decide if the value is valid or out of range</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>ranges.from (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The Lower bound of the range of data value</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>ranges.to (optional)</td>
+<td><a href="#" class="label type-hint type-hint-number">Number</a></td>
+<td>The Upper bound of the range of data value</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>ranges.color (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Color of value column when data is between from and to range</td>
+<td>#22b14c</td>
+</tr>
+<tr>
+<td>ranges.fontColor (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Font Color of value column when data is between from and to range</td>
+<td>#ffffff</td>
+</tr>
+</tbody>
+</table>
+<p> <strong>Schema type: String</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tail</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Relative FQN of the item whose data is to be displayed</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>caption (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The text which is displayed as caption of TimeSeries Table</td>
+<td>This property is autobound to model .Name property of tag or it is empty</td>
+</tr>
+<tr>
+<td>colorIndication (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Color Indication    (font/background/both)</td>
+<td>both</td>
+</tr>
+<tr>
+<td>ranges (optional)</td>
+<td><a href="#" class="label type-hint type-hint-array">Array</a></td>
+<td>Range of Valid Values helps decide if the value is valid or out of range</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>ranges.filterExpression(optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Filter Expression to filter valid set of values</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>ranges.color (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Color of value column when data is in valid range</td>
+<td>#22b14c</td>
+</tr>
+<tr>
+<td>ranges.fontColor (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Font Color of value column when data is in valid range</td>
+<td>#ffffff</td>
+</tr>
+</tbody>
+</table>
+<p> <strong>Schema type: Boolean</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Details</th>
+<th>Default value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tail</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Relative FQN of the item whose data is to be displayed</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>caption (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>The text which is displayed as caption of TimeSeries Table</td>
+<td>This property is autobound to model .Name property of tag or it is empty</td>
+</tr>
+<tr>
+<td>colorIndication (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Color Indication    (font/background/both)</td>
+<td>both</td>
+</tr>
+<tr>
+<td>ranges (optional)</td>
+<td><a href="#" class="label type-hint type-hint-array">Array</a></td>
+<td>Range of Valid Values helps decide if the value is valid or out of range</td>
+<td>undefined</td>
+</tr>
+<tr>
+<td>ranges.valueIndication(optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Value Indication (trueOnly/falseOnly/both)</td>
+<td>both</td>
+</tr>
+<tr>
+<td>ranges.colorTrue (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Color of value column when data value is true. Applicable only when ranges.valueIndication is set to trueOnly or both</td>
+<td>#6d6e70</td>
+</tr>
+<tr>
+<td>ranges.fontColorTrue (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Font Color of value column when data value is true. Applicable only when ranges.valueIndication is set to trueOnly or both</td>
+<td>#ffffff</td>
+</tr>
+<tr>
+<td>ranges.colorFalse (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Color of value column when data value is false. Applicable only when ranges.valueIndication is set to falseOnly or both</td>
+<td>#6d6e70</td>
+</tr>
+<tr>
+<td>ranges.fontColorFalse (optional)</td>
+<td><a href="#" class="label type-hint type-hint-string">String</a></td>
+<td>Font Color of value column when data value is false. Applicable only when ranges.valueIndication is set to falseOnly or both</td>
+<td>#ffffff</td>
+</tr>
+</tbody>
+</table>
+</div></td></tr><tr><td>riFqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipdatagrid-page"><p>FQN the widget is relative to.</p>
+</div></td></tr><tr><td>rbIsActive</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipdatagrid-page"><p>Flag which shows whether the widget sould be active.</p>
+</div></td></tr><tr><td>roSchema</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipdatagrid-page"><p>Function which should be called to intialize the widget schema in outside environment.</p>
+</div></td></tr><tr><td>roExamples</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipdatagrid-page"><p>Function which should be called to intialize the widget examples in outside
+environment.</p>
+</div></td></tr><tr><td>rbStyle <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipdatagrid-page"><p>String indicating which class should be used in widget.</p>
+</div></td></tr><tr><td>rbDesignMode</td><td><a href="" class="label type-hint type-hint-boolean">boolean</a></td><td><div class="ra-ipdisplay-directive-page ra-ipdisplay-directive-raipdatagrid-page"><p>Flag which indicates whether the widget is in design mode.</p>
+</div></td></tr></tbody></table></div>
+</div>

@@ -1,0 +1,39 @@
+<h1><code ng:non-bindable="">momentHelperSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPDisplay</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-momenthelpersvc-page"><p>Service which provides functions which help with moment library and datetime.</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_createutcmomentfromstring">createUTCMomentFromString(dateString)</h3>
+<div class="createutcmomentfromstring"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-momenthelpersvc-createutcmomentfromstring-page"><p>Helper method to create moment date from supported datetime string formats.
+Supported formats:</p>
+<ul>
+<li>all ISO_8601, long and short parts (up to &quot;YYYY-MM-DDTHH:mm:ss.SSSSZ&quot; and &quot;YYYYMMDDTHH:mm:ss.SSSSZ&quot;)</li>
+<li>RFC822 - Mon, 15 Aug 05 15:52:01 +0000 </li>
+<li>RFC2822 - Mon, 15 Aug 2005 15:52:01 +0000</li>
+<li>&quot;YYYY-MM-DD&quot; up to &quot;YYYY-MM-DD HH:mm:ss.SSSSZ&quot;</li>
+<li>other custom and non-standard formats:<ul>
+<li>en_US &quot;YYYY-MM-DD&quot; up to &quot;MM/DD/YYYY HH:mm:ss:SSSSZ&quot;</li>
+<li>fr-FR &quot;DD/MM/YYYY&quot; up to &quot;DD/MM/YYYY HH:mm:ss:SSSSZ&quot;</li>
+<li>ja-JP &quot;YYYY/MM/DD&quot; up to &quot;YYYY/MM/DD HH:mm:ss.SSSSZ&quot;</li>
+<li>javascript Date to string format &quot;ddd MMM DD YYYY HH:mm:ss [GMT]Z&quot;</li>
+</ul>
+</li>
+</ul>
+</div><h5 id="methods_createutcmomentfromstring_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>dateString</td><td><a href="" class="label type-hint type-hint-string">String</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-momenthelpersvc-createutcmomentfromstring-page"><p>string to create moment from</p>
+</div></td></tr></tbody></table><h5 id="methods_createutcmomentfromstring_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-moment">moment</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-momenthelpersvc-createutcmomentfromstring-page"><p>moment date, check if moment is valid later</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getmomentbyunixtimestamp">getMomentByUnixTimestamp(timestamp)</h3>
+<div class="getmomentbyunixtimestamp"><div class="ra-ipdisplay-service-page ra-ipdisplay-service-momenthelpersvc-getmomentbyunixtimestamp-page"><p>Helper method to convert unix timestamp to a moment date with option to localize timezone.
+When localize flag is not true, it returns utc moment date.</p>
+</div><h5 id="methods_getmomentbyunixtimestamp_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>timestamp</td><td><a href="" class="label type-hint type-hint-integer">Integer</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-momenthelpersvc-getmomentbyunixtimestamp-page"><p>timestamp</p>
+</div></td></tr></tbody></table><h5 id="methods_getmomentbyunixtimestamp_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-moment">moment</a></td><td><div class="ra-ipdisplay-service-page ra-ipdisplay-service-momenthelpersvc-getmomentbyunixtimestamp-page"><p>moment UTC moment</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

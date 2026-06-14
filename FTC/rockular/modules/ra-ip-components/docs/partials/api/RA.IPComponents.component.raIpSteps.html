@@ -1,0 +1,204 @@
+<h1><code ng:non-bindable="">raIpSteps</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">RA.IPComponents</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipsteps-page"><p>This component is responsible for rendering steps, used e.g. in wizard component.
+The component expects to receive {object} <strong><code>config</code></strong>.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;ra-ip-steps
+       config="{object}"&gt;
+&lt;/ra-ip-steps&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>config</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipsteps-page"><ul>
+<li><strong><code>size</code></strong> {string} steps size, possible values &#39;small&#39;, &#39;medium&#39;, &#39;large&#39;, defaults to &#39;medium&#39;</li>
+<li><strong><code>type</code></strong> {string} steps type, possible values &#39;numeric&#39;, &#39;icons&#39;, defaults to &#39;numeric&#39;</li>
+<li><strong><code>theme</code></strong> {string} steps theme, possible values &#39;rockwell&#39;, defaults to &#39;rockwell&#39;</li>
+<li><strong><code>enableTitles</code></strong> {boolean} flag to turn on/off step title</li>
+<li><strong><code>autofillConnector</code></strong> {boolean} flag to turn automatic color filling for connector between two active steps,
+   defaults to false</li>
+<li><strong><code>disableStatusColor</code></strong> {boolean} flag to disable coloring of statuses for current theme</li>
+<li><strong><code>steps</code></strong> {array} array with step configuration, possible step object definition:<ul>
+<li><strong><code>step</code></strong> {object} step definition<ul>
+<li><strong><code>tooltip</code></strong> {string} step tooltip</li>
+<li><strong><code>title</code></strong> {string} title to show unsder step, enableTitles flag must be turned on to show title</li>
+<li><strong><code>iconClass</code></strong> {string} with class definition example:<pre><code> &quot;ra-icon-home&quot;
+</code></pre></li>
+<li><strong><code>disabled</code></strong> {boolean} flag indicating disabled step
+  (is not clickable if true - onAction cannot be triggered)</li>
+<li><strong><code>clickable</code></strong> {boolean} flag indicating step is clickable (onAction can be trigered)</li>
+<li><strong><code>active</code></strong> {boolean} flag indicating step is active, has active visual</li>
+<li><strong><code>onAction</code></strong> {function} funtion to be triggered for clickable step on step click
+  (clickable must be true to work properly)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div></td></tr></tbody></table></div>
+<h2 id="example">Example</h2>
+<div class="example"><div class="ra-ipcomponents-component-page ra-ipcomponents-component-raipsteps-page"><p>The example below shows how to use raIpSteps.</p>
+<h4 id="example_source">Source</h4>
+<div source-edit="example1" source-edit-deps="angular.js script.js" source-edit-html="index.html-26" source-edit-css="" source-edit-js="script.js-27" source-edit-json="" source-edit-unit="" source-edit-scenario=""></div>
+<div class="tabbable"><div class="tab-pane" title="index.html">
+<pre class="prettyprint linenums" ng-set-text="index.html-26" ng-html-wrap-loaded="example1 angular.js script.js"></pre>
+<script type="text/ng-template" id="index.html-26">
+<div ng-controller="myCtrl">
+   <div>With icons and tooltip text (small size):</div>
+   <ra-ip-steps config="stepsConfigA"></ra-ip-steps>
+   <div>With icons and second item active (medium size):</div>
+   <ra-ip-steps config="stepsConfigB"></ra-ip-steps>
+   <div>With click actions (large size):</div>
+   <ra-ip-steps config="stepsConfigC"></ra-ip-steps>
+   <div>Numeric steps (small size):</div>
+   <ra-ip-steps config="stepsConfigD"></ra-ip-steps>
+   <div>With titles (small size):</div>
+   <ra-ip-steps config="stepsConfigE"></ra-ip-steps>
+   <div>With statuses:</div>
+   <ra-ip-steps config="stepsConfigF"></ra-ip-steps>
+</div>
+</script>
+</div>
+<div class="tab-pane" title="script.js">
+<pre class="prettyprint linenums" ng-set-text="script.js-27"></pre>
+<script type="text/ng-template" id="script.js-27">
+angular.module('example1', ['mobile-toolkit-ra', 'RA.IPComponents']);
+angular.module('example1')
+.controller('myCtrl',['$scope',
+function($scope) {
+                   $scope.stepsConfigA = {
+                       type: 'icons',
+                       steps: [
+                           {
+                               iconClass: 'ra-icon-home',
+                               tooltip: 'Tooltip text',
+                               active: true,
+                               status: 'default' | 'error' | 'success' | 'warning'
+                           },
+                           {
+                               disabled: true,
+                               tooltip: 'Tooltip text',
+                               iconClass: 'ra-icon-no-data'
+                           }
+                       ],
+                       size: 'small'
+                   };
+                   $scope.stepsConfigB = {
+                       type: 'icons',
+                       steps: [
+                           {
+                               iconClass: 'ra-icon-home',
+                           },
+                           {
+                               active: true,
+                               iconClass: 'ra-icon-no-data'
+                           }
+                       ],
+                       size: 'medium'
+                   };
+                   $scope.stepsConfigC = {
+                       type: 'icons',
+                       enableTitles: true,
+                       steps: [
+                           {
+                               iconClass: 'ra-icon-home',
+                               active: true,
+                               clickable: false,
+                               title: 'Can\'t click me!',
+                               onAction: function () {
+                                   $scope.stepsConfigC.steps[1] = angular.extend($scope.stepsConfigC.steps[1], {
+                                       active: false,
+                                       clickable: true,
+                                       title: 'Click me!'
+                                   });
+                                   $scope.stepsConfigC.steps[0] = angular.extend($scope.stepsConfigC.steps[0], {
+                                       active: true,
+                                       clickable: false,
+                                       title: 'Can\'t click me!'
+                                   });
+                               }
+                           },
+                           {
+                               iconClass: 'ra-icon-no-data',
+                               clickable: true,
+                               title: 'Click me!',
+                               onAction: function () {
+                                   $scope.stepsConfigC.steps[0] = angular.extend($scope.stepsConfigC.steps[0], {
+                                       active: false,
+                                       clickable: true,
+                                       title: 'Click me!'
+                                   });
+                                   $scope.stepsConfigC.steps[1] = angular.extend($scope.stepsConfigC.steps[1], {
+                                       active: true,
+                                       clickable: false,
+                                       title: 'Can\'t click me!'
+                                   });
+                               }
+                           }
+                       ],
+                       size: 'large'
+                   };
+                   $scope.stepsConfigD = {
+                       type: 'numeric',
+                       steps: [
+                           {},
+                           {
+                               disabled: true,
+                           },
+                           {
+                               active: true
+                           },
+                       ],
+                       size: 'small'
+                   };
+                   $scope.stepsConfigE = {
+                       enableTitles: true,
+                       type: 'numeric',
+                       steps: [
+                           {
+                               title: 'Title 1'
+                           },
+                           {
+                               title: 'Title 2'
+                           },
+                           {
+                               active: true
+                           },
+                       ],
+                       size: 'small'
+                   };
+                   $scope.stepsConfigF = {
+                       type: 'numeric',
+                       enableTitles: true,
+                       steps: [
+                           {
+                               status: 'warning',
+                               title: 'warning'
+                           },
+                           {
+                               status: 'error',
+                               title: 'error'
+                           },
+                           {
+                               status: 'success',
+                               title: 'success'
+                           },
+                           {
+                               status: 'default',
+                               title: 'default'
+                           }
+                       ],
+                       size: 'medium'
+                   };
+               }]);
+</script>
+</div>
+</div><h4 id="example_demo">Demo</h4>
+<div class="well live-example-container"><iframe src="examples/example-15-index.html" iframe-adjust-dimensions></iframe></div>
+</div></div>
+</div>

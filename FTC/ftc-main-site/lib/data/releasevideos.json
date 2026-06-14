@@ -1,0 +1,38 @@
+[
+  {
+    "date":"05/17/2018",
+    "videoTitle":"Budapest release",
+    "videoSubtitle":"version 12.00.005",
+    "videoPath":"lib/vids/releases/budapest.mp4",
+    "posterPath":"lib/vids/releases/budapest_poster.png",
+    "description":"This release brings reworked Gateways workflow with new UX design, user access roles and support for limits. Manage workflow brings site level access configuration. Dashboarding introduces new File Trend widget and ability to export large sets of historic data as Data Integration task. Widget Editor was enhanced by zoom, drill through links and grid options.",
+    "new":true
+  },
+  {
+    "date":"12/21/2017",
+    "videoTitle":"Bucharest release",
+    "videoSubtitle":"version 11.00.008",
+    "videoPath":"lib/vids/releases/bucharest.mp4",
+    "posterPath":"lib/vids/releases/bucharest_poster.png",
+    "description":"This release introduces new data integration workflow. There were implemented multiple functional enhancements in gateways workflow including local gateway time settings, data collection turn off, support for gateway type selection (FT IoT Gateway alias CGP) and the workflow UI was completely refactored using new common UI elements unifying overall user experience closer to standard Rockwell device configuration UI. New PowerBI widget (for integration of Power BI reports) along with multiple dashboard widget enhancements were implemented including: new visuals for trend, browse entire model option in the composer editor. The application login page was enhanced with reset password option for standard user accounts. Widget editor introduces new ability to create new properties and define expressions for widget properties.",
+    "new":false
+  },
+  {
+    "date":"09/19/2017",
+    "videoTitle":"Brussels release",
+    "videoSubtitle":"version 10.00.012",
+    "videoPath":"lib/vids/releases/brussels.mp4",
+    "posterPath":"lib/vids/releases/brussels_poster.png",
+    "description":"This release brings various dashboarding enhancements (in Displays workflow) primarily targeting new functional requirements for CSM/ Metso customer project: new visuals for linear gauges, markers clustering display enhancement for Map widget, raw data export option for trend widget, new zoom feature for display cell, configurable color indication for alarm grid row…etc.",
+    "new":false
+  },
+  {
+    "date":"06/18/2018",
+    "videoTitle":"Connecting to Cloud Policy Server",
+    "videoSubtitle":"tutorial video",
+    "videoPath":"lib/vids/releases/FTCloud_Connecting_SPS_May2018.mp4",
+    "posterPath":"lib/vids/releases/Connecting_AStoSPS.png",
+    "description":"This video tutorial shows how to connect FTCloud Application Server with FTCloud Security Policy server to enable automatic provisioning of gateway devices.",
+    "new":true
+  }
+]

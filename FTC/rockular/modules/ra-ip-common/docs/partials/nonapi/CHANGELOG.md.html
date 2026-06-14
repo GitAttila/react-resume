@@ -1,0 +1,113 @@
+<h1><code ng:non-bindable=""></code>
+<div><span class="hint"></span>
+</div>
+</h1>
+<div><div class="changelog-page"><!-----------------------------------------------------------------------------
+Changelog documentation should be updated for all changes to toolkit, especially breaking changes.
+Since we do not have a process to generate this changelog file, and at the time the changelog is updated on a branch,
+we won't know the version number, we'll keep a "v.next" section at the top that we can all append to and merge into.
+Then, before merge to master from develop, this can be updated.  Let's stick with the following format (comes from
+AngularJS changelog.md file:
+
+# [version number]
+
+## Deprecated
+
+## Bug Fixes
+
+## Features
+
+## Breaking Changes
+
+Then on the final release before build, we can delete sections that do not apply for that build.
+
+IMPORTANT: KEEP ONE LINE EMPTY AFTER THIS COMMENT TO GENERATE IT PROPERLY !!!
+-->
+<h2 id="v140">v1.4.0</h2>
+<h3 id="v140_features">Features</h3>
+<ul>
+<li><p>updated MFT dependency to version 8.0.0</p>
+</li>
+<li><p>enhanced fqnSvc with methods to cut and find fqns</p>
+</li>
+</ul>
+<h2 id="v132">v1.3.2</h2>
+<h3 id="v132_bug-fixes">Bug Fixes</h3>
+<ul>
+<li>B-165437 trend widget in live mode doesn&#39;t refresh interpolated values with real one, interpolated values stay there</li>
+</ul>
+<h2 id="v131">v1.3.1</h2>
+<h3 id="v131_bug-fixes">Bug Fixes</h3>
+<ul>
+<li><p>Fixed timeSeries service to use whole specified time frame when request contains data sampling</p>
+</li>
+<li><p>Fixed timeSeries service repeated requests un-registering when trying to consequently reinitialize these requests.
+Note that each registered timeSeries repeated request has to have unique ID (when ID is specified). Otherwise it will
+not be repetitively called.</p>
+</li>
+</ul>
+<h2 id="v130">v1.3.0</h2>
+<h3 id="v130_bug-fixes">Bug Fixes</h3>
+<ul>
+<li>Fixed TimeSeries service to work properly with changing start time of the repeated requests</li>
+</ul>
+<h3 id="v130_features">Features</h3>
+<ul>
+<li>It is now not possible to pass start date parameter to timeseriesSvc.getDataRepeatedly function.
+Duration parameter can be still passed but has to be negative or zero. Otherwise, error is thrown.</li>
+</ul>
+<h2 id="v120">v1.2.0</h2>
+<h3 id="v120_features">Features</h3>
+<ul>
+<li><p>New version of MFT toolkit used (6.1.0)</p>
+</li>
+<li><p>Enhanced API of persistenceSvc.commit function to accept flag for setting global httpConfig.raPassError value.</p>
+</li>
+<li><p>Added buildFqnForQueryWithEscaping function to fqnSvc.</p>
+</li>
+<li><p>Enhanced API of instanceSvc.getInstances function to accept flag for setting global httpConfig.raPassError value.</p>
+</li>
+</ul>
+<h2 id="v110">v1.1.0</h2>
+<h3 id="v110_bug-fixes">Bug Fixes</h3>
+<ul>
+<li><p>Fixed issue when there was no data coming from TimeSeriesSvc - Alarm grid and Transaction grid threw error.</p>
+</li>
+<li><p>Fixed paths for source mapping files</p>
+</li>
+<li><p>OperationSvc: Add cancelling promise to the getOperationData method that aborts the request when resolved.</p>
+</li>
+<li><p>Fixed fqnSvc.getLastName method which was not escaping &#39;]&#39; character for &#39;.&#39; delimiter present at the end.</p>
+</li>
+<li><p>Fixed issue with TimeSeriesSvc &quot;live mode&quot; where data were appended incorrectly
+(affected Trend widget in ThinUI applications)</p>
+</li>
+</ul>
+<h3 id="v110_features">Features</h3>
+<ul>
+<li>Added new subscriber service which is now being used by timeSeries and liveData services</li>
+</ul>
+<h2 id="v100">v1.0.0</h2>
+<h3 id="v100_deprecated">Deprecated</h3>
+<ul>
+<li>instanceRequest, navigationHandlerRequest, navigationRequest and persistRequest objects</li>
+</ul>
+<h3 id="v100_bug-fixes">Bug Fixes</h3>
+<ul>
+<li>Fixed FQN splitting function in fqnSvc. It now handles also escaping of &quot;]&quot; character.</li>
+</ul>
+<h3 id="v100_features">Features</h3>
+<ul>
+<li><p>Documentation created</p>
+</li>
+<li><p>InstantceRequest object provides possibility to specify the &quot;pageSize&quot; parameter of added property FQN</p>
+</li>
+</ul>
+<h3 id="v100_breaking-changes">Breaking Changes</h3>
+<ul>
+<li>Changed API for creating request objects for instanceSvc, navigationHandlerSvc, navigationSvc, operationSvc
+and persistenceSvc. All these services now exposes &quot;create[serviceName]Request&quot; function for creating such object.</li>
+</ul>
+<h2 id="v010">v0.1.0</h2>
+<p>Initial version with extracted files from VantagePoint project.</p>
+</div></div>

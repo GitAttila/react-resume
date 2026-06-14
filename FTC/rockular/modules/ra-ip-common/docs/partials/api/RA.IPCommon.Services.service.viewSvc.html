@@ -1,0 +1,63 @@
+<h1><code ng:non-bindable="">viewSvc</code>
+<div><span class="hint">service in module <code ng:non-bindable="">RA.IPCommon.Services</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-viewsvc-page"><p>Service for View Service Requests and Manipulations</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_addview">addView(name, anchorFqn, description)</h3>
+<div class="addview"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-viewsvc-addview-page"><p>Add a View</p>
+</div><h5 id="methods_addview_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-viewsvc-addview-page"><p>view name</p>
+</div></td></tr><tr><td>anchorFqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-viewsvc-addview-page"><ul>
+<li>Anchor Fqn</li>
+</ul>
+</div></td></tr><tr><td>description</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-viewsvc-addview-page"><p>view description</p>
+</div></td></tr></tbody></table><h5 id="methods_addview_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-ipromise">IPromise&lt;T&gt;</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-viewsvc-addview-page"><p>Promise to resolve when answer
+will be available.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getfqnforviewname">getFqnForViewName([viewName])</h3>
+<div class="getfqnforviewname"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-viewsvc-getfqnforviewname-page"><p>Get Fqn of the View Name</p>
+</div><h5 id="methods_getfqnforviewname_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>[viewName] <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-viewsvc-getfqnforviewname-page"><p>name of the view</p>
+</div></td></tr></tbody></table><h5 id="methods_getfqnforviewname_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-viewsvc-getfqnforviewname-page"><p>Fqn of the View</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_getviews">getViews()</h3>
+<div class="getviews"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-viewsvc-getviews-page"><p>Makes a request to JSON Navigation service on the server
+to get list of views.</p>
+</div><h5 id="methods_getviews_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-ipromise">IPromise&lt;T&gt;</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-viewsvc-getviews-page"><p>Promise to resolve when answer
+will be available.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_removeview">removeView(name)</h3>
+<div class="removeview"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-viewsvc-removeview-page"><p>Remove the View</p>
+</div><h5 id="methods_removeview_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-viewsvc-removeview-page"><ul>
+<li>of the view to remove</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_removeview_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-ipromise">IPromise&lt;T&gt;</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-viewsvc-removeview-page"><p>Promise to resolve when answer will be available.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_renameview">renameView(fqn, newName)</h3>
+<div class="renameview"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-viewsvc-renameview-page"><p>Rename a view.</p>
+</div><h5 id="methods_renameview_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>fqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-viewsvc-renameview-page"><p>The original FQN of the view, Including the final Name node.</p>
+</div></td></tr><tr><td>newName</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-viewsvc-renameview-page"><p>The new name to be used for the final Name node.</p>
+</div></td></tr></tbody></table><h5 id="methods_renameview_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-ipromise">IPromise&lt;T&gt;</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-viewsvc-renameview-page"><p>Promise to resolve when answer will be available.</p>
+</div></td></tr></table></div>
+</li>
+<li><h3 id="methods_updateview">updateView(fqn, viewInfo)</h3>
+<div class="updateview"><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-viewsvc-updateview-page"><p>Update an existing view item with given information.</p>
+</div><h5 id="methods_updateview_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>fqn</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-viewsvc-updateview-page"><p>The view fqn of the properties that are being updated.</p>
+</div></td></tr><tr><td>viewInfo</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-viewsvc-updateview-page"><p>The object containing the information that can be
+updated for the view, including:</p>
+<ul>
+<li>description</li>
+<li>anchorFqn</li>
+</ul>
+</div></td></tr></tbody></table><h5 id="methods_updateview_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-ipromise">IPromise&lt;T&gt;</a></td><td><div class="ra-ipcommon-services-service-page ra-ipcommon-services-service-viewsvc-updateview-page"><p>Promise to resolve when answer will be available.</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

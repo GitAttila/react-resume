@@ -1,0 +1,230 @@
+[
+  {
+    "pluginName":"Simulator",
+    "description":"Simulates various timeseries patterns",
+    "contacts":
+      [
+        {
+        "responsibleName":"Matej Muller",
+        "responsibleEmail":"mmuller@ra.rockwell.com"
+        }
+      ],
+    "versionNumber":"2.0.0",
+    "lastUpdate":"04/01/2018",
+    "availableAt":"InfoPlatform NuGet repository",
+    "coreComponent":true,
+    "tags": ["core","timeseries","testing"],
+    "imagePath": "lib/images/plugins/plugins_icon_red.png ",
+    "imageAlt": "plugin icon"
+  },
+  {
+    "pluginName":"InfoPlatformConnector",
+    "description":"Connect to to another instance of InfoPlatform via the standard APIs and browse its model",
+    "contacts":
+      [
+        {
+        "responsibleName":"Matej Muller",
+        "responsibleEmail":"mmuller@ra.rockwell.com"
+        }
+      ],
+    "versionNumber":"2.0.0",
+    "lastUpdate":"04/01/2018",
+    "availableAt":"InfoPlatform NuGet repository",
+    "coreComponent":true,
+    "tags": ["connector","item data provider", "timeseries"],
+    "imagePath": "lib/images/plugins/plugins_icon_red.png ",
+    "imageAlt": "plugin icon"
+  },
+  {
+    "pluginName":"SQL ItemDataProvider",
+    "description":"Store and persist your model in a MS SQL database - in Azure or on premise",
+    "contacts":
+      [
+        {
+        "responsibleName":"Matej Muller",
+        "responsibleEmail":"mmuller@ra.rockwell.com"
+        }
+      ],
+    "versionNumber":"0.1.0",
+    "lastUpdate":"04/01/2018",
+    "availableAt":"",
+    "coreComponent":false,
+    "tags": ["connector","item data provider", "sql", "model persistence"],
+    "imagePath": "lib/images/plugins/plugins_icon_red.png ",
+    "imageAlt": "plugin icon"
+  },
+  {
+    "pluginName":"SystemStore",
+    "description":"Store model data in-memory without persistence",
+    "contacts":
+      [
+        {
+        "responsibleName":"Matej Muller",
+        "responsibleEmail":"mmuller@ra.rockwell.com"
+        }
+      ],
+    "versionNumber":"2.0.0",
+    "lastUpdate":"04/01/2018",
+    "availableAt":"InfoPlatform NuGet repository",
+    "coreComponent":true,
+    "tags": ["item data provider"],
+    "imagePath": "lib/images/plugins/plugins_icon_red.png ",
+    "imageAlt": "plugin icon"
+  },
+  {
+    "pluginName":"Log4net Wrapper",
+    "description":"Stores logs with the Apache log4net library",
+    "contacts":
+      [
+        {
+        "responsibleName":"Matej Muller",
+        "responsibleEmail":"mmuller@ra.rockwell.com"
+        }
+      ],
+    "versionNumber":"2.0.0",
+    "lastUpdate":"04/01/2018",
+    "availableAt":"InfoPlatform NuGet repository",
+    "coreComponent":true,
+    "tags": ["logging"],
+    "imagePath": "lib/images/plugins/plugins_icon_red.png ",
+    "imageAlt": "plugin icon"
+  },
+  {
+    "pluginName":"Serilog Wrapper",
+    "description":"Stores logs with the Serilog library",
+    "contacts":
+      [
+        {
+        "responsibleName":"Matej Muller",
+        "responsibleEmail":"mmuller@ra.rockwell.com"
+        }
+      ],
+    "versionNumber":"2.0.0",
+    "lastUpdate":"04/01/2018",
+    "availableAt":"InfoPlatform NuGet repository",
+    "coreComponent":true,
+    "tags": ["logging"],
+    "imagePath": "lib/images/plugins/plugins_icon_red.png ",
+    "imageAlt": "plugin icon"
+  },
+  {
+    "pluginName":"FTLinx Browser",
+    "description":"Browse the FTLinx topology directly in the InfoPlatform model",
+    "contacts":
+      [
+        {
+        "responsibleName":"Ivo Peterka",
+        "responsibleEmail":"ipeterka@ra.rockwell.com"
+        }
+      ],
+    "versionNumber":"0.1.0",
+    "lastUpdate":"04/01/2018",
+    "availableAt":"",
+    "coreComponent":false,
+    "tags": ["connector","item data provider","Rockwell products interop"],
+    "imagePath": "lib/images/plugins/plugins_icon_red.png ",
+    "imageAlt": "plugin icon"
+  },
+  {
+    "pluginName":"ImportExport",
+    "description":"Back up parts of your model in a file",
+    "contacts":
+      [
+        {
+        "responsibleName":"Shweta Chatrola",
+        "responsibleEmail":"schatro@ra.rockwell.com"
+        },
+		{
+        "responsibleName":"Matej Muller",
+        "responsibleEmail":"mmuller@ra.rockwell.com"
+        }
+      ],
+    "versionNumber":"2.0.0",
+    "lastUpdate":"04/01/2018",
+    "availableAt":"InfoPlatform NuGet repository",
+    "coreComponent": true,
+    "tags": ["model persistence"],
+    "imagePath": "lib/images/plugins/plugins_icon_red.png ",
+    "imageAlt": "plugin icon"
+  },
+  {
+    "pluginName":"WebUI",
+    "description":"",
+    "contacts":
+      [
+        {
+        "responsibleName":"Shweta Chatrola",
+        "responsibleEmail":"schatro@ra.rockwell.com"
+        },
+		{
+        "responsibleName":"Martin Skalnik",
+        "responsibleEmail":"mskalnik@ra.rockwell.com"
+        }
+      ],
+    "versionNumber":"2.0.0",
+    "lastUpdate":"04/01/2018",
+    "availableAt":"InfoPlatform NuGet repository",
+    "coreComponent":false,
+    "tags": ["misc"],
+    "imagePath": "lib/images/plugins/plugins_icon_red.png ",
+    "imageAlt": "plugin icon"
+  },
+  {
+    "pluginName":"Profile Service",
+    "description":"Creates a unique store for user-specific data",
+    "contacts":
+      [
+        {
+        "responsibleName":"Matej Muller",
+        "responsibleEmail":"mmuller@ra.rockwell.com"
+        },
+		{
+        "responsibleName":"Martin Skalnik",
+        "responsibleEmail":"mskalnik@ra.rockwell.com"
+        }
+      ],
+    "versionNumber":"2.1.0",
+    "lastUpdate":"04/01/2018",
+    "availableAt":"InfoPlatform NuGet repository",
+    "coreComponent":false,
+    "tags": ["misc"],
+    "imagePath": "lib/images/plugins/plugins_icon_red.png ",
+    "imageAlt": "plugin icon"
+  },
+  {
+    "pluginName":"FTHistorian Connector",
+    "description":"Connect to FTHistorian to read live and historical timeseries data",
+    "contacts":
+      [
+        {
+        "responsibleName":"Matej Muller",
+        "responsibleEmail":"mmuller@ra.rockwell.com"
+        }
+      ],
+    "versionNumber":"2.1.0",
+    "lastUpdate":"04/01/2018",
+    "availableAt":"InfoPlatform NuGet repository",
+    "coreComponent":false,
+    "tags": ["connector","timeseries","Rockwell products interop"],
+    "imagePath": "lib/images/plugins/plugins_icon_red.png ",
+    "imageAlt": "plugin icon"
+  },
+  {
+    "pluginName":"Socket API",
+    "description":"Additional set of SignalR APIs",
+    "contacts":
+      [
+        {
+        "responsibleName":"Shweta Chatrola",
+        "responsibleEmail":"schatro@ra.rockwell.com"
+        }
+      ],
+    "versionNumber":"2.0.0",
+    "lastUpdate":"04/01/2018",
+    "availableAt":"InfoPlatform NuGet repository",
+    "coreComponent":false,
+    "tags": ["interface"],
+    "imagePath": "lib/images/plugins/plugins_icon_red.png ",
+    "imageAlt": "plugin icon"
+  }
+]

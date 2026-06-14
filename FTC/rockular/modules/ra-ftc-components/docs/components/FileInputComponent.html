@@ -1,0 +1,1230 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>@ra-wcftcloud/ra-ftc-components documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">@ra-wcftcloud/ra-ftc-components documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search">
+</div>
+            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>FileInputComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">API</a>
+        </li>
+        <li >
+            <a href="#readme" role="tab" id="readme-tab" data-toggle="tab" data-link="readme">Overview</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/file-input/file-input.component.ts</code>
+</p>
+
+
+    <p class="comment">
+        <h3>Extends</h3>
+    </p>
+    <p class="comment">
+            <code><a href="../miscellaneous/variables.html#_FileInputMixinBase" target="_self" >_FileInputMixinBase</a></code>
+    </p>
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code><a href="https://angular.io/api/core/OnDestroy" target="_blank" >OnDestroy</a></code>
+                <code>CanColor</code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+            <tr>
+                <td class="col-md-3">encapsulation</td>
+                <td class="col-md-9"><code>ViewEncapsulation.None</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>ra-ftc-file-input</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>file-input.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./file-input.component.html</code></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#_fileNames">_fileNames</a>
+                            </li>
+                            <li>
+                                <a href="#_files$">_files$</a>
+                            </li>
+                            <li>
+                                <a href="#_filesSubscription">_filesSubscription</a>
+                            </li>
+                            <li>
+                                <a href="#fileInput">fileInput</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#_clear">_clear</a>
+                            </li>
+                            <li>
+                                <a href="#_currentFiles">_currentFiles</a>
+                            </li>
+                            <li>
+                                <a href="#_isFileSelected">_isFileSelected</a>
+                            </li>
+                            <li>
+                                <a href="#_onFileInputChange">_onFileInputChange</a>
+                            </li>
+                            <li>
+                                <a href="#_openFileExplorer">_openFileExplorer</a>
+                            </li>
+                            <li>
+                                <a href="#_remove">_remove</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Inputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#allowedMimeTypes">allowedMimeTypes</a>
+                            </li>
+                            <li>
+                                <a href="#allowedMimeTypesHint">allowedMimeTypesHint</a>
+                            </li>
+                            <li>
+                                <a href="#appearance">appearance</a>
+                            </li>
+                            <li>
+                                <a href="#color">color</a>
+                            </li>
+                            <li>
+                                <a href="#disabled">disabled</a>
+                            </li>
+                            <li>
+                                <a href="#files">files</a>
+                            </li>
+                            <li>
+                                <a href="#label">label</a>
+                            </li>
+                            <li>
+                                <a href="#multiple">multiple</a>
+                            </li>
+                            <li>
+                                <a href="#removable">removable</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#disallowedFilesAdded">disallowedFilesAdded</a>
+                            </li>
+                            <li>
+                                <a href="#filesAdded">filesAdded</a>
+                            </li>
+                            <li>
+                                <a href="#filesChanged">filesChanged</a>
+                            </li>
+                            <li>
+                                <a href="#filesRemoved">filesRemoved</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(elementRef: <a href="https://angular.io/api/core/ElementRef" target="_blank">ElementRef</a>)</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>elementRef</td>
+                                                  
+                                                        <td>
+                                                                    <code><a href="https://angular.io/api/core/ElementRef" target="_blank" >ElementRef</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="allowedMimeTypes"></a>
+                        <code>allowedMimeTypes</code>
+                    </td>
+                    <td class="col-md-10">
+                        <div><p>Allowed file mime types to select.</p>
+</div>
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="allowedMimeTypesHint"></a>
+                        <code>allowedMimeTypesHint</code>
+                    </td>
+                    <td class="col-md-10">
+                        <div><p>Allowed file mime types hint visible to user.</p>
+</div>
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="appearance"></a>
+                        <code>appearance</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code>&quot;chips&quot; | &quot;input&quot;</code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>&#x27;chips&#x27;</code>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="color"></a>
+                        <code>color</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code>ThemePalette</code>
+
+                            </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="disabled"></a>
+                        <code>disabled</code>
+                    </td>
+                    <td class="col-md-10">
+                        <p>
+                            <em>Default value : </em><code>false</code>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="files"></a>
+                        <code>files</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="../interfaces/IFileInputFile.html" target="_self" >IFileInputFile[]</a></code>
+
+                            </p>
+                        <p>
+                            <em>Default value : </em><code>[]</code>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="label"></a>
+                        <code>label</code>
+                    </td>
+                    <td class="col-md-10">
+                            <p>
+                            <em>Type :</em>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                            </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="multiple"></a>
+                        <code>multiple</code>
+                    </td>
+                    <td class="col-md-10">
+                        <p>
+                            <em>Default value : </em><code>false</code>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="removable"></a>
+                        <code>removable</code>
+                    </td>
+                    <td class="col-md-10">
+                        <p>
+                            <em>Default value : </em><code>true</code>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+    <section>
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="disallowedFilesAdded"></a>
+                        <code>disallowedFilesAdded</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="filesAdded"></a>
+                        <code>filesAdded</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="filesChanged"></a>
+                        <code>filesChanged</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-2">
+                        <a name="filesRemoved"></a>
+                        <code>filesRemoved</code>
+                    </td>
+                    <td class="col-md-10">
+                        <em><code>$event</code> Type:</em>    <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+    <section>
+    
+        <h3 id="methods">
+            Methods
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_clear"></a>
+                        <span class="name">
+                            <b>
+                            _clear
+                            </b>
+                            <a href="#_clear"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>_clear(event: )</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Method to clear all selected files.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_currentFiles"></a>
+                        <span class="name">
+                            <b>
+                            _currentFiles
+                            </b>
+                            <a href="#_currentFiles"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>_currentFiles()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Method to get current files.
+Only for cases where there is a need to deeply clone and modify current source values.
+In other cases, where no modification is done, use directly this._files$.value.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_isFileSelected"></a>
+                        <span class="name">
+                            <b>
+                            _isFileSelected
+                            </b>
+                            <a href="#_isFileSelected"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>_isFileSelected(file: <a href="../interfaces/IFileInputFile.html">IFileInputFile</a>)</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>file</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/IFileInputFile.html" target="_self" >IFileInputFile</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_onFileInputChange"></a>
+                        <span class="name">
+                            <b>
+                            _onFileInputChange
+                            </b>
+                            <a href="#_onFileInputChange"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>_onFileInputChange(event: )</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Call back handler for input type file change event.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>event object emitted from element</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_openFileExplorer"></a>
+                        <span class="name">
+                            <b>
+                            _openFileExplorer
+                            </b>
+                            <a href="#_openFileExplorer"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>_openFileExplorer(event: )</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Method to open file explorer through click emulated on input type file.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>event</td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>event object emitted from element</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_remove"></a>
+                        <span class="name">
+                            <b>
+                            _remove
+                            </b>
+                            <a href="#_remove"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>_remove(file: <a href="../interfaces/IFileInputFile.html">IFileInputFile</a>)</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Method to remove one file object from files list.</p>
+</div>
+
+                            <div class="io-description">
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>file</td>
+                                                        <td>
+                                                                    <code><a href="../interfaces/IFileInputFile.html" target="_self" >IFileInputFile</a></code>
+                                                        </td>
+                                                    
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+
+                                                        <td>
+                                                                <code><p>File object to find and remove from files list.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                            <div>
+                            </div>
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                                <div class="io-description">
+                                    
+                                </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnDestroy"></a>
+                        <span class="name">
+                            <b>
+                            ngOnDestroy
+                            </b>
+                            <a href="#ngOnDestroy"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnDestroy()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ngOnInit"></a>
+                        <span class="name">
+                            <b>
+                            ngOnInit
+                            </b>
+                            <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+<code>ngOnInit()</code>
+                    </td>
+                </tr>
+
+
+
+
+                <tr>
+                    <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_fileNames"></a>
+                        <span class="name">
+                            <b>
+                            _fileNames
+                            </b>
+                            <a href="#_fileNames"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>_fileNames:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_files$"></a>
+                        <span class="name">
+                            <b>
+                            _files$
+                            </b>
+                            <a href="#_files$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>_files$:     <code><a href="../interfaces/IFileInputFile.html" target="_self" >BehaviorSubject&lt;IFileInputFile[]&gt;</a></code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code><a href="../interfaces/IFileInputFile.html" target="_self" >BehaviorSubject&lt;IFileInputFile[]&gt;</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_filesSubscription"></a>
+                        <span class="name">
+                            <b>
+                            _filesSubscription
+                            </b>
+                            <a href="#_filesSubscription"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>_filesSubscription:     <code>Subscription</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription</code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fileInput"></a>
+                        <span class="name">
+                            <b>
+                            fileInput
+                            </b>
+                            <a href="#fileInput"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <code>fileInput:     <code>ElementRef&lt;HTMLInputElement&gt;</code>
+</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>ElementRef&lt;HTMLInputElement&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Decorators : </i><code>ViewChild</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+    <div class="tab-pane fade " id="c-readme">
+        <p><p><code>&lt;ra-ftc-file-input&gt;</code> provides a file input component.</p>
+<h3 id="configuration">Configuration</h3>
+<p>File Input component takes 12 parameters</p>
+<div><pre class="line-numbers"><code class="language-html">&lt;ra-ftc-file-input
+    [appearance]=&quot;appearance&quot; &lt;!-- string, either &#39;chips&#39; or &#39;input&#39; --&gt;
+    [label]=&quot;label&quot; &lt;!-- string, label to describe the input field&#39;s purpose --&gt;
+    [color]=&quot;color&quot; &lt;!-- ThemePalette, either &#39;accent&#39;, &#39;warn&#39; or &#39;primary --&gt;
+    [multiple]=&quot;allowMultiple&quot; &lt;!-- boolean, true allows the input of more than just 1 file --&gt;
+    [files]=&quot;passedFiles&quot; &lt;!-- IFileInputFile[], array of files passed to the component  --&gt;
+    [allowedMimeTypes]=&quot;allowedMimeTypes&quot; &lt;!-- string, supported MIME types. Different types have to be comma separated. Unlike RFC2046 it supports wildcards such as image/* --&gt;
+    [allowedMimeTypesHint]=&quot;allowedMimeTypesHint&quot; &lt;!-- string, hint to allowed MIME types --&gt;
+    [disabled]=&quot;disabled&quot; &lt;!-- boolean, if true disables the input field --&gt;
+    (filesAdded)=&quot;onFilesAdded($event)&quot; &lt;!-- event listener, fires when a file is added   --&gt;
+    (filesRemoved)=&quot;onFilesRemoved($event)&quot; &lt;!-- event listener, fires when a file is removed --&gt;
+    (filesChanged)=&quot;onFilesChanged($event)&quot; &lt;!-- event listener, fires when a file is changed (only works when multiple === true) --&gt;
+    (disallowedFilesAdded)=&quot;onDisallowedFilesAdded($event)&quot;&gt; &lt;!-- event listener, fires when a user attempts to add a disallowed file type --&gt;
+&lt;/ra-ftc-file-input&gt;</code></pre></div><h3 id="interfaces">Interfaces</h3>
+<div><pre class="line-numbers"><code class="language-typescript">interface IFileInputFile {
+    name: string;
+    size?: number;
+    lastModified?: number; // this is not available on IE 11
+    lastModifiedDate?: Date;
+    type?: string;
+}</code></pre></div><h3 id="examples">Examples</h3>
+<h4 id="simple-example-showing-image-in-its-original-size-in-the-top-right-corner-of-its-outer-container">Simple example showing image in its original size in the top-right corner of its outer container</h4>
+<div><pre class="line-numbers"><code class="language-typescript">...
+passedFiles: IFileInputFile[] = [{ name: &#39;testA.jpg&#39; }];
+appearance = &#39;chips&#39;;
+label = &#39;Label&#39;;
+color: ThemePalette = &#39;accent&#39;;
+disabled = false;
+allowMultiple = false;
+allowedMimeTypes = &#39;image/*&#39;;
+allowedMimeTypesHint = &#39;Only image files are supported&#39;;
+
+onFilesChanged(f: IFileInputFile[]) {
+    console.log(f);
+}
+
+onFilesAdded(f: IFileInputFile[]) {
+    console.log(f);
+}
+
+onFilesRemoved(f: IFileInputFile[]) {
+    console.log(f);
+}
+
+onDisallowedFilesAdded(f: IFileInputFile[]) {
+    console.log(f);
+}
+...</code></pre></div><div><pre class="line-numbers"><code class="language-html">&lt;div fxLayout=&quot;column&quot; fxFlex=&quot;0 0 100%&quot;&gt;
+  &lt;h3&gt;File Input Component&lt;/h3&gt;
+  &lt;div fxLayout=&quot;row&quot; fxFlex=&quot;0 0 auto&quot;&gt;
+    &lt;div fxFlex=&quot;0 0 20%&quot;&gt;&lt;/div&gt;
+    &lt;div fxFlex=&quot;0 0 60%&quot; fxLayout=&quot;column&quot;&gt;
+      &lt;ra-ftc-file-input [appearance]=&quot;appearance&quot; [label]=&quot;label&quot; [color]=&quot;color&quot; [multiple]=&quot;allowMultiple&quot; 
+        [files]=&quot;passedFiles&quot; 
+        [allowedMimeTypes]=&quot;allowedMimeTypes&quot; 
+        [allowedMimeTypesHint]=&quot;allowedMimeTypesHint&quot;
+        [disabled]=&quot;disabled&quot;
+        (filesAdded)=&quot;onFilesAdded($event)&quot;
+        (filesRemoved)=&quot;onFilesRemoved($event)&quot;
+        (filesChanged)=&quot;onFilesChanged($event)&quot;
+        (disallowedFilesAdded)=&quot;onDisallowedFilesAdded($event)&quot;&gt;&lt;/ra-ftc-file-input&gt;
+    &lt;/div&gt;
+    &lt;div fxFlex=&quot;0 0 20%&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div></p>
+    </div>
+
+
+
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div fxflex="0 0 100%" fxLayout="row" fxLayoutAlign="start stretch">  <input type="file" #fileInput (change)="_onFileInputChange($event)" [multiple]="multiple" [disabled]="disabled" style="display: none;"/>  <div *ngIf="appearance === \'input\'" fxFlex="0 0 100%" fxLayout="row" fxLayoutAlign="start stretch">    <mat-form-field [color]="color" fxFlex="0 0 100%" fxLayout="column">      <mat-label>{{ label || \'RA_FTC_COMPONENTS.RA_FTC_FILE_INPUT.DEFAULT_LABEL\' + (multiple ? \'_MULTIPLE\' : \'\') | translate}}</mat-label>      <input type="text" matInput readonly [ngClass]="{\'clickable\': !disabled}"        [disabled]="disabled"        [ngModel]="_fileNames" value="" (dblclick)="_openFileExplorer($event)" [matTooltip]="_fileNames" />      <mat-hint *ngIf="allowedMimeTypesHint && allowedMimeTypes" [translate]="allowedMimeTypesHint"></mat-hint>      <mat-hint *ngIf="!allowedMimeTypesHint && allowedMimeTypes" [translate]="\'RA_FTC_COMPONENTS.RA_FTC_FILE_INPUT.ALLOWED_MIME_TYPE_LIMIT\' + (multiple ? \'_MULTIPLE\' : \'\')" [translateParams]="{allowedMimeTypes: allowedMimeTypes}"></mat-hint>          <div fxFlex fxLayout="row" matSuffix>        <button *ngIf="removable" mat-icon-button [color]="color" [disabled]="disabled || !_files$.value.length" (click)="_clear($event)"          [matTooltip]="\'RA_FTC_COMPONENTS.RA_FTC_FILE_INPUT.CLEAR_FILE_TOOLTIP\' | translate" matTooltipPosition="below">          <mat-icon>clear</mat-icon>        </button>        <button mat-icon-button [color]="color" (click)="_openFileExplorer($event)" [disabled]="disabled" [matTooltip]="\'RA_FTC_COMPONENTS.RA_FTC_FILE_INPUT.SELECT_FILE_TOOLTIP\' | translate"          matTooltipPosition="below">          <mat-icon>open_in_new</mat-icon>        </button>      </div>    </mat-form-field>  </div>  <div *ngIf="appearance === \'chips\'" fxFlex="1 1 auto" fxLayout="row" fxLayoutAlign="start stretch">    <mat-form-field appearance="standard" [color]="color" fxFlex="0 0 100%" fxLayout="column" fxLayoutAlign="start stretch">      <mat-label>{{ label || \'RA_FTC_COMPONENTS.RA_FTC_FILE_INPUT.DEFAULT_LABEL\' + (multiple ? \'_MULTIPLE\' : \'\') | translate}}</mat-label>      <mat-chip-list #chipList fxFlex>        <mat-chip *ngFor="let file of _files$.value" [color]="color" selectable="false" [disabled]="disabled" [removable]="removable && !disabled" (removed)="_remove(file)">          {{file.name}}          <mat-icon class="remove-icon" [ngClass]="{\'disabled\': disabled}" matChipRemove *ngIf="removable">cancel</mat-icon>        </mat-chip>        <input matInput readonly [matChipInputFor]="chipList" [ngClass]="{\'clickable\': !disabled}" (dblclick)="_openFileExplorer($event)"          [disabled]="disabled" />        <button matSuffix mat-icon-button [color]="color" (click)="_openFileExplorer($event)" [disabled]="disabled" [matTooltip]="\'RA_FTC_COMPONENTS.RA_FTC_FILE_INPUT.SELECT_FILE_TOOLTIP\' | translate"          matTooltipPosition="below">          <mat-icon>open_in_new</mat-icon>        </button>      </mat-chip-list>      <mat-hint *ngIf="allowedMimeTypesHint && allowedMimeTypes" [translate]="allowedMimeTypesHint"></mat-hint>      <mat-hint *ngIf="!allowedMimeTypesHint && allowedMimeTypes" [translate]="\'RA_FTC_COMPONENTS.RA_FTC_FILE_INPUT.ALLOWED_MIME_TYPE_LIMIT\' + (multiple ? \'_MULTIPLE\' : \'\')" [translateParams]="{allowedMimeTypes: allowedMimeTypes}"></mat-hint>    </mat-form-field>  </div></div></div>'
+    var COMPONENTS = [{'name': 'BreadcrumbComponent', 'selector': 'ra-ftc-breadcrumb'},{'name': 'DatetimePickerComponent', 'selector': 'ra-ftc-datetime-picker'},{'name': 'DialogMessageComponent', 'selector': 'ra-ftc-dialog-message'},{'name': 'ExpansionPanel', 'selector': 'ra-ftc-expansion-panel'},{'name': 'ExpansionPanelHeader', 'selector': 'ra-ftc-expansion-panel-header'},{'name': 'ExpansionToolPanelComponent', 'selector': 'ra-ftc-expansion-tool-panel'},{'name': 'FileInputComponent', 'selector': 'ra-ftc-file-input'},{'name': 'IconPickerComponent', 'selector': 'ra-ftc-icon-picker'},{'name': 'IconPickerPopupContentComponent', 'selector': 'ra-ftc-icon-picker-popup-content'},{'name': 'LabelComponent', 'selector': 'ra-ftc-label'},{'name': 'MapComponent', 'selector': 'ra-ftc-map'},{'name': 'NavbarContextMenuComponent', 'selector': 'ra-ftc-navbar-context-menu'},{'name': 'PaletteColorPickerComponent', 'selector': 'ra-ftc-palette-color-picker'},{'name': 'PaletteColorPickerPopupContentComponent', 'selector': 'ra-ftc-palette-colorpicker-popup-content'},{'name': 'RasterImageComponent', 'selector': 'ra-ftc-raster-image'},{'name': 'SimpleIconPickerComponent', 'selector': 'ra-ftc-simple-icon-picker'},{'name': 'SimplePaletteColorPickerComponent', 'selector': 'ra-ftc-simple-palette-color-picker'},{'name': 'SimpleStandardColorPickerComponent', 'selector': 'ra-ftc-simple-standard-color-picker'},{'name': 'StandardColorPickerComponent', 'selector': 'ra-ftc-standard-color-picker'},{'name': 'StandardColorPickerPopupContentComponent', 'selector': 'ra-ftc-standard-colorpicker-popup-content'},{'name': 'StringValuePickerComponent', 'selector': 'ra-ftc-string-value-picker'},{'name': 'TruncateComponent', 'selector': 'ra-ftc-truncate'},{'name': 'ValuePickerContentComponent', 'selector': 'ra-ftc-value-picker-content'},{'name': 'ValueTableComponent', 'selector': 'ra-ftc-value-table'},{'name': 'ValueTitleComponent', 'selector': 'ra-ftc-value-title'},{'name': 'VerticalIconNavbarComponent', 'selector': 'ra-ftc-vertical-icon-navbar'}];
+    var DIRECTIVES = [{'name': 'Accordion', 'selector': 'ra-ftc-accordion'},{'name': 'ExpansionPanelActionRow', 'selector': 'ra-ftc-action-row'},{'name': 'ExpansionPanelContent', 'selector': 'ng-template[ExpansionPanelContent]'},{'name': 'ExpansionPanelHeaderContent', 'selector': 'ra-ftc-panel-header-content'},{'name': 'ExpansionPanelHeaderDescription', 'selector': 'ra-ftc-panel-header-description'},{'name': 'ExpansionPanelHeaderTitle', 'selector': 'ra-ftc-panel-header-title'},{'name': 'NavbarLabelWrapperDirective', 'selector': 'mat-toolbar-row[navbarLabelWrapper]'}];
+    var ACTUAL_COMPONENT = {'name': 'FileInputComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'FileInputComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <script src="../js/menu-wc.js"></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
