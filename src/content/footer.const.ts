@@ -3,7 +3,7 @@ import { FooterDescriptionItem } from '../models/footer-description.model';
 export const FOOTER_DESCRIPTORS: FooterDescriptionItem[] = [
   {
     id: 'footer-desc-1',
-    text: "This site is not a wordpress template, nor it is a so called 'dope' Wix site. It has been built from scratch using HTML, SASS, React, Vite and of course, Typescript as a superset to Javascript. The cascaded styling was developed with the use of BEM methodology.",
+    text: "This site is not a wordpress template, nor it is a so called 'dope' Wix site. It has been built from scratch using HTML, SCSS, React 19, Vite 8 and of course, TypeScript 6 as a superset to Javascript. The cascaded styling was developed with the use of BEM methodology.",
   },
   {
     id: 'footer-desc-2',
@@ -15,6 +15,6 @@ export const FOOTER_DESCRIPTORS: FooterDescriptionItem[] = [
   },
   {
     id: 'footer-desc-4',
-    text: '© 2023 All right reserved.',
+    text: '© 2026 All rights reserved.',
   },
 ];
