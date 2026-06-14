@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './FeatureDownload.module.scss';
 import { FaRegFilePdf } from 'react-icons/fa';
 import { IoArrowForward, IoArrowDown } from 'react-icons/io5';
+import ResumePDF from '../../../assets/pdfs/AttilaHazay_Resume_2026.pdf';
 
 const FeatureDownload: React.FC<{ className?: string }> = ({ className }) => {
   return (
@@ -35,10 +36,7 @@ const FeatureDownload: React.FC<{ className?: string }> = ({ className }) => {
             />
           </div>
           <div className={classes['ah-c-feature-download__pdf-container']}>
-            <a
-              href="../../../../src/assets/pdfs/AttilaHazay_Resume_2023_oct.pdf"
-              download
-            >
+            <a href={ResumePDF} download="AttilaHazay_Resume_2026.pdf">
               <FaRegFilePdf />
             </a>
           </div>
