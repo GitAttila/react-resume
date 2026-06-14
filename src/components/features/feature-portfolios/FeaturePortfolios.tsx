@@ -28,7 +28,7 @@ export default function FeaturePortfolios(props: FeaturePortfoliosProps) {
   const cards = props.cards || [];
   const [filteredCards, setFilteredCards] =
     useState<PortfolioCardContent<CertificateFilterKeys | ProjectFilterKeys>[]>(
-      cards
+      cards,
     );
 
   const buttonGroupClickHandler = (id: string) => {
@@ -37,7 +37,13 @@ export default function FeaturePortfolios(props: FeaturePortfoliosProps) {
       ? id.split('--')[idFragmentsCount - 1]
       : ('' as CertificateFilterKeys | ProjectFilterKeys);
     let filtered =
-      cards.filter(card => !!card.keys.find(cardKey => cardKey === key)) || [];
+      cards.filter(
+        card =>
+          !!card.keys.find(
+            cardKey =>
+              cardKey === (key as CertificateFilterKeys | ProjectFilterKeys),
+          ),
+      ) || [];
     filtered = key.includes('all') ? cards : filtered;
     setFilteredCards(filtered);
   };

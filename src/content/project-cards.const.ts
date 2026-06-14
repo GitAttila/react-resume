@@ -37,6 +37,7 @@ import FTCWebSite from '../assets/images/projects/FTC_site/AH_project_FTC_site_0
 import EmbLogo from '../assets/images/projects/embitron-logo-white.png';
 import EmbImage from '../assets/images/projects/embitron/embitron1.png';
 import MyResumeImage from '../assets/images/projects/resume/my-resume_1.png';
+import ZodiacFontsImage from '../assets/images/projects/zodiacfonts/zf-overview-light.png';
 
 // must have double hyphens in LinkIcon id for later parsing
 export const PROJECT_CARDS: PortfolioCardContent<ProjectFilterKeys>[] = [
@@ -313,6 +314,19 @@ export const PROJECT_CARDS: PortfolioCardContent<ProjectFilterKeys>[] = [
     keys: [ProjectFilterKeys.REACT_DEVELOPMENT],
     galleryIcon: {
       id: `id-project-gallery-icon--${LightboxKeys.PROJECT_MY_RESUME}`,
+      caption: '',
+      icon: IoImagesOutline,
+    },
+  },
+  {
+    type: CardContentType.PROJECT,
+    logo: AHstudioLogo,
+    image: ZodiacFontsImage,
+    title: 'ZodiacFonts',
+    keys: [ProjectFilterKeys.ANGULAR_DEVELOPMENT, ProjectFilterKeys.UX_DESIGN],
+    linkIcon: null,
+    galleryIcon: {
+      id: `id-project-gallery-icon--${LightboxKeys.PROJECT_ZODIAC_FONTS}`,
       caption: '',
       icon: IoImagesOutline,
     },

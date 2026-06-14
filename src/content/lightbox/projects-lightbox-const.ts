@@ -137,6 +137,17 @@ import MyResume2 from '../../assets/images/projects/resume/my-resume_2.png';
 import MyResume3 from '../../assets/images/projects/resume/my-resume_3.png';
 import MyResume4 from '../../assets/images/projects/resume/my-resume_4.png';
 import MyResume5 from '../../assets/images/projects/resume/my-resume_5.png';
+import ZodiacFontsWire1 from '../../assets/images/projects/zodiacfonts/zodiac-fonts-landing.png';
+import ZodiacFontsWire2 from '../../assets/images/projects/zodiacfonts/zodiac-fonts-categories.png';
+import ZodiacFontsWire3 from '../../assets/images/projects/zodiacfonts/zodiac-fonts-licensing-free.png';
+import ZodiacFontsWire4 from '../../assets/images/projects/zodiacfonts/zodiac-fonts-landing-footer.png';
+import ZodiacFontsWire5 from '../../assets/images/projects/zodiacfonts/zodiac-fonts-landing-toast-premium.png';
+import ZodiacFonts1 from '../../assets/images/projects/zodiacfonts/zf-overview-light.png';
+import ZodiacFonts2 from '../../assets/images/projects/zodiacfonts/zf-overview-menu.png';
+import ZodiacFonts3 from '../../assets/images/projects/zodiacfonts/zf-overview-categorize.png';
+import ZodiacFonts4 from '../../assets/images/projects/zodiacfonts/zf-licensing.png';
+import ZodiacFonts5 from '../../assets/images/projects/zodiacfonts/zf-documentation.png';
+import ZodiacFonts6 from '../../assets/images/projects/zodiacfonts/zf-footer.png';
 
 export const SLIDES_PROJECT_ASTRO_CHARTING = [
   {
@@ -748,5 +759,52 @@ export const SLIDES_PROJECT_MY_RESUME = [
   {
     src: MyResume5,
     alt: 'Attila Hazay resume',
+  },
+];
+
+export const SLIDES_PROJECT_ZODIAC_FONTS = [
+  {
+    src: ZodiacFontsWire1,
+    alt: 'ZodiacFonts wireframe — landing page',
+  },
+  {
+    src: ZodiacFontsWire2,
+    alt: 'ZodiacFonts wireframe — categories',
+  },
+  {
+    src: ZodiacFontsWire3,
+    alt: 'ZodiacFonts wireframe — licensing (free)',
+  },
+  {
+    src: ZodiacFontsWire4,
+    alt: 'ZodiacFonts wireframe — landing footer',
+  },
+  {
+    src: ZodiacFontsWire5,
+    alt: 'ZodiacFonts wireframe — premium toast',
+  },
+  {
+    src: ZodiacFonts1,
+    alt: 'ZodiacFonts overview (light theme)',
+  },
+  {
+    src: ZodiacFonts3,
+    alt: 'ZodiacFonts categorize (dark theme)',
+  },
+  {
+    src: ZodiacFonts2,
+    alt: 'ZodiacFonts menu (dark theme)',
+  },
+  {
+    src: ZodiacFonts4,
+    alt: 'ZodiacFonts licensing (dark theme)',
+  },
+  {
+    src: ZodiacFonts5,
+    alt: 'ZodiacFonts documentation (dark theme)',
+  },
+  {
+    src: ZodiacFonts6,
+    alt: 'ZodiacFonts footer (dark theme)',
   },
 ];
