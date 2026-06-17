@@ -4,18 +4,6 @@ import { SiVite, SiSass, SiTypescript } from 'react-icons/si';
 
 export const TECH_LINKS_LIST: Link[] = [
   {
-    id: 'html-logo',
-    icon: IoLogoHtml5,
-    caption: 'HTML5',
-    link: 'https://github.com/whatwg/html',
-  },
-  {
-    id: 'scss-logo',
-    icon: SiSass,
-    caption: 'SCSS',
-    link: 'https://sass-lang.com/',
-  },
-  {
     id: 'react-logo',
     icon: IoLogoReact,
     caption: 'React',
@@ -32,5 +20,17 @@ export const TECH_LINKS_LIST: Link[] = [
     icon: SiVite,
     caption: 'Vite',
     link: 'https://vitejs.dev/',
+  },
+  {
+    id: 'html-logo',
+    icon: IoLogoHtml5,
+    caption: 'HTML5',
+    link: 'https://github.com/whatwg/html',
+  },
+  {
+    id: 'scss-logo',
+    icon: SiSass,
+    caption: 'SCSS',
+    link: 'https://sass-lang.com/',
   },
 ];
