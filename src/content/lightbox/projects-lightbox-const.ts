@@ -132,11 +132,21 @@ import Emb5 from '../../assets/images/projects/embitron/embitron5.png';
 import Emb6 from '../../assets/images/projects/embitron/embitron6.png';
 import Emb7 from '../../assets/images/projects/embitron/embitron7.png';
 import Emb8 from '../../assets/images/projects/embitron/embitron8.png';
-import MyResume1 from '../../assets/images/projects/resume/my-resume_1.png';
-import MyResume2 from '../../assets/images/projects/resume/my-resume_2.png';
-import MyResume3 from '../../assets/images/projects/resume/my-resume_3.png';
-import MyResume4 from '../../assets/images/projects/resume/my-resume_4.png';
-import MyResume5 from '../../assets/images/projects/resume/my-resume_5.png';
+import RMUILib1 from '../../assets/images/projects/rmui-library/RMUI_lib_1.png';
+import RMUILib2 from '../../assets/images/projects/rmui-library/RMUI_lib_2.png';
+import RMUILib3 from '../../assets/images/projects/rmui-library/RMUI_lib_3.png';
+import RMUILib4 from '../../assets/images/projects/rmui-library/RMUI_lib_4.png';
+import RMUILib5 from '../../assets/images/projects/rmui-library/RMUI_lib_5.png';
+import RMUILib6 from '../../assets/images/projects/rmui-library/RMUI_lib_6.png';
+import RMUILib7 from '../../assets/images/projects/rmui-library/RMUI_lib_7.png';
+import RMUILib8 from '../../assets/images/projects/rmui-library/RMUI_lib_8.png';
+import RMUILib9 from '../../assets/images/projects/rmui-library/RMUI_lib_9.png';
+import RMPricingWire1 from '../../assets/images/projects/RM-pricing/RM_ETD_wireframe_1.png';
+import RMPricingWire2 from '../../assets/images/projects/RM-pricing/RM_ETD_wireframe_2.png';
+import RMPricingWire3 from '../../assets/images/projects/RM-pricing/RM_ETD_wireframe_3.png';
+import RMPricing1 from '../../assets/images/projects/RM-pricing/RM_ETD_1.png';
+import RMPricing2 from '../../assets/images/projects/RM-pricing/RM_ETD_2.png';
+import RMPricing3 from '../../assets/images/projects/RM-pricing/RM_ETD_3.png';
 import ZodiacFontsWire1 from '../../assets/images/projects/zodiacfonts/zodiac-fonts-landing.png';
 import ZodiacFontsWire2 from '../../assets/images/projects/zodiacfonts/zodiac-fonts-categories.png';
 import ZodiacFontsWire3 from '../../assets/images/projects/zodiacfonts/zodiac-fonts-licensing-free.png';
@@ -739,27 +749,25 @@ export const SLIDES_PROJECT_EMB = [
   },
 ];
 
-export const SLIDES_PROJECT_MY_RESUME = [
-  {
-    src: MyResume1,
-    alt: 'Attila Hazay resume',
-  },
-  {
-    src: MyResume2,
-    alt: 'Attila Hazay resume',
-  },
-  {
-    src: MyResume3,
-    alt: 'Attila Hazay resume',
-  },
-  {
-    src: MyResume4,
-    alt: 'Attila Hazay resume',
-  },
-  {
-    src: MyResume5,
-    alt: 'Attila Hazay resume',
-  },
+export const SLIDES_PROJECT_RMUI_LIBRARY = [
+  { src: RMUILib1, alt: 'RMUI library image 1' },
+  { src: RMUILib2, alt: 'RMUI library image 2' },
+  { src: RMUILib3, alt: 'RMUI library image 3' },
+  { src: RMUILib4, alt: 'RMUI library image 4' },
+  { src: RMUILib5, alt: 'RMUI library image 5' },
+  { src: RMUILib6, alt: 'RMUI library image 6' },
+  { src: RMUILib7, alt: 'RMUI library image 7' },
+  { src: RMUILib8, alt: 'RMUI library image 8' },
+  { src: RMUILib9, alt: 'RMUI library image 9' },
+];
+
+export const SLIDES_PROJECT_RM_PRICING = [
+  { src: RMPricingWire1, alt: 'Risk Monitor Pricing — wireframe 1' },
+  { src: RMPricingWire2, alt: 'Risk Monitor Pricing — wireframe 2' },
+  { src: RMPricingWire3, alt: 'Risk Monitor Pricing — wireframe 3' },
+  { src: RMPricing1, alt: 'Risk Monitor Pricing — app screenshot 1' },
+  { src: RMPricing2, alt: 'Risk Monitor Pricing — app screenshot 2' },
+  { src: RMPricing3, alt: 'Risk Monitor Pricing — app screenshot 3' },
 ];
 
 export const SLIDES_PROJECT_ZODIAC_FONTS = [

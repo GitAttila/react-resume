@@ -20,7 +20,6 @@ const useScrollIntersection = <T extends Element>(): [
     const offset = window.innerHeight / 2;
     const observer = new IntersectionObserver(
       ([entry]) => {
-        console.log(ref.current, entry.isIntersecting);
         setIsIntersecting(entry.isIntersecting);
       },
       { rootMargin: `-${offset}px` },

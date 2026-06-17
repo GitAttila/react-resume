@@ -36,11 +36,58 @@ import FTCManage from '../assets/images/projects/FTC_Manage/AH_project_FTC_manag
 import FTCWebSite from '../assets/images/projects/FTC_site/AH_project_FTC_site_01.jpg';
 import EmbLogo from '../assets/images/projects/embitron-logo-white.png';
 import EmbImage from '../assets/images/projects/embitron/embitron1.png';
-import MyResumeImage from '../assets/images/projects/resume/my-resume_1.png';
 import ZodiacFontsImage from '../assets/images/projects/zodiacfonts/zf-overview-light.png';
+import ZodiacFontsLogo from '../assets/images/projects/zf-logo-white.png';
+import RMLogo from '../assets/images/projects/RM-tagline-1-white.svg';
+import RMUILibImage from '../assets/images/projects/rmui-library/RMUI_lib_1.png';
+import RMPricingImage from '../assets/images/projects/RM-pricing/RM_ETD_wireframe_1.png';
 
 // must have double hyphens in LinkIcon id for later parsing
 export const PROJECT_CARDS: PortfolioCardContent<ProjectFilterKeys>[] = [
+  {
+    type: CardContentType.PROJECT,
+    logo: RMLogo,
+    image: RMUILibImage,
+    title: 'RMUI Component Library',
+    keys: [ProjectFilterKeys.ANGULAR_DEVELOPMENT, ProjectFilterKeys.UX_DESIGN],
+    linkIcon: null,
+    galleryIcon: {
+      id: `id-project-gallery-icon--${LightboxKeys.PROJECT_RMUI_LIBRARY}`,
+      caption: '',
+      icon: IoImagesOutline,
+    },
+  },
+  {
+    type: CardContentType.PROJECT,
+    logo: RMLogo,
+    image: RMPricingImage,
+    title: 'Risk Monitor Pricing',
+    keys: [ProjectFilterKeys.ANGULAR_DEVELOPMENT, ProjectFilterKeys.UX_DESIGN],
+    linkIcon: null,
+    galleryIcon: {
+      id: `id-project-gallery-icon--${LightboxKeys.PROJECT_RM_PRICING}`,
+      caption: '',
+      icon: IoImagesOutline,
+    },
+  },
+  {
+    type: CardContentType.PROJECT,
+    logo: ZodiacFontsLogo,
+    image: ZodiacFontsImage,
+    title: 'ZodiacFonts',
+    keys: [ProjectFilterKeys.ANGULAR_DEVELOPMENT, ProjectFilterKeys.UX_DESIGN],
+    linkIcon: {
+      id: 'id-project-link--zodiac-fonts',
+      caption: '',
+      link: 'https://www.zodiacfonts.com',
+      icon: IoOpenOutline,
+    },
+    galleryIcon: {
+      id: `id-project-gallery-icon--${LightboxKeys.PROJECT_ZODIAC_FONTS}`,
+      caption: '',
+      icon: IoImagesOutline,
+    },
+  },
   {
     type: CardContentType.PROJECT,
     logo: EmbLogo,
@@ -302,31 +349,6 @@ export const PROJECT_CARDS: PortfolioCardContent<ProjectFilterKeys>[] = [
     keys: [ProjectFilterKeys.GRAPHICS_DESIGN],
     galleryIcon: {
       id: `id-project-gallery-icon--${LightboxKeys.PROJECT_RA_MERCHENDISE}`,
-      caption: '',
-      icon: IoImagesOutline,
-    },
-  },
-  {
-    type: CardContentType.PROJECT,
-    logo: AHstudioLogo,
-    image: MyResumeImage,
-    title: 'My Resume',
-    keys: [ProjectFilterKeys.REACT_DEVELOPMENT],
-    galleryIcon: {
-      id: `id-project-gallery-icon--${LightboxKeys.PROJECT_MY_RESUME}`,
-      caption: '',
-      icon: IoImagesOutline,
-    },
-  },
-  {
-    type: CardContentType.PROJECT,
-    logo: AHstudioLogo,
-    image: ZodiacFontsImage,
-    title: 'ZodiacFonts',
-    keys: [ProjectFilterKeys.ANGULAR_DEVELOPMENT, ProjectFilterKeys.UX_DESIGN],
-    linkIcon: null,
-    galleryIcon: {
-      id: `id-project-gallery-icon--${LightboxKeys.PROJECT_ZODIAC_FONTS}`,
       caption: '',
       icon: IoImagesOutline,
     },
