@@ -8,7 +8,7 @@ export const EXPERIENCE_LIST: FeatureTimelineItem[] = [
     subtitle: 'Angular developer / UX designer',
     keys: ['financial risk management'],
     description:
-      'Leading the design of the risk monitoring tool within Deutsche Boerse’s Risk Management workflows, while collaborating on the front-end development using Angular to enhance user experience and functionality.',
+      "Leading UX design and front-end development of a risk monitoring tool within Deutsche Boerse's Risk Management workflows. Closely collaborating with key stakeholders — Risk Managers from EUREX (Frankfurt) and the Energy Exchange (Leipzig) — to translate domain expertise into precise, functional interface solutions using Angular.",
   },
   {
     id: 'experience-5',
@@ -17,7 +17,7 @@ export const EXPERIENCE_LIST: FeatureTimelineItem[] = [
     subtitle: 'Software engineer: Angular and React',
     keys: ['cyber security'],
     description:
-      'Taking part in the development of SentinelOne’s XDR platform including mobile solution via third party mobile integration Javascript frameworks and libraries: Angular and React.',
+      "Contributed to the development of SentinelOne's XDR cybersecurity platform, including mobile integration solutions built with Angular and React.",
   },
   {
     id: 'experience-4',
@@ -26,7 +26,7 @@ export const EXPERIENCE_LIST: FeatureTimelineItem[] = [
     subtitle: 'Senior Angular developer',
     keys: ['medical'],
     description:
-      'Front-end development and UX design of an application for pacemaker implants and patient follow-ups.',
+      'Led UX design and front-end development of a clinical iPad application used in live pacemaker implant procedures. Produced high-fidelity prototypes in Figma before implementing the solution in Angular, with bespoke D3.js visualisations to support real-time patient data display during surgery.',
   },
   {
     id: 'experience-3',
@@ -34,7 +34,8 @@ export const EXPERIENCE_LIST: FeatureTimelineItem[] = [
     title: 'TeamIT (for Komerční banka)',
     subtitle: 'Front-end software engineer',
     keys: ['investment banking'],
-    description: 'Development of Investment Banking application using Angular.',
+    description:
+      "Lead front-end developer on an investment banking application, delivering scalable Angular solutions for Komerční banka's digital infrastructure.",
   },
   {
     id: 'experience-2',
@@ -43,7 +44,7 @@ export const EXPERIENCE_LIST: FeatureTimelineItem[] = [
     subtitle: 'Front-end software engineer and UX designer.',
     keys: ['medical'],
     description:
-      'Part of an agile team developing application for Medtronic with use of Angular and charting libraries. Taking the lead in the UX design of the heart monitoring application.',
+      'Part of an agile team delivering a Holter heart-monitoring application for Medtronic using Angular and charting libraries, while leading its end-to-end UX design.',
   },
   {
     id: 'experience-1',
@@ -52,6 +53,6 @@ export const EXPERIENCE_LIST: FeatureTimelineItem[] = [
     subtitle: 'Front-end software engineer and UX designer.',
     keys: ['industrial automation'],
     description:
-      'Taking part in development of cloud solution within industrial automation field using Angular and Typescript. Visually designing cloud application and its workflows for industrial automation.',
+      'Contributed to a cloud-based industrial automation platform using Angular and TypeScript, while leading the visual and UX design of its workflows and interfaces.',
   },
 ];
