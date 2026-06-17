@@ -79,7 +79,39 @@ All images are **statically imported** in TypeScript files and processed through
 
 ---
 
-## 🚀 Getting Started
+## � Image Optimisation
+
+Image optimisation is a **two-step process** — a one-time resize pass on source files, plus automatic quality compression at every build.
+
+### Step 1 — Resize source images (run once per batch of new images)
+
+```bash
+npm run optimize:images
+```
+
+Runs `scripts/optimize-images.mjs` using [sharp](https://sharp.pixelplumbing.com/). It walks the entire `src/assets/images/` directory and resizes any image whose width **or** height exceeds **1920 px** — whichever axis is larger is capped, and the other is scaled proportionally so aspect ratio is always preserved:
+
+| Original (landscape) | After                            |
+| -------------------- | -------------------------------- |
+| 3840 × 2160          | 1920 × 1080                      |
+| 1920 × 1080          | unchanged (already within limit) |
+
+| Original (portrait) | After      |
+| ------------------- | ---------- |
+| 1200 × 3000         | 768 × 1920 |
+| 800 × 1200          | unchanged  |
+
+Images already within the 1920 px limit are skipped. **Run this script whenever a batch of new, potentially large screenshots is added to the project, then commit the resized files.**
+
+### Step 2 — Quality compression at build time (automatic)
+
+`vite-plugin-image-optimizer` (configured in `vite.config.ts`) runs automatically during `npm run build` and applies **quality 80** lossy compression to every PNG, JPEG, and JPG that Vite processes. No extra steps needed.
+
+Combined, the two steps typically achieve **70–85 % total file-size reduction** compared to unprocessed originals.
+
+---
+
+## �🚀 Getting Started
 
 ### Prerequisites
 
