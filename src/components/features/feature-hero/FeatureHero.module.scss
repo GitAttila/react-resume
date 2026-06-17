@@ -21,9 +21,12 @@
           position: absolute;
           z-index: 2;
           bottom: 0;
-          width: 60%;
           color: vars.$ah-white;
           margin-bottom: 7rem;
+          width: 60%;
+          @include responsive.breakpoint(sm) {
+            width: 90%;
+          }
         }
         &__title {
           font-size: 3.8rem;
@@ -71,9 +74,38 @@
         height: 100%;
         width: 100%;
         margin: auto;
+        @include responsive.breakpoint(sm) {
+          justify-content: flex-start;
+          padding-top: 6rem;
+        }
+        &__avatar {
+          height: 14rem;
+          border-radius: 14rem;
+          margin-bottom: 2.4rem;
+          background-color: rgba(vars.$ah-white, 0.15);
+          backdrop-filter: blur(vars.$ah-backdrop-blur);
+          @include responsive.breakpoint(md) {
+            height: 16rem;
+            border-radius: 16rem;
+          }
+          @include responsive.breakpoint(sm) {
+            height: 12rem;
+            border-radius: 12rem;
+            order: -1;
+          }
+        }
+        &__image-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          @include responsive.breakpoint(sm) {
+            flex-direction: column;
+          }
+        }
         &__image {
           width: 50%;
-          max-width: 64rem;
+          max-width: 56rem;
           @include responsive.breakpoint(md) {
             width: 67%;
           }
@@ -84,11 +116,14 @@
         &__title {
           color: vars.$ah-white;
           font-size: 5.6rem;
+          text-align: center;
           @include responsive.breakpoint(md) {
-            font-size: 3.8rem;
+            font-size: 3rem;
+            margin: 1rem 0;
           }
           @include responsive.breakpoint(sm) {
-            font-size: 2.4rem;
+            font-size: 2rem;
+            margin: 0.5rem 0;
           }
         }
       }

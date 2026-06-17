@@ -38,13 +38,14 @@ import {
   SLIDES_PROJECT_KE_WEB,
   SLIDES_PROJECT_MDT_HOLTER,
   SLIDES_PROJECT_MDT_SCYNC,
-  SLIDES_PROJECT_MY_RESUME,
   SLIDES_PROJECT_PF,
   SLIDES_PROJECT_ZODIAC_FONTS,
   SLIDES_PROJECT_RA_CALENDAR,
   SLIDES_PROJECT_RA_LOGIN_PAGE,
   SLIDES_PROJECT_RA_MERCHENDISE,
   SLIDES_PROJECT_SPARS,
+  SLIDES_PROJECT_RMUI_LIBRARY,
+  SLIDES_PROJECT_RM_PRICING,
 } from './projects-lightbox-const';
 
 export enum LightboxKeys {
@@ -89,8 +90,9 @@ export enum LightboxKeys {
   PROJECT_MDT_HOLTER = 'mdt-holter',
   PROJECT_RA_MERCHENDISE = 'ra-merchendise',
   PROJECT_EMB = 'embitron',
-  PROJECT_MY_RESUME = 'my-resume',
   PROJECT_ZODIAC_FONTS = 'zodiac-fonts',
+  PROJECT_RMUI_LIBRARY = 'rmui-library',
+  PROJECT_RM_PRICING = 'rm-pricing',
 }
 
 export function initLightBoxData(): Map<LightboxKeys, SlideImage[]> {
@@ -179,11 +181,14 @@ export function initLightBoxData(): Map<LightboxKeys, SlideImage[]> {
     ...SLIDES_PROJECT_RA_MERCHENDISE,
   ]);
   LightBoxMap.set(LightboxKeys.PROJECT_EMB, [...SLIDES_PROJECT_EMB]);
-  LightBoxMap.set(LightboxKeys.PROJECT_MY_RESUME, [
-    ...SLIDES_PROJECT_MY_RESUME,
-  ]);
   LightBoxMap.set(LightboxKeys.PROJECT_ZODIAC_FONTS, [
     ...SLIDES_PROJECT_ZODIAC_FONTS,
+  ]);
+  LightBoxMap.set(LightboxKeys.PROJECT_RMUI_LIBRARY, [
+    ...SLIDES_PROJECT_RMUI_LIBRARY,
+  ]);
+  LightBoxMap.set(LightboxKeys.PROJECT_RM_PRICING, [
+    ...SLIDES_PROJECT_RM_PRICING,
   ]);
   return LightBoxMap;
 }

@@ -14,7 +14,7 @@ export const EXPERIENCE_LIST: FeatureTimelineItem[] = [
     id: 'experience-5',
     date: '03/2022-02/2024',
     title: 'Sentinel One',
-    subtitle: 'Software engineer',
+    subtitle: 'Software engineer: Angular and React',
     keys: ['cyber security'],
     description:
       'Taking part in the development of SentinelOne’s XDR platform including mobile solution via third party mobile integration Javascript frameworks and libraries: Angular and React.',
@@ -23,10 +23,10 @@ export const EXPERIENCE_LIST: FeatureTimelineItem[] = [
     id: 'experience-4',
     date: '03/2021-02/2022',
     title: 'Certicon (for Medtronic)',
-    subtitle: 'Senior Angular development',
+    subtitle: 'Senior Angular developer',
     keys: ['medical'],
     description:
-      'Front - end development and UX design of an application for pacemaker implants and patient follow-ups.',
+      'Front-end development and UX design of an application for pacemaker implants and patient follow-ups.',
   },
   {
     id: 'experience-3',

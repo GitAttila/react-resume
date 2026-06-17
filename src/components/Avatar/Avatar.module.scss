@@ -12,7 +12,9 @@
         background-color: var(--card-background-color);
         padding: 0.8rem;
         margin-top: 0.8rem;
-        transition: 500ms height ease-in-out, 300ms background-color ease-in-out;
+        transition:
+          500ms height ease-in-out,
+          300ms background-color ease-in-out;
         @include responsive.breakpoint(sm) {
           height: vars.$ah-avatar-size-mobile;
           border-radius: vars.$ah-avatar-size-mobile;
@@ -22,7 +24,6 @@
         position: relative;
         z-index: 1;
         border-radius: vars.$ah-avatar-size;
-        background-color: var(--primary-background-color);
         transition: 300ms background-color ease-in-out;
         img {
           width: 100%;

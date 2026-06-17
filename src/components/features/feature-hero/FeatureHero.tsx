@@ -2,10 +2,12 @@ import styles from './FeatureHero.module.scss';
 import Carousel from '../../Carousel/Carousel';
 import CarouselHero from '../../CarouselHero/CarouselHero';
 import AHsignature from '../../../assets/images/ah_signature_white.png';
+import avatarImg from '../../../assets/images/AH_portrait_white.png';
 import { CarouselSlideContent } from '../../../models/carousel-slide-content.model';
 import CarouselSlide from '../../CarouselSlide/CarouselSlide';
 import { NavItem } from '../../../consts/nav-items.consts';
 import { forwardRef } from 'react';
+import Avatar from '../../Avatar/Avatar';
 
 interface FeatureHeroProps {
   id?: NavItem;
@@ -24,7 +26,7 @@ const FeatureHero = forwardRef(
         id={props?.id || ''}
         className={`${className} ${styles['app-c-carousel__container']}`}
       >
-        <Carousel rollOver={true} indicators={true} timer={14000}>
+        <Carousel rollOver={true} indicators={true} timer={1400000}>
           {carouselSlides.map((carouselSlide, i) => {
             return (
               <CarouselSlide
@@ -56,11 +58,18 @@ const FeatureHero = forwardRef(
             key={'carousel-hero'}
             className={styles['app-c-carousel__hero']}
           >
-            <img
-              className={styles['app-c-carousel__hero__image']}
-              src={AHsignature}
-              alt="AH signature"
-            />
+            <div className={styles['app-c-carousel__hero__image-container']}>
+              <img
+                className={styles['app-c-carousel__hero__image']}
+                src={AHsignature}
+                alt="AH signature"
+              />
+              <Avatar
+                image={avatarImg}
+                showMask={false}
+                className={styles['app-c-carousel__hero__avatar']}
+              />
+            </div>
             <h1 className={`${styles['app-c-carousel__hero__title']}`}>
               &mdash;&nbsp;interactive&nbsp;&mdash;&nbsp;resume&nbsp;&mdash;
             </h1>
@@ -68,7 +77,7 @@ const FeatureHero = forwardRef(
         </Carousel>
       </div>
     );
-  }
+  },
 );
 
 export default FeatureHero;
